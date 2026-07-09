@@ -1,0 +1,67 @@
+# Full local/prod-like stack: FastAPI app + PostgreSQL(pgvector) + Ollama.
+#
+#   cp .env.docker.example .env      # add your DEEPSEEK_API_KEY etc.
+#   docker compose up -d --build
+#   docker compose exec ollama ollama pull bge-m3        # pull embed model (once)
+#   docker compose exec ollama ollama pull qwen2.5vl     # vision model for /extract (once)
+#   docker compose exec api python -m scripts.embed_knowledge   # build vectors (once)
+#   open http://localhost:8000/docs
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: tspi_db
+    environment:
+      POSTGRES_USER: tspi
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-tspi}
+      POSTGRES_DB: tspi
+    volumes:
+      - tspi_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tspi -d tspi"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    restart: unless-stopped
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: tspi_ollama
+    volumes:
+      - tspi_ollama:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+    # --- GPU (optional; needs nvidia-container-toolkit). Uncomment for acceleration: ---
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+  api:
+    build: .
+    container_name: tspi_api
+    env_file: .env                       # your secrets/tunables (DEEPSEEK_API_KEY, EMBEDDING_*, ...)
+    environment:                          # infra values (override .env)
+      TSPI_ENV: prod
+      DATABASE_URL: postgresql+psycopg://tspi:${POSTGRES_PASSWORD:-tspi}@db:5432/tspi
+      OLLAMA_BASE_URL: http://ollama:11434
+      WEB_CONCURRENCY: ${WEB_CONCURRENCY:-2}
+      RUN_EMBED_ON_START: ${RUN_EMBED_ON_START:-false}
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+      ollama:
+        condition: service_started
+    restart: unless-stopped
+
+volumes:
+  tspi_pgdata:
+  tspi_ollama:

@@ -1,0 +1,4 @@
+module_code,module_name,target_axes,products,key,therapeutic_focus,dosing_default,special_protocol,contraindications,safety_notes,treatment_duration,notes
+KS,KS bowel protocol,A17;A18,KS,C,gut & elimination,follows severity table,yes,pregnancy,bowel-based titration,ongoing,EXAMPLE ROW - replace with official mapping
+KERRA,KERRA CAPSULE,A1;A18,KERRA,A,systemic inflammation,follows severity table,no,pregnancy;anticoagulants,,8-12 weeks,EXAMPLE ROW - replace with official mapping
+IM6,IM6,A1;A2,IM6,A,immune modulation,follows severity table,no,,,,EXAMPLE ROW - replace with official mapping

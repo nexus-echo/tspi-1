@@ -1,0 +1,29 @@
+{
+  "source": "OFFICIAL: TSPI-AI Clinical Decision Engine.pdf v3.0 + question_answers.txt Q5",
+  "nss_scale": {"min": 0, "max": 100, "driver": "inflammatory network activity (NF-kB, IL-6, TNF-a, COX-2, NLRP3, ROS)"},
+  "levels": [
+    {"level": 0, "nss_min": 0,  "nss_max": 15,  "name": "Preventive Longevity & Network Optimization",
+     "dose": {"caps": 2, "times_per_day": 2, "daily_total": 4, "schedule": ["morning","evening"]},
+     "objective": "optimize before dysfunction; maintain Prakati"},
+    {"level": 1, "nss_min": 16, "nss_max": 30,  "name": "Functional Imbalance",
+     "dose": {"caps": 2, "times_per_day": 3, "daily_total": 6, "schedule": ["morning","midday","evening"]},
+     "objective": "correct dysfunction before progression"},
+    {"level": 2, "nss_min": 31, "nss_max": 60,  "name": "Systemic Dysfunction",
+     "dose": {"caps": 3, "times_per_day": 3, "daily_total": 9, "schedule": ["morning","midday","evening"]},
+     "objective": "reverse network deterioration; restore resilience"},
+    {"level": 3, "nss_min": 61, "nss_max": 100, "name": "Advanced Network Failure",
+     "dose": {"caps": 3, "times_per_day": 5, "daily_total": 15, "schedule": ["waking","morning","midday","evening","bedtime"]},
+     "objective": "suppress inflammatory signaling; restore homeostasis"}
+  ],
+  "ks_protocol": {
+    "rule": "KS dosed by bowel performance, NOT severity level",
+    "goal": "minimum 2 comfortable bowel movements/day; complete evacuation, no straining/bloating",
+    "start": {"normal": "2 caps before bed",
+              "incomplete_evacuation": "2 caps before bed + 2 caps on waking",
+              "chronic_constipation": "4 caps before bed + 2 caps on waking"},
+    "titration": "increase 2 caps every 3-7 days until bowel target met",
+    "practical_max": "8 caps before bed + 4 caps on waking (12/day); physician review beyond"
+  },
+  "safety": "TSPI-AI is a Clinical Decision Support System (CDSS). It recommends modules, dosing ranges, and priorities; final prescribing authority remains with the supervising physician.",
+  "reassessment_days": [14, 30]
+}

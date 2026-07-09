@@ -1,0 +1,24 @@
+# --- tspi_ai_brain runtime deps ---
+# Minimum-version pins (>=) so pip selects wheels compatible with your Python
+# (incl. Python 3.14). Hard "==" pins can fail on bleeding-edge Python when a wheel
+# isn't published yet (e.g. scipy 1.15 on 3.14). Bump the floors as you upgrade.
+fastapi>=0.115
+uvicorn[standard]>=0.34
+pydantic>=2.10
+pydantic-settings>=2.7
+httpx>=0.28
+networkx>=3.4           # axis dependency graph + root-cause ranking
+scipy>=1.18             # 1.18+ ships wheels for Python 3.14 (needed by networkx pagerank)
+SQLAlchemy>=2.0.36      # knowledge + EMR models
+alembic>=1.13          # DB schema migrations (tracks model changes)
+psycopg[binary]>=3.2    # PostgreSQL driver (used when DATABASE_URL is a postgres URL)
+pgvector>=0.3.6         # vector column type + search in Postgres
+
+# --- dev / test ---
+pytest>=8.3
+pytest-asyncio>=0.25
+
+# --- lab/imaging extraction (POST /extract) ---
+python-multipart>=0.0.9   # FastAPI file uploads (UploadFile/Form)
+pdfplumber>=0.11          # PDF text-layer extraction
+PyMuPDF>=1.24             # rasterize scanned PDF pages -> images for the vision model

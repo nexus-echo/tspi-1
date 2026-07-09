@@ -1,0 +1,8 @@
+Patient Name: Vrishali Singh 
+Gender: Female
+Age: 46 yrs
+Problem:
+- Fibroid (attached report)
+- Blood pressure (hypertension pills she takes every day)
+- Inflammation in body (high CRP in blood report)
+- ⁠she has hit menopause but once a year gets bleeding. Usually when in stress.

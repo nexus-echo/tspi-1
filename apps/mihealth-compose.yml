@@ -1,0 +1,54 @@
+# MiHealth Portal — local prototype stack.
+# Postgres + MiHealth API + React web. The TSPI brain is consumed as a service
+# (run it separately on the host at :8000); reached here via host.docker.internal.
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: mihealth
+      POSTGRES_PASSWORD: mihealth
+      POSTGRES_DB: mihealth
+    ports:
+      - "5432:5432"
+    volumes:
+      - mihealth_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mihealth"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build: ./backend
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql+psycopg2://mihealth:mihealth@db:5432/mihealth
+      JWT_SECRET: change-me-to-a-long-random-string
+      TSPI_BASE_URL: http://host.docker.internal:8000
+      SEED_ADMIN_EMAIL: admin@mihealth.app
+      SEED_ADMIN_PASSWORD: admin12345
+      SEED_ADMIN_NAME: Default Admin
+      CORS_ORIGINS: http://localhost:5173
+      UPLOAD_DIR: /data/uploads
+      OCR_USE_LLM: "false"
+    volumes:
+      - mihealth_uploads:/data/uploads
+    ports:
+      - "8001:8001"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  web:
+    build: ./frontend
+    depends_on:
+      - api
+    environment:
+      VITE_API_TARGET: http://api:8001
+    ports:
+      - "5173:5173"
+
+volumes:
+  mihealth_pgdata:
+  mihealth_uploads:

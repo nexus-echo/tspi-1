@@ -1,0 +1,2182 @@
+[
+  {
+    "canonical_name": "ABSORN CAPSULE",
+    "norm_key": "ABSORN",
+    "kept_product_id": "H-003",
+    "kept_file": "product_H-003_ABSORN_CAPSULE.md",
+    "phytocore_code": "TSPI-ABSORN-03",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "ABSORN CAPSULE (Apsorn Capsule Medicine)",
+    "norm_key": "ABSORN APSORN",
+    "kept_product_id": "163",
+    "kept_file": "product_163_ABSORN_CAPSULE_Apsorn_Capsule_Medicine.md",
+    "phytocore_code": "Absorn Women's Internal Harmony Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Advanced Liver Protocol",
+    "norm_key": "ADVANCED LIVER PROTOCOL",
+    "kept_product_id": "HEPA 3",
+    "kept_file": "product_HEPA 3_Advanced_Liver_Protocol.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Allium sativum (garlic)",
+    "norm_key": "ALLIUM SATIVUM GARLIC",
+    "kept_product_id": "S-00-03",
+    "kept_file": "product_S-00-03_Allium_sativum_garlic.md",
+    "phytocore_code": "TSPI-GARLICA-004",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "AM-PUR MIXTURE",
+    "norm_key": "AM PUR",
+    "kept_product_id": "H-010",
+    "kept_file": "product_H-010_AM-PUR_MIXTURE.md",
+    "phytocore_code": "TSPI-REGEN-ENDO-010",
+    "duplicate_count": 5,
+    "aliases": [
+      "AM-PUR",
+      "AM-PUR Herbal Tonic"
+    ],
+    "archived_ids": [
+      {
+        "id": "20",
+        "file": "product_20_AM-PUR.md"
+      },
+      {
+        "id": "59",
+        "file": "product_59_AM-PUR_Herbal_Tonic.md"
+      },
+      {
+        "id": "69",
+        "file": "product_69_AM-PUR_Herbal_Tonic.md"
+      },
+      {
+        "id": "106",
+        "file": "product_106_AM-PUR.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "ANAX MIXTURE",
+    "norm_key": "ANAX",
+    "kept_product_id": "18",
+    "kept_file": "product_18_ANAX_MIXTURE.md",
+    "phytocore_code": "Anax Rejuvenative Movement Module",
+    "duplicate_count": 3,
+    "aliases": [
+      "Anax"
+    ],
+    "archived_ids": [
+      {
+        "id": "32",
+        "file": "product_32_ANAX_MIXTURE.md"
+      },
+      {
+        "id": "130",
+        "file": "product_130_Anax.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "ANAX / AJAX Mixture",
+    "norm_key": "ANAX AJAX",
+    "kept_product_id": "H-028",
+    "kept_file": "product_H-028_ANAX_AJAX_Mixture.md",
+    "phytocore_code": "TSPI-MUSCLE-REGEN-028",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Andrographis paniculata capsules.",
+    "norm_key": "ANDROGRAPHIS PANICULATA",
+    "kept_product_id": "162",
+    "kept_file": "product_162_Andrographis_paniculata_capsules.md",
+    "phytocore_code": "Andrographis Immune Defense Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Angera",
+    "norm_key": "ANGERA",
+    "kept_product_id": "113",
+    "kept_file": "product_113_Angera.md",
+    "phytocore_code": "Nervous System Balance Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "ANGERA Hormonal Balance Capsule",
+    "norm_key": "ANGERA HORMONAL BALANCE",
+    "kept_product_id": "S-00-48",
+    "kept_file": "product_S-00-48_ANGERA_Hormonal_Balance_Capsule.md",
+    "phytocore_code": "TSPI-GYNO-HORMONE-CIRC-048",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Astringent–Vascular Repair–Gut Barrier–Anti-inflammatory Formula",
+    "norm_key": "ASTRINGENTVASCULAR REPAIRGUT BARRIERANTI INFLAMMATORY FORMULA",
+    "kept_product_id": "RIZZO-096",
+    "kept_file": "product_RIZZO-096_AstringentVascular_RepairGut_BarrierAnti-inflammatory_Formula.md",
+    "phytocore_code": "TSPI-RIZZO-VASCULAR-GUT-ONCO-096",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Ava",
+    "norm_key": "AVA",
+    "kept_product_id": "137",
+    "kept_file": "product_137_Ava.md",
+    "phytocore_code": "Neuro-Endocrine Support",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "B-FRESH MINERAL SOAP BAR",
+    "norm_key": "B FRESH MINERAL SOAP BAR",
+    "kept_product_id": "214",
+    "kept_file": "product_214_B-FRESH_MINERAL_SOAP_BAR.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "B-LAX CAPSULE",
+    "norm_key": "B LAX",
+    "kept_product_id": "H-015",
+    "kept_file": "product_H-015_B-LAX_CAPSULE.md",
+    "phytocore_code": "TSPI-BLAX-015",
+    "duplicate_count": 4,
+    "aliases": [
+      "B-LAX Capsule"
+    ],
+    "archived_ids": [
+      {
+        "id": "58",
+        "file": "product_58_B-LAX_Capsule.md"
+      },
+      {
+        "id": "68",
+        "file": "product_68_B-LAX_Capsule.md"
+      },
+      {
+        "id": "5",
+        "file": "product_5_B-LAX_Capsule.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "BENCHAKUL CAPSULE",
+    "norm_key": "BENCHAKUL",
+    "kept_product_id": "H-007",
+    "kept_file": "product_H-007_BENCHAKUL_CAPSULE.md",
+    "phytocore_code": "TSPI-BENCHAKUL-07",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "BENCHAKUN CAPSULE (Benjakun Capsule Medicine)",
+    "norm_key": "BENCHAKUN BENJAKUN",
+    "kept_product_id": "167",
+    "kept_file": "product_167_BENCHAKUN_CAPSULE_Benjakun_Capsule_Medicine.md",
+    "phytocore_code": "Bencha-Kul Metabolic Fire Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "BETA 1",
+    "norm_key": "BETA 1",
+    "kept_product_id": "194",
+    "kept_file": "product_194_BETA_1.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Beta-4",
+    "norm_key": "BETA 4",
+    "kept_product_id": "114",
+    "kept_file": "product_114_Beta-4.md",
+    "phytocore_code": "Immune Regulation Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "BETA 5 Capsule",
+    "norm_key": "BETA 5",
+    "kept_product_id": "S-00-52",
+    "kept_file": "product_S-00-52_BETA_5_Capsule.md",
+    "phytocore_code": "S-00-52",
+    "duplicate_count": 2,
+    "aliases": [
+      "BETA 5"
+    ],
+    "archived_ids": [
+      {
+        "id": "197",
+        "file": "product_197_BETA_5.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "BETA G",
+    "norm_key": "BETA G",
+    "kept_product_id": "S-00-55",
+    "kept_file": "product_S-00-55_BETA_G.md",
+    "phytocore_code": "BETA G / 12-1-05-555-5-0-098",
+    "duplicate_count": 2,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "200",
+        "file": "product_200_BETA_G.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Beta L Capsule",
+    "norm_key": "BETA L",
+    "kept_product_id": "BL-021",
+    "kept_file": "product_BL-021_Beta_L_Capsule.md",
+    "phytocore_code": "TSPI-BETAL-021",
+    "duplicate_count": 2,
+    "aliases": [
+      "BETA L"
+    ],
+    "archived_ids": [
+      {
+        "id": "207",
+        "file": "product_207_BETA_L.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "BETA M",
+    "norm_key": "BETA M",
+    "kept_product_id": "216",
+    "kept_file": "product_216_BETA_M.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Beta-V",
+    "norm_key": "BETA V",
+    "kept_product_id": "87",
+    "kept_file": "product_87_Beta-V.md",
+    "phytocore_code": "Immune Activation Module",
+    "duplicate_count": 3,
+    "aliases": [
+      "BETA-V"
+    ],
+    "archived_ids": [
+      {
+        "id": "157",
+        "file": "product_157_BETA-V.md"
+      },
+      {
+        "id": "125",
+        "file": "product_125_Beta-V.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Beta-X",
+    "norm_key": "BETA X",
+    "kept_product_id": "134",
+    "kept_file": "product_134_Beta-X.md",
+    "phytocore_code": "Circulation & Detox Module",
+    "duplicate_count": 2,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "119",
+        "file": "product_119_Beta-X.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Bio Active Crystallization Technology (TSPI Patent Platform)",
+    "norm_key": "BIO ACTIVE CRYSTALLIZATION TECHNOLOGY TSPI PATENT PLATFORM",
+    "kept_product_id": "S-00-02",
+    "kept_file": "product_S-00-02_Bio_Active_Crystallization_Technology_TSPI_Patent_Platform.md",
+    "phytocore_code": "TSPI-RICEZOZYME-CORE",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Bonax Capsule",
+    "norm_key": "BONAX",
+    "kept_product_id": "S-00-60 (Next Sequence)",
+    "kept_file": "product_S-00-60 (Next Sequence)_Bonax_Capsule.md",
+    "phytocore_code": "TSPI-MUSCLE-BONE-REGEN-061",
+    "duplicate_count": 2,
+    "aliases": [
+      "BONAX"
+    ],
+    "archived_ids": [
+      {
+        "id": "206",
+        "file": "product_206_BONAX.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Bone Anabolic & Anti-Resorption System",
+    "norm_key": "BONE ANABOLIC ANTI RESORPTION SYSTEM",
+    "kept_product_id": "BONAX",
+    "kept_file": "product_BONAX_Bone_Anabolic_Anti-Resorption_System.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "BOVA Capsule",
+    "norm_key": "BOVA",
+    "kept_product_id": "H-020",
+    "kept_file": "product_H-020_BOVA_Capsule.md",
+    "phytocore_code": "TSPI-BOVA-020",
+    "duplicate_count": 2,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "10",
+        "file": "product_10_BOVA_Capsule.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "BRANARA",
+    "norm_key": "BRANARA",
+    "kept_product_id": "27",
+    "kept_file": "product_27_BRANARA.md",
+    "phytocore_code": "Brain Cognitive Circulation Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "BRANARIS",
+    "norm_key": "BRANARIS",
+    "kept_product_id": "208",
+    "kept_file": "product_208_BRANARIS.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Buminmax",
+    "norm_key": "BUMINMAX",
+    "kept_product_id": "115",
+    "kept_file": "product_115_Buminmax.md",
+    "phytocore_code": "Bioactive Peptide Regeneration Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Buminmax Plus Bioactive Peptide Capsule",
+    "norm_key": "BUMINMAX PLUS BIOACTIVE PEPTIDE",
+    "kept_product_id": "BUMINMAX PLUS",
+    "kept_file": "product_BUMINMAX PLUS_Buminmax_Plus_Bioactive_Peptide_Capsule.md",
+    "phytocore_code": "TSPI-REGEN-PEPTIDE-CORE",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "BUTEA SUPERBA CAPSULE",
+    "norm_key": "BUTEA SUPERBA",
+    "kept_product_id": "H-006",
+    "kept_file": "product_H-006_BUTEA_SUPERBA_CAPSULE.md",
+    "phytocore_code": "TSPI-BUTEA-06",
+    "duplicate_count": 3,
+    "aliases": [
+      "Butea Superba Capsule"
+    ],
+    "archived_ids": [
+      {
+        "id": "60",
+        "file": "product_60_Butea_Superba_Capsule.md"
+      },
+      {
+        "id": "70",
+        "file": "product_70_Butea_Superba_Capsule.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "BUTEA SUPERBA CAPSULE (Red Kwao Krua Capsules)",
+    "norm_key": "BUTEA SUPERBA RED KWAO KRUA",
+    "kept_product_id": "166",
+    "kept_file": "product_166_BUTEA_SUPERBA_CAPSULE_Red_Kwao_Krua_Capsules.md",
+    "phytocore_code": "Butea Male Vitality Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Catharic Capsule",
+    "norm_key": "CATHARIC",
+    "kept_product_id": "7",
+    "kept_file": "product_7_Catharic_Capsule.md",
+    "phytocore_code": "DetoxColon-07",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Cathartic Capsule",
+    "norm_key": "CATHARTIC",
+    "kept_product_id": "H-017",
+    "kept_file": "product_H-017_Cathartic_Capsule.md",
+    "phytocore_code": "TSPI-CATHARTIC-017",
+    "duplicate_count": 3,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "52",
+        "file": "product_52_Cathartic_Capsule.md"
+      },
+      {
+        "id": "62",
+        "file": "product_62_Cathartic_Capsule.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Centella Asiatica Capsule",
+    "norm_key": "CENTELLA ASIATICA",
+    "kept_product_id": "H-014",
+    "kept_file": "product_H-014_Centella_Asiatica_Capsule.md",
+    "phytocore_code": "TSPI-CENTELLA-014",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "CHLOROPHYNA",
+    "norm_key": "CHLOROPHYNA",
+    "kept_product_id": "108",
+    "kept_file": "product_108_CHLOROPHYNA.md",
+    "phytocore_code": "Cellular Detox Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "CINNARA Capsule",
+    "norm_key": "CINNARA",
+    "kept_product_id": "H-022",
+    "kept_file": "product_H-022_CINNARA_Capsule.md",
+    "phytocore_code": "TSPI-CINNARA-022",
+    "duplicate_count": 4,
+    "aliases": [
+      "CINNARA BRAND CAPSULE",
+      "Cinnara Capsule"
+    ],
+    "archived_ids": [
+      {
+        "id": "11",
+        "file": "product_11_CINNARA_BRAND_CAPSULE.md"
+      },
+      {
+        "id": "54",
+        "file": "product_54_Cinnara_Capsule.md"
+      },
+      {
+        "id": "64",
+        "file": "product_64_Cinnara_Capsule.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "COMPOUND DERRIS SCANDENS CAPSULE",
+    "norm_key": "COMPOUND DERRIS SCANDENS",
+    "kept_product_id": "H-004",
+    "kept_file": "product_H-004_COMPOUND_DERRIS_SCANDENS_CAPSULE.md",
+    "phytocore_code": "TSPI-DERRIS-SCANDENS-04",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "COMPOUND DERRIS SCANDENS CAPSULE (Derris Scandens Capsule)",
+    "norm_key": "COMPOUND DERRIS SCANDENS DERRIS SCANDENS",
+    "kept_product_id": "164",
+    "kept_file": "product_164_COMPOUND_DERRIS_SCANDENS_CAPSULE_Derris_Scandens_Capsule.md",
+    "phytocore_code": "Derris Musculoskeletal Repair Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "COMPOUND DERRIS VELVET CAPSULE",
+    "norm_key": "COMPOUND DERRIS VELVET",
+    "kept_product_id": "H-005",
+    "kept_file": "product_H-005_COMPOUND_DERRIS_VELVET_CAPSULE.md",
+    "phytocore_code": "TSPI-DERRIS-VELVET-05",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "COMPOUND YHATEENNOK CAPSULE",
+    "norm_key": "COMPOUND YHATEENNOK",
+    "kept_product_id": "H-012",
+    "kept_file": "product_H-012_COMPOUND_YHATEENNOK_CAPSULE.md",
+    "phytocore_code": "TSPI-YHATEENNOK-012",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Curcuma Capsules",
+    "norm_key": "CURCUMA",
+    "kept_product_id": "H-001",
+    "kept_file": "product_H-001_Curcuma_Capsules.md",
+    "phytocore_code": "TSPI-CURCUMA-01",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Curcuma Longa Capsule (Turmeric Capsules)",
+    "norm_key": "CURCUMA LONGA TURMERIC",
+    "kept_product_id": "161",
+    "kept_file": "product_161_Curcuma_Longa_Capsule_Turmeric_Capsules.md",
+    "phytocore_code": "Curcuma Digestive Integrity Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "CURMINA",
+    "norm_key": "CURMINA",
+    "kept_product_id": "199",
+    "kept_file": "product_199_CURMINA.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "DB-1",
+    "norm_key": "DB 1",
+    "kept_product_id": "81",
+    "kept_file": "product_81_DB-1.md",
+    "phytocore_code": "Metabolic Restoration Module",
+    "duplicate_count": 2,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "151",
+        "file": "product_151_DB-1.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Deer Antler Velvet Capsule, Veychakorn Brand.",
+    "norm_key": "DEER ANTLER VELVET VEYCHAKORN",
+    "kept_product_id": "165",
+    "kept_file": "product_165_Deer_Antler_Velvet_Capsule_Veychakorn_Brand.md",
+    "phytocore_code": "Velvet Antler Rejuvenation Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Deer Velvet Antler Elixir",
+    "norm_key": "DEER VELVET ANTLER",
+    "kept_product_id": "19",
+    "kept_file": "product_19_Deer_Velvet_Antler_Elixir.md",
+    "phytocore_code": "Imperial Vital Reserve Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Digestive–Anti-inflammatory–Mucosal Repair Formula",
+    "norm_key": "DIGESTIVEANTI INFLAMMATORYMUCOSAL REPAIR FORMULA",
+    "kept_product_id": "CURMINA-097",
+    "kept_file": "product_CURMINA-097_DigestiveAnti-inflammatoryMucosal_Repair_Formula.md",
+    "phytocore_code": "TSPI-CURMINA-DIGESTIVE-ANTIINFLAM-097",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "EDH",
+    "norm_key": "EDH",
+    "kept_product_id": "26",
+    "kept_file": "product_26_EDH.md",
+    "phytocore_code": "Neuro-Metabolic Vitality Module",
+    "duplicate_count": 4,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "173",
+        "file": "product_173_EDH.md"
+      },
+      {
+        "id": "143",
+        "file": "product_143_EDH.md"
+      },
+      {
+        "id": "183",
+        "file": "product_183_EDH.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Femoon",
+    "norm_key": "FEMOON",
+    "kept_product_id": "95",
+    "kept_file": "product_95_Femoon.md",
+    "phytocore_code": "Female Hormonal Balance Module",
+    "duplicate_count": 3,
+    "aliases": [
+      "FEMOON"
+    ],
+    "archived_ids": [
+      {
+        "id": "44",
+        "file": "product_44_FEMOON.md"
+      },
+      {
+        "id": "36",
+        "file": "product_36_FEMOON.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "FEVA CAPSULE",
+    "norm_key": "FEVA",
+    "kept_product_id": "H-019",
+    "kept_file": "product_H-019_FEVA_CAPSULE.md",
+    "phytocore_code": "TSPI-FEVA-IMMUNE-019",
+    "duplicate_count": 2,
+    "aliases": [
+      "FEVA Capsule"
+    ],
+    "archived_ids": [
+      {
+        "id": "9",
+        "file": "product_9_FEVA_Capsule.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "FlaxPro",
+    "norm_key": "FLAXPRO",
+    "kept_product_id": "71",
+    "kept_file": "product_71_FlaxPro.md",
+    "phytocore_code": "Cardiovascular Lipid Balance Module",
+    "duplicate_count": 2,
+    "aliases": [
+      "FLAXPRO"
+    ],
+    "archived_ids": [
+      {
+        "id": "90",
+        "file": "product_90_FLAXPRO.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Focuz",
+    "norm_key": "FOCUZ",
+    "kept_product_id": "74",
+    "kept_file": "product_74_Focuz.md",
+    "phytocore_code": "Neuro-Cognitive Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "GARCINIA",
+    "norm_key": "GARCINIA",
+    "kept_product_id": "H-012",
+    "kept_file": "product_H-012_GARCINIA.md",
+    "phytocore_code": "TSPI-GARCINIA-012",
+    "duplicate_count": 2,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "30",
+        "file": "product_30_GARCINIA.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Garcinia atroviridis / Garcinia cambogia",
+    "norm_key": "GARCINIA ATROVIRIDIS GARCINIA CAMBOGIA",
+    "kept_product_id": "S-00-05",
+    "kept_file": "product_S-00-05_Garcinia_atroviridis_Garcinia_cambogia.md",
+    "phytocore_code": "TSPI-GARCINIA-META",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "GARLICA",
+    "norm_key": "GARLICA",
+    "kept_product_id": "28",
+    "kept_file": "product_28_GARLICA.md",
+    "phytocore_code": "Garlic Cardiometabolic Module",
+    "duplicate_count": 2,
+    "aliases": [
+      "Garlica"
+    ],
+    "archived_ids": [
+      {
+        "id": "110",
+        "file": "product_110_Garlica.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "HEPA-1",
+    "norm_key": "HEPA 1",
+    "kept_product_id": "85",
+    "kept_file": "product_85_HEPA-1.md",
+    "phytocore_code": "Hepatic Detox Module",
+    "duplicate_count": 3,
+    "aliases": [
+      "Hepa-1"
+    ],
+    "archived_ids": [
+      {
+        "id": "123",
+        "file": "product_123_Hepa-1.md"
+      },
+      {
+        "id": "155",
+        "file": "product_155_HEPA-1.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Hepa-2",
+    "norm_key": "HEPA 2",
+    "kept_product_id": "133",
+    "kept_file": "product_133_Hepa-2.md",
+    "phytocore_code": "Advanced Liver Protection",
+    "duplicate_count": 2,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "111",
+        "file": "product_111_Hepa-2.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "HEPA-3 Capsule",
+    "norm_key": "HEPA 3",
+    "kept_product_id": "S-00-58",
+    "kept_file": "product_S-00-58_HEPA-3_Capsule.md",
+    "phytocore_code": "TSPI-LIVER-REGEN-058",
+    "duplicate_count": 3,
+    "aliases": [
+      "HEPA 3",
+      "Hepa-3"
+    ],
+    "archived_ids": [
+      {
+        "id": "203",
+        "file": "product_203_HEPA_3.md"
+      },
+      {
+        "id": "118",
+        "file": "product_118_Hepa-3.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Hepa Plus",
+    "norm_key": "HEPA PLUS",
+    "kept_product_id": "112",
+    "kept_file": "product_112_Hepa_Plus.md",
+    "phytocore_code": "Comprehensive Hepatic Support",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Hepatic Detox & Fluid Clearance System",
+    "norm_key": "HEPATIC DETOX FLUID CLEARANCE SYSTEM",
+    "kept_product_id": "HEPA2",
+    "kept_file": "product_HEPA2_Hepatic_Detox_Fluid_Clearance_System.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "HO REN YIN MIXTURE",
+    "norm_key": "HO REN YIN",
+    "kept_product_id": "H-009",
+    "kept_file": "product_H-009_HO_REN_YIN_MIXTURE.md",
+    "phytocore_code": "TSPI-REGEN-ENDO-BLOOD-009",
+    "duplicate_count": 5,
+    "aliases": [
+      "Ho Ren Yin Mixture",
+      "Ho-Ren-Yin Herbal Tonic"
+    ],
+    "archived_ids": [
+      {
+        "id": "H-027",
+        "file": "product_H-027_Ho_Ren_Yin_Mixture.md"
+      },
+      {
+        "id": "17",
+        "file": "product_17_HO_REN_YIN_MIXTURE.md"
+      },
+      {
+        "id": "31",
+        "file": "product_31_HO_REN_YIN_MIXTURE.md"
+      },
+      {
+        "id": "105",
+        "file": "product_105_Ho-Ren-Yin_Herbal_Tonic.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "HO RENYIN CAPSULE          Horenyin Capsule",
+    "norm_key": "HO RENYIN HORENYIN",
+    "kept_product_id": "169",
+    "kept_file": "product_169_HO_RENYIN_CAPSULE_Horenyin_Capsule.md",
+    "phytocore_code": "Ho Ren Yin Vital Organ Restore Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "HOUTTUYNIA CORDATA CAPSULE",
+    "norm_key": "HOUTTUYNIA CORDATA",
+    "kept_product_id": "H-013",
+    "kept_file": "product_H-013_HOUTTUYNIA_CORDATA_CAPSULE.md",
+    "phytocore_code": "TSPI-HOUTTUYNIA-013",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "HP-1",
+    "norm_key": "HP 1",
+    "kept_product_id": "86",
+    "kept_file": "product_86_HP-1.md",
+    "phytocore_code": "Cardiovascular Protection Module",
+    "duplicate_count": 3,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "156",
+        "file": "product_156_HP-1.md"
+      },
+      {
+        "id": "124",
+        "file": "product_124_HP-1.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "IM-1",
+    "norm_key": "IM 1",
+    "kept_product_id": "187",
+    "kept_file": "product_187_IM-1.md",
+    "phytocore_code": "IM-1 Beta Glucan Immune Module",
+    "duplicate_count": 2,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "80",
+        "file": "product_80_IM-1.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "IM-1 Beta Glucan",
+    "norm_key": "IM 1 BETA GLUCAN",
+    "kept_product_id": "48",
+    "kept_file": "product_48_IM-1_Beta_Glucan.md",
+    "phytocore_code": "Immunometabolic Defense Module",
+    "duplicate_count": 2,
+    "aliases": [
+      "IM-1 Beta-Glucan"
+    ],
+    "archived_ids": [
+      {
+        "id": "147",
+        "file": "product_147_IM-1_Beta-Glucan.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "IM-1 BETAGLUCAN",
+    "norm_key": "IM 1 BETAGLUCAN",
+    "kept_product_id": "23",
+    "kept_file": "product_23_IM-1_BETAGLUCAN.md",
+    "phytocore_code": "Beta-Glucan Immune Activation Module",
+    "duplicate_count": 2,
+    "aliases": [
+      "IM-1 Betaglucan"
+    ],
+    "archived_ids": [
+      {
+        "id": "177",
+        "file": "product_177_IM-1_Betaglucan.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "IM-5",
+    "norm_key": "IM 5",
+    "kept_product_id": "84",
+    "kept_file": "product_84_IM-5.md",
+    "phytocore_code": "Cellular Repair Module",
+    "duplicate_count": 3,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "122",
+        "file": "product_122_IM-5.md"
+      },
+      {
+        "id": "154",
+        "file": "product_154_IM-5.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "IM-6 Capsule",
+    "norm_key": "IM 6",
+    "kept_product_id": "H-030",
+    "kept_file": "product_H-030_IM-6_Capsule.md",
+    "phytocore_code": "TSPI-IMMUNE-INFLAM-030",
+    "duplicate_count": 3,
+    "aliases": [
+      "IM 6",
+      "IM-6"
+    ],
+    "archived_ids": [
+      {
+        "id": "202",
+        "file": "product_202_IM_6.md"
+      },
+      {
+        "id": "117",
+        "file": "product_117_IM-6.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "IM-7",
+    "norm_key": "IM 7",
+    "kept_product_id": "195",
+    "kept_file": "product_195_IM-7.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "IM-7 Detox & Anti-Inflammatory Capsule",
+    "norm_key": "IM 7 DETOX ANTI INFLAMMATORY",
+    "kept_product_id": "S-00-47",
+    "kept_file": "product_S-00-47_IM-7_Detox_Anti-Inflammatory_Capsule.md",
+    "phytocore_code": "TSPI-TOXIN-INFLAM-TME-IM7",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "IM 9",
+    "norm_key": "IM 9",
+    "kept_product_id": "193",
+    "kept_file": "product_193_IM_9.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "IM9",
+    "norm_key": "IM9",
+    "kept_product_id": "218",
+    "kept_file": "product_218_IM9.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "IMO",
+    "norm_key": "IMO",
+    "kept_product_id": "89",
+    "kept_file": "product_89_IMO.md",
+    "phytocore_code": "Microbiome Regeneration Module",
+    "duplicate_count": 4,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "102",
+        "file": "product_102_IMO.md"
+      },
+      {
+        "id": "158",
+        "file": "product_158_IMO.md"
+      },
+      {
+        "id": "127",
+        "file": "product_127_IMO.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "IVORA",
+    "norm_key": "IVORA",
+    "kept_product_id": "45",
+    "kept_file": "product_45_IVORA.md",
+    "phytocore_code": "Cardiometabolic Adaptation Module",
+    "duplicate_count": 3,
+    "aliases": [
+      "Ivora"
+    ],
+    "archived_ids": [
+      {
+        "id": "96",
+        "file": "product_96_Ivora.md"
+      },
+      {
+        "id": "37",
+        "file": "product_37_IVORA.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "KD",
+    "norm_key": "KD",
+    "kept_product_id": "148",
+    "kept_file": "product_148_KD.md",
+    "phytocore_code": "Renal Detox & Fluid Balance Module",
+    "duplicate_count": 2,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "178",
+        "file": "product_178_KD.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "KD (Kidney Defense & Regeneration System)",
+    "norm_key": "KD KIDNEY DEFENSE REGENERATION SYSTEM",
+    "kept_product_id": "KD",
+    "kept_file": "product_KD_KD_Kidney_Defense_Regeneration_System.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Kerma",
+    "norm_key": "KERMA",
+    "kept_product_id": "93",
+    "kept_file": "product_93_Kerma.md",
+    "phytocore_code": "Digestive Microbiome Repair Module",
+    "duplicate_count": 2,
+    "aliases": [
+      "KERMA"
+    ],
+    "archived_ids": [
+      {
+        "id": "34",
+        "file": "product_34_KERMA.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "KERMA COMPLEX",
+    "norm_key": "KERMA COMPLEX",
+    "kept_product_id": "39",
+    "kept_file": "product_39_KERMA_COMPLEX.md",
+    "phytocore_code": "Immune Antiviral Defense Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "KERMA (Digestive variant)",
+    "norm_key": "KERMA DIGESTIVE VARIANT",
+    "kept_product_id": "42",
+    "kept_file": "product_42_KERMA_Digestive_variant.md",
+    "phytocore_code": "Gastrointestinal Mucosal Repair Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "KERRA CAPSULE",
+    "norm_key": "KERRA",
+    "kept_product_id": "16",
+    "kept_file": "product_16_KERRA_CAPSULE.md",
+    "phytocore_code": "Kerra Immune-Oncology Regulatory Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "KERRINA REFRESHING MOUTH SPRAY",
+    "norm_key": "KERRINA REFRESHING MOUTH SPRAY",
+    "kept_product_id": "213",
+    "kept_file": "product_213_KERRINA_REFRESHING_MOUTH_SPRAY.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "KERRIX PLUS",
+    "norm_key": "KERRIX PLUS",
+    "kept_product_id": "212",
+    "kept_file": "product_212_KERRIX_PLUS.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "KIMLUY BRAND YELLOW OIL",
+    "norm_key": "KIMLUY YELLOW OIL",
+    "kept_product_id": "21",
+    "kept_file": "product_21_KIMLUY_BRAND_YELLOW_OIL.md",
+    "phytocore_code": "Anti-Inflammatory Joint & Circulation Module",
+    "duplicate_count": 2,
+    "aliases": [
+      "Kimluy Yellow Oil"
+    ],
+    "archived_ids": [
+      {
+        "id": "107",
+        "file": "product_107_Kimluy_Yellow_Oil.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "KS",
+    "norm_key": "KS",
+    "kept_product_id": "159",
+    "kept_file": "product_159_KS.md",
+    "phytocore_code": "Neurovascular Longevity Module",
+    "duplicate_count": 5,
+    "aliases": [
+      "KS Capsule",
+      "YA KS CAPSULE"
+    ],
+    "archived_ids": [
+      {
+        "id": "H-026",
+        "file": "product_H-026_KS_Capsule.md"
+      },
+      {
+        "id": "14",
+        "file": "product_14_YA_KS_CAPSULE.md"
+      },
+      {
+        "id": "128",
+        "file": "product_128_KS.md"
+      },
+      {
+        "id": "103",
+        "file": "product_103_KS.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "LANA",
+    "norm_key": "LANA",
+    "kept_product_id": "201",
+    "kept_file": "product_201_LANA.md",
+    "phytocore_code": "None",
+    "duplicate_count": 2,
+    "aliases": [
+      "Lana"
+    ],
+    "archived_ids": [
+      {
+        "id": "116",
+        "file": "product_116_Lana.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Livita",
+    "norm_key": "LIVITA",
+    "kept_product_id": "120",
+    "kept_file": "product_120_Livita.md",
+    "phytocore_code": "Hepato-Metabolic Regulation Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Livoxy Capsule",
+    "norm_key": "LIVOXY",
+    "kept_product_id": "S-00-60",
+    "kept_file": "product_S-00-60_Livoxy_Capsule.md",
+    "phytocore_code": "TSPI-OXY-LIVER-DETOX-060",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "LIVOXY PLUS",
+    "norm_key": "LIVOXY PLUS",
+    "kept_product_id": "205",
+    "kept_file": "product_205_LIVOXY_PLUS.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Luce",
+    "norm_key": "LUCE",
+    "kept_product_id": "72",
+    "kept_file": "product_72_Luce.md",
+    "phytocore_code": "Metabolic Reset Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "(Lymphatic–Liver–Lung Detox System)",
+    "norm_key": "LYMPHATICLIVERLUNG DETOX SYSTEM",
+    "kept_product_id": "Beta L",
+    "kept_file": "product_Beta L_LymphaticLiverLung_Detox_System.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "LYPHOLAX",
+    "norm_key": "LYPHOLAX",
+    "kept_product_id": "211",
+    "kept_file": "product_211_LYPHOLAX.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Merdana Capsule",
+    "norm_key": "MERDANA",
+    "kept_product_id": "H-024",
+    "kept_file": "product_H-024_Merdana_Capsule.md",
+    "phytocore_code": "TSPI-IMMUNE-DETOX-024",
+    "duplicate_count": 2,
+    "aliases": [
+      "MERDANA CAPSULE"
+    ],
+    "archived_ids": [
+      {
+        "id": "12",
+        "file": "product_12_MERDANA_CAPSULE.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Minoza",
+    "norm_key": "MINOZA",
+    "kept_product_id": "104",
+    "kept_file": "product_104_Minoza.md",
+    "phytocore_code": "Lymphatic Regulation Module",
+    "duplicate_count": 4,
+    "aliases": [
+      "MINOZA CAPSULE"
+    ],
+    "archived_ids": [
+      {
+        "id": "15",
+        "file": "product_15_MINOZA_CAPSULE.md"
+      },
+      {
+        "id": "160",
+        "file": "product_160_Minoza.md"
+      },
+      {
+        "id": "129",
+        "file": "product_129_Minoza.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "MOMORDICA CHARANTIA CAPSULE",
+    "norm_key": "MOMORDICA CHARANTIA",
+    "kept_product_id": "H-010",
+    "kept_file": "product_H-010_MOMORDICA_CHARANTIA_CAPSULE.md",
+    "phytocore_code": "TSPI-MOMORDICA-010",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "MOMORDICA CHARANTIA CAPSULE         Bitter melon capsules",
+    "norm_key": "MOMORDICA CHARANTIA BITTER MELON",
+    "kept_product_id": "170",
+    "kept_file": "product_170_MOMORDICA_CHARANTIA_CAPSULE_Bitter_melon_capsules.md",
+    "phytocore_code": "Bitter Melon Glycemic Balance Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "NARIS",
+    "norm_key": "NARIS",
+    "kept_product_id": "82",
+    "kept_file": "product_82_NARIS.md",
+    "phytocore_code": "Neuro-Respiratory Support Module",
+    "duplicate_count": 2,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "152",
+        "file": "product_152_NARIS.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "None",
+    "norm_key": "NONE",
+    "kept_product_id": "189",
+    "kept_file": "product_189_N_A.md",
+    "phytocore_code": "Renax Renal Detox Module",
+    "duplicate_count": 3,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "190",
+        "file": "product_190_N_A.md"
+      },
+      {
+        "id": "188",
+        "file": "product_188_N_A.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Nourishing Blood Tonic Capsule",
+    "norm_key": "NOURISHING BLOOD",
+    "kept_product_id": "H-016",
+    "kept_file": "product_H-016_Nourishing_Blood_Tonic_Capsule.md",
+    "phytocore_code": "TSPI-BLOOD-REGEN-016",
+    "duplicate_count": 5,
+    "aliases": [
+      "NOURISHING BLOOD TONIC",
+      "Nourishing Blood Capsule"
+    ],
+    "archived_ids": [
+      {
+        "id": "51",
+        "file": "product_51_Nourishing_Blood_Capsule.md"
+      },
+      {
+        "id": "61",
+        "file": "product_61_Nourishing_Blood_Capsule.md"
+      },
+      {
+        "id": "40",
+        "file": "product_40_NOURISHING_BLOOD_TONIC.md"
+      },
+      {
+        "id": "6",
+        "file": "product_6_Nourishing_Blood_Capsule.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Orygis Bamboo Mouthwash",
+    "norm_key": "ORYGIS BAMBOO MOUTHWASH",
+    "kept_product_id": "139",
+    "kept_file": "product_139_Orygis_Bamboo_Mouthwash.md",
+    "phytocore_code": "Orygis Bamboo Mouthwash™",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "ORYGIS PD HERB MOISTURIZER OIL",
+    "norm_key": "ORYGIS PD HERB MOISTURIZER OIL",
+    "kept_product_id": "215",
+    "kept_file": "product_215_ORYGIS_PD_HERB_MOISTURIZER_OIL.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Plumax Plus",
+    "norm_key": "PLUMAX PLUS",
+    "kept_product_id": "138",
+    "kept_file": "product_138_Plumax_Plus.md",
+    "phytocore_code": "Systemic Organ Tonic",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Propolis Immune Spray",
+    "norm_key": "PROPOLIS IMMUNE SPRAY",
+    "kept_product_id": "140",
+    "kept_file": "product_140_Propolis_Immune_Spray.md",
+    "phytocore_code": "Propolis Immune Spray™",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Psylaza Capsule",
+    "norm_key": "PSYLAZA",
+    "kept_product_id": "H-021",
+    "kept_file": "product_H-021_Psylaza_Capsule.md",
+    "phytocore_code": "TSPI-PSYLAZA-021",
+    "duplicate_count": 2,
+    "aliases": [
+      "PSYLAZA"
+    ],
+    "archived_ids": [
+      {
+        "id": "209",
+        "file": "product_209_PSYLAZA.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "RADICA",
+    "norm_key": "RADICA",
+    "kept_product_id": "43",
+    "kept_file": "product_43_RADICA.md",
+    "phytocore_code": "Antioxidant Cellular Protection Module",
+    "duplicate_count": 3,
+    "aliases": [
+      "Radica"
+    ],
+    "archived_ids": [
+      {
+        "id": "35",
+        "file": "product_35_RADICA.md"
+      },
+      {
+        "id": "94",
+        "file": "product_94_Radica.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "REDCAL",
+    "norm_key": "REDCAL",
+    "kept_product_id": "22",
+    "kept_file": "product_22_REDCAL.md",
+    "phytocore_code": "Bone Mineralization Support Module",
+    "duplicate_count": 6,
+    "aliases": [
+      "RedCal",
+      "Redcal"
+    ],
+    "archived_ids": [
+      {
+        "id": "47",
+        "file": "product_47_REDCAL.md"
+      },
+      {
+        "id": "146",
+        "file": "product_146_RedCal.md"
+      },
+      {
+        "id": "176",
+        "file": "product_176_Redcal.md"
+      },
+      {
+        "id": "79",
+        "file": "product_79_RedCal.md"
+      },
+      {
+        "id": "186",
+        "file": "product_186_REDCAL.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Reishimuno",
+    "norm_key": "REISHIMUNO",
+    "kept_product_id": "83",
+    "kept_file": "product_83_Reishimuno.md",
+    "phytocore_code": "Immune Longevity Module",
+    "duplicate_count": 3,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "121",
+        "file": "product_121_Reishimuno.md"
+      },
+      {
+        "id": "153",
+        "file": "product_153_Reishimuno.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Renax",
+    "norm_key": "RENAX",
+    "kept_product_id": "149",
+    "kept_file": "product_149_Renax.md",
+    "phytocore_code": "Renal Recovery Module",
+    "duplicate_count": 2,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "179",
+        "file": "product_179_Renax.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Revita",
+    "norm_key": "REVITA",
+    "kept_product_id": "101",
+    "kept_file": "product_101_Revita.md",
+    "phytocore_code": "Longevity Regeneration Module",
+    "duplicate_count": 3,
+    "aliases": [
+      "REVITA"
+    ],
+    "archived_ids": [
+      {
+        "id": "88",
+        "file": "product_88_REVITA.md"
+      },
+      {
+        "id": "126",
+        "file": "product_126_Revita.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "RICEZOZYME",
+    "norm_key": "RICEZOZYME",
+    "kept_product_id": "29",
+    "kept_file": "product_29_RICEZOZYME.md",
+    "phytocore_code": "Microbiome Symbiosis Module",
+    "duplicate_count": 2,
+    "aliases": [
+      "Ricezozyme"
+    ],
+    "archived_ids": [
+      {
+        "id": "109",
+        "file": "product_109_Ricezozyme.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "RID-SI CAPSULE",
+    "norm_key": "RID SI",
+    "kept_product_id": "H-014",
+    "kept_file": "product_H-014_RID-SI_CAPSULE(1).md",
+    "phytocore_code": "TSPI-RIDSI-014",
+    "duplicate_count": 5,
+    "aliases": [
+      "RID-SI Capsule"
+    ],
+    "archived_ids": [
+      {
+        "id": "H-014",
+        "file": "product_H-014_RID-SI_Capsule.md"
+      },
+      {
+        "id": "67",
+        "file": "product_67_RID-SI_Capsule.md"
+      },
+      {
+        "id": "4",
+        "file": "product_4_RID-SI_Capsule.md"
+      },
+      {
+        "id": "57",
+        "file": "product_57_RID-SI_Capsule.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "RIZZ",
+    "norm_key": "RIZZ",
+    "kept_product_id": "198",
+    "kept_file": "product_198_RIZZ.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Rizzo Capsule",
+    "norm_key": "RIZZO",
+    "kept_product_id": "S-00-61",
+    "kept_file": "product_S-00-61_Rizzo_Capsule.md",
+    "phytocore_code": "TSPI-WOUND-IMMUNE-061",
+    "duplicate_count": 2,
+    "aliases": [
+      "RIZZO"
+    ],
+    "archived_ids": [
+      {
+        "id": "196",
+        "file": "product_196_RIZZO.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Sangvichai",
+    "norm_key": "SANGVICHAI",
+    "kept_product_id": "S-00-59",
+    "kept_file": "product_S-00-59_Sangvichai.md",
+    "phytocore_code": "TSPI-NEURO-SLEEP-059",
+    "duplicate_count": 2,
+    "aliases": [
+      "SANGVICHAI"
+    ],
+    "archived_ids": [
+      {
+        "id": "204",
+        "file": "product_204_SANGVICHAI.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Sinaza",
+    "norm_key": "SINAZA",
+    "kept_product_id": "150",
+    "kept_file": "product_150_Sinaza.md",
+    "phytocore_code": "Digestive Neuroenteric Module",
+    "duplicate_count": 2,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "180",
+        "file": "product_180_Sinaza.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Ya Sitthijohn",
+    "norm_key": "SITTHIJOHN",
+    "kept_product_id": "135",
+    "kept_file": "product_135_Ya_Sitthijohn.md",
+    "phytocore_code": "Traditional Detox Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "STOMMA CAPSULE",
+    "norm_key": "STOMMA",
+    "kept_product_id": "H-013",
+    "kept_file": "product_H-013_STOMMA_CAPSULE.md",
+    "phytocore_code": "TSPI-STOMMA-013",
+    "duplicate_count": 4,
+    "aliases": [
+      "Stomma Capsule"
+    ],
+    "archived_ids": [
+      {
+        "id": "66",
+        "file": "product_66_Stomma_Capsule.md"
+      },
+      {
+        "id": "3",
+        "file": "product_3_Stomma_Capsule.md"
+      },
+      {
+        "id": "56",
+        "file": "product_56_Stomma_Capsule.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Stream",
+    "norm_key": "STREAM",
+    "kept_product_id": "174",
+    "kept_file": "product_174_Stream.md",
+    "phytocore_code": "Circulatory Flow Optimization Module",
+    "duplicate_count": 2,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "144",
+        "file": "product_144_Stream.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "STREAM PLUS",
+    "norm_key": "STREAM PLUS",
+    "kept_product_id": "184",
+    "kept_file": "product_184_STREAM_PLUS.md",
+    "phytocore_code": "Stream Cardiovascular Protection Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "STREAM X",
+    "norm_key": "STREAM X",
+    "kept_product_id": "192",
+    "kept_file": "product_192_STREAM_X.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "TANGCHOU PLUS SANCHI",
+    "norm_key": "TANGCHOU PLUS SANCHI",
+    "kept_product_id": "24",
+    "kept_file": "product_24_TANGCHOU_PLUS_SANCHI.md",
+    "phytocore_code": "Cordyceps Energy & Circulation Module",
+    "duplicate_count": 6,
+    "aliases": [
+      "Tangchou Plus Sanchi"
+    ],
+    "archived_ids": [
+      {
+        "id": "141",
+        "file": "product_141_Tangchou_Plus_Sanchi.md"
+      },
+      {
+        "id": "76",
+        "file": "product_76_Tangchou_Plus_Sanchi.md"
+      },
+      {
+        "id": "171",
+        "file": "product_171_Tangchou_Plus_Sanchi.md"
+      },
+      {
+        "id": "49",
+        "file": "product_49_TANGCHOU_PLUS_SANCHI.md"
+      },
+      {
+        "id": "181",
+        "file": "product_181_TANGCHOU_PLUS_SANCHI.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "TANGTU NGCHOU PLUS 2",
+    "norm_key": "TANGTU NGCHOU PLUS 2",
+    "kept_product_id": "41",
+    "kept_file": "product_41_TANGTU_NGCHOU_PLUS_2.md",
+    "phytocore_code": "Women's Endocrine Renewal Module",
+    "duplicate_count": 2,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "33",
+        "file": "product_33_TANGTU_NGCHOU_PLUS_2.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Tangtungchou Plus I",
+    "norm_key": "TANGTUNGCHOU PLUS I",
+    "kept_product_id": "91",
+    "kept_file": "product_91_Tangtungchou_Plus_I.md",
+    "phytocore_code": "Vital Energy Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Tangtungchou Plus II",
+    "norm_key": "TANGTUNGCHOU PLUS II",
+    "kept_product_id": "92",
+    "kept_file": "product_92_Tangtungchou_Plus_II.md",
+    "phytocore_code": "Neuro-Endocrine Restoration Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Tarana Capsule",
+    "norm_key": "TARANA",
+    "kept_product_id": "H-023",
+    "kept_file": "product_H-023_Tarana_Capsule.md",
+    "phytocore_code": "TSPI-MYOFASCIAL-REPAIR-023",
+    "duplicate_count": 2,
+    "aliases": [
+      "YA TARANA CAPSULE"
+    ],
+    "archived_ids": [
+      {
+        "id": "13",
+        "file": "product_13_YA_TARANA_CAPSULE.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Topaz",
+    "norm_key": "TOPAZ",
+    "kept_product_id": "73",
+    "kept_file": "product_73_Topaz.md",
+    "phytocore_code": "Prostate Support Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "TOPAZ – Vascular–Prostate Modulation Formula",
+    "norm_key": "TOPAZ VASCULARPROSTATE MODULATION FORMULA",
+    "kept_product_id": "12-1-05 555-5-0 056",
+    "kept_file": "product_12-1-05 555-5-0 056_TOPAZ_VascularProstate_Modulation_Formula.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "TSPI MASTER LIVER DETOX & REGENERATION FORMULA",
+    "norm_key": "TSPI MASTER LIVER DETOX REGENERATION FORMULA",
+    "kept_product_id": "HEPA 1",
+    "kept_file": "product_HEPA 1_TSPI_MASTER_LIVER_DETOX_REGENERATION_FORMULA.md",
+    "phytocore_code": "Phase 1–3 Detox Platform",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "– TSPI NEURO–ENDOCRINE MASTER MODULE (Reconstructed",
+    "norm_key": "TSPI NEUROENDOCRINE MASTER MODULE RECONSTRUCTED",
+    "kept_product_id": "S-00-06",
+    "kept_file": "product_S-00-06_TSPI_NEUROENDOCRINE_MASTER_MODULE_Reconstructed.md",
+    "phytocore_code": "TSPI-BRANARA-NEURO-ENDO-006",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Twmid",
+    "norm_key": "TWMID",
+    "kept_product_id": "99",
+    "kept_file": "product_99_Twmid.md",
+    "phytocore_code": "Gastrointestinal Protection Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "UMX",
+    "norm_key": "UMX",
+    "kept_product_id": "217",
+    "kept_file": "product_217_UMX.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Urana",
+    "norm_key": "URANA",
+    "kept_product_id": "98",
+    "kept_file": "product_98_Urana.md",
+    "phytocore_code": "Renal-Urological Support Module",
+    "duplicate_count": 2,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "132",
+        "file": "product_132_Urana.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "URANA 2",
+    "norm_key": "URANA 2",
+    "kept_product_id": "210",
+    "kept_file": "product_210_URANA_2.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "VARIZ",
+    "norm_key": "VARIZ",
+    "kept_product_id": "25",
+    "kept_file": "product_25_VARIZ.md",
+    "phytocore_code": "Respiratory Immune Protection Module",
+    "duplicate_count": 6,
+    "aliases": [
+      "Variz"
+    ],
+    "archived_ids": [
+      {
+        "id": "50",
+        "file": "product_50_VARIZ.md"
+      },
+      {
+        "id": "142",
+        "file": "product_142_Variz.md"
+      },
+      {
+        "id": "172",
+        "file": "product_172_Variz.md"
+      },
+      {
+        "id": "77",
+        "file": "product_77_Variz.md"
+      },
+      {
+        "id": "182",
+        "file": "product_182_VARIZ.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Vascular repair formula",
+    "norm_key": "VASCULAR REPAIR FORMULA",
+    "kept_product_id": "S-00-53",
+    "kept_file": "product_S-00-53_Vascular_repair_formula.md",
+    "phytocore_code": "TSPI-RIZZ-096",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Ya Venta Capsule",
+    "norm_key": "VENTA",
+    "kept_product_id": "H-018",
+    "kept_file": "product_H-018_Ya_Venta_Capsule.md",
+    "phytocore_code": "TSPI-VENTA-018",
+    "duplicate_count": 2,
+    "aliases": [
+      "YA VENTA Capsule"
+    ],
+    "archived_ids": [
+      {
+        "id": "8",
+        "file": "product_8_YA_VENTA_Capsule.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "YA VETCHAKORN NO.6 (Medicine Vejakorn Number 6)",
+    "norm_key": "VETCHAKORN NO 6 VEJAKORN NUMBER 6",
+    "kept_product_id": "168",
+    "kept_file": "product_168_YA_VETCHAKORN_NO6_Medicine_Vejakorn_Number_6.md",
+    "phytocore_code": "Vetchakorn Neuro-Sleep Module No.6",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Virana",
+    "norm_key": "VIRANA",
+    "kept_product_id": "100",
+    "kept_file": "product_100_Virana.md",
+    "phytocore_code": "Herbal Cosmetic Healing Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "VITACEL",
+    "norm_key": "VITACEL",
+    "kept_product_id": "46",
+    "kept_file": "product_46_VITACEL.md",
+    "phytocore_code": "Cellular Detoxification & Antioxidant Module",
+    "duplicate_count": 6,
+    "aliases": [
+      "VitaCel",
+      "Vitacel"
+    ],
+    "archived_ids": [
+      {
+        "id": "38",
+        "file": "product_38_VITACEL.md"
+      },
+      {
+        "id": "78",
+        "file": "product_78_Vitacel.md"
+      },
+      {
+        "id": "175",
+        "file": "product_175_VitaCel.md"
+      },
+      {
+        "id": "145",
+        "file": "product_145_VitaCel.md"
+      },
+      {
+        "id": "185",
+        "file": "product_185_VITACEL.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Vitalis",
+    "norm_key": "VITALIS",
+    "kept_product_id": "136",
+    "kept_file": "product_136_Vitalis.md",
+    "phytocore_code": "Metabolic Balancing Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "VitalPlus",
+    "norm_key": "VITALPLUS",
+    "kept_product_id": "131",
+    "kept_file": "product_131_VitalPlus.md",
+    "phytocore_code": "Multinutrient Cellular Support",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "WATTA NOTHAI Capsule",
+    "norm_key": "WATTA NOTHAI",
+    "kept_product_id": "1",
+    "kept_file": "product_1_WATTA_NOTHAI_Capsule.md",
+    "phytocore_code": "GastroReg-01",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "WATTANOTHAI CAPSULE",
+    "norm_key": "WATTANOTHAI",
+    "kept_product_id": "H-011",
+    "kept_file": "product_H-011_WATTANOTHAI_CAPSULE.md",
+    "phytocore_code": "TSPI-WATTANOTHAI-011",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "XM-2 Capsule",
+    "norm_key": "XM 2",
+    "kept_product_id": "XM2-024",
+    "kept_file": "product_XM2-024_XM-2_Capsule.md",
+    "phytocore_code": "TSPI-XM2-024",
+    "duplicate_count": 2,
+    "aliases": [
+      "XM-2"
+    ],
+    "archived_ids": [
+      {
+        "id": "97",
+        "file": "product_97_XM-2.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "XS",
+    "norm_key": "XS",
+    "kept_product_id": "75",
+    "kept_file": "product_75_XS.md",
+    "phytocore_code": "Digestive Repair Module",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Yaventa Capsule",
+    "norm_key": "YAVENTA",
+    "kept_product_id": "53",
+    "kept_file": "product_53_Yaventa_Capsule.md",
+    "phytocore_code": "Gastrointestinal Motility Module",
+    "duplicate_count": 2,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "63",
+        "file": "product_63_Yaventa_Capsule.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "YAVETCHAKORN NO.6 CAPSULE",
+    "norm_key": "YAVETCHAKORN NO 6",
+    "kept_product_id": "H-008",
+    "kept_file": "product_H-008_YAVETCHAKORN_NO6_CAPSULE.md",
+    "phytocore_code": "TSPI-YAVETCHAKORN-06",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "Yhateennok Capsule",
+    "norm_key": "YHATEENNOK",
+    "kept_product_id": "55",
+    "kept_file": "product_55_Yhateennok_Capsule.md",
+    "phytocore_code": "Vascular Anti-Inflammatory Module",
+    "duplicate_count": 2,
+    "aliases": [],
+    "archived_ids": [
+      {
+        "id": "65",
+        "file": "product_65_Yhateennok_Capsule.md"
+      }
+    ]
+  },
+  {
+    "canonical_name": "Yhateenok Capsule",
+    "norm_key": "YHATEENOK",
+    "kept_product_id": "2",
+    "kept_file": "product_2_Yhateenok_Capsule.md",
+    "phytocore_code": "VasoBalance-02",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  },
+  {
+    "canonical_name": "ZAMINZYME",
+    "norm_key": "ZAMINZYME",
+    "kept_product_id": "191",
+    "kept_file": "product_191_ZAMINZYME.md",
+    "phytocore_code": "None",
+    "duplicate_count": 1,
+    "aliases": [],
+    "archived_ids": []
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "_note": "PROVISIONAL axis->module map. The OFFICIAL module->axis mapping is pending official master files (Q3/Q4). Module names are resolved against product_registry.json; unresolved ones are flagged.",
+  "map": {
+    "A1":  ["KS", "Kerra", "Minoza", "IM6"],
+    "A2":  ["IM6", "RESHIMUNO"],
+    "A5":  ["DB1", "BENJAKUL"],
+    "A17": ["KS"],
+    "A18": ["KS", "Kerra"],
+    "A26": ["Nourishing Blood", "ZAMINZYME"],
+    "A31": ["ZAMINZYME"],
+    "A33": ["KS"],
+    "A34": ["KS"]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "source": "OFFICIAL: new_revised_docs/39 Biological Axes,12 Domains, and the Three Fundamental Keys.pdf + TSPI-AI Clinical Decision Engine.pdf + question_answers.txt",
+  "architecture": "3 Keys -> 9 Steps -> 12 Systems(Domains) -> 39 Axes -> 180 Living Biological Networks -> TSPI Modules",
+  "master_authority_order": [
+    "Official Product Registry",
+    "Official Module Registry",
+    "Official 39-Axis Framework",
+    "Official Module-to-Axis Mapping",
+    "Official TSPI Dosing Protocol"
+  ],
+  "principle": "Treat the Network, Not the Disease. Intensity follows Network Severity, not disease label.",
+  "keys_3": [
+    {"code": "A", "num": 1, "name": "Metabolic Energy", "tridosha": "Pitta", "focus": "restore cellular energy production and metabolic efficiency"},
+    {"code": "B", "num": 2, "name": "Biological Dynamics", "tridosha": "Vata", "focus": "restore biological communication, adaptability and resilience"},
+    {"code": "C", "num": 3, "name": "Biointegrity", "tridosha": "Kapha", "focus": "preserve structural and functional integrity of tissues, organs, networks"}
+  ],
+  "steps_9": [
+    {"order": 1, "name": "Detoxification"},
+    {"order": 2, "name": "Microbiome Restoration"},
+    {"order": 3, "name": "Immune Regulation"},
+    {"order": 4, "name": "Redox Balance"},
+    {"order": 5, "name": "Metabolic & Mitochondrial Recovery"},
+    {"order": 6, "name": "Autophagy & Cellular Clearance"},
+    {"order": 7, "name": "Genomic Stability & Proteostasis"},
+    {"order": 8, "name": "Genomic Regulation"},
+    {"order": 9, "name": "PRAKATI (biological homeostasis)"}
+  ],
+  "domains_12_official": [
+    {"num": 1,  "name": "Immune-Infection Governance", "axes": ["A1","A2","A3","A4"]},
+    {"num": 2,  "name": "Metabolic-Energy Core", "axes": ["A5","A6","A7","A8","A9","A10"]},
+    {"num": 3,  "name": "Genomic Programming", "axes": ["A11","A12","A13","A14"]},
+    {"num": 4,  "name": "Detoxification", "axes": ["A15"]},
+    {"num": 5,  "name": "Digestive-Gut Ecosystem", "axes": ["A16","A17","A18","A19"]},
+    {"num": 6,  "name": "Vascular-Circulation", "axes": ["A20","A21","A22","A23"]},
+    {"num": 7,  "name": "Repair-Regeneration", "axes": ["A24","A25","A26","A27"]},
+    {"num": 8,  "name": "Musculoskeletal & Structural Integrity", "axes": ["A28","A29","A30"]},
+    {"num": 9,  "name": "Endocrine Network", "axes": ["A31","A32","A33"]},
+    {"num": 10, "name": "Neurological", "axes": ["A34"]},
+    {"num": 11, "name": "Organ Axis", "axes": ["A35"]},
+    {"num": 12, "name": "Oncology", "axes": ["A36"]}
+  ],
+  "axes_37_39_pending": {
+    "note": "The official 12-domain grid covers axes 1-36. Axes 37-39 are listed AFTER Domain 12. Provisional grouping below pending owner confirmation.",
+    "provisional_group": "Proteostasis & Cellular Integrity (meta)",
+    "axes": [
+      {"code": "A37", "name": "Proteostasis Network Axis"},
+      {"code": "A38", "name": "Protein Clearance & Proteotoxic Stress Axis"},
+      {"code": "A39", "name": "Cognitive-Emotional Loop Axis (CELA) — meta-regulator"}
+    ]
+  },
+  "decisions": {
+    "domain_to_key_mapping": "not yet provided (left null)",
+    "domain_grouping": "adopted official master (1-36 across 12 domains); 37-39 provisional",
+    "module_registry": "awaiting official master files; expected ~60-70 active modules after dedup"
+  }
+}

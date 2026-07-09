@@ -1,0 +1,22 @@
+# secrets
+.env
+.env.*
+!.env*.example
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+# dev databases
+*.db
+# node / vite
+node_modules/
+dist/
+build/
+.next/
+# os
+.DS_Store
+stakeholder-chat.txt

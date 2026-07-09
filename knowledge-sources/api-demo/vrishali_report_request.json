@@ -1,0 +1,35 @@
+{
+  "case_id": "TSPI-2026-000123",
+  "age_band": "mid-40s",
+  "sex": "female",
+  "symptoms": "uterine fibroid; hypertension (on daily antihypertensive); body inflammation (high CRP); post-menopausal bleeding once a year, stress-triggered; stress",
+  "labs": [
+    {"analyte": "CRP", "value": 21.57, "unit": "mg/L", "ref_high": 5.0, "flag": "high"},
+    {"analyte": "hs-CRP", "value": 20.21, "unit": "mg/L", "ref_high": 3.0, "flag": "high"},
+    {"analyte": "HbA1c", "value": 6.5, "unit": "%", "ref_high": 5.6, "flag": "high"},
+    {"analyte": "Fasting glucose", "value": 99, "unit": "mg/dL", "ref_low": 70, "ref_high": 99},
+    {"analyte": "Hemoglobin", "value": 10.8, "unit": "g/dL", "ref_low": 12.0, "ref_high": 16.0, "flag": "low"},
+    {"analyte": "PCV", "value": 34.9, "unit": "%", "ref_low": 37, "ref_high": 47, "flag": "low"},
+    {"analyte": "MCV", "value": 67.2, "unit": "fL", "ref_low": 82.0, "ref_high": 101.0, "flag": "low"},
+    {"analyte": "MCHC", "value": 31.0, "unit": "g/dL", "ref_low": 31.5, "ref_high": 36, "flag": "low"},
+    {"analyte": "RDW", "value": 17.0, "unit": "%", "ref_low": 11.5, "ref_high": 14.0, "flag": "high"},
+    {"analyte": "Transferrin saturation", "value": 12, "unit": "%", "ref_low": 14, "ref_high": 50, "flag": "low"},
+    {"analyte": "TSH", "value": 0.416, "unit": "uIU/mL", "ref_low": 0.54, "ref_high": 5.3, "flag": "low"},
+    {"analyte": "FT3", "value": 5.20, "unit": "pg/mL", "ref_low": 2.0, "ref_high": 4.4, "flag": "high"},
+    {"analyte": "FT4", "value": 1.11, "unit": "ng/dL", "ref_low": 0.93, "ref_high": 1.7},
+    {"analyte": "Vitamin D", "value": 27.6, "unit": "ng/mL", "ref_low": 30.0, "flag": "low"},
+    {"analyte": "Total cholesterol", "value": 187, "unit": "mg/dL", "ref_high": 200},
+    {"analyte": "Triglycerides", "value": 149, "unit": "mg/dL", "ref_high": 150},
+    {"analyte": "HDL", "value": 58, "unit": "mg/dL", "ref_low": 40},
+    {"analyte": "LDL", "value": 99.2, "unit": "mg/dL", "ref_high": 100},
+    {"analyte": "Creatinine", "value": 0.68, "unit": "mg/dL", "ref_low": 0.6, "ref_high": 1.1},
+    {"analyte": "IgE", "value": "elevated", "unit": "IU/mL", "flag": "high"}
+  ],
+  "imaging": [
+    "Pelvic ultrasound (TAS), 31-Mar-2026: uterus anteverted 8.4 x 5.2 x 3.9 cm; large subserosal fibroid (type 6, >50% subserosal) 6.5 x 6.0 x 5.6 cm arising from anterior & right wall; small fundal intramural fibroid 1.3 x 1.0 cm; endometrial thickness 6.6 mm; both ovaries normal (RT 2.4 x 1.0 cm, LT 2.7 x 1.1 cm); no adnexal mass."
+  ],
+  "medications": ["antihypertensive (daily)"],
+  "conditions": ["uterine fibroids", "hypertension", "post-menopausal"],
+  "lifestyle": {"diet": "vegetarian", "stress": "high"},
+  "consent": {"ai_analysis": true, "doctor_sharing": true}
+}

@@ -1,0 +1,16 @@
+{
+  "_note": "SEED safety/contraindication rules (mechanism). Official contraindication data is pending from the domain owner; expand this file. Matching is by normalized module/product name OR ingredient keyword.",
+  "global_alerts": [
+    "Continue prescribed prescription medicines unless the supervising physician advises otherwise.",
+    "TSPI-AI is clinical decision support; the physician holds final prescribing authority."
+  ],
+  "rules": [
+    {"match": "ZAMINZYME", "avoid_with_conditions": ["estrogen-sensitive cancer"],
+     "note": "Contains phytoestrogens — review in estrogen-sensitive conditions."},
+    {"match": "warfarin", "applies_to_ingredient": ["ginger", "garlic", "ginkgo", "dong quai"],
+     "avoid_with_meds": ["warfarin", "anticoagulant"],
+     "note": "Possible additive bleeding risk with anticoagulants — physician review."},
+    {"match": "KERRA", "avoid_with_conditions": ["pregnancy"],
+     "note": "Use with caution in pregnancy — physician review."}
+  ]
+}

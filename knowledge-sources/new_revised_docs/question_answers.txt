@@ -1,0 +1,384 @@
+TSPI Knowledge Base – Official Answers for Developer Team
+
+Phase 0 Required Clarifications
+
+Official Response from TSPI System Owner
+
+---
+
+Q1. The same product name appears many times. Which one is the official version?
+
+Official Answer
+
+The duplicate entries are the result of data duplication during previous data collection and file organization processes.
+
+For the purpose of TSPI-AI development:
+
+Rule
+
+Each module should appear only once in the final knowledge base.
+
+If multiple files exist under the same module name:
+
+- Treat them as duplicate records.
+- Retain only the most complete and most up-to-date version.
+- Archive all duplicate or incomplete versions.
+
+The final knowledge base should contain:
+
+One Module
+
+One Official Record
+
+Example:
+
+If "KS" appears five times, only the most complete and current KS record should remain.
+
+The same rule applies to all modules.
+
+---
+
+Developer Action
+
+Perform duplicate detection.
+
+Merge identical modules.
+
+Keep the most complete record.
+
+Remove redundant records.
+
+---
+
+Q2. How many modules are there really? What is a module versus a product?
+
+Official Answer
+
+Based on the current TSPI system, we estimate that there are approximately:
+
+60–70 active modules
+
+rather than 200 independent modules.
+
+The larger number likely includes:
+
+- Duplicate records
+- Historical versions
+- Legacy files
+- Incomplete records
+- Draft formulations
+
+These should be removed during data cleaning.
+
+---
+
+Module Definition
+
+A TSPI Module is:
+
+A functional intervention package designed to restore specific biological networks.
+
+A module may consist of:
+
+- One product
+- Multiple products
+- Multiple phytochemical strategies
+
+working together toward a defined biological objective.
+
+---
+
+Developer Action
+
+Perform a full audit of all module files.
+
+Remove duplicate entries.
+
+Generate a final clean module registry.
+
+Expected final count:
+
+Approximately 60–70 active modules.
+
+Final number to be confirmed after data cleaning.
+
+---
+
+Q3. The axis numbers do not match between files. Which numbering is correct?
+
+Official Answer
+
+The official TSPI framework contains:
+
+39 Axes only.
+
+This is the official and authoritative axis structure.
+
+Any previous numbering systems should be considered:
+
+Legacy Draft Versions
+
+and should not be used by the AI.
+
+---
+
+Official Architecture
+
+3 Keys
+
+↓
+
+9 Steps
+
+↓
+
+12 Systems
+
+↓
+
+39 Axes
+
+↓
+
+180 Living Biological Networks
+
+↓
+
+TSPI Modules
+
+---
+
+Developer Action
+
+Use only the official 39-axis framework.
+
+Ignore alternative numbering systems.
+
+A finalized official 39-axis document will be provided separately.
+
+This document will become the master reference for all future development.
+
+---
+
+Q4. Which herbs treat which axis?
+
+Official Answer
+
+This mapping has already been defined.
+
+Each module already contains its corresponding axis assignments.
+
+The relationship has been established by the TSPI scientific framework.
+
+Therefore:
+
+Module
+→ Assigned Axis
+
+has already been determined.
+
+---
+
+Developer Action
+
+Use the axis assignments already attached to each module.
+
+Do not generate new axis mappings.
+
+Do not infer new relationships.
+
+Use only the official module-to-axis relationships provided by TSPI.
+
+Future updates will be delivered through official master files.
+
+---
+
+Q5. What is the standard dose and safety note for each module?
+
+Official Answer
+
+TSPI dosing is determined according to the Network Severity Level rather than disease diagnosis.
+
+The AI should recommend dosage according to the severity classification system.
+
+Final clinical decisions remain under physician supervision.
+
+---
+
+LEVEL 0
+
+Preventive Longevity & Network Optimization
+
+For healthy individuals and longevity programs.
+
+All modules:
+
+2 capsules
+
+twice daily
+
+Administration:
+
+- Morning + Evening
+
+or
+
+- Upon waking + Before bedtime
+
+---
+
+LEVEL 1
+
+Functional Imbalance Stage
+
+Mild biological dysfunction.
+
+All modules:
+
+2 capsules
+
+3 times daily
+
+Administration:
+
+- Morning
+- Midday
+- Evening
+
+---
+
+LEVEL 2
+
+Systemic Dysfunction Stage
+
+Moderate biological network dysfunction.
+
+All modules:
+
+3 capsules
+
+3 times daily
+
+Administration:
+
+- Morning
+- Midday
+- Evening
+
+---
+
+LEVEL 3
+
+Advanced Network Failure Stage
+
+Severe biological network dysfunction characterized by high inflammatory activity.
+
+Examples:
+
+- Active SLE
+- Active Rheumatoid Arthritis
+- Vasculitis
+- Severe inflammatory skin disease
+- Progressive cancer
+- Cancer cachexia
+- Advanced chronic inflammatory diseases
+
+All modules:
+
+3 capsules
+
+5 times daily
+
+Administration:
+
+- Upon waking
+- Morning
+- Midday
+- Evening
+- Before bedtime
+
+---
+
+KS Special Protocol
+
+KS follows a separate dosing algorithm.
+
+The dose is determined by bowel function rather than disease severity.
+
+Goal:
+
+Minimum two comfortable bowel movements daily.
+
+Starting dose:
+
+2 capsules before bedtime
+
+or
+
+2 capsules before bedtime
++
+2 capsules upon waking
+
+depending on bowel status.
+
+The dose may be increased progressively until bowel targets are achieved.
+
+---
+
+Safety Rule
+
+TSPI-AI functions as a Clinical Decision Support System (CDSS).
+
+The AI may recommend:
+
+- Modules
+- Dosing ranges
+- Biological priorities
+
+Final prescribing authority remains with the supervising physician.
+
+---
+
+Q6. Two module names in the report need confirmation.
+
+Official Answer
+
+The question is not sufficiently clear.
+
+We do not fully understand what confirmation is being requested.
+
+Please clarify:
+
+1. Which specific products require confirmation?
+2. Are you asking about:
+   - Product identity?
+   - Product ID?
+   - Module assignment?
+   - Active versus archived status?
+3. What decision must the AI make based on this information?
+
+Once clarified, we will provide an official answer.
+
+---
+
+MASTER RULE FOR TSPI-AI DEVELOPMENT
+
+The order of authority is:
+
+1. Official Product Registry
+2. Official Module Registry
+3. Official 39-Axis Framework
+4. Official Module-to-Axis Mapping
+5. Official TSPI Dosing Protocol
+
+Any conflicting file should be treated as a legacy version until reviewed and approved.
+
+The knowledge base must always prioritize the latest official TSPI master files.
+
+---
+
+TSPI PRINCIPLE
+
+Treat the Network, Not the Disease.
+
+The AI should evaluate biological network dysfunction, prioritize affected systems and axes, assign the appropriate TSPI modules, and recommend intervention intensity according to the official TSPI severity framework.

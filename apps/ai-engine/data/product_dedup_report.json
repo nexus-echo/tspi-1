@@ -1,0 +1,2699 @@
+[
+  {
+    "norm_key": "ABSORN",
+    "members": [
+      {
+        "id": "H-003",
+        "name": "ABSORN CAPSULE",
+        "file": "product_H-003_ABSORN_CAPSULE.md",
+        "completeness": 5077,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "ABSORN APSORN",
+    "members": [
+      {
+        "id": "163",
+        "name": "ABSORN CAPSULE (Apsorn Capsule Medicine)",
+        "file": "product_163_ABSORN_CAPSULE_Apsorn_Capsule_Medicine.md",
+        "completeness": 2948,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "ADVANCED LIVER PROTOCOL",
+    "members": [
+      {
+        "id": "HEPA 3",
+        "name": "Advanced Liver Protocol",
+        "file": "product_HEPA 3_Advanced_Liver_Protocol.md",
+        "completeness": 3306,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "ALLIUM SATIVUM GARLIC",
+    "members": [
+      {
+        "id": "S-00-03",
+        "name": "Allium sativum (garlic)",
+        "file": "product_S-00-03_Allium_sativum_garlic.md",
+        "completeness": 3764,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "AM PUR",
+    "members": [
+      {
+        "id": "H-010",
+        "name": "AM-PUR MIXTURE",
+        "file": "product_H-010_AM-PUR_MIXTURE.md",
+        "completeness": 4629,
+        "kept": true
+      },
+      {
+        "id": "20",
+        "name": "AM-PUR",
+        "file": "product_20_AM-PUR.md",
+        "completeness": 3233,
+        "kept": false
+      },
+      {
+        "id": "59",
+        "name": "AM-PUR Herbal Tonic",
+        "file": "product_59_AM-PUR_Herbal_Tonic.md",
+        "completeness": 2761,
+        "kept": false
+      },
+      {
+        "id": "69",
+        "name": "AM-PUR Herbal Tonic",
+        "file": "product_69_AM-PUR_Herbal_Tonic.md",
+        "completeness": 2761,
+        "kept": false
+      },
+      {
+        "id": "106",
+        "name": "AM-PUR",
+        "file": "product_106_AM-PUR.md",
+        "completeness": 2718,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "ANAX",
+    "members": [
+      {
+        "id": "18",
+        "name": "ANAX MIXTURE",
+        "file": "product_18_ANAX_MIXTURE.md",
+        "completeness": 3215,
+        "kept": true
+      },
+      {
+        "id": "32",
+        "name": "ANAX MIXTURE",
+        "file": "product_32_ANAX_MIXTURE.md",
+        "completeness": 2808,
+        "kept": false
+      },
+      {
+        "id": "130",
+        "name": "Anax",
+        "file": "product_130_Anax.md",
+        "completeness": 2704,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "ANAX AJAX",
+    "members": [
+      {
+        "id": "H-028",
+        "name": "ANAX / AJAX Mixture",
+        "file": "product_H-028_ANAX_AJAX_Mixture.md",
+        "completeness": 3701,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "ANDROGRAPHIS PANICULATA",
+    "members": [
+      {
+        "id": "162",
+        "name": "Andrographis paniculata capsules.",
+        "file": "product_162_Andrographis_paniculata_capsules.md",
+        "completeness": 2731,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "ANGERA",
+    "members": [
+      {
+        "id": "113",
+        "name": "Angera",
+        "file": "product_113_Angera.md",
+        "completeness": 2605,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "ANGERA HORMONAL BALANCE",
+    "members": [
+      {
+        "id": "S-00-48",
+        "name": "ANGERA Hormonal Balance Capsule",
+        "file": "product_S-00-48_ANGERA_Hormonal_Balance_Capsule.md",
+        "completeness": 3846,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "ASTRINGENTVASCULAR REPAIRGUT BARRIERANTI INFLAMMATORY FORMULA",
+    "members": [
+      {
+        "id": "RIZZO-096",
+        "name": "Astringent–Vascular Repair–Gut Barrier–Anti-inflammatory Formula",
+        "file": "product_RIZZO-096_AstringentVascular_RepairGut_BarrierAnti-inflammatory_Formula.md",
+        "completeness": 4674,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "AVA",
+    "members": [
+      {
+        "id": "137",
+        "name": "Ava",
+        "file": "product_137_Ava.md",
+        "completeness": 2451,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "B FRESH MINERAL SOAP BAR",
+    "members": [
+      {
+        "id": "214",
+        "name": "B-FRESH MINERAL SOAP BAR",
+        "file": "product_214_B-FRESH_MINERAL_SOAP_BAR.md",
+        "completeness": 2350,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "B LAX",
+    "members": [
+      {
+        "id": "H-015",
+        "name": "B-LAX CAPSULE",
+        "file": "product_H-015_B-LAX_CAPSULE.md",
+        "completeness": 3805,
+        "kept": true
+      },
+      {
+        "id": "58",
+        "name": "B-LAX Capsule",
+        "file": "product_58_B-LAX_Capsule.md",
+        "completeness": 2647,
+        "kept": false
+      },
+      {
+        "id": "68",
+        "name": "B-LAX Capsule",
+        "file": "product_68_B-LAX_Capsule.md",
+        "completeness": 2647,
+        "kept": false
+      },
+      {
+        "id": "5",
+        "name": "B-LAX Capsule",
+        "file": "product_5_B-LAX_Capsule.md",
+        "completeness": 2621,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "BENCHAKUL",
+    "members": [
+      {
+        "id": "H-007",
+        "name": "BENCHAKUL CAPSULE",
+        "file": "product_H-007_BENCHAKUL_CAPSULE.md",
+        "completeness": 5611,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "BENCHAKUN BENJAKUN",
+    "members": [
+      {
+        "id": "167",
+        "name": "BENCHAKUN CAPSULE (Benjakun Capsule Medicine)",
+        "file": "product_167_BENCHAKUN_CAPSULE_Benjakun_Capsule_Medicine.md",
+        "completeness": 2814,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "BETA 1",
+    "members": [
+      {
+        "id": "194",
+        "name": "BETA 1",
+        "file": "product_194_BETA_1.md",
+        "completeness": 2397,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "BETA 4",
+    "members": [
+      {
+        "id": "114",
+        "name": "Beta-4",
+        "file": "product_114_Beta-4.md",
+        "completeness": 2572,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "BETA 5",
+    "members": [
+      {
+        "id": "S-00-52",
+        "name": "BETA 5 Capsule",
+        "file": "product_S-00-52_BETA_5_Capsule.md",
+        "completeness": 3441,
+        "kept": true
+      },
+      {
+        "id": "197",
+        "name": "BETA 5",
+        "file": "product_197_BETA_5.md",
+        "completeness": 2372,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "BETA G",
+    "members": [
+      {
+        "id": "S-00-55",
+        "name": "BETA G",
+        "file": "product_S-00-55_BETA_G.md",
+        "completeness": 7600,
+        "kept": true
+      },
+      {
+        "id": "200",
+        "name": "BETA G",
+        "file": "product_200_BETA_G.md",
+        "completeness": 3460,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "BETA L",
+    "members": [
+      {
+        "id": "BL-021",
+        "name": "Beta L Capsule",
+        "file": "product_BL-021_Beta_L_Capsule.md",
+        "completeness": 3705,
+        "kept": true
+      },
+      {
+        "id": "207",
+        "name": "BETA L",
+        "file": "product_207_BETA_L.md",
+        "completeness": 2506,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "BETA M",
+    "members": [
+      {
+        "id": "216",
+        "name": "BETA M",
+        "file": "product_216_BETA_M.md",
+        "completeness": 3666,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "BETA V",
+    "members": [
+      {
+        "id": "87",
+        "name": "Beta-V",
+        "file": "product_87_Beta-V.md",
+        "completeness": 2548,
+        "kept": true
+      },
+      {
+        "id": "157",
+        "name": "BETA-V",
+        "file": "product_157_BETA-V.md",
+        "completeness": 2492,
+        "kept": false
+      },
+      {
+        "id": "125",
+        "name": "Beta-V",
+        "file": "product_125_Beta-V.md",
+        "completeness": 2463,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "BETA X",
+    "members": [
+      {
+        "id": "134",
+        "name": "Beta-X",
+        "file": "product_134_Beta-X.md",
+        "completeness": 2583,
+        "kept": true
+      },
+      {
+        "id": "119",
+        "name": "Beta-X",
+        "file": "product_119_Beta-X.md",
+        "completeness": 2549,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "BIO ACTIVE CRYSTALLIZATION TECHNOLOGY TSPI PATENT PLATFORM",
+    "members": [
+      {
+        "id": "S-00-02",
+        "name": "Bio Active Crystallization Technology (TSPI Patent Platform)",
+        "file": "product_S-00-02_Bio_Active_Crystallization_Technology_TSPI_Patent_Platform.md",
+        "completeness": 4810,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "BONAX",
+    "members": [
+      {
+        "id": "S-00-60 (Next Sequence)",
+        "name": "Bonax Capsule",
+        "file": "product_S-00-60 (Next Sequence)_Bonax_Capsule.md",
+        "completeness": 3957,
+        "kept": true
+      },
+      {
+        "id": "206",
+        "name": "BONAX",
+        "file": "product_206_BONAX.md",
+        "completeness": 2574,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "BONE ANABOLIC ANTI RESORPTION SYSTEM",
+    "members": [
+      {
+        "id": "BONAX",
+        "name": "Bone Anabolic & Anti-Resorption System",
+        "file": "product_BONAX_Bone_Anabolic_Anti-Resorption_System.md",
+        "completeness": 3569,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "BOVA",
+    "members": [
+      {
+        "id": "H-020",
+        "name": "BOVA Capsule",
+        "file": "product_H-020_BOVA_Capsule.md",
+        "completeness": 4310,
+        "kept": true
+      },
+      {
+        "id": "10",
+        "name": "BOVA Capsule",
+        "file": "product_10_BOVA_Capsule.md",
+        "completeness": 2807,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "BRANARA",
+    "members": [
+      {
+        "id": "27",
+        "name": "BRANARA",
+        "file": "product_27_BRANARA.md",
+        "completeness": 2635,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "BRANARIS",
+    "members": [
+      {
+        "id": "208",
+        "name": "BRANARIS",
+        "file": "product_208_BRANARIS.md",
+        "completeness": 2503,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "BUMINMAX",
+    "members": [
+      {
+        "id": "115",
+        "name": "Buminmax",
+        "file": "product_115_Buminmax.md",
+        "completeness": 2438,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "BUMINMAX PLUS BIOACTIVE PEPTIDE",
+    "members": [
+      {
+        "id": "BUMINMAX PLUS",
+        "name": "Buminmax Plus Bioactive Peptide Capsule",
+        "file": "product_BUMINMAX PLUS_Buminmax_Plus_Bioactive_Peptide_Capsule.md",
+        "completeness": 4021,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "BUTEA SUPERBA",
+    "members": [
+      {
+        "id": "H-006",
+        "name": "BUTEA SUPERBA CAPSULE",
+        "file": "product_H-006_BUTEA_SUPERBA_CAPSULE.md",
+        "completeness": 4722,
+        "kept": true
+      },
+      {
+        "id": "60",
+        "name": "Butea Superba Capsule",
+        "file": "product_60_Butea_Superba_Capsule.md",
+        "completeness": 2712,
+        "kept": false
+      },
+      {
+        "id": "70",
+        "name": "Butea Superba Capsule",
+        "file": "product_70_Butea_Superba_Capsule.md",
+        "completeness": 2712,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "BUTEA SUPERBA RED KWAO KRUA",
+    "members": [
+      {
+        "id": "166",
+        "name": "BUTEA SUPERBA CAPSULE (Red Kwao Krua Capsules)",
+        "file": "product_166_BUTEA_SUPERBA_CAPSULE_Red_Kwao_Krua_Capsules.md",
+        "completeness": 3010,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "CATHARIC",
+    "members": [
+      {
+        "id": "7",
+        "name": "Catharic Capsule",
+        "file": "product_7_Catharic_Capsule.md",
+        "completeness": 2747,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "CATHARTIC",
+    "members": [
+      {
+        "id": "H-017",
+        "name": "Cathartic Capsule",
+        "file": "product_H-017_Cathartic_Capsule.md",
+        "completeness": 4046,
+        "kept": true
+      },
+      {
+        "id": "52",
+        "name": "Cathartic Capsule",
+        "file": "product_52_Cathartic_Capsule.md",
+        "completeness": 2829,
+        "kept": false
+      },
+      {
+        "id": "62",
+        "name": "Cathartic Capsule",
+        "file": "product_62_Cathartic_Capsule.md",
+        "completeness": 2829,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "CENTELLA ASIATICA",
+    "members": [
+      {
+        "id": "H-014",
+        "name": "Centella Asiatica Capsule",
+        "file": "product_H-014_Centella_Asiatica_Capsule.md",
+        "completeness": 4250,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "CHLOROPHYNA",
+    "members": [
+      {
+        "id": "108",
+        "name": "CHLOROPHYNA",
+        "file": "product_108_CHLOROPHYNA.md",
+        "completeness": 2454,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "CINNARA",
+    "members": [
+      {
+        "id": "H-022",
+        "name": "CINNARA Capsule",
+        "file": "product_H-022_CINNARA_Capsule.md",
+        "completeness": 4052,
+        "kept": true
+      },
+      {
+        "id": "11",
+        "name": "CINNARA BRAND CAPSULE",
+        "file": "product_11_CINNARA_BRAND_CAPSULE.md",
+        "completeness": 3194,
+        "kept": false
+      },
+      {
+        "id": "54",
+        "name": "Cinnara Capsule",
+        "file": "product_54_Cinnara_Capsule.md",
+        "completeness": 2799,
+        "kept": false
+      },
+      {
+        "id": "64",
+        "name": "Cinnara Capsule",
+        "file": "product_64_Cinnara_Capsule.md",
+        "completeness": 2795,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "COMPOUND DERRIS SCANDENS",
+    "members": [
+      {
+        "id": "H-004",
+        "name": "COMPOUND DERRIS SCANDENS CAPSULE",
+        "file": "product_H-004_COMPOUND_DERRIS_SCANDENS_CAPSULE.md",
+        "completeness": 4808,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "COMPOUND DERRIS SCANDENS DERRIS SCANDENS",
+    "members": [
+      {
+        "id": "164",
+        "name": "COMPOUND DERRIS SCANDENS CAPSULE (Derris Scandens Capsule)",
+        "file": "product_164_COMPOUND_DERRIS_SCANDENS_CAPSULE_Derris_Scandens_Capsule.md",
+        "completeness": 3015,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "COMPOUND DERRIS VELVET",
+    "members": [
+      {
+        "id": "H-005",
+        "name": "COMPOUND DERRIS VELVET CAPSULE",
+        "file": "product_H-005_COMPOUND_DERRIS_VELVET_CAPSULE.md",
+        "completeness": 5116,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "COMPOUND YHATEENNOK",
+    "members": [
+      {
+        "id": "H-012",
+        "name": "COMPOUND YHATEENNOK CAPSULE",
+        "file": "product_H-012_COMPOUND_YHATEENNOK_CAPSULE.md",
+        "completeness": 5260,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "CURCUMA",
+    "members": [
+      {
+        "id": "H-001",
+        "name": "Curcuma Capsules",
+        "file": "product_H-001_Curcuma_Capsules.md",
+        "completeness": 4712,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "CURCUMA LONGA TURMERIC",
+    "members": [
+      {
+        "id": "161",
+        "name": "Curcuma Longa Capsule (Turmeric Capsules)",
+        "file": "product_161_Curcuma_Longa_Capsule_Turmeric_Capsules.md",
+        "completeness": 2611,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "CURMINA",
+    "members": [
+      {
+        "id": "199",
+        "name": "CURMINA",
+        "file": "product_199_CURMINA.md",
+        "completeness": 2335,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "DB 1",
+    "members": [
+      {
+        "id": "81",
+        "name": "DB-1",
+        "file": "product_81_DB-1.md",
+        "completeness": 2707,
+        "kept": true
+      },
+      {
+        "id": "151",
+        "name": "DB-1",
+        "file": "product_151_DB-1.md",
+        "completeness": 2673,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "DEER ANTLER VELVET VEYCHAKORN",
+    "members": [
+      {
+        "id": "165",
+        "name": "Deer Antler Velvet Capsule, Veychakorn Brand.",
+        "file": "product_165_Deer_Antler_Velvet_Capsule_Veychakorn_Brand.md",
+        "completeness": 3312,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "DEER VELVET ANTLER",
+    "members": [
+      {
+        "id": "19",
+        "name": "Deer Velvet Antler Elixir",
+        "file": "product_19_Deer_Velvet_Antler_Elixir.md",
+        "completeness": 3081,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "DIGESTIVEANTI INFLAMMATORYMUCOSAL REPAIR FORMULA",
+    "members": [
+      {
+        "id": "CURMINA-097",
+        "name": "Digestive–Anti-inflammatory–Mucosal Repair Formula",
+        "file": "product_CURMINA-097_DigestiveAnti-inflammatoryMucosal_Repair_Formula.md",
+        "completeness": 3497,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "EDH",
+    "members": [
+      {
+        "id": "26",
+        "name": "EDH",
+        "file": "product_26_EDH.md",
+        "completeness": 2597,
+        "kept": true
+      },
+      {
+        "id": "173",
+        "name": "EDH",
+        "file": "product_173_EDH.md",
+        "completeness": 2484,
+        "kept": false
+      },
+      {
+        "id": "143",
+        "name": "EDH",
+        "file": "product_143_EDH.md",
+        "completeness": 2467,
+        "kept": false
+      },
+      {
+        "id": "183",
+        "name": "EDH",
+        "file": "product_183_EDH.md",
+        "completeness": 2405,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "FEMOON",
+    "members": [
+      {
+        "id": "95",
+        "name": "Femoon",
+        "file": "product_95_Femoon.md",
+        "completeness": 2535,
+        "kept": true
+      },
+      {
+        "id": "44",
+        "name": "FEMOON",
+        "file": "product_44_FEMOON.md",
+        "completeness": 2517,
+        "kept": false
+      },
+      {
+        "id": "36",
+        "name": "FEMOON",
+        "file": "product_36_FEMOON.md",
+        "completeness": 2501,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "FEVA",
+    "members": [
+      {
+        "id": "H-019",
+        "name": "FEVA CAPSULE",
+        "file": "product_H-019_FEVA_CAPSULE.md",
+        "completeness": 3910,
+        "kept": true
+      },
+      {
+        "id": "9",
+        "name": "FEVA Capsule",
+        "file": "product_9_FEVA_Capsule.md",
+        "completeness": 2635,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "FLAXPRO",
+    "members": [
+      {
+        "id": "71",
+        "name": "FlaxPro",
+        "file": "product_71_FlaxPro.md",
+        "completeness": 2531,
+        "kept": true
+      },
+      {
+        "id": "90",
+        "name": "FLAXPRO",
+        "file": "product_90_FLAXPRO.md",
+        "completeness": 2482,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "FOCUZ",
+    "members": [
+      {
+        "id": "74",
+        "name": "Focuz",
+        "file": "product_74_Focuz.md",
+        "completeness": 2592,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "GARCINIA",
+    "members": [
+      {
+        "id": "H-012",
+        "name": "GARCINIA",
+        "file": "product_H-012_GARCINIA.md",
+        "completeness": 4466,
+        "kept": true
+      },
+      {
+        "id": "30",
+        "name": "GARCINIA",
+        "file": "product_30_GARCINIA.md",
+        "completeness": 2450,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "GARCINIA ATROVIRIDIS GARCINIA CAMBOGIA",
+    "members": [
+      {
+        "id": "S-00-05",
+        "name": "Garcinia atroviridis / Garcinia cambogia",
+        "file": "product_S-00-05_Garcinia_atroviridis_Garcinia_cambogia.md",
+        "completeness": 3976,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "GARLICA",
+    "members": [
+      {
+        "id": "28",
+        "name": "GARLICA",
+        "file": "product_28_GARLICA.md",
+        "completeness": 2465,
+        "kept": true
+      },
+      {
+        "id": "110",
+        "name": "Garlica",
+        "file": "product_110_Garlica.md",
+        "completeness": 2394,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "HEPA 1",
+    "members": [
+      {
+        "id": "85",
+        "name": "HEPA-1",
+        "file": "product_85_HEPA-1.md",
+        "completeness": 2636,
+        "kept": true
+      },
+      {
+        "id": "123",
+        "name": "Hepa-1",
+        "file": "product_123_Hepa-1.md",
+        "completeness": 2537,
+        "kept": false
+      },
+      {
+        "id": "155",
+        "name": "HEPA-1",
+        "file": "product_155_HEPA-1.md",
+        "completeness": 2521,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "HEPA 2",
+    "members": [
+      {
+        "id": "133",
+        "name": "Hepa-2",
+        "file": "product_133_Hepa-2.md",
+        "completeness": 2753,
+        "kept": true
+      },
+      {
+        "id": "111",
+        "name": "Hepa-2",
+        "file": "product_111_Hepa-2.md",
+        "completeness": 2629,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "HEPA 3",
+    "members": [
+      {
+        "id": "S-00-58",
+        "name": "HEPA-3 Capsule",
+        "file": "product_S-00-58_HEPA-3_Capsule.md",
+        "completeness": 4162,
+        "kept": true
+      },
+      {
+        "id": "203",
+        "name": "HEPA 3",
+        "file": "product_203_HEPA_3.md",
+        "completeness": 2567,
+        "kept": false
+      },
+      {
+        "id": "118",
+        "name": "Hepa-3",
+        "file": "product_118_Hepa-3.md",
+        "completeness": 2514,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "HEPA PLUS",
+    "members": [
+      {
+        "id": "112",
+        "name": "Hepa Plus",
+        "file": "product_112_Hepa_Plus.md",
+        "completeness": 2586,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "HEPATIC DETOX FLUID CLEARANCE SYSTEM",
+    "members": [
+      {
+        "id": "HEPA2",
+        "name": "Hepatic Detox & Fluid Clearance System",
+        "file": "product_HEPA2_Hepatic_Detox_Fluid_Clearance_System.md",
+        "completeness": 4074,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "HO REN YIN",
+    "members": [
+      {
+        "id": "H-009",
+        "name": "HO REN YIN MIXTURE",
+        "file": "product_H-009_HO_REN_YIN_MIXTURE.md",
+        "completeness": 4375,
+        "kept": true
+      },
+      {
+        "id": "H-027",
+        "name": "Ho Ren Yin Mixture",
+        "file": "product_H-027_Ho_Ren_Yin_Mixture.md",
+        "completeness": 3990,
+        "kept": false
+      },
+      {
+        "id": "17",
+        "name": "HO REN YIN MIXTURE",
+        "file": "product_17_HO_REN_YIN_MIXTURE.md",
+        "completeness": 3244,
+        "kept": false
+      },
+      {
+        "id": "31",
+        "name": "HO REN YIN MIXTURE",
+        "file": "product_31_HO_REN_YIN_MIXTURE.md",
+        "completeness": 2891,
+        "kept": false
+      },
+      {
+        "id": "105",
+        "name": "Ho-Ren-Yin Herbal Tonic",
+        "file": "product_105_Ho-Ren-Yin_Herbal_Tonic.md",
+        "completeness": 2763,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "HO RENYIN HORENYIN",
+    "members": [
+      {
+        "id": "169",
+        "name": "HO RENYIN CAPSULE          Horenyin Capsule",
+        "file": "product_169_HO_RENYIN_CAPSULE_Horenyin_Capsule.md",
+        "completeness": 3074,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "HOUTTUYNIA CORDATA",
+    "members": [
+      {
+        "id": "H-013",
+        "name": "HOUTTUYNIA CORDATA CAPSULE",
+        "file": "product_H-013_HOUTTUYNIA_CORDATA_CAPSULE.md",
+        "completeness": 4401,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "HP 1",
+    "members": [
+      {
+        "id": "86",
+        "name": "HP-1",
+        "file": "product_86_HP-1.md",
+        "completeness": 2653,
+        "kept": true
+      },
+      {
+        "id": "156",
+        "name": "HP-1",
+        "file": "product_156_HP-1.md",
+        "completeness": 2594,
+        "kept": false
+      },
+      {
+        "id": "124",
+        "name": "HP-1",
+        "file": "product_124_HP-1.md",
+        "completeness": 2555,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "IM 1",
+    "members": [
+      {
+        "id": "187",
+        "name": "IM-1",
+        "file": "product_187_IM-1.md",
+        "completeness": 3786,
+        "kept": true
+      },
+      {
+        "id": "80",
+        "name": "IM-1",
+        "file": "product_80_IM-1.md",
+        "completeness": 2464,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "IM 1 BETA GLUCAN",
+    "members": [
+      {
+        "id": "48",
+        "name": "IM-1 Beta Glucan",
+        "file": "product_48_IM-1_Beta_Glucan.md",
+        "completeness": 2511,
+        "kept": true
+      },
+      {
+        "id": "147",
+        "name": "IM-1 Beta-Glucan",
+        "file": "product_147_IM-1_Beta-Glucan.md",
+        "completeness": 2463,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "IM 1 BETAGLUCAN",
+    "members": [
+      {
+        "id": "23",
+        "name": "IM-1 BETAGLUCAN",
+        "file": "product_23_IM-1_BETAGLUCAN.md",
+        "completeness": 2593,
+        "kept": true
+      },
+      {
+        "id": "177",
+        "name": "IM-1 Betaglucan",
+        "file": "product_177_IM-1_Betaglucan.md",
+        "completeness": 2472,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "IM 5",
+    "members": [
+      {
+        "id": "84",
+        "name": "IM-5",
+        "file": "product_84_IM-5.md",
+        "completeness": 2618,
+        "kept": true
+      },
+      {
+        "id": "122",
+        "name": "IM-5",
+        "file": "product_122_IM-5.md",
+        "completeness": 2602,
+        "kept": false
+      },
+      {
+        "id": "154",
+        "name": "IM-5",
+        "file": "product_154_IM-5.md",
+        "completeness": 2566,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "IM 6",
+    "members": [
+      {
+        "id": "H-030",
+        "name": "IM-6 Capsule",
+        "file": "product_H-030_IM-6_Capsule.md",
+        "completeness": 4148,
+        "kept": true
+      },
+      {
+        "id": "202",
+        "name": "IM 6",
+        "file": "product_202_IM_6.md",
+        "completeness": 3856,
+        "kept": false
+      },
+      {
+        "id": "117",
+        "name": "IM-6",
+        "file": "product_117_IM-6.md",
+        "completeness": 2547,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "IM 7",
+    "members": [
+      {
+        "id": "195",
+        "name": "IM-7",
+        "file": "product_195_IM-7.md",
+        "completeness": 3307,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "IM 7 DETOX ANTI INFLAMMATORY",
+    "members": [
+      {
+        "id": "S-00-47",
+        "name": "IM-7 Detox & Anti-Inflammatory Capsule",
+        "file": "product_S-00-47_IM-7_Detox_Anti-Inflammatory_Capsule.md",
+        "completeness": 4562,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "IM 9",
+    "members": [
+      {
+        "id": "193",
+        "name": "IM 9",
+        "file": "product_193_IM_9.md",
+        "completeness": 3558,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "IM9",
+    "members": [
+      {
+        "id": "218",
+        "name": "IM9",
+        "file": "product_218_IM9.md",
+        "completeness": 3929,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "IMO",
+    "members": [
+      {
+        "id": "89",
+        "name": "IMO",
+        "file": "product_89_IMO.md",
+        "completeness": 2996,
+        "kept": true
+      },
+      {
+        "id": "102",
+        "name": "IMO",
+        "file": "product_102_IMO.md",
+        "completeness": 2570,
+        "kept": false
+      },
+      {
+        "id": "158",
+        "name": "IMO",
+        "file": "product_158_IMO.md",
+        "completeness": 2535,
+        "kept": false
+      },
+      {
+        "id": "127",
+        "name": "IMO",
+        "file": "product_127_IMO.md",
+        "completeness": 2501,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "IVORA",
+    "members": [
+      {
+        "id": "45",
+        "name": "IVORA",
+        "file": "product_45_IVORA.md",
+        "completeness": 2628,
+        "kept": true
+      },
+      {
+        "id": "96",
+        "name": "Ivora",
+        "file": "product_96_Ivora.md",
+        "completeness": 2609,
+        "kept": false
+      },
+      {
+        "id": "37",
+        "name": "IVORA",
+        "file": "product_37_IVORA.md",
+        "completeness": 2595,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "KD",
+    "members": [
+      {
+        "id": "148",
+        "name": "KD",
+        "file": "product_148_KD.md",
+        "completeness": 2599,
+        "kept": true
+      },
+      {
+        "id": "178",
+        "name": "KD",
+        "file": "product_178_KD.md",
+        "completeness": 2520,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "KD KIDNEY DEFENSE REGENERATION SYSTEM",
+    "members": [
+      {
+        "id": "KD",
+        "name": "KD (Kidney Defense & Regeneration System)",
+        "file": "product_KD_KD_Kidney_Defense_Regeneration_System.md",
+        "completeness": 3491,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "KERMA",
+    "members": [
+      {
+        "id": "93",
+        "name": "Kerma",
+        "file": "product_93_Kerma.md",
+        "completeness": 2483,
+        "kept": true
+      },
+      {
+        "id": "34",
+        "name": "KERMA",
+        "file": "product_34_KERMA.md",
+        "completeness": 2464,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "KERMA COMPLEX",
+    "members": [
+      {
+        "id": "39",
+        "name": "KERMA COMPLEX",
+        "file": "product_39_KERMA_COMPLEX.md",
+        "completeness": 2488,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "KERMA DIGESTIVE VARIANT",
+    "members": [
+      {
+        "id": "42",
+        "name": "KERMA (Digestive variant)",
+        "file": "product_42_KERMA_Digestive_variant.md",
+        "completeness": 2556,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "KERRA",
+    "members": [
+      {
+        "id": "16",
+        "name": "KERRA CAPSULE",
+        "file": "product_16_KERRA_CAPSULE.md",
+        "completeness": 3687,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "KERRINA REFRESHING MOUTH SPRAY",
+    "members": [
+      {
+        "id": "213",
+        "name": "KERRINA REFRESHING MOUTH SPRAY",
+        "file": "product_213_KERRINA_REFRESHING_MOUTH_SPRAY.md",
+        "completeness": 2419,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "KERRIX PLUS",
+    "members": [
+      {
+        "id": "212",
+        "name": "KERRIX PLUS",
+        "file": "product_212_KERRIX_PLUS.md",
+        "completeness": 2369,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "KIMLUY YELLOW OIL",
+    "members": [
+      {
+        "id": "21",
+        "name": "KIMLUY BRAND YELLOW OIL",
+        "file": "product_21_KIMLUY_BRAND_YELLOW_OIL.md",
+        "completeness": 2674,
+        "kept": true
+      },
+      {
+        "id": "107",
+        "name": "Kimluy Yellow Oil",
+        "file": "product_107_Kimluy_Yellow_Oil.md",
+        "completeness": 2494,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "KS",
+    "members": [
+      {
+        "id": "159",
+        "name": "KS",
+        "file": "product_159_KS.md",
+        "completeness": 4521,
+        "kept": true
+      },
+      {
+        "id": "H-026",
+        "name": "KS Capsule",
+        "file": "product_H-026_KS_Capsule.md",
+        "completeness": 4190,
+        "kept": false
+      },
+      {
+        "id": "14",
+        "name": "YA KS CAPSULE",
+        "file": "product_14_YA_KS_CAPSULE.md",
+        "completeness": 3126,
+        "kept": false
+      },
+      {
+        "id": "128",
+        "name": "KS",
+        "file": "product_128_KS.md",
+        "completeness": 2834,
+        "kept": false
+      },
+      {
+        "id": "103",
+        "name": "KS",
+        "file": "product_103_KS.md",
+        "completeness": 2662,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "LANA",
+    "members": [
+      {
+        "id": "201",
+        "name": "LANA",
+        "file": "product_201_LANA.md",
+        "completeness": 2570,
+        "kept": true
+      },
+      {
+        "id": "116",
+        "name": "Lana",
+        "file": "product_116_Lana.md",
+        "completeness": 2555,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "LIVITA",
+    "members": [
+      {
+        "id": "120",
+        "name": "Livita",
+        "file": "product_120_Livita.md",
+        "completeness": 2510,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "LIVOXY",
+    "members": [
+      {
+        "id": "S-00-60",
+        "name": "Livoxy Capsule",
+        "file": "product_S-00-60_Livoxy_Capsule.md",
+        "completeness": 3497,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "LIVOXY PLUS",
+    "members": [
+      {
+        "id": "205",
+        "name": "LIVOXY PLUS",
+        "file": "product_205_LIVOXY_PLUS.md",
+        "completeness": 2589,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "LUCE",
+    "members": [
+      {
+        "id": "72",
+        "name": "Luce",
+        "file": "product_72_Luce.md",
+        "completeness": 2616,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "LYMPHATICLIVERLUNG DETOX SYSTEM",
+    "members": [
+      {
+        "id": "Beta L",
+        "name": "(Lymphatic–Liver–Lung Detox System)",
+        "file": "product_Beta L_LymphaticLiverLung_Detox_System.md",
+        "completeness": 3410,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "LYPHOLAX",
+    "members": [
+      {
+        "id": "211",
+        "name": "LYPHOLAX",
+        "file": "product_211_LYPHOLAX.md",
+        "completeness": 2713,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "MERDANA",
+    "members": [
+      {
+        "id": "H-024",
+        "name": "Merdana Capsule",
+        "file": "product_H-024_Merdana_Capsule.md",
+        "completeness": 3966,
+        "kept": true
+      },
+      {
+        "id": "12",
+        "name": "MERDANA CAPSULE",
+        "file": "product_12_MERDANA_CAPSULE.md",
+        "completeness": 3255,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "MINOZA",
+    "members": [
+      {
+        "id": "104",
+        "name": "Minoza",
+        "file": "product_104_Minoza.md",
+        "completeness": 4392,
+        "kept": true
+      },
+      {
+        "id": "15",
+        "name": "MINOZA CAPSULE",
+        "file": "product_15_MINOZA_CAPSULE.md",
+        "completeness": 3178,
+        "kept": false
+      },
+      {
+        "id": "160",
+        "name": "Minoza",
+        "file": "product_160_Minoza.md",
+        "completeness": 2628,
+        "kept": false
+      },
+      {
+        "id": "129",
+        "name": "Minoza",
+        "file": "product_129_Minoza.md",
+        "completeness": 2596,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "MOMORDICA CHARANTIA",
+    "members": [
+      {
+        "id": "H-010",
+        "name": "MOMORDICA CHARANTIA CAPSULE",
+        "file": "product_H-010_MOMORDICA_CHARANTIA_CAPSULE.md",
+        "completeness": 4838,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "MOMORDICA CHARANTIA BITTER MELON",
+    "members": [
+      {
+        "id": "170",
+        "name": "MOMORDICA CHARANTIA CAPSULE         Bitter melon capsules",
+        "file": "product_170_MOMORDICA_CHARANTIA_CAPSULE_Bitter_melon_capsules.md",
+        "completeness": 2962,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "NARIS",
+    "members": [
+      {
+        "id": "82",
+        "name": "NARIS",
+        "file": "product_82_NARIS.md",
+        "completeness": 2657,
+        "kept": true
+      },
+      {
+        "id": "152",
+        "name": "NARIS",
+        "file": "product_152_NARIS.md",
+        "completeness": 2559,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "NONE",
+    "members": [
+      {
+        "id": "189",
+        "name": "None",
+        "file": "product_189_N_A.md",
+        "completeness": 2766,
+        "kept": true
+      },
+      {
+        "id": "190",
+        "name": "None",
+        "file": "product_190_N_A.md",
+        "completeness": 2737,
+        "kept": false
+      },
+      {
+        "id": "188",
+        "name": "None",
+        "file": "product_188_N_A.md",
+        "completeness": 2577,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "NOURISHING BLOOD",
+    "members": [
+      {
+        "id": "H-016",
+        "name": "Nourishing Blood Tonic Capsule",
+        "file": "product_H-016_Nourishing_Blood_Tonic_Capsule.md",
+        "completeness": 4813,
+        "kept": true
+      },
+      {
+        "id": "51",
+        "name": "Nourishing Blood Capsule",
+        "file": "product_51_Nourishing_Blood_Capsule.md",
+        "completeness": 2900,
+        "kept": false
+      },
+      {
+        "id": "61",
+        "name": "Nourishing Blood Capsule",
+        "file": "product_61_Nourishing_Blood_Capsule.md",
+        "completeness": 2892,
+        "kept": false
+      },
+      {
+        "id": "40",
+        "name": "NOURISHING BLOOD TONIC",
+        "file": "product_40_NOURISHING_BLOOD_TONIC.md",
+        "completeness": 2846,
+        "kept": false
+      },
+      {
+        "id": "6",
+        "name": "Nourishing Blood Capsule",
+        "file": "product_6_Nourishing_Blood_Capsule.md",
+        "completeness": 2800,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "ORYGIS BAMBOO MOUTHWASH",
+    "members": [
+      {
+        "id": "139",
+        "name": "Orygis Bamboo Mouthwash",
+        "file": "product_139_Orygis_Bamboo_Mouthwash.md",
+        "completeness": 2398,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "ORYGIS PD HERB MOISTURIZER OIL",
+    "members": [
+      {
+        "id": "215",
+        "name": "ORYGIS PD HERB MOISTURIZER OIL",
+        "file": "product_215_ORYGIS_PD_HERB_MOISTURIZER_OIL.md",
+        "completeness": 2405,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "PLUMAX PLUS",
+    "members": [
+      {
+        "id": "138",
+        "name": "Plumax Plus",
+        "file": "product_138_Plumax_Plus.md",
+        "completeness": 3444,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "PROPOLIS IMMUNE SPRAY",
+    "members": [
+      {
+        "id": "140",
+        "name": "Propolis Immune Spray",
+        "file": "product_140_Propolis_Immune_Spray.md",
+        "completeness": 2595,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "PSYLAZA",
+    "members": [
+      {
+        "id": "H-021",
+        "name": "Psylaza Capsule",
+        "file": "product_H-021_Psylaza_Capsule.md",
+        "completeness": 3680,
+        "kept": true
+      },
+      {
+        "id": "209",
+        "name": "PSYLAZA",
+        "file": "product_209_PSYLAZA.md",
+        "completeness": 2821,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "RADICA",
+    "members": [
+      {
+        "id": "43",
+        "name": "RADICA",
+        "file": "product_43_RADICA.md",
+        "completeness": 2446,
+        "kept": true
+      },
+      {
+        "id": "35",
+        "name": "RADICA",
+        "file": "product_35_RADICA.md",
+        "completeness": 2424,
+        "kept": false
+      },
+      {
+        "id": "94",
+        "name": "Radica",
+        "file": "product_94_Radica.md",
+        "completeness": 2379,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "REDCAL",
+    "members": [
+      {
+        "id": "22",
+        "name": "REDCAL",
+        "file": "product_22_REDCAL.md",
+        "completeness": 2584,
+        "kept": true
+      },
+      {
+        "id": "47",
+        "name": "REDCAL",
+        "file": "product_47_REDCAL.md",
+        "completeness": 2528,
+        "kept": false
+      },
+      {
+        "id": "146",
+        "name": "RedCal",
+        "file": "product_146_RedCal.md",
+        "completeness": 2499,
+        "kept": false
+      },
+      {
+        "id": "176",
+        "name": "Redcal",
+        "file": "product_176_Redcal.md",
+        "completeness": 2489,
+        "kept": false
+      },
+      {
+        "id": "79",
+        "name": "RedCal",
+        "file": "product_79_RedCal.md",
+        "completeness": 2484,
+        "kept": false
+      },
+      {
+        "id": "186",
+        "name": "REDCAL",
+        "file": "product_186_REDCAL.md",
+        "completeness": 2468,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "REISHIMUNO",
+    "members": [
+      {
+        "id": "83",
+        "name": "Reishimuno",
+        "file": "product_83_Reishimuno.md",
+        "completeness": 2553,
+        "kept": true
+      },
+      {
+        "id": "121",
+        "name": "Reishimuno",
+        "file": "product_121_Reishimuno.md",
+        "completeness": 2537,
+        "kept": false
+      },
+      {
+        "id": "153",
+        "name": "Reishimuno",
+        "file": "product_153_Reishimuno.md",
+        "completeness": 2480,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "RENAX",
+    "members": [
+      {
+        "id": "149",
+        "name": "Renax",
+        "file": "product_149_Renax.md",
+        "completeness": 2801,
+        "kept": true
+      },
+      {
+        "id": "179",
+        "name": "Renax",
+        "file": "product_179_Renax.md",
+        "completeness": 2524,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "REVITA",
+    "members": [
+      {
+        "id": "101",
+        "name": "Revita",
+        "file": "product_101_Revita.md",
+        "completeness": 2670,
+        "kept": true
+      },
+      {
+        "id": "88",
+        "name": "REVITA",
+        "file": "product_88_REVITA.md",
+        "completeness": 2636,
+        "kept": false
+      },
+      {
+        "id": "126",
+        "name": "Revita",
+        "file": "product_126_Revita.md",
+        "completeness": 2539,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "RICEZOZYME",
+    "members": [
+      {
+        "id": "29",
+        "name": "RICEZOZYME",
+        "file": "product_29_RICEZOZYME.md",
+        "completeness": 2494,
+        "kept": true
+      },
+      {
+        "id": "109",
+        "name": "Ricezozyme",
+        "file": "product_109_Ricezozyme.md",
+        "completeness": 2409,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "RID SI",
+    "members": [
+      {
+        "id": "H-014",
+        "name": "RID-SI CAPSULE",
+        "file": "product_H-014_RID-SI_CAPSULE(1).md",
+        "completeness": 4979,
+        "kept": true
+      },
+      {
+        "id": "H-014",
+        "name": "RID-SI Capsule",
+        "file": "product_H-014_RID-SI_Capsule.md",
+        "completeness": 4075,
+        "kept": false
+      },
+      {
+        "id": "67",
+        "name": "RID-SI Capsule",
+        "file": "product_67_RID-SI_Capsule.md",
+        "completeness": 2672,
+        "kept": false
+      },
+      {
+        "id": "4",
+        "name": "RID-SI Capsule",
+        "file": "product_4_RID-SI_Capsule.md",
+        "completeness": 2665,
+        "kept": false
+      },
+      {
+        "id": "57",
+        "name": "RID-SI Capsule",
+        "file": "product_57_RID-SI_Capsule.md",
+        "completeness": 2627,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "RIZZ",
+    "members": [
+      {
+        "id": "198",
+        "name": "RIZZ",
+        "file": "product_198_RIZZ.md",
+        "completeness": 2417,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "RIZZO",
+    "members": [
+      {
+        "id": "S-00-61",
+        "name": "Rizzo Capsule",
+        "file": "product_S-00-61_Rizzo_Capsule.md",
+        "completeness": 4128,
+        "kept": true
+      },
+      {
+        "id": "196",
+        "name": "RIZZO",
+        "file": "product_196_RIZZO.md",
+        "completeness": 2549,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "SANGVICHAI",
+    "members": [
+      {
+        "id": "S-00-59",
+        "name": "Sangvichai",
+        "file": "product_S-00-59_Sangvichai.md",
+        "completeness": 3918,
+        "kept": true
+      },
+      {
+        "id": "204",
+        "name": "SANGVICHAI",
+        "file": "product_204_SANGVICHAI.md",
+        "completeness": 3027,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "SINAZA",
+    "members": [
+      {
+        "id": "150",
+        "name": "Sinaza",
+        "file": "product_150_Sinaza.md",
+        "completeness": 2547,
+        "kept": true
+      },
+      {
+        "id": "180",
+        "name": "Sinaza",
+        "file": "product_180_Sinaza.md",
+        "completeness": 2547,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "SITTHIJOHN",
+    "members": [
+      {
+        "id": "135",
+        "name": "Ya Sitthijohn",
+        "file": "product_135_Ya_Sitthijohn.md",
+        "completeness": 2867,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "STOMMA",
+    "members": [
+      {
+        "id": "H-013",
+        "name": "STOMMA CAPSULE",
+        "file": "product_H-013_STOMMA_CAPSULE.md",
+        "completeness": 4486,
+        "kept": true
+      },
+      {
+        "id": "66",
+        "name": "Stomma Capsule",
+        "file": "product_66_Stomma_Capsule.md",
+        "completeness": 2588,
+        "kept": false
+      },
+      {
+        "id": "3",
+        "name": "Stomma Capsule",
+        "file": "product_3_Stomma_Capsule.md",
+        "completeness": 2547,
+        "kept": false
+      },
+      {
+        "id": "56",
+        "name": "Stomma Capsule",
+        "file": "product_56_Stomma_Capsule.md",
+        "completeness": 2455,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "STREAM",
+    "members": [
+      {
+        "id": "174",
+        "name": "Stream",
+        "file": "product_174_Stream.md",
+        "completeness": 2588,
+        "kept": true
+      },
+      {
+        "id": "144",
+        "name": "Stream",
+        "file": "product_144_Stream.md",
+        "completeness": 2576,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "STREAM PLUS",
+    "members": [
+      {
+        "id": "184",
+        "name": "STREAM PLUS",
+        "file": "product_184_STREAM_PLUS.md",
+        "completeness": 3037,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "STREAM X",
+    "members": [
+      {
+        "id": "192",
+        "name": "STREAM X",
+        "file": "product_192_STREAM_X.md",
+        "completeness": 2875,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "TANGCHOU PLUS SANCHI",
+    "members": [
+      {
+        "id": "24",
+        "name": "TANGCHOU PLUS SANCHI",
+        "file": "product_24_TANGCHOU_PLUS_SANCHI.md",
+        "completeness": 2566,
+        "kept": true
+      },
+      {
+        "id": "141",
+        "name": "Tangchou Plus Sanchi",
+        "file": "product_141_Tangchou_Plus_Sanchi.md",
+        "completeness": 2514,
+        "kept": false
+      },
+      {
+        "id": "76",
+        "name": "Tangchou Plus Sanchi",
+        "file": "product_76_Tangchou_Plus_Sanchi.md",
+        "completeness": 2502,
+        "kept": false
+      },
+      {
+        "id": "171",
+        "name": "Tangchou Plus Sanchi",
+        "file": "product_171_Tangchou_Plus_Sanchi.md",
+        "completeness": 2497,
+        "kept": false
+      },
+      {
+        "id": "49",
+        "name": "TANGCHOU PLUS SANCHI",
+        "file": "product_49_TANGCHOU_PLUS_SANCHI.md",
+        "completeness": 2486,
+        "kept": false
+      },
+      {
+        "id": "181",
+        "name": "TANGCHOU PLUS SANCHI",
+        "file": "product_181_TANGCHOU_PLUS_SANCHI.md",
+        "completeness": 2434,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "TANGTU NGCHOU PLUS 2",
+    "members": [
+      {
+        "id": "41",
+        "name": "TANGTU NGCHOU PLUS 2",
+        "file": "product_41_TANGTU_NGCHOU_PLUS_2.md",
+        "completeness": 2629,
+        "kept": true
+      },
+      {
+        "id": "33",
+        "name": "TANGTU NGCHOU PLUS 2",
+        "file": "product_33_TANGTU_NGCHOU_PLUS_2.md",
+        "completeness": 2594,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "TANGTUNGCHOU PLUS I",
+    "members": [
+      {
+        "id": "91",
+        "name": "Tangtungchou Plus I",
+        "file": "product_91_Tangtungchou_Plus_I.md",
+        "completeness": 2613,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "TANGTUNGCHOU PLUS II",
+    "members": [
+      {
+        "id": "92",
+        "name": "Tangtungchou Plus II",
+        "file": "product_92_Tangtungchou_Plus_II.md",
+        "completeness": 2563,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "TARANA",
+    "members": [
+      {
+        "id": "H-023",
+        "name": "Tarana Capsule",
+        "file": "product_H-023_Tarana_Capsule.md",
+        "completeness": 3387,
+        "kept": true
+      },
+      {
+        "id": "13",
+        "name": "YA TARANA CAPSULE",
+        "file": "product_13_YA_TARANA_CAPSULE.md",
+        "completeness": 3116,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "TOPAZ",
+    "members": [
+      {
+        "id": "73",
+        "name": "Topaz",
+        "file": "product_73_Topaz.md",
+        "completeness": 2580,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "TOPAZ VASCULARPROSTATE MODULATION FORMULA",
+    "members": [
+      {
+        "id": "12-1-05 555-5-0 056",
+        "name": "TOPAZ – Vascular–Prostate Modulation Formula",
+        "file": "product_12-1-05 555-5-0 056_TOPAZ_VascularProstate_Modulation_Formula.md",
+        "completeness": 3576,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "TSPI MASTER LIVER DETOX REGENERATION FORMULA",
+    "members": [
+      {
+        "id": "HEPA 1",
+        "name": "TSPI MASTER LIVER DETOX & REGENERATION FORMULA",
+        "file": "product_HEPA 1_TSPI_MASTER_LIVER_DETOX_REGENERATION_FORMULA.md",
+        "completeness": 3954,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "TSPI NEUROENDOCRINE MASTER MODULE RECONSTRUCTED",
+    "members": [
+      {
+        "id": "S-00-06",
+        "name": "– TSPI NEURO–ENDOCRINE MASTER MODULE (Reconstructed",
+        "file": "product_S-00-06_TSPI_NEUROENDOCRINE_MASTER_MODULE_Reconstructed.md",
+        "completeness": 4693,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "TWMID",
+    "members": [
+      {
+        "id": "99",
+        "name": "Twmid",
+        "file": "product_99_Twmid.md",
+        "completeness": 2570,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "UMX",
+    "members": [
+      {
+        "id": "217",
+        "name": "UMX",
+        "file": "product_217_UMX.md",
+        "completeness": 2507,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "URANA",
+    "members": [
+      {
+        "id": "98",
+        "name": "Urana",
+        "file": "product_98_Urana.md",
+        "completeness": 2754,
+        "kept": true
+      },
+      {
+        "id": "132",
+        "name": "Urana",
+        "file": "product_132_Urana.md",
+        "completeness": 2543,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "URANA 2",
+    "members": [
+      {
+        "id": "210",
+        "name": "URANA 2",
+        "file": "product_210_URANA_2.md",
+        "completeness": 2542,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "VARIZ",
+    "members": [
+      {
+        "id": "25",
+        "name": "VARIZ",
+        "file": "product_25_VARIZ.md",
+        "completeness": 2627,
+        "kept": true
+      },
+      {
+        "id": "50",
+        "name": "VARIZ",
+        "file": "product_50_VARIZ.md",
+        "completeness": 2562,
+        "kept": false
+      },
+      {
+        "id": "142",
+        "name": "Variz",
+        "file": "product_142_Variz.md",
+        "completeness": 2528,
+        "kept": false
+      },
+      {
+        "id": "172",
+        "name": "Variz",
+        "file": "product_172_Variz.md",
+        "completeness": 2519,
+        "kept": false
+      },
+      {
+        "id": "77",
+        "name": "Variz",
+        "file": "product_77_Variz.md",
+        "completeness": 2508,
+        "kept": false
+      },
+      {
+        "id": "182",
+        "name": "VARIZ",
+        "file": "product_182_VARIZ.md",
+        "completeness": 2442,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "VASCULAR REPAIR FORMULA",
+    "members": [
+      {
+        "id": "S-00-53",
+        "name": "Vascular repair formula",
+        "file": "product_S-00-53_Vascular_repair_formula.md",
+        "completeness": 5377,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "VENTA",
+    "members": [
+      {
+        "id": "H-018",
+        "name": "Ya Venta Capsule",
+        "file": "product_H-018_Ya_Venta_Capsule.md",
+        "completeness": 3624,
+        "kept": true
+      },
+      {
+        "id": "8",
+        "name": "YA VENTA Capsule",
+        "file": "product_8_YA_VENTA_Capsule.md",
+        "completeness": 2552,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "VETCHAKORN NO 6 VEJAKORN NUMBER 6",
+    "members": [
+      {
+        "id": "168",
+        "name": "YA VETCHAKORN NO.6 (Medicine Vejakorn Number 6)",
+        "file": "product_168_YA_VETCHAKORN_NO6_Medicine_Vejakorn_Number_6.md",
+        "completeness": 3084,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "VIRANA",
+    "members": [
+      {
+        "id": "100",
+        "name": "Virana",
+        "file": "product_100_Virana.md",
+        "completeness": 2691,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "VITACEL",
+    "members": [
+      {
+        "id": "46",
+        "name": "VITACEL",
+        "file": "product_46_VITACEL.md",
+        "completeness": 2656,
+        "kept": true
+      },
+      {
+        "id": "38",
+        "name": "VITACEL",
+        "file": "product_38_VITACEL.md",
+        "completeness": 2647,
+        "kept": false
+      },
+      {
+        "id": "78",
+        "name": "Vitacel",
+        "file": "product_78_Vitacel.md",
+        "completeness": 2573,
+        "kept": false
+      },
+      {
+        "id": "175",
+        "name": "VitaCel",
+        "file": "product_175_VitaCel.md",
+        "completeness": 2562,
+        "kept": false
+      },
+      {
+        "id": "145",
+        "name": "VitaCel",
+        "file": "product_145_VitaCel.md",
+        "completeness": 2561,
+        "kept": false
+      },
+      {
+        "id": "185",
+        "name": "VITACEL",
+        "file": "product_185_VITACEL.md",
+        "completeness": 2489,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "VITALIS",
+    "members": [
+      {
+        "id": "136",
+        "name": "Vitalis",
+        "file": "product_136_Vitalis.md",
+        "completeness": 2531,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "VITALPLUS",
+    "members": [
+      {
+        "id": "131",
+        "name": "VitalPlus",
+        "file": "product_131_VitalPlus.md",
+        "completeness": 2879,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "WATTA NOTHAI",
+    "members": [
+      {
+        "id": "1",
+        "name": "WATTA NOTHAI Capsule",
+        "file": "product_1_WATTA_NOTHAI_Capsule.md",
+        "completeness": 2835,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "WATTANOTHAI",
+    "members": [
+      {
+        "id": "H-011",
+        "name": "WATTANOTHAI CAPSULE",
+        "file": "product_H-011_WATTANOTHAI_CAPSULE.md",
+        "completeness": 5359,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "XM 2",
+    "members": [
+      {
+        "id": "XM2-024",
+        "name": "XM-2 Capsule",
+        "file": "product_XM2-024_XM-2_Capsule.md",
+        "completeness": 3636,
+        "kept": true
+      },
+      {
+        "id": "97",
+        "name": "XM-2",
+        "file": "product_97_XM-2.md",
+        "completeness": 2589,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "XS",
+    "members": [
+      {
+        "id": "75",
+        "name": "XS",
+        "file": "product_75_XS.md",
+        "completeness": 2570,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "YAVENTA",
+    "members": [
+      {
+        "id": "53",
+        "name": "Yaventa Capsule",
+        "file": "product_53_Yaventa_Capsule.md",
+        "completeness": 2562,
+        "kept": true
+      },
+      {
+        "id": "63",
+        "name": "Yaventa Capsule",
+        "file": "product_63_Yaventa_Capsule.md",
+        "completeness": 2562,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "YAVETCHAKORN NO 6",
+    "members": [
+      {
+        "id": "H-008",
+        "name": "YAVETCHAKORN NO.6 CAPSULE",
+        "file": "product_H-008_YAVETCHAKORN_NO6_CAPSULE.md",
+        "completeness": 10400,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "YHATEENNOK",
+    "members": [
+      {
+        "id": "55",
+        "name": "Yhateennok Capsule",
+        "file": "product_55_Yhateennok_Capsule.md",
+        "completeness": 2822,
+        "kept": true
+      },
+      {
+        "id": "65",
+        "name": "Yhateennok Capsule",
+        "file": "product_65_Yhateennok_Capsule.md",
+        "completeness": 2822,
+        "kept": false
+      }
+    ]
+  },
+  {
+    "norm_key": "YHATEENOK",
+    "members": [
+      {
+        "id": "2",
+        "name": "Yhateenok Capsule",
+        "file": "product_2_Yhateenok_Capsule.md",
+        "completeness": 2844,
+        "kept": true
+      }
+    ]
+  },
+  {
+    "norm_key": "ZAMINZYME",
+    "members": [
+      {
+        "id": "191",
+        "name": "ZAMINZYME",
+        "file": "product_191_ZAMINZYME.md",
+        "completeness": 2688,
+        "kept": true
+      }
+    ]
+  }
+]
