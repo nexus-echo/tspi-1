@@ -1,9 +1,10 @@
-"""DB-backed knowledge repository (Phase 0).
+"""DB-backed knowledge repository (Phase 0) + official module registry (post domain-expert answers).
 
-Reads the official catalog (39 axes, 12+meta domains, keys, steps, 153 products) from the
-relational DB (SQLite dev / PostgreSQL prod). Same method signatures as the old in-memory seed,
-so nothing upstream changes. The axis->module map is still PROVISIONAL (official map pending);
-module names are resolved against the product registry and unresolved ones are flagged.
+Axis catalog (39 axes / 12 domains / keys / products) comes from the relational DB. The
+axis->module map now reads the OFFICIAL compiled registry (data/axis_module_official.json +
+data/module_registry.json): 1 module = 1 product, keyed by H-Code, with a per-axis primary/secondary
+role, dose_type, contraindications and status. Falls back to the provisional map if the official
+files are absent, so older setups still run.
 """
 from __future__ import annotations
 
@@ -28,6 +29,25 @@ def _provisional_axis_modules() -> dict:
 
 
 @lru_cache
+def _official() -> dict | None:
+    try:
+        return json.loads((_DATA / "axis_module_official.json").read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return None
+
+
+@lru_cache
+def _registry() -> dict:
+    try:
+        reg = json.loads((_DATA / "module_registry.json").read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return {}
+    return {"_meta": {"registry_version": reg.get("registry_version"),
+                      "framework_version": reg.get("framework_version")},
+            **{m["module_code"]: m for m in reg.get("modules", [])}}
+
+
+@lru_cache
 def _registry_norms() -> frozenset:
     try:
         reg = json.loads((_DATA / "product_registry.json").read_text(encoding="utf-8"))
@@ -41,7 +61,7 @@ def _registry_norms() -> frozenset:
 
 
 class KnowledgeRepo:
-    """Stable interface over the knowledge DB."""
+    """Stable interface over the knowledge DB + official module registry."""
 
     def __init__(self) -> None:
         init_db()
@@ -72,21 +92,36 @@ class KnowledgeRepo:
             s.close()
 
     def modules_for_axis(self, axis_code: str) -> list[dict]:
+        official = _official()
+        if official is not None:
+            out: list[dict] = []
+            for e in official.get("map", {}).get(axis_code, []):
+                if e.get("status", "active") != "active":
+                    continue
+                out.append({
+                    "code": e["code"], "name": e.get("name"),
+                    "phytocore": e.get("phytocore"), "dose_type": e.get("dose_type", "severity"),
+                    "status": e.get("status", "active"), "role": e.get("role", "primary"),
+                    "resolved": True, "provisional": False,
+                })
+            return out
+        # fallback: provisional map (legacy)
         reg = _registry_norms()
-        out: list[dict] = []
-        for code in _provisional_axis_modules().get(axis_code, []):
-            out.append({
-                "code": code,
-                "name": code,
-                "resolved": _norm(code) in reg,
-                "provisional": True,
-            })
-        return out
+        return [{"code": c, "name": c, "resolved": _norm(c) in reg, "provisional": True,
+                 "role": "primary", "dose_type": "severity", "status": "active"}
+                for c in _provisional_axis_modules().get(axis_code, [])]
+
+    def module_contraindications(self, code: str) -> list[str]:
+        m = _registry().get(code)
+        return list(m.get("contraindications", [])) if m else []
+
+    def registry_meta(self) -> dict:
+        return dict(_registry().get("_meta", {}))
 
     def is_contraindicated(self, module_code: str, medications: list[str]) -> bool:
-        return False  # TODO(Phase 3): real contraindication rules vs meds.
+        # Governance: we FLAG contraindications (safety.py), never silently drop a module.
+        return False
 
-    # --- convenience for diagnostics ---
     def counts(self) -> dict:
         s = get_session()
         try:

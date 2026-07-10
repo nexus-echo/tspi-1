@@ -39,6 +39,9 @@ def check_modules(modules: list, medications: list[str], conditions: list[str]) 
     def _code(m):
         return getattr(m, "module_code", None) if not isinstance(m, dict) else m.get("module_code")
 
+    def _name(m):
+        return getattr(m, "module_name", None) if not isinstance(m, dict) else m.get("module_name")
+
     for rule in _rules().get("rules", []):
         rmatch = _norm(rule.get("match", ""))
         amed = {_norm(x) for x in rule.get("avoid_with_meds", [])}
@@ -56,7 +59,8 @@ def check_modules(modules: list, medications: list[str], conditions: list[str]) 
 
         for m in modules:
             mc = _norm(_code(m) or "")
-            if rmatch and rmatch in mc:
+            mn = _norm(_name(m) or "")
+            if rmatch and (rmatch in mc or rmatch in mn):
                 cond_ok = (not amed and not acond) or bool(amed & meds) or bool(acond & conds)
                 if cond_ok and (mc, note) not in seen:
                     seen.add((mc, note))
@@ -65,6 +69,19 @@ def check_modules(modules: list, medications: list[str], conditions: list[str]) 
                         m.safety = ((m.safety + " | ") if getattr(m, "safety", None) else "") + note
                     except Exception:  # noqa: BLE001
                         pass
+
+    # per-module contraindications carried in the registry: flag when a patient med/condition
+    # token (>=4 chars) literally appears in the module's contraindication note (conservative).
+    tokens = {t for t in (meds | conds) if len(t) >= 4}
+    for m in modules:
+        for cnote in (getattr(m, "contraindications", None) or []):
+            cn = _norm(cnote)
+            if any(t in cn for t in tokens):
+                key = (_norm(_code(m) or ""), "reg-contra")
+                if key not in seen:
+                    seen.add(key)
+                    alerts.append({"module": _code(m), "severity": "review",
+                                   "reason": f"Registry contraindication note matches a patient med/condition: {cnote[:140]}"})
     return alerts
 
 

@@ -51,10 +51,9 @@ async def build_report(patient: PatientInput) -> CaseReport:
 
     level = dosing.level_for_nss(analysis.nss)
     level_dose = dosing.dose_string(level)
-    ks = dosing.ks_protocol()
     for m in modules:
-        if m.module_code.upper() == "KS":
-            m.dose = f"KS protocol (bowel-based): start {ks['start']['normal']}; {ks['goal']}"
+        if m.dose_type == "bowel" or dosing.is_bowel(m.module_code) or dosing.is_bowel(m.module_name or ""):
+            m.dose = dosing.bowel_dose(m.module_name or m.module_code)
         else:
             m.dose = level_dose
 
@@ -64,6 +63,9 @@ async def build_report(patient: PatientInput) -> CaseReport:
     report = await report_composer.compose(analysis, modules, _llm)
     report.monitoring = [{"reassess_every_days": dosing.reassessment_days()}]
     report.safety_alerts = alerts
+    _meta = _repo.registry_meta()
+    report.registry_version = _meta.get("registry_version")
+    report.framework_version = _meta.get("framework_version")
 
     # Phase 3 — persist (de-identified) + doctor-validation gate
     status = "draft" if settings.require_doctor_validation else "validated"

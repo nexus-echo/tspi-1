@@ -38,7 +38,7 @@ def test_report_is_grounded_and_deidentified():
     assert "clinician review" in r["disclaimer"].lower()
     # modules are resolved against the real product registry; unresolved ones are FLAGGED
     assert all(isinstance(m["resolved"], bool) for m in r["modules"])
-    ks = [m for m in r["modules"] if m["module_code"].upper() == "KS"]
+    ks = [m for m in r["modules"] if (m["module_name"] or "").strip().upper() == "KS"]
     assert ks and ks[0]["resolved"]  # core KS module resolves to the catalog
 
 
@@ -55,8 +55,9 @@ def test_severity_and_dosing_present():
     assert a["severity_name"]
     assert a["system_priority"]                      # SPS ranked systems
     assert all(m["dose"] for m in r["modules"])      # every module got a dose
-    ks = [m for m in r["modules"] if m["module_code"].upper() == "KS"]
+    ks = [m for m in r["modules"] if (m["module_name"] or "").strip().upper() == "KS"]
     assert ks and "bowel" in ks[0]["dose"].lower()   # KS uses its special protocol
+    assert ks[0]["dose_type"] == "bowel"
 
 
 def test_async_embed_matches_sync():
@@ -114,7 +115,10 @@ def test_outcome_recorded():
 def test_safety_flags_for_condition():
     p = {**_PATIENT, "conditions": ["pregnancy"]}   # KERRA rule -> flag (not dropped)
     r = client.post("/report", json=p).json()
-    flagged = [a for a in r["safety_alerts"] if (a.get("module") or "").upper() == "KERRA"]
+    # KERRA's business code is now an H-Code; resolve it by name, then confirm it was flagged.
+    kerra_codes = {m["module_code"] for m in r["modules"] if "KERRA" in (m["module_name"] or "").upper()}
+    assert kerra_codes, "KERRA module expected in the plan for this case"
+    flagged = [a for a in r["safety_alerts"] if a.get("module") in kerra_codes]
     assert flagged and all(isinstance(m["resolved"], bool) for m in r["modules"])
 
 
@@ -166,3 +170,31 @@ def test_extract_endpoint_parses_labs_and_drops_pii():
     assert "Name" not in analytes            # PII line not treated as a lab
     assert r["confirmed"] is False           # human-review gate preserved
     assert r["source"] == "text"
+
+
+# ---- Official module registry (domain-expert answers) ----
+def test_report_stamps_registry_versions():
+    r = client.post("/report", json=_PATIENT).json()
+    assert r["registry_version"] and r["framework_version"]   # traceable to the data that made it
+
+
+def test_modules_carry_role_and_dose_type():
+    r = client.post("/report", json=_PATIENT).json()
+    assert r["modules"], "expected modules for a high-severity case"
+    m = r["modules"][0]
+    assert m["dose_type"] in ("severity", "bowel")
+    assert set(m["axis_roles"].values()) <= {"primary", "secondary"}   # per-axis role tagged
+
+
+def test_bowel_group_uses_bowel_dose():
+    r = client.post("/report", json=_PATIENT).json()
+    bowel = [m for m in r["modules"] if m["dose_type"] == "bowel"]
+    assert bowel and all("bowel" in (m["dose"] or "").lower() for m in bowel)
+
+
+def test_a37_has_modules():
+    # A37 (Protein Quality Control) — interim support assigned by the experts
+    from app.knowledge.repository import KnowledgeRepo
+    mods = KnowledgeRepo().modules_for_axis("A37")
+    names = {(m.get("name") or "").upper() for m in mods}
+    assert mods and any(n in names for n in ("KS", "KERRA CAPSULE", "VITALPLUS"))

@@ -76,6 +76,11 @@ class ModulePick(BaseModel):
     safety: str | None = None
     phase: Literal["step_1", "step_2", "step_3"] = "step_1"
     resolved: bool = True
+    phytocore_code: str | None = None
+    dose_type: str = "severity"                 # severity | bowel
+    status: str = "active"
+    axis_roles: dict[str, str] = {}             # axis_code -> "primary" | "secondary"
+    contraindications: list[str] = []
 
 
 class AnalysisResult(BaseModel):
@@ -103,6 +108,8 @@ class CaseReport(BaseModel):
     disclaimer: str = "For clinician review and approval — not a substitute for medical judgment."
     status: Literal["draft", "validated", "rejected"] = "draft"
     deliverable: bool = False                 # only true once a doctor validates
+    registry_version: str | None = None       # which module-registry version produced this
+    framework_version: str | None = None      # which 39-axis framework version
 
 
 class ValidationRequest(BaseModel):

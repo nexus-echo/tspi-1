@@ -1,0 +1,4579 @@
+{
+  "registry_version": "0.1.0-draft",
+  "framework_version": "39-axis-v3.0",
+  "source": "compiled DRAFT from modules_consolidated.json — replace with official master file",
+  "module_count": 145,
+  "modules": [
+    {
+      "module_code": "H-003",
+      "phytocore_code": "TSPI-ABSORN-03",
+      "name_en": "ABSORN CAPSULE",
+      "name_th": null,
+      "product_id": "H-003",
+      "target_axes": [
+        "A1",
+        "A9",
+        "A21",
+        "A22",
+        "A25",
+        "A27",
+        "A29",
+        "A33",
+        "A34",
+        "A36"
+      ],
+      "primary_axes": [
+        "A1",
+        "A9",
+        "A21",
+        "A22",
+        "A25",
+        "A27",
+        "A29",
+        "A33",
+        "A34",
+        "A36"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [
+        "A risk score of 3/10 suggests caution in individuals using anticoagulants or hormonal therapy."
+      ],
+      "status": "active"
+    },
+    {
+      "module_code": "163",
+      "phytocore_code": "Absorn Women's Internal Harmony Module",
+      "name_en": "ABSORN CAPSULE (Apsorn Capsule Medicine)",
+      "name_th": null,
+      "product_id": "163",
+      "target_axes": [
+        "A1",
+        "A21",
+        "A25",
+        "A31",
+        "A32"
+      ],
+      "primary_axes": [
+        "A32"
+      ],
+      "secondary_axes": [
+        "A1",
+        "A21",
+        "A25",
+        "A31"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "HEPA 3",
+      "phytocore_code": "None",
+      "name_en": "Advanced Liver Protocol",
+      "name_th": null,
+      "product_id": "HEPA 3",
+      "target_axes": [
+        "A2",
+        "A5",
+        "A6",
+        "A9",
+        "A10",
+        "A15",
+        "A24",
+        "A25",
+        "A35",
+        "A36"
+      ],
+      "primary_axes": [],
+      "secondary_axes": [
+        "A2",
+        "A5",
+        "A6",
+        "A9",
+        "A10",
+        "A15",
+        "A24",
+        "A25",
+        "A35",
+        "A36"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "S-00-03",
+      "phytocore_code": "TSPI-GARLICA-004",
+      "name_en": "Allium sativum (garlic)",
+      "name_th": null,
+      "product_id": "S-00-03",
+      "target_axes": [
+        "A1",
+        "A9",
+        "A16",
+        "A20",
+        "A21",
+        "A22",
+        "A31",
+        "A36"
+      ],
+      "primary_axes": [
+        "A1",
+        "A9",
+        "A16",
+        "A20",
+        "A21",
+        "A22",
+        "A31",
+        "A36"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [
+        "Risk Score 5/10"
+      ],
+      "status": "active"
+    },
+    {
+      "module_code": "H-010",
+      "phytocore_code": "TSPI-REGEN-ENDO-010",
+      "name_en": "AM-PUR MIXTURE",
+      "name_th": null,
+      "product_id": "H-010",
+      "target_axes": [
+        "A2",
+        "A5",
+        "A7",
+        "A8",
+        "A9",
+        "A11",
+        "A14",
+        "A15",
+        "A18",
+        "A21",
+        "A23",
+        "A24",
+        "A26",
+        "A28",
+        "A29",
+        "A30",
+        "A31",
+        "A32",
+        "A33",
+        "A34",
+        "A35"
+      ],
+      "primary_axes": [
+        "A5",
+        "A7",
+        "A8",
+        "A9",
+        "A11",
+        "A14",
+        "A15",
+        "A18",
+        "A21",
+        "A23",
+        "A24",
+        "A26",
+        "A28",
+        "A29",
+        "A31",
+        "A32",
+        "A33",
+        "A35"
+      ],
+      "secondary_axes": [
+        "A2",
+        "A30",
+        "A34"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "18",
+      "phytocore_code": "Anax Rejuvenative Movement Module",
+      "name_en": "ANAX MIXTURE",
+      "name_th": null,
+      "product_id": "18",
+      "target_axes": [
+        "A1",
+        "A7",
+        "A13",
+        "A14",
+        "A17",
+        "A21",
+        "A29",
+        "A31",
+        "A34"
+      ],
+      "primary_axes": [
+        "A1",
+        "A7",
+        "A13",
+        "A17",
+        "A29"
+      ],
+      "secondary_axes": [
+        "A14",
+        "A21",
+        "A31",
+        "A34"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "H-028",
+      "phytocore_code": "TSPI-MUSCLE-REGEN-028",
+      "name_en": "ANAX / AJAX Mixture",
+      "name_th": null,
+      "product_id": "H-028",
+      "target_axes": [
+        "A5",
+        "A8",
+        "A9",
+        "A21",
+        "A22",
+        "A24",
+        "A30"
+      ],
+      "primary_axes": [
+        "A5",
+        "A8",
+        "A9",
+        "A21",
+        "A22",
+        "A24",
+        "A30"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "162",
+      "phytocore_code": "Andrographis Immune Defense Module",
+      "name_en": "Andrographis paniculata capsules.",
+      "name_th": null,
+      "product_id": "162",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A9"
+      ],
+      "primary_axes": [
+        "A2",
+        "A3"
+      ],
+      "secondary_axes": [
+        "A1",
+        "A4",
+        "A9"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "113",
+      "phytocore_code": "Nervous System Balance Module",
+      "name_en": "Angera",
+      "name_th": null,
+      "product_id": "113",
+      "target_axes": [
+        "A10",
+        "A16",
+        "A20"
+      ],
+      "primary_axes": [
+        "A10",
+        "A16",
+        "A20"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "S-00-48",
+      "phytocore_code": "TSPI-GYNO-HORMONE-CIRC-048",
+      "name_en": "ANGERA Hormonal Balance Capsule",
+      "name_th": null,
+      "product_id": "S-00-48",
+      "target_axes": [
+        "A3",
+        "A9",
+        "A21",
+        "A22",
+        "A24",
+        "A27",
+        "A31",
+        "A35"
+      ],
+      "primary_axes": [
+        "A3",
+        "A9",
+        "A21",
+        "A22",
+        "A24",
+        "A27",
+        "A31",
+        "A35"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "RIZZO-096",
+      "phytocore_code": "TSPI-RIZZO-VASCULAR-GUT-ONCO-096",
+      "name_en": "Astringent–Vascular Repair–Gut Barrier–Anti-inflammatory Formula",
+      "name_th": null,
+      "product_id": "RIZZO-096",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A20",
+        "A21",
+        "A22",
+        "A23",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A28",
+        "A29",
+        "A30",
+        "A31",
+        "A32",
+        "A33",
+        "A34",
+        "A35",
+        "A36"
+      ],
+      "primary_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A20",
+        "A21",
+        "A22",
+        "A23",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A28",
+        "A29",
+        "A30",
+        "A31",
+        "A32",
+        "A33",
+        "A34",
+        "A35",
+        "A36"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "137",
+      "phytocore_code": "Neuro-Endocrine Support",
+      "name_en": "Ava",
+      "name_th": null,
+      "product_id": "137",
+      "target_axes": [
+        "A10",
+        "A18",
+        "A21"
+      ],
+      "primary_axes": [
+        "A10",
+        "A18",
+        "A21"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "214",
+      "phytocore_code": "None",
+      "name_en": "B-FRESH MINERAL SOAP BAR",
+      "name_th": null,
+      "product_id": "214",
+      "target_axes": [],
+      "primary_axes": [],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "draft"
+    },
+    {
+      "module_code": "H-015",
+      "phytocore_code": "TSPI-BLAX-015",
+      "name_en": "B-LAX CAPSULE",
+      "name_th": null,
+      "product_id": "H-015",
+      "target_axes": [
+        "A16",
+        "A17",
+        "A18",
+        "A20",
+        "A22",
+        "A33",
+        "A35"
+      ],
+      "primary_axes": [
+        "A16",
+        "A17",
+        "A18",
+        "A20",
+        "A22",
+        "A33",
+        "A35"
+      ],
+      "secondary_axes": [],
+      "dose_type": "bowel",
+      "contraindications": [
+        "Low risk, but caution is advised in users of stimulant laxatives and motility drugs."
+      ],
+      "status": "active"
+    },
+    {
+      "module_code": "H-007",
+      "phytocore_code": "TSPI-BENCHAKUL-07",
+      "name_en": "BENCHAKUL CAPSULE",
+      "name_th": null,
+      "product_id": "H-007",
+      "target_axes": [
+        "A9",
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A21",
+        "A24",
+        "A27",
+        "A28",
+        "A39"
+      ],
+      "primary_axes": [
+        "A9",
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A21",
+        "A24",
+        "A27",
+        "A28",
+        "A39"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [
+        "Risk score 2/10. Caution should be exercised in users of anticoagulants and antidiabetic drugs."
+      ],
+      "status": "active"
+    },
+    {
+      "module_code": "167",
+      "phytocore_code": "Bencha-Kul Metabolic Fire Module",
+      "name_en": "BENCHAKUN CAPSULE (Benjakun Capsule Medicine)",
+      "name_th": null,
+      "product_id": "167",
+      "target_axes": [
+        "A5",
+        "A6",
+        "A7",
+        "A16",
+        "A17",
+        "A18"
+      ],
+      "primary_axes": [
+        "A7",
+        "A17"
+      ],
+      "secondary_axes": [
+        "A5",
+        "A6",
+        "A16",
+        "A18"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "194",
+      "phytocore_code": "None",
+      "name_en": "BETA 1",
+      "name_th": null,
+      "product_id": "194",
+      "target_axes": [
+        "A36"
+      ],
+      "primary_axes": [],
+      "secondary_axes": [
+        "A36"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "114",
+      "phytocore_code": "Immune Regulation Module",
+      "name_en": "Beta-4",
+      "name_th": null,
+      "product_id": "114",
+      "target_axes": [
+        "A3",
+        "A4",
+        "A5"
+      ],
+      "primary_axes": [
+        "A3",
+        "A4",
+        "A5"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "S-00-52",
+      "phytocore_code": "S-00-52",
+      "name_en": "BETA 5 Capsule",
+      "name_th": null,
+      "product_id": "S-00-52",
+      "target_axes": [
+        "A36"
+      ],
+      "primary_axes": [
+        "A36"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "S-00-55",
+      "phytocore_code": "BETA G / 12-1-05-555-5-0-098",
+      "name_en": "BETA G",
+      "name_th": null,
+      "product_id": "S-00-55",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A18",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A34",
+        "A35",
+        "A36"
+      ],
+      "primary_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A18",
+        "A24",
+        "A34",
+        "A35",
+        "A36"
+      ],
+      "secondary_axes": [
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A25",
+        "A26",
+        "A27"
+      ],
+      "dose_type": "severity",
+      "contraindications": [
+        "There are many immune-active herbs, including garlic and licorice, which may require caution in some individuals. Caution should be exercised when using these herbs in conjunction with anticoagulant or immunosuppressant medications."
+      ],
+      "status": "active"
+    },
+    {
+      "module_code": "BL-021",
+      "phytocore_code": "TSPI-BETAL-021",
+      "name_en": "Beta L Capsule",
+      "name_th": null,
+      "product_id": "BL-021",
+      "target_axes": [
+        "A1",
+        "A3",
+        "A9",
+        "A15",
+        "A17",
+        "A20",
+        "A36"
+      ],
+      "primary_axes": [
+        "A1",
+        "A3",
+        "A9",
+        "A15",
+        "A17",
+        "A20",
+        "A36"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "216",
+      "phytocore_code": "None",
+      "name_en": "BETA M",
+      "name_th": null,
+      "product_id": "216",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A9",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A36"
+      ],
+      "primary_axes": [],
+      "secondary_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A9",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A36"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "87",
+      "phytocore_code": "Immune Activation Module",
+      "name_en": "Beta-V",
+      "name_th": null,
+      "product_id": "87",
+      "target_axes": [
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A18",
+        "A19",
+        "A21"
+      ],
+      "primary_axes": [
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A18",
+        "A19",
+        "A21"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "134",
+      "phytocore_code": "Circulation & Detox Module",
+      "name_en": "Beta-X",
+      "name_th": null,
+      "product_id": "134",
+      "target_axes": [
+        "A1",
+        "A4",
+        "A5",
+        "A20",
+        "A24"
+      ],
+      "primary_axes": [
+        "A1",
+        "A4",
+        "A5",
+        "A20",
+        "A24"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "S-00-02",
+      "phytocore_code": "TSPI-RICEZOZYME-CORE",
+      "name_en": "Bio Active Crystallization Technology (TSPI Patent Platform)",
+      "name_th": null,
+      "product_id": "S-00-02",
+      "target_axes": [
+        "A1",
+        "A9",
+        "A10",
+        "A11",
+        "A17",
+        "A18",
+        "A19",
+        "A28",
+        "A29",
+        "A33"
+      ],
+      "primary_axes": [
+        "A1",
+        "A9",
+        "A10",
+        "A11",
+        "A17",
+        "A18",
+        "A19",
+        "A28",
+        "A29",
+        "A33"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [
+        "Risk Score 1/10 (Very Low)"
+      ],
+      "status": "active"
+    },
+    {
+      "module_code": "S-00-60 (Next Sequence)",
+      "phytocore_code": "TSPI-MUSCLE-BONE-REGEN-061",
+      "name_en": "Bonax Capsule",
+      "name_th": null,
+      "product_id": "S-00-60 (Next Sequence)",
+      "target_axes": [
+        "A1",
+        "A9",
+        "A21",
+        "A25",
+        "A28",
+        "A29",
+        "A30",
+        "A36"
+      ],
+      "primary_axes": [
+        "A1",
+        "A9",
+        "A21",
+        "A25",
+        "A28",
+        "A29",
+        "A30",
+        "A36"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "BONAX",
+      "phytocore_code": "None",
+      "name_en": "Bone Anabolic & Anti-Resorption System",
+      "name_th": null,
+      "product_id": "BONAX",
+      "target_axes": [
+        "A6",
+        "A7",
+        "A11",
+        "A17",
+        "A18",
+        "A25",
+        "A26",
+        "A27",
+        "A28",
+        "A29",
+        "A30"
+      ],
+      "primary_axes": [],
+      "secondary_axes": [
+        "A6",
+        "A7",
+        "A11",
+        "A17",
+        "A18",
+        "A25",
+        "A26",
+        "A27",
+        "A28",
+        "A29",
+        "A30"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "H-020",
+      "phytocore_code": "TSPI-BOVA-020",
+      "name_en": "BOVA Capsule",
+      "name_th": null,
+      "product_id": "H-020",
+      "target_axes": [
+        "A9",
+        "A21",
+        "A22",
+        "A32",
+        "A33",
+        "A34",
+        "A35",
+        "A39"
+      ],
+      "primary_axes": [
+        "A9",
+        "A21",
+        "A22",
+        "A32",
+        "A33",
+        "A34",
+        "A35",
+        "A39"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "27",
+      "phytocore_code": "Brain Cognitive Circulation Module",
+      "name_en": "BRANARA",
+      "name_th": null,
+      "product_id": "27",
+      "target_axes": [
+        "A9",
+        "A21",
+        "A35"
+      ],
+      "primary_axes": [
+        "A35"
+      ],
+      "secondary_axes": [
+        "A9",
+        "A21"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "208",
+      "phytocore_code": "None",
+      "name_en": "BRANARIS",
+      "name_th": null,
+      "product_id": "208",
+      "target_axes": [
+        "A38"
+      ],
+      "primary_axes": [],
+      "secondary_axes": [
+        "A38"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "115",
+      "phytocore_code": "Bioactive Peptide Regeneration Module",
+      "name_en": "Buminmax",
+      "name_th": null,
+      "product_id": "115",
+      "target_axes": [
+        "A11",
+        "A18",
+        "A24"
+      ],
+      "primary_axes": [
+        "A11",
+        "A18",
+        "A24"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "BUMINMAX PLUS",
+      "phytocore_code": "TSPI-REGEN-PEPTIDE-CORE",
+      "name_en": "Buminmax Plus Bioactive Peptide Capsule",
+      "name_th": null,
+      "product_id": "BUMINMAX PLUS",
+      "target_axes": [
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A13",
+        "A14",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A28",
+        "A29",
+        "A30",
+        "A35",
+        "A36"
+      ],
+      "primary_axes": [
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A13",
+        "A14",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A28",
+        "A29",
+        "A30",
+        "A35",
+        "A36"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "H-006",
+      "phytocore_code": "TSPI-BUTEA-06",
+      "name_en": "BUTEA SUPERBA CAPSULE",
+      "name_th": null,
+      "product_id": "H-006",
+      "target_axes": [
+        "A7",
+        "A9",
+        "A21",
+        "A22",
+        "A27",
+        "A30",
+        "A33",
+        "A35"
+      ],
+      "primary_axes": [
+        "A9",
+        "A21",
+        "A22",
+        "A27",
+        "A30",
+        "A33",
+        "A35"
+      ],
+      "secondary_axes": [
+        "A7"
+      ],
+      "dose_type": "severity",
+      "contraindications": [
+        "Risk score 3/10. Caution should be exercised in users of nitrate drugs and antihypertensive drugs."
+      ],
+      "status": "active"
+    },
+    {
+      "module_code": "166",
+      "phytocore_code": "Butea Male Vitality Module",
+      "name_en": "BUTEA SUPERBA CAPSULE (Red Kwao Krua Capsules)",
+      "name_th": null,
+      "product_id": "166",
+      "target_axes": [
+        "A14",
+        "A21",
+        "A24",
+        "A29",
+        "A33"
+      ],
+      "primary_axes": [
+        "A33"
+      ],
+      "secondary_axes": [
+        "A14",
+        "A21",
+        "A24",
+        "A29"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "7",
+      "phytocore_code": "DetoxColon-07",
+      "name_en": "Catharic Capsule",
+      "name_th": null,
+      "product_id": "7",
+      "target_axes": [
+        "A16",
+        "A18",
+        "A20"
+      ],
+      "primary_axes": [
+        "A16",
+        "A18",
+        "A20"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "H-017",
+      "phytocore_code": "TSPI-CATHARTIC-017",
+      "name_en": "Cathartic Capsule",
+      "name_th": null,
+      "product_id": "H-017",
+      "target_axes": [
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A20",
+        "A33"
+      ],
+      "primary_axes": [
+        "A16",
+        "A17",
+        "A18",
+        "A20",
+        "A33"
+      ],
+      "secondary_axes": [
+        "A19"
+      ],
+      "dose_type": "bowel",
+      "contraindications": [
+        "Stimulant laxatives are drugs that increase bowel movement."
+      ],
+      "status": "active"
+    },
+    {
+      "module_code": "H-014",
+      "phytocore_code": "TSPI-CENTELLA-014",
+      "name_en": "Centella Asiatica Capsule",
+      "name_th": null,
+      "product_id": "H-014",
+      "target_axes": [
+        "A9",
+        "A21",
+        "A22",
+        "A25",
+        "A31",
+        "A33",
+        "A34"
+      ],
+      "primary_axes": [
+        "A9",
+        "A21",
+        "A22",
+        "A25",
+        "A31",
+        "A33",
+        "A34"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "108",
+      "phytocore_code": "Cellular Detox Module",
+      "name_en": "CHLOROPHYNA",
+      "name_th": null,
+      "product_id": "108",
+      "target_axes": [
+        "A1",
+        "A3",
+        "A17"
+      ],
+      "primary_axes": [
+        "A1",
+        "A3",
+        "A17"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "H-022",
+      "phytocore_code": "TSPI-CINNARA-022",
+      "name_en": "CINNARA Capsule",
+      "name_th": null,
+      "product_id": "H-022",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A4",
+        "A5",
+        "A6",
+        "A9",
+        "A16",
+        "A17",
+        "A18",
+        "A25",
+        "A33",
+        "A35"
+      ],
+      "primary_axes": [
+        "A2",
+        "A4",
+        "A9",
+        "A16",
+        "A17",
+        "A18",
+        "A25",
+        "A33"
+      ],
+      "secondary_axes": [
+        "A1",
+        "A5",
+        "A6",
+        "A35"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "H-004",
+      "phytocore_code": "TSPI-DERRIS-SCANDENS-04",
+      "name_en": "COMPOUND DERRIS SCANDENS CAPSULE",
+      "name_th": null,
+      "product_id": "H-004",
+      "target_axes": [
+        "A1",
+        "A9",
+        "A21",
+        "A22",
+        "A25",
+        "A27",
+        "A30",
+        "A31",
+        "A33",
+        "A36"
+      ],
+      "primary_axes": [
+        "A1",
+        "A9",
+        "A21",
+        "A22",
+        "A25",
+        "A27",
+        "A30",
+        "A31",
+        "A33",
+        "A36"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [
+        "Risk score 2/10: Caution advised for users of NSAIDs and anticoagulants."
+      ],
+      "status": "active"
+    },
+    {
+      "module_code": "164",
+      "phytocore_code": "Derris Musculoskeletal Repair Module",
+      "name_en": "COMPOUND DERRIS SCANDENS CAPSULE (Derris Scandens Capsule)",
+      "name_th": null,
+      "product_id": "164",
+      "target_axes": [
+        "A1",
+        "A25",
+        "A29",
+        "A30",
+        "A31"
+      ],
+      "primary_axes": [
+        "A25",
+        "A31"
+      ],
+      "secondary_axes": [
+        "A1",
+        "A29",
+        "A30"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "H-005",
+      "phytocore_code": "TSPI-DERRIS-VELVET-05",
+      "name_en": "COMPOUND DERRIS VELVET CAPSULE",
+      "name_th": null,
+      "product_id": "H-005",
+      "target_axes": [
+        "A2",
+        "A7",
+        "A9",
+        "A21",
+        "A22",
+        "A25",
+        "A27",
+        "A30",
+        "A33",
+        "A35",
+        "A36"
+      ],
+      "primary_axes": [
+        "A2",
+        "A7",
+        "A9",
+        "A21",
+        "A22",
+        "A25",
+        "A27",
+        "A30",
+        "A33",
+        "A35",
+        "A36"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [
+        "A risk score of 3/10 suggests caution in patients using immunosuppressants and chemotherapy."
+      ],
+      "status": "active"
+    },
+    {
+      "module_code": "H-012",
+      "phytocore_code": "TSPI-YHATEENNOK-012",
+      "name_en": "COMPOUND YHATEENNOK CAPSULE",
+      "name_th": null,
+      "product_id": "H-012",
+      "target_axes": [
+        "A1",
+        "A9",
+        "A21",
+        "A22",
+        "A27",
+        "A32",
+        "A33"
+      ],
+      "primary_axes": [
+        "A1",
+        "A9",
+        "A21",
+        "A22",
+        "A27",
+        "A32",
+        "A33"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "H-001",
+      "phytocore_code": "TSPI-CURCUMA-01",
+      "name_en": "Curcuma Capsules",
+      "name_th": null,
+      "product_id": "H-001",
+      "target_axes": [
+        "A1",
+        "A9",
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A21",
+        "A25",
+        "A27"
+      ],
+      "primary_axes": [
+        "A1",
+        "A9",
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A21",
+        "A25",
+        "A27"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [
+        "A risk score of 2/10 suggests caution should be exercised in individuals taking anticoagulants or anticoagulant medications."
+      ],
+      "status": "active"
+    },
+    {
+      "module_code": "161",
+      "phytocore_code": "Curcuma Digestive Integrity Module",
+      "name_en": "Curcuma Longa Capsule (Turmeric Capsules)",
+      "name_th": null,
+      "product_id": "161",
+      "target_axes": [
+        "A1",
+        "A9",
+        "A16",
+        "A17",
+        "A19"
+      ],
+      "primary_axes": [
+        "A17",
+        "A19"
+      ],
+      "secondary_axes": [
+        "A1",
+        "A9",
+        "A16"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "199",
+      "phytocore_code": "None",
+      "name_en": "CURMINA",
+      "name_th": null,
+      "product_id": "199",
+      "target_axes": [
+        "A35"
+      ],
+      "primary_axes": [],
+      "secondary_axes": [
+        "A35"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "81",
+      "phytocore_code": "Metabolic Restoration Module",
+      "name_en": "DB-1",
+      "name_th": null,
+      "product_id": "81",
+      "target_axes": [
+        "A5",
+        "A8",
+        "A9",
+        "A11"
+      ],
+      "primary_axes": [
+        "A5",
+        "A8",
+        "A9",
+        "A11"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "165",
+      "phytocore_code": "Velvet Antler Rejuvenation Module",
+      "name_en": "Deer Antler Velvet Capsule, Veychakorn Brand.",
+      "name_th": null,
+      "product_id": "165",
+      "target_axes": [
+        "A2",
+        "A14",
+        "A28",
+        "A29",
+        "A30",
+        "A34"
+      ],
+      "primary_axes": [
+        "A14",
+        "A28"
+      ],
+      "secondary_axes": [
+        "A2",
+        "A29",
+        "A30",
+        "A34"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "19",
+      "phytocore_code": "Imperial Vital Reserve Module",
+      "name_en": "Deer Velvet Antler Elixir",
+      "name_th": null,
+      "product_id": "19",
+      "target_axes": [
+        "A2",
+        "A14",
+        "A28",
+        "A29",
+        "A30",
+        "A34"
+      ],
+      "primary_axes": [
+        "A14",
+        "A28"
+      ],
+      "secondary_axes": [
+        "A2",
+        "A29",
+        "A30",
+        "A34"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "CURMINA-097",
+      "phytocore_code": "TSPI-CURMINA-DIGESTIVE-ANTIINFLAM-097",
+      "name_en": "Digestive–Anti-inflammatory–Mucosal Repair Formula",
+      "name_th": null,
+      "product_id": "CURMINA-097",
+      "target_axes": [
+        "A20",
+        "A21",
+        "A22",
+        "A23",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A28",
+        "A29",
+        "A30",
+        "A31",
+        "A32",
+        "A33",
+        "A34",
+        "A35",
+        "A36"
+      ],
+      "primary_axes": [
+        "A20",
+        "A21",
+        "A22",
+        "A23",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A28",
+        "A29",
+        "A30",
+        "A31",
+        "A32",
+        "A33",
+        "A34",
+        "A35",
+        "A36"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "26",
+      "phytocore_code": "Neuro-Metabolic Vitality Module",
+      "name_en": "EDH",
+      "name_th": null,
+      "product_id": "26",
+      "target_axes": [
+        "A1",
+        "A3",
+        "A5",
+        "A6",
+        "A9",
+        "A13",
+        "A14",
+        "A16",
+        "A35"
+      ],
+      "primary_axes": [
+        "A1",
+        "A3",
+        "A5",
+        "A6",
+        "A9",
+        "A13"
+      ],
+      "secondary_axes": [
+        "A14",
+        "A16",
+        "A35"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "95",
+      "phytocore_code": "Female Hormonal Balance Module",
+      "name_en": "Femoon",
+      "name_th": null,
+      "product_id": "95",
+      "target_axes": [
+        "A1",
+        "A5",
+        "A14",
+        "A15",
+        "A16",
+        "A20",
+        "A32"
+      ],
+      "primary_axes": [
+        "A5",
+        "A15",
+        "A16",
+        "A20",
+        "A32"
+      ],
+      "secondary_axes": [
+        "A1",
+        "A14"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "H-019",
+      "phytocore_code": "TSPI-FEVA-IMMUNE-019",
+      "name_en": "FEVA CAPSULE",
+      "name_th": null,
+      "product_id": "H-019",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A9",
+        "A31",
+        "A32"
+      ],
+      "primary_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A9",
+        "A31",
+        "A32"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "71",
+      "phytocore_code": "Cardiovascular Lipid Balance Module",
+      "name_en": "FlaxPro",
+      "name_th": null,
+      "product_id": "71",
+      "target_axes": [
+        "A3",
+        "A5",
+        "A6",
+        "A9",
+        "A10",
+        "A11",
+        "A20"
+      ],
+      "primary_axes": [
+        "A3",
+        "A5",
+        "A6",
+        "A9",
+        "A10",
+        "A11",
+        "A20"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "74",
+      "phytocore_code": "Neuro-Cognitive Module",
+      "name_en": "Focuz",
+      "name_th": null,
+      "product_id": "74",
+      "target_axes": [
+        "A9",
+        "A30",
+        "A33"
+      ],
+      "primary_axes": [
+        "A9",
+        "A30",
+        "A33"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "S-00-05",
+      "phytocore_code": "TSPI-GARCINIA-META",
+      "name_en": "Garcinia atroviridis / Garcinia cambogia",
+      "name_th": null,
+      "product_id": "S-00-05",
+      "target_axes": [
+        "A1",
+        "A9",
+        "A11",
+        "A12",
+        "A17",
+        "A18",
+        "A33"
+      ],
+      "primary_axes": [
+        "A1",
+        "A9",
+        "A11",
+        "A12",
+        "A17",
+        "A18",
+        "A33"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [
+        "2/10 (low)"
+      ],
+      "status": "active"
+    },
+    {
+      "module_code": "28",
+      "phytocore_code": "Garlic Cardiometabolic Module",
+      "name_en": "GARLICA",
+      "name_th": null,
+      "product_id": "28",
+      "target_axes": [
+        "A5",
+        "A9",
+        "A18",
+        "A21"
+      ],
+      "primary_axes": [
+        "A21"
+      ],
+      "secondary_axes": [
+        "A5",
+        "A9",
+        "A18"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "85",
+      "phytocore_code": "Hepatic Detox Module",
+      "name_en": "HEPA-1",
+      "name_th": null,
+      "product_id": "85",
+      "target_axes": [
+        "A1",
+        "A3",
+        "A5",
+        "A13"
+      ],
+      "primary_axes": [
+        "A1",
+        "A3",
+        "A5",
+        "A13"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "133",
+      "phytocore_code": "Advanced Liver Protection",
+      "name_en": "Hepa-2",
+      "name_th": null,
+      "product_id": "133",
+      "target_axes": [
+        "A1",
+        "A3",
+        "A5",
+        "A13"
+      ],
+      "primary_axes": [
+        "A1",
+        "A3",
+        "A5",
+        "A13"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "S-00-58",
+      "phytocore_code": "TSPI-LIVER-REGEN-058",
+      "name_en": "HEPA-3 Capsule",
+      "name_th": null,
+      "product_id": "S-00-58",
+      "target_axes": [
+        "A1",
+        "A5",
+        "A6",
+        "A8",
+        "A9",
+        "A13",
+        "A15",
+        "A21",
+        "A24",
+        "A35",
+        "A36"
+      ],
+      "primary_axes": [
+        "A1",
+        "A5",
+        "A6",
+        "A8",
+        "A9",
+        "A13",
+        "A15",
+        "A21",
+        "A24",
+        "A35"
+      ],
+      "secondary_axes": [
+        "A36"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "112",
+      "phytocore_code": "Comprehensive Hepatic Support",
+      "name_en": "Hepa Plus",
+      "name_th": null,
+      "product_id": "112",
+      "target_axes": [
+        "A1",
+        "A5",
+        "A13"
+      ],
+      "primary_axes": [
+        "A1",
+        "A5",
+        "A13"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "HEPA2",
+      "phytocore_code": "None",
+      "name_en": "Hepatic Detox & Fluid Clearance System",
+      "name_th": null,
+      "product_id": "HEPA2",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A4",
+        "A6",
+        "A7",
+        "A9",
+        "A10",
+        "A15",
+        "A17",
+        "A18",
+        "A23",
+        "A25",
+        "A35",
+        "A36"
+      ],
+      "primary_axes": [],
+      "secondary_axes": [
+        "A1",
+        "A2",
+        "A4",
+        "A6",
+        "A7",
+        "A9",
+        "A10",
+        "A15",
+        "A17",
+        "A18",
+        "A23",
+        "A25",
+        "A35",
+        "A36"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "H-009",
+      "phytocore_code": "TSPI-REGEN-ENDO-BLOOD-009",
+      "name_en": "HO REN YIN MIXTURE",
+      "name_th": null,
+      "product_id": "H-009",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A4",
+        "A5",
+        "A7",
+        "A8",
+        "A9",
+        "A11",
+        "A13",
+        "A14",
+        "A18",
+        "A21",
+        "A22",
+        "A23",
+        "A24",
+        "A26",
+        "A27",
+        "A28",
+        "A29",
+        "A30",
+        "A31",
+        "A32",
+        "A33",
+        "A34",
+        "A35"
+      ],
+      "primary_axes": [
+        "A1",
+        "A4",
+        "A5",
+        "A8",
+        "A9",
+        "A11",
+        "A13",
+        "A14",
+        "A18",
+        "A21",
+        "A22",
+        "A23",
+        "A24",
+        "A26",
+        "A27",
+        "A28",
+        "A29",
+        "A31",
+        "A32",
+        "A33",
+        "A34",
+        "A35"
+      ],
+      "secondary_axes": [
+        "A2",
+        "A7",
+        "A30"
+      ],
+      "dose_type": "severity",
+      "contraindications": [
+        "Risk Score 2/10"
+      ],
+      "status": "active"
+    },
+    {
+      "module_code": "169",
+      "phytocore_code": "Ho Ren Yin Vital Organ Restore Module",
+      "name_en": "HO RENYIN CAPSULE          Horenyin Capsule",
+      "name_th": null,
+      "product_id": "169",
+      "target_axes": [
+        "A2",
+        "A14",
+        "A28",
+        "A34",
+        "A35",
+        "A36"
+      ],
+      "primary_axes": [
+        "A14",
+        "A28"
+      ],
+      "secondary_axes": [
+        "A2",
+        "A34",
+        "A35",
+        "A36"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "H-013",
+      "phytocore_code": "TSPI-HOUTTUYNIA-013",
+      "name_en": "HOUTTUYNIA CORDATA CAPSULE",
+      "name_th": null,
+      "product_id": "H-013",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A9",
+        "A18",
+        "A19",
+        "A21"
+      ],
+      "primary_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A9",
+        "A18",
+        "A19",
+        "A21"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "86",
+      "phytocore_code": "Cardiovascular Protection Module",
+      "name_en": "HP-1",
+      "name_th": null,
+      "product_id": "86",
+      "target_axes": [
+        "A3",
+        "A5",
+        "A6",
+        "A8",
+        "A20",
+        "A21"
+      ],
+      "primary_axes": [
+        "A3",
+        "A5",
+        "A6",
+        "A8",
+        "A20",
+        "A21"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "187",
+      "phytocore_code": "IM-1 Beta Glucan Immune Module",
+      "name_en": "IM-1",
+      "name_th": null,
+      "product_id": "187",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A20",
+        "A22",
+        "A23",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A32",
+        "A36"
+      ],
+      "primary_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A20",
+        "A22",
+        "A23",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A32",
+        "A36"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "48",
+      "phytocore_code": "Immunometabolic Defense Module",
+      "name_en": "IM-1 Beta Glucan",
+      "name_th": null,
+      "product_id": "48",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A18",
+        "A19"
+      ],
+      "primary_axes": [
+        "A2",
+        "A4",
+        "A18",
+        "A19"
+      ],
+      "secondary_axes": [
+        "A1",
+        "A3"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "84",
+      "phytocore_code": "Cellular Repair Module",
+      "name_en": "IM-5",
+      "name_th": null,
+      "product_id": "84",
+      "target_axes": [
+        "A3",
+        "A5",
+        "A7",
+        "A8",
+        "A9",
+        "A14"
+      ],
+      "primary_axes": [
+        "A3",
+        "A5",
+        "A7",
+        "A8",
+        "A9",
+        "A14"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "H-030",
+      "phytocore_code": "TSPI-IMMUNE-INFLAM-030",
+      "name_en": "IM-6 Capsule",
+      "name_th": null,
+      "product_id": "H-030",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A17",
+        "A18",
+        "A20",
+        "A21",
+        "A22",
+        "A23",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A33",
+        "A35",
+        "A36"
+      ],
+      "primary_axes": [
+        "A1",
+        "A3",
+        "A4",
+        "A5",
+        "A9",
+        "A17",
+        "A21",
+        "A24",
+        "A36"
+      ],
+      "secondary_axes": [
+        "A2",
+        "A6",
+        "A7",
+        "A8",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A18",
+        "A20",
+        "A22",
+        "A23",
+        "A25",
+        "A26",
+        "A27",
+        "A33",
+        "A35"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "195",
+      "phytocore_code": "None",
+      "name_en": "IM-7",
+      "name_th": null,
+      "product_id": "195",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A36"
+      ],
+      "primary_axes": [],
+      "secondary_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A36"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "S-00-47",
+      "phytocore_code": "TSPI-TOXIN-INFLAM-TME-IM7",
+      "name_en": "IM-7 Detox & Anti-Inflammatory Capsule",
+      "name_th": null,
+      "product_id": "S-00-47",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A9",
+        "A15",
+        "A22",
+        "A24",
+        "A25",
+        "A34",
+        "A36"
+      ],
+      "primary_axes": [
+        "A1",
+        "A2",
+        "A9",
+        "A15",
+        "A22",
+        "A24",
+        "A25",
+        "A34",
+        "A36"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [
+        "IM-7 works through three main mechanisms: detoxification (+anti-inflammatory), regulating the tissue microenvironment, and modulating the immune system to eliminate abnormalities."
+      ],
+      "status": "active"
+    },
+    {
+      "module_code": "193",
+      "phytocore_code": "None",
+      "name_en": "IM 9",
+      "name_th": null,
+      "product_id": "193",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A18",
+        "A22",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A36"
+      ],
+      "primary_axes": [],
+      "secondary_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A18",
+        "A22",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A36"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "89",
+      "phytocore_code": "Microbiome Regeneration Module",
+      "name_en": "IMO",
+      "name_th": null,
+      "product_id": "89",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A4",
+        "A5",
+        "A8",
+        "A12",
+        "A15",
+        "A16",
+        "A36",
+        "A38",
+        "A39"
+      ],
+      "primary_axes": [
+        "A1",
+        "A2",
+        "A4",
+        "A5",
+        "A8",
+        "A12",
+        "A15",
+        "A16",
+        "A36",
+        "A38",
+        "A39"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "45",
+      "phytocore_code": "Cardiometabolic Adaptation Module",
+      "name_en": "IVORA",
+      "name_th": null,
+      "product_id": "45",
+      "target_axes": [
+        "A5",
+        "A6",
+        "A8",
+        "A11",
+        "A20",
+        "A21",
+        "A23"
+      ],
+      "primary_axes": [
+        "A5",
+        "A8",
+        "A11",
+        "A20",
+        "A21"
+      ],
+      "secondary_axes": [
+        "A6",
+        "A23"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "148",
+      "phytocore_code": "Renal Detox & Fluid Balance Module",
+      "name_en": "KD",
+      "name_th": null,
+      "product_id": "148",
+      "target_axes": [
+        "A1",
+        "A5",
+        "A12",
+        "A17",
+        "A35"
+      ],
+      "primary_axes": [
+        "A1",
+        "A5",
+        "A12",
+        "A17",
+        "A35"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "KD",
+      "phytocore_code": "None",
+      "name_en": "KD (Kidney Defense & Regeneration System)",
+      "name_th": null,
+      "product_id": "KD",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A9",
+        "A10",
+        "A15",
+        "A20",
+        "A23",
+        "A25",
+        "A26",
+        "A35"
+      ],
+      "primary_axes": [],
+      "secondary_axes": [
+        "A1",
+        "A2",
+        "A9",
+        "A10",
+        "A15",
+        "A20",
+        "A23",
+        "A25",
+        "A26",
+        "A35"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "93",
+      "phytocore_code": "Digestive Microbiome Repair Module",
+      "name_en": "Kerma",
+      "name_th": null,
+      "product_id": "93",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A5",
+        "A12",
+        "A17",
+        "A19"
+      ],
+      "primary_axes": [
+        "A1",
+        "A2",
+        "A5",
+        "A12",
+        "A17"
+      ],
+      "secondary_axes": [
+        "A19"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "39",
+      "phytocore_code": "Immune Antiviral Defense Module",
+      "name_en": "KERMA COMPLEX",
+      "name_th": null,
+      "product_id": "39",
+      "target_axes": [
+        "A2",
+        "A3",
+        "A36"
+      ],
+      "primary_axes": [
+        "A3"
+      ],
+      "secondary_axes": [
+        "A2",
+        "A36"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "42",
+      "phytocore_code": "Gastrointestinal Mucosal Repair Module",
+      "name_en": "KERMA (Digestive variant)",
+      "name_th": null,
+      "product_id": "42",
+      "target_axes": [
+        "A1",
+        "A17",
+        "A18",
+        "A19"
+      ],
+      "primary_axes": [
+        "A17"
+      ],
+      "secondary_axes": [
+        "A1",
+        "A18",
+        "A19"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "16",
+      "phytocore_code": "Kerra Immune-Oncology Regulatory Module",
+      "name_en": "KERRA CAPSULE",
+      "name_th": null,
+      "product_id": "16",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A9",
+        "A19",
+        "A36",
+        "A37",
+        "A39"
+      ],
+      "primary_axes": [
+        "A1",
+        "A2",
+        "A37"
+      ],
+      "secondary_axes": [
+        "A3",
+        "A9",
+        "A19",
+        "A36",
+        "A39"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "213",
+      "phytocore_code": "None",
+      "name_en": "KERRINA REFRESHING MOUTH SPRAY",
+      "name_th": null,
+      "product_id": "213",
+      "target_axes": [],
+      "primary_axes": [],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "draft"
+    },
+    {
+      "module_code": "212",
+      "phytocore_code": "None",
+      "name_en": "KERRIX PLUS",
+      "name_th": null,
+      "product_id": "212",
+      "target_axes": [
+        "A36"
+      ],
+      "primary_axes": [],
+      "secondary_axes": [
+        "A36"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "21",
+      "phytocore_code": "Anti-Inflammatory Joint & Circulation Module",
+      "name_en": "KIMLUY BRAND YELLOW OIL",
+      "name_th": null,
+      "product_id": "21",
+      "target_axes": [
+        "A1",
+        "A5",
+        "A20",
+        "A21",
+        "A23",
+        "A29",
+        "A31"
+      ],
+      "primary_axes": [
+        "A5",
+        "A20",
+        "A23",
+        "A29",
+        "A31"
+      ],
+      "secondary_axes": [
+        "A1",
+        "A21"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "159",
+      "phytocore_code": "Neurovascular Longevity Module",
+      "name_en": "KS",
+      "name_th": null,
+      "product_id": "159",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A20",
+        "A21",
+        "A22",
+        "A23",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A30",
+        "A35",
+        "A36",
+        "A37",
+        "A38",
+        "A39"
+      ],
+      "primary_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A20",
+        "A21",
+        "A22",
+        "A23",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A30",
+        "A35",
+        "A36",
+        "A37",
+        "A38",
+        "A39"
+      ],
+      "secondary_axes": [],
+      "dose_type": "bowel",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "201",
+      "phytocore_code": "None",
+      "name_en": "LANA",
+      "name_th": null,
+      "product_id": "201",
+      "target_axes": [
+        "A7",
+        "A15",
+        "A18",
+        "A31",
+        "A33",
+        "A35",
+        "A36"
+      ],
+      "primary_axes": [
+        "A7",
+        "A15",
+        "A18"
+      ],
+      "secondary_axes": [
+        "A31",
+        "A33",
+        "A35",
+        "A36"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "120",
+      "phytocore_code": "Hepato-Metabolic Regulation Module",
+      "name_en": "Livita",
+      "name_th": null,
+      "product_id": "120",
+      "target_axes": [
+        "A3",
+        "A8",
+        "A13"
+      ],
+      "primary_axes": [
+        "A3",
+        "A8",
+        "A13"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "S-00-60",
+      "phytocore_code": "TSPI-OXY-LIVER-DETOX-060",
+      "name_en": "Livoxy Capsule",
+      "name_th": null,
+      "product_id": "S-00-60",
+      "target_axes": [
+        "A1",
+        "A9",
+        "A15",
+        "A21",
+        "A22",
+        "A23",
+        "A25",
+        "A36"
+      ],
+      "primary_axes": [
+        "A1",
+        "A9",
+        "A15",
+        "A21",
+        "A22",
+        "A23",
+        "A25",
+        "A36"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "205",
+      "phytocore_code": "None",
+      "name_en": "LIVOXY PLUS",
+      "name_th": null,
+      "product_id": "205",
+      "target_axes": [
+        "A8",
+        "A9",
+        "A25",
+        "A26",
+        "A27",
+        "A36"
+      ],
+      "primary_axes": [],
+      "secondary_axes": [
+        "A8",
+        "A9",
+        "A25",
+        "A26",
+        "A27",
+        "A36"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "72",
+      "phytocore_code": "Metabolic Reset Module",
+      "name_en": "Luce",
+      "name_th": null,
+      "product_id": "72",
+      "target_axes": [
+        "A2",
+        "A5",
+        "A11",
+        "A12"
+      ],
+      "primary_axes": [
+        "A2",
+        "A5",
+        "A11",
+        "A12"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "Beta L",
+      "phytocore_code": "None",
+      "name_en": "(Lymphatic–Liver–Lung Detox System)",
+      "name_th": null,
+      "product_id": "Beta L",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A15",
+        "A17",
+        "A18",
+        "A20",
+        "A34",
+        "A36",
+        "A39"
+      ],
+      "primary_axes": [],
+      "secondary_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A15",
+        "A17",
+        "A18",
+        "A20",
+        "A34",
+        "A36",
+        "A39"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "211",
+      "phytocore_code": "None",
+      "name_en": "LYPHOLAX",
+      "name_th": null,
+      "product_id": "211",
+      "target_axes": [
+        "A15",
+        "A17",
+        "A19",
+        "A35",
+        "A36",
+        "A39"
+      ],
+      "primary_axes": [],
+      "secondary_axes": [
+        "A15",
+        "A17",
+        "A19",
+        "A35",
+        "A36",
+        "A39"
+      ],
+      "dose_type": "bowel",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "H-024",
+      "phytocore_code": "TSPI-IMMUNE-DETOX-024",
+      "name_en": "Merdana Capsule",
+      "name_th": null,
+      "product_id": "H-024",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A9",
+        "A17",
+        "A18",
+        "A21",
+        "A24",
+        "A25",
+        "A31",
+        "A35",
+        "A36",
+        "A39"
+      ],
+      "primary_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A9",
+        "A17",
+        "A18",
+        "A21",
+        "A24",
+        "A25",
+        "A36",
+        "A39"
+      ],
+      "secondary_axes": [
+        "A31",
+        "A35"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "104",
+      "phytocore_code": "Lymphatic Regulation Module",
+      "name_en": "Minoza",
+      "name_th": null,
+      "product_id": "104",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A18",
+        "A20",
+        "A21",
+        "A22",
+        "A23",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A30",
+        "A33",
+        "A35",
+        "A36",
+        "A39"
+      ],
+      "primary_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A18",
+        "A20",
+        "A21",
+        "A22",
+        "A23",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A30",
+        "A33",
+        "A35",
+        "A36",
+        "A39"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "170",
+      "phytocore_code": "Bitter Melon Glycemic Balance Module",
+      "name_en": "MOMORDICA CHARANTIA CAPSULE         Bitter melon capsules",
+      "name_th": null,
+      "product_id": "170",
+      "target_axes": [
+        "A1",
+        "A5",
+        "A6",
+        "A8",
+        "A21"
+      ],
+      "primary_axes": [
+        "A5"
+      ],
+      "secondary_axes": [
+        "A1",
+        "A6",
+        "A8",
+        "A21"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "82",
+      "phytocore_code": "Neuro-Respiratory Support Module",
+      "name_en": "NARIS",
+      "name_th": null,
+      "product_id": "82",
+      "target_axes": [
+        "A4",
+        "A5",
+        "A6",
+        "A12"
+      ],
+      "primary_axes": [
+        "A4",
+        "A5",
+        "A6",
+        "A12"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "189",
+      "phytocore_code": "Renax Renal Detox Module",
+      "name_en": "None",
+      "name_th": null,
+      "product_id": "189",
+      "target_axes": [
+        "A2",
+        "A3",
+        "A4",
+        "A26",
+        "A27",
+        "A35",
+        "A36"
+      ],
+      "primary_axes": [
+        "A2",
+        "A3",
+        "A4",
+        "A26",
+        "A27",
+        "A35",
+        "A36"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "H-016",
+      "phytocore_code": "TSPI-BLOOD-REGEN-016",
+      "name_en": "Nourishing Blood Tonic Capsule",
+      "name_th": null,
+      "product_id": "H-016",
+      "target_axes": [
+        "A1",
+        "A7",
+        "A9",
+        "A14",
+        "A21",
+        "A22",
+        "A25",
+        "A27",
+        "A28",
+        "A31"
+      ],
+      "primary_axes": [
+        "A1",
+        "A9",
+        "A21",
+        "A22",
+        "A25",
+        "A27",
+        "A28",
+        "A31"
+      ],
+      "secondary_axes": [
+        "A7",
+        "A14"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "139",
+      "phytocore_code": "Orygis Bamboo Mouthwash™",
+      "name_en": "Orygis Bamboo Mouthwash",
+      "name_th": null,
+      "product_id": "139",
+      "target_axes": [
+        "A4",
+        "A5",
+        "A30"
+      ],
+      "primary_axes": [
+        "A4",
+        "A5",
+        "A30"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "215",
+      "phytocore_code": "None",
+      "name_en": "ORYGIS PD HERB MOISTURIZER OIL",
+      "name_th": null,
+      "product_id": "215",
+      "target_axes": [],
+      "primary_axes": [],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "draft"
+    },
+    {
+      "module_code": "138",
+      "phytocore_code": "Systemic Organ Tonic",
+      "name_en": "Plumax Plus",
+      "name_th": null,
+      "product_id": "138",
+      "target_axes": [
+        "A6",
+        "A18",
+        "A20",
+        "A36",
+        "A39"
+      ],
+      "primary_axes": [
+        "A6",
+        "A18",
+        "A20",
+        "A36",
+        "A39"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "140",
+      "phytocore_code": "Propolis Immune Spray™",
+      "name_en": "Propolis Immune Spray",
+      "name_th": null,
+      "product_id": "140",
+      "target_axes": [
+        "A4",
+        "A5",
+        "A30"
+      ],
+      "primary_axes": [
+        "A4",
+        "A5",
+        "A30"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "H-021",
+      "phytocore_code": "TSPI-PSYLAZA-021",
+      "name_en": "Psylaza Capsule",
+      "name_th": null,
+      "product_id": "H-021",
+      "target_axes": [
+        "A9",
+        "A21",
+        "A22",
+        "A33",
+        "A34",
+        "A35",
+        "A38",
+        "A39"
+      ],
+      "primary_axes": [
+        "A9",
+        "A21",
+        "A22",
+        "A33",
+        "A34",
+        "A35",
+        "A39"
+      ],
+      "secondary_axes": [
+        "A38"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "43",
+      "phytocore_code": "Antioxidant Cellular Protection Module",
+      "name_en": "RADICA",
+      "name_th": null,
+      "product_id": "43",
+      "target_axes": [
+        "A3",
+        "A4",
+        "A9",
+        "A12",
+        "A14",
+        "A15",
+        "A18"
+      ],
+      "primary_axes": [
+        "A3",
+        "A4",
+        "A9",
+        "A18"
+      ],
+      "secondary_axes": [
+        "A12",
+        "A14",
+        "A15"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "22",
+      "phytocore_code": "Bone Mineralization Support Module",
+      "name_en": "REDCAL",
+      "name_th": null,
+      "product_id": "22",
+      "target_axes": [
+        "A3",
+        "A21",
+        "A22",
+        "A24",
+        "A25",
+        "A29",
+        "A30",
+        "A34"
+      ],
+      "primary_axes": [
+        "A3",
+        "A22",
+        "A24",
+        "A25",
+        "A29",
+        "A30",
+        "A34"
+      ],
+      "secondary_axes": [
+        "A21"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "83",
+      "phytocore_code": "Immune Longevity Module",
+      "name_en": "Reishimuno",
+      "name_th": null,
+      "product_id": "83",
+      "target_axes": [
+        "A3",
+        "A4",
+        "A5",
+        "A11",
+        "A18",
+        "A19"
+      ],
+      "primary_axes": [
+        "A3",
+        "A4",
+        "A5",
+        "A11",
+        "A18",
+        "A19"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "149",
+      "phytocore_code": "Renal Recovery Module",
+      "name_en": "Renax",
+      "name_th": null,
+      "product_id": "149",
+      "target_axes": [
+        "A5",
+        "A6",
+        "A12",
+        "A17",
+        "A20",
+        "A39"
+      ],
+      "primary_axes": [
+        "A5",
+        "A6",
+        "A12",
+        "A17",
+        "A20",
+        "A39"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "101",
+      "phytocore_code": "Longevity Regeneration Module",
+      "name_en": "Revita",
+      "name_th": null,
+      "product_id": "101",
+      "target_axes": [
+        "A3",
+        "A4",
+        "A10",
+        "A11",
+        "A18"
+      ],
+      "primary_axes": [
+        "A3",
+        "A4",
+        "A10",
+        "A11",
+        "A18"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "29",
+      "phytocore_code": "Microbiome Symbiosis Module",
+      "name_en": "RICEZOZYME",
+      "name_th": null,
+      "product_id": "29",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A5",
+        "A12",
+        "A17",
+        "A18",
+        "A19"
+      ],
+      "primary_axes": [
+        "A2",
+        "A5",
+        "A12",
+        "A18"
+      ],
+      "secondary_axes": [
+        "A1",
+        "A17",
+        "A19"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "198",
+      "phytocore_code": "None",
+      "name_en": "RIZZ",
+      "name_th": null,
+      "product_id": "198",
+      "target_axes": [
+        "A35",
+        "A36"
+      ],
+      "primary_axes": [],
+      "secondary_axes": [
+        "A35",
+        "A36"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "S-00-61",
+      "phytocore_code": "TSPI-WOUND-IMMUNE-061",
+      "name_en": "Rizzo Capsule",
+      "name_th": null,
+      "product_id": "S-00-61",
+      "target_axes": [
+        "A1",
+        "A4",
+        "A9",
+        "A12",
+        "A18",
+        "A22",
+        "A35",
+        "A36"
+      ],
+      "primary_axes": [
+        "A1",
+        "A4",
+        "A9",
+        "A12",
+        "A18",
+        "A22",
+        "A35",
+        "A36"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "S-00-59",
+      "phytocore_code": "TSPI-NEURO-SLEEP-059",
+      "name_en": "Sangvichai",
+      "name_th": null,
+      "product_id": "S-00-59",
+      "target_axes": [
+        "A1",
+        "A8",
+        "A9",
+        "A10",
+        "A12",
+        "A13",
+        "A14",
+        "A17",
+        "A21",
+        "A22",
+        "A23",
+        "A24",
+        "A33",
+        "A34",
+        "A35",
+        "A36",
+        "A39"
+      ],
+      "primary_axes": [
+        "A1",
+        "A8",
+        "A9",
+        "A10",
+        "A13",
+        "A17",
+        "A21",
+        "A24",
+        "A34",
+        "A36",
+        "A39"
+      ],
+      "secondary_axes": [
+        "A12",
+        "A14",
+        "A22",
+        "A23",
+        "A33",
+        "A35"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "150",
+      "phytocore_code": "Digestive Neuroenteric Module",
+      "name_en": "Sinaza",
+      "name_th": null,
+      "product_id": "150",
+      "target_axes": [
+        "A5",
+        "A15",
+        "A16"
+      ],
+      "primary_axes": [
+        "A5",
+        "A15",
+        "A16"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "135",
+      "phytocore_code": "Traditional Detox Module",
+      "name_en": "Ya Sitthijohn",
+      "name_th": null,
+      "product_id": "135",
+      "target_axes": [
+        "A1",
+        "A4",
+        "A14"
+      ],
+      "primary_axes": [
+        "A1",
+        "A4",
+        "A14"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "174",
+      "phytocore_code": "Circulatory Flow Optimization Module",
+      "name_en": "Stream",
+      "name_th": null,
+      "product_id": "174",
+      "target_axes": [
+        "A3",
+        "A6",
+        "A8",
+        "A10",
+        "A20"
+      ],
+      "primary_axes": [
+        "A3",
+        "A6",
+        "A8",
+        "A10",
+        "A20"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "184",
+      "phytocore_code": "Stream Cardiovascular Protection Module",
+      "name_en": "STREAM PLUS",
+      "name_th": null,
+      "product_id": "184",
+      "target_axes": [
+        "A6",
+        "A7",
+        "A16",
+        "A20",
+        "A21",
+        "A22",
+        "A23"
+      ],
+      "primary_axes": [
+        "A6",
+        "A7",
+        "A16",
+        "A20",
+        "A21",
+        "A22",
+        "A23"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "192",
+      "phytocore_code": "None",
+      "name_en": "STREAM X",
+      "name_th": null,
+      "product_id": "192",
+      "target_axes": [
+        "A6",
+        "A7",
+        "A16",
+        "A20",
+        "A21",
+        "A22",
+        "A23"
+      ],
+      "primary_axes": [],
+      "secondary_axes": [
+        "A6",
+        "A7",
+        "A16",
+        "A20",
+        "A21",
+        "A22",
+        "A23"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "24",
+      "phytocore_code": "Cordyceps Energy & Circulation Module",
+      "name_en": "TANGCHOU PLUS SANCHI",
+      "name_th": null,
+      "product_id": "24",
+      "target_axes": [
+        "A5",
+        "A6",
+        "A7",
+        "A10",
+        "A14",
+        "A20",
+        "A21",
+        "A29",
+        "A34"
+      ],
+      "primary_axes": [
+        "A5",
+        "A6",
+        "A7",
+        "A10",
+        "A14",
+        "A20"
+      ],
+      "secondary_axes": [
+        "A21",
+        "A29",
+        "A34"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "41",
+      "phytocore_code": "Women's Endocrine Renewal Module",
+      "name_en": "TANGTU NGCHOU PLUS 2",
+      "name_th": null,
+      "product_id": "41",
+      "target_axes": [
+        "A7",
+        "A21",
+        "A28",
+        "A32",
+        "A34",
+        "A35"
+      ],
+      "primary_axes": [
+        "A32",
+        "A35"
+      ],
+      "secondary_axes": [
+        "A7",
+        "A21",
+        "A28",
+        "A34"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "91",
+      "phytocore_code": "Vital Energy Module",
+      "name_en": "Tangtungchou Plus I",
+      "name_th": null,
+      "product_id": "91",
+      "target_axes": [
+        "A4",
+        "A11",
+        "A18",
+        "A20"
+      ],
+      "primary_axes": [
+        "A4",
+        "A11",
+        "A18",
+        "A20"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "92",
+      "phytocore_code": "Neuro-Endocrine Restoration Module",
+      "name_en": "Tangtungchou Plus II",
+      "name_th": null,
+      "product_id": "92",
+      "target_axes": [
+        "A10",
+        "A11",
+        "A15",
+        "A18"
+      ],
+      "primary_axes": [
+        "A10",
+        "A11",
+        "A15",
+        "A18"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "H-023",
+      "phytocore_code": "TSPI-MYOFASCIAL-REPAIR-023",
+      "name_en": "Tarana Capsule",
+      "name_th": null,
+      "product_id": "H-023",
+      "target_axes": [
+        "A1",
+        "A9",
+        "A16",
+        "A17",
+        "A21",
+        "A22",
+        "A24",
+        "A25",
+        "A29",
+        "A30",
+        "A31"
+      ],
+      "primary_axes": [
+        "A1",
+        "A9",
+        "A17",
+        "A21",
+        "A22",
+        "A24",
+        "A25",
+        "A29",
+        "A30"
+      ],
+      "secondary_axes": [
+        "A16",
+        "A31"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "73",
+      "phytocore_code": "Prostate Support Module",
+      "name_en": "Topaz",
+      "name_th": null,
+      "product_id": "73",
+      "target_axes": [
+        "A5",
+        "A6",
+        "A25"
+      ],
+      "primary_axes": [
+        "A5",
+        "A6",
+        "A25"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "12-1-05 555-5-0 056",
+      "phytocore_code": "None",
+      "name_en": "TOPAZ – Vascular–Prostate Modulation Formula",
+      "name_th": null,
+      "product_id": "12-1-05 555-5-0 056",
+      "target_axes": [
+        "A1",
+        "A9",
+        "A20",
+        "A21",
+        "A22",
+        "A23",
+        "A32",
+        "A34",
+        "A35",
+        "A36"
+      ],
+      "primary_axes": [],
+      "secondary_axes": [
+        "A1",
+        "A9",
+        "A20",
+        "A21",
+        "A22",
+        "A23",
+        "A32",
+        "A34",
+        "A35",
+        "A36"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "HEPA 1",
+      "phytocore_code": "Phase 1–3 Detox Platform",
+      "name_en": "TSPI MASTER LIVER DETOX & REGENERATION FORMULA",
+      "name_th": null,
+      "product_id": "HEPA 1",
+      "target_axes": [
+        "A5",
+        "A6",
+        "A9",
+        "A10",
+        "A11",
+        "A15",
+        "A20",
+        "A24",
+        "A35",
+        "A36"
+      ],
+      "primary_axes": [
+        "A6",
+        "A9",
+        "A10",
+        "A15",
+        "A24",
+        "A36"
+      ],
+      "secondary_axes": [
+        "A5",
+        "A11",
+        "A20",
+        "A35"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "S-00-06",
+      "phytocore_code": "TSPI-BRANARA-NEURO-ENDO-006",
+      "name_en": "– TSPI NEURO–ENDOCRINE MASTER MODULE (Reconstructed",
+      "name_th": null,
+      "product_id": "S-00-06",
+      "target_axes": [
+        "A1",
+        "A9",
+        "A18",
+        "A20",
+        "A21",
+        "A22",
+        "A33",
+        "A34",
+        "A36"
+      ],
+      "primary_axes": [
+        "A1",
+        "A9",
+        "A18",
+        "A20",
+        "A21",
+        "A22",
+        "A33",
+        "A34",
+        "A36"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [
+        "4/10 Caution: Contains sedatives and antihypertensive drugs."
+      ],
+      "status": "active"
+    },
+    {
+      "module_code": "99",
+      "phytocore_code": "Gastrointestinal Protection Module",
+      "name_en": "Twmid",
+      "name_th": null,
+      "product_id": "99",
+      "target_axes": [
+        "A2",
+        "A5",
+        "A12"
+      ],
+      "primary_axes": [
+        "A2",
+        "A5",
+        "A12"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "217",
+      "phytocore_code": "None",
+      "name_en": "UMX",
+      "name_th": null,
+      "product_id": "217",
+      "target_axes": [
+        "A36"
+      ],
+      "primary_axes": [],
+      "secondary_axes": [
+        "A36"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "98",
+      "phytocore_code": "Renal-Urological Support Module",
+      "name_en": "Urana",
+      "name_th": null,
+      "product_id": "98",
+      "target_axes": [
+        "A1",
+        "A5",
+        "A14",
+        "A17",
+        "A35",
+        "A36"
+      ],
+      "primary_axes": [
+        "A1",
+        "A5",
+        "A14",
+        "A17",
+        "A35",
+        "A36"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "210",
+      "phytocore_code": "None",
+      "name_en": "URANA 2",
+      "name_th": null,
+      "product_id": "210",
+      "target_axes": [
+        "A15",
+        "A35",
+        "A36"
+      ],
+      "primary_axes": [],
+      "secondary_axes": [
+        "A15",
+        "A35",
+        "A36"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "25",
+      "phytocore_code": "Respiratory Immune Protection Module",
+      "name_en": "VARIZ",
+      "name_th": null,
+      "product_id": "25",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A9",
+        "A17",
+        "A19",
+        "A20",
+        "A21",
+        "A24",
+        "A35"
+      ],
+      "primary_axes": [
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A9",
+        "A17",
+        "A20",
+        "A21",
+        "A24"
+      ],
+      "secondary_axes": [
+        "A1",
+        "A19",
+        "A35"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "S-00-53",
+      "phytocore_code": "TSPI-RIZZ-096",
+      "name_en": "Vascular repair formula",
+      "name_th": null,
+      "product_id": "S-00-53",
+      "target_axes": [
+        "A2",
+        "A20",
+        "A21",
+        "A22",
+        "A24",
+        "A25",
+        "A30",
+        "A36"
+      ],
+      "primary_axes": [
+        "A2",
+        "A20",
+        "A21",
+        "A22",
+        "A24",
+        "A25",
+        "A30",
+        "A36"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [
+        "Score: 3/10 Caution: Anticoagulants (NSAIDs)"
+      ],
+      "status": "active"
+    },
+    {
+      "module_code": "H-018",
+      "phytocore_code": "TSPI-VENTA-018",
+      "name_en": "Ya Venta Capsule",
+      "name_th": null,
+      "product_id": "H-018",
+      "target_axes": [
+        "A1",
+        "A9",
+        "A21",
+        "A22",
+        "A25",
+        "A29",
+        "A31",
+        "A33"
+      ],
+      "primary_axes": [
+        "A1",
+        "A9",
+        "A21",
+        "A22",
+        "A25",
+        "A29",
+        "A31",
+        "A33"
+      ],
+      "secondary_axes": [],
+      "dose_type": "bowel",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "168",
+      "phytocore_code": "Vetchakorn Neuro-Sleep Module No.6",
+      "name_en": "YA VETCHAKORN NO.6 (Medicine Vejakorn Number 6)",
+      "name_th": null,
+      "product_id": "168",
+      "target_axes": [
+        "A1",
+        "A17",
+        "A18",
+        "A34",
+        "A35"
+      ],
+      "primary_axes": [
+        "A35"
+      ],
+      "secondary_axes": [
+        "A1",
+        "A17",
+        "A18",
+        "A34"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "100",
+      "phytocore_code": "Herbal Cosmetic Healing Module",
+      "name_en": "Virana",
+      "name_th": null,
+      "product_id": "100",
+      "target_axes": [
+        "A5",
+        "A7",
+        "A14"
+      ],
+      "primary_axes": [
+        "A5",
+        "A7",
+        "A14"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "46",
+      "phytocore_code": "Cellular Detoxification & Antioxidant Module",
+      "name_en": "VITACEL",
+      "name_th": null,
+      "product_id": "46",
+      "target_axes": [
+        "A3",
+        "A5",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A14",
+        "A15",
+        "A16",
+        "A18"
+      ],
+      "primary_axes": [
+        "A3",
+        "A5",
+        "A10",
+        "A11",
+        "A14",
+        "A15",
+        "A16",
+        "A18"
+      ],
+      "secondary_axes": [
+        "A8",
+        "A9"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "136",
+      "phytocore_code": "Metabolic Balancing Module",
+      "name_en": "Vitalis",
+      "name_th": null,
+      "product_id": "136",
+      "target_axes": [
+        "A3",
+        "A8",
+        "A9"
+      ],
+      "primary_axes": [
+        "A3",
+        "A8",
+        "A9"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "131",
+      "phytocore_code": "Multinutrient Cellular Support",
+      "name_en": "VitalPlus",
+      "name_th": null,
+      "product_id": "131",
+      "target_axes": [
+        "A10",
+        "A11",
+        "A18",
+        "A37",
+        "A39"
+      ],
+      "primary_axes": [
+        "A10",
+        "A11",
+        "A18",
+        "A37",
+        "A39"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "H-011",
+      "phytocore_code": "TSPI-WATTANOTHAI-011",
+      "name_en": "WATTANOTHAI CAPSULE",
+      "name_th": null,
+      "product_id": "H-011",
+      "target_axes": [
+        "A9",
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A21",
+        "A27"
+      ],
+      "primary_axes": [
+        "A9",
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A21",
+        "A27"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [
+        "Risk score 2/10"
+      ],
+      "status": "active"
+    },
+    {
+      "module_code": "XM2-024",
+      "phytocore_code": "TSPI-XM2-024",
+      "name_en": "XM-2 Capsule",
+      "name_th": null,
+      "product_id": "XM2-024",
+      "target_axes": [
+        "A1",
+        "A3",
+        "A4",
+        "A5",
+        "A7",
+        "A9",
+        "A18",
+        "A23",
+        "A24",
+        "A36"
+      ],
+      "primary_axes": [
+        "A1",
+        "A3",
+        "A4",
+        "A5",
+        "A7",
+        "A9",
+        "A18",
+        "A23",
+        "A24",
+        "A36"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "75",
+      "phytocore_code": "Digestive Repair Module",
+      "name_en": "XS",
+      "name_th": null,
+      "product_id": "75",
+      "target_axes": [
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "primary_axes": [
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "H-008",
+      "phytocore_code": "TSPI-YAVETCHAKORN-06",
+      "name_en": "YAVETCHAKORN NO.6 CAPSULE",
+      "name_th": null,
+      "product_id": "H-008",
+      "target_axes": [
+        "A2",
+        "A9",
+        "A17",
+        "A21",
+        "A22",
+        "A27",
+        "A33",
+        "A34",
+        "A35",
+        "A39"
+      ],
+      "primary_axes": [
+        "A2",
+        "A9",
+        "A17",
+        "A21",
+        "A22",
+        "A27",
+        "A33",
+        "A34",
+        "A35",
+        "A39"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [
+        "Risk score: 2.5/10. Caution should be exercised in individuals using sleeping pills, anti-anxiety medications, sedatives, or medications that affect blood pressure and circulation. This is because they may potentiate the sedative or circulation-enhancing effects in some individuals."
+      ],
+      "status": "active"
+    },
+    {
+      "module_code": "55",
+      "phytocore_code": "Vascular Anti-Inflammatory Module",
+      "name_en": "Yhateennok Capsule",
+      "name_th": null,
+      "product_id": "55",
+      "target_axes": [
+        "A1",
+        "A9",
+        "A21"
+      ],
+      "primary_axes": [
+        "A21"
+      ],
+      "secondary_axes": [
+        "A1",
+        "A9"
+      ],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "2",
+      "phytocore_code": "VasoBalance-02",
+      "name_en": "Yhateenok Capsule",
+      "name_th": null,
+      "product_id": "2",
+      "target_axes": [
+        "A9",
+        "A21",
+        "A22",
+        "A23"
+      ],
+      "primary_axes": [
+        "A9",
+        "A21",
+        "A22",
+        "A23"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    },
+    {
+      "module_code": "191",
+      "phytocore_code": "None",
+      "name_en": "ZAMINZYME",
+      "name_th": null,
+      "product_id": "191",
+      "target_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A20",
+        "A21",
+        "A22",
+        "A23",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A28",
+        "A29",
+        "A30",
+        "A31",
+        "A32",
+        "A33",
+        "A34",
+        "A35",
+        "A36",
+        "A38",
+        "A39"
+      ],
+      "primary_axes": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8",
+        "A9",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A20",
+        "A21",
+        "A22",
+        "A23",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A28",
+        "A29",
+        "A30",
+        "A31",
+        "A32",
+        "A33",
+        "A34",
+        "A35",
+        "A36",
+        "A38",
+        "A39"
+      ],
+      "secondary_axes": [],
+      "dose_type": "severity",
+      "contraindications": [],
+      "status": "active"
+    }
+  ]
+}

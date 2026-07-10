@@ -71,24 +71,41 @@ class Product(Base):
     therapeutic_focus: Mapped[str | None] = mapped_column(Text)
 
 
-class Module(Base):                   # therapeutic unit (e.g. KS, IM6)
+class Module(Base):                   # therapeutic unit = ONE product (1 module = 1 product)
     __tablename__ = "modules"
     id: Mapped[int] = mapped_column(primary_key=True)
-    code: Mapped[str] = mapped_column(String(32), unique=True)
-    name: Mapped[str | None] = mapped_column(String(200))
+    code: Mapped[str] = mapped_column(String(32), unique=True)          # H-Code (primary business key)
+    name: Mapped[str | None] = mapped_column(String(200))               # English canonical name
+    name_th: Mapped[str | None] = mapped_column(String(200))            # localized display name
+    phytocore_code: Mapped[str | None] = mapped_column(String(120))     # long-term scientific ID
+    product_id: Mapped[int | None] = mapped_column(ForeignKey("products.id"))   # 1:1 product link
+    dose_type: Mapped[str] = mapped_column(String(16), default="severity")      # severity | bowel
+    status: Mapped[str] = mapped_column(String(16), default="active")           # active|deprecated|archived|draft
+    replaced_by: Mapped[str | None] = mapped_column(String(32))         # successor H-Code (supersede)
+    registry_version: Mapped[str | None] = mapped_column(String(32))
+    contraindications: Mapped[str | None] = mapped_column(Text)         # JSON-encoded list of notes
 
 
-class ModuleProduct(Base):            # module <-> its product(s)
+class ModuleProduct(Base):            # kept for history; module<->product is now 1:1
     __tablename__ = "module_products"
     module_id: Mapped[int] = mapped_column(ForeignKey("modules.id"), primary_key=True)
     product_id: Mapped[int] = mapped_column(ForeignKey("products.id"), primary_key=True)
 
 
-class AxisModuleMap(Base):            # THE key mapping table
+class AxisModuleMap(Base):            # THE key mapping table (axis -> module, with role)
     __tablename__ = "axis_module_map"
     axis_id: Mapped[int] = mapped_column(ForeignKey("axes.id"), primary_key=True)
     module_id: Mapped[int] = mapped_column(ForeignKey("modules.id"), primary_key=True)
     relevance: Mapped[float] = mapped_column(Float, default=1.0)
+    role: Mapped[str] = mapped_column(String(16), default="primary")    # primary | secondary
+
+
+class RegistryMeta(Base):             # which registry/framework versions are loaded
+    __tablename__ = "registry_meta"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    registry_version: Mapped[str | None] = mapped_column(String(32))
+    framework_version: Mapped[str | None] = mapped_column(String(32))
+    effective_date: Mapped[str | None] = mapped_column(String(32))
 
 
 # ---------------------------------------------------------------------------
