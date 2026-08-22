@@ -1,16 +1,3 @@
-# TSPI monorepo — full local/prod-like stack.
-#
-# Current deployment configuration:
-#   TSPI brain   : container 8000 / host 8002
-#   MiHealth API : container 8001 / host 8001
-#   Web UI       : container 5173 / host 5173
-#
-# NOTE:
-# Ollama is temporarily included for the initial application deployment.
-# After the application stack is successfully running, Ollama will be
-# removed from the VPS and TSPI will connect to the local WSL2 Ollama
-# through Tailscale.
-
 services:
 
   # ---------------- TSPI AI brain database ----------------
@@ -34,17 +21,6 @@ services:
     restart: unless-stopped
 
 
-  # ---------------- Temporary VPS Ollama ----------------
-  # This will be removed after the initial application deployment.
-  ollama:
-    image: ollama/ollama:latest
-
-    volumes:
-      - tspi_ollama:/root/.ollama
-
-    restart: unless-stopped
-
-
   # ---------------- TSPI AI brain ----------------
   tspi-api:
     build: ./apps/ai-engine
@@ -57,23 +33,23 @@ services:
 
       DATABASE_URL: postgresql+psycopg://tspi:${TSPI_DB_PASSWORD:-tspi}@tspi-db:5432/tspi
 
-      # Internal Docker network address.
-      # Keep container port 8000.
-      OLLAMA_BASE_URL: http://ollama:11434
+      # Remote Ollama running on local WSL2 through Tailscale.
+      OLLAMA_BASE_URL: http://100.121.11.25:11434
+
+      # Primary local LLM.
+      OLLAMA_MODEL: qwen3:8b
+
+      # Embedding model.
+      OLLAMA_EMBEDDING_MODEL: bge-m3
 
       WEB_CONCURRENCY: ${WEB_CONCURRENCY:-2}
 
-    # VPS host 8002 -> TSPI container 8000.
-    # Host 8000 is already used by Coolify.
     ports:
       - "8002:8000"
 
     depends_on:
       tspi-db:
         condition: service_healthy
-
-      ollama:
-        condition: service_started
 
     restart: unless-stopped
 
@@ -86,11 +62,6 @@ services:
       POSTGRES_USER: mihealth
       POSTGRES_PASSWORD: ${MIHEALTH_DB_PASSWORD:-mihealth}
       POSTGRES_DB: mihealth
-
-    # IMPORTANT:
-    # No host port is published.
-    # MiHealth API connects internally through:
-    # mihealth-db:5432
 
     volumes:
       - mihealth_pgdata:/var/lib/postgresql/data
@@ -120,7 +91,6 @@ services:
 
       JWT_SECRET: ${JWT_SECRET:-change-me-to-a-long-random-string}
 
-      # Internal Docker network address.
       TSPI_BASE_URL: http://tspi-api:8000
 
       SEED_ADMIN_EMAIL: ${SEED_ADMIN_EMAIL:-admin@mihealth.app}
@@ -138,7 +108,6 @@ services:
     volumes:
       - mihealth_uploads:/data/uploads
 
-    # Host 8001 -> container 8001.
     ports:
       - "8001:8001"
 
@@ -153,10 +122,8 @@ services:
       - mihealth-api
 
     environment:
-      # Internal Docker network address.
       VITE_API_TARGET: http://mihealth-api:8001
 
-    # Host 5173 -> container 5173.
     ports:
       - "5173:5173"
 
@@ -165,16 +132,6 @@ services:
 
 # ---------------- Persistent storage ----------------
 volumes:
-
-  # TSPI PostgreSQL / pgvector
   tspi_pgdata:
-
-  # Temporary VPS Ollama storage.
-  # This will be removed when we switch to your local WSL2 Ollama.
-  tspi_ollama:
-
-  # MiHealth PostgreSQL
   mihealth_pgdata:
-
-  # Uploaded MiHealth files
   mihealth_uploads:
