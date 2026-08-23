@@ -1,0 +1,202 @@
+"""TSPI AI Brain — FastMCP server (Phase A).
+
+Exposes the existing engine endpoints as MCP tools for a clinician's AI chat client. Phase A uses
+ONLY endpoints that already exist (/health, /screen, /analyze, /report, /reports, /validate,
+/outcome) — the engine needs no changes and keeps working standalone for MiHealth and any other
+REST client.
+
+Governance baked into this layer (not the engine):
+  * De-identification gate on every case input (PII never forwarded).
+  * Every generated plan is an AI DRAFT — not deliverable until a clinician approves it.
+  * The chat/LLM is a presentation layer only: it must relay engine output, never invent
+    axis scores, networks, modules, doses, or evidence.
+"""
+from __future__ import annotations
+
+from typing import Any, Literal
+
+from fastmcp import FastMCP
+from pydantic import BaseModel, Field
+
+from . import engine_client as engine
+from .config import settings
+from .deident import PIIError, deidentify
+
+INSTRUCTIONS = """TSPI AI Brain — deterministic clinical decision-support.
+
+RULES FOR THE ASSISTANT:
+- Collect DE-IDENTIFIED data only: a case code, an age band, sex, symptoms, and lab values.
+  NEVER ask for or submit a patient's name, date of birth, MRN, phone, email, or address.
+- The TSPI engine is the sole source of clinical conclusions. Present its structured output as-is.
+  Do NOT invent or estimate axis scores, networks, modules, doses, evidence grades, or outcomes.
+- Always run tspi_screen_red_flags first for a new case.
+- A generated treatment plan is an AI DRAFT pending physician review; it is NOT for patient use
+  until a clinician approves it with tspi_approve_treatment_plan.
+"""
+
+mcp = FastMCP("tspi-ai-brain", instructions=INSTRUCTIONS)
+
+
+# --------------------------------------------------------------------------- input models
+class LabResultIn(BaseModel):
+    analyte: str = Field(description="Lab test name, e.g. 'CRP', 'HbA1c', 'Ferritin'.")
+    value: float | str = Field(description="Measured value (number, or text for qualitative).")
+    unit: str | None = Field(default=None, description="Unit, e.g. 'mg/L'. Include it for derived markers.")
+    ref_low: float | None = None
+    ref_high: float | None = None
+    flag: str | None = Field(default=None, description="Optional 'high' | 'low' if already flagged.")
+
+
+class PatientCase(BaseModel):
+    """A DE-IDENTIFIED patient case. There are deliberately no identity fields."""
+    case_id: str = Field(description="A non-identifying case code (NOT a name or MRN), e.g. 'CASE-0912'.")
+    age_band: str | None = Field(default=None, description="Age band, e.g. '40s', not an exact DOB.")
+    sex: Literal["female", "male", "other", "unknown"] = "unknown"
+    symptoms: str = Field(default="", description="Free-text clinical symptoms (no identifiers).")
+    labs: list[LabResultIn] = Field(default_factory=list)
+    medications: list[str] = Field(default_factory=list)
+    conditions: list[str] = Field(default_factory=list)
+    imaging: list[str] = Field(default_factory=list)
+    consent_ai_analysis: bool = Field(
+        default=True,
+        description="Clinician attests the patient consented to AI analysis. Audited; required by the engine.",
+    )
+
+
+_DRAFT_NOTICE = ("AI-GENERATED CLINICAL DRAFT — PENDING PHYSICIAN REVIEW — NOT FOR PATIENT RELEASE. "
+                 "Module recommendations are PROVISIONAL until the official Module Registry is approved.")
+
+
+def _to_engine_payload(case: PatientCase) -> dict:
+    raw = case.model_dump(exclude_none=False)
+    raw["consent"] = {"ai_analysis": bool(raw.pop("consent_ai_analysis", True))}
+    clean, findings = deidentify(raw, strict=settings.strict_deident)
+    clean["_deident_findings"] = findings   # popped before sending; surfaced to caller
+    return clean
+
+
+def _forwardable(payload: dict) -> tuple[dict, list[str]]:
+    findings = payload.pop("_deident_findings", [])
+    return payload, findings
+
+
+# --------------------------------------------------------------------------- tools
+@mcp.tool()
+async def tspi_engine_health() -> dict:
+    """Check that the TSPI engine is reachable and report its governance/registry status."""
+    try:
+        health = await engine.get("/health")
+        know = await engine.get("/knowledge/health")
+        return {"ok": True, "engine": health, "knowledge": know,
+                "note": "Module recommendations are provisional until the Module Registry is approved."}
+    except engine.EngineError as e:
+        return {"ok": False, "error": str(e)}
+
+
+@mcp.tool()
+async def tspi_screen_red_flags(case: PatientCase) -> dict:
+    """Run deterministic red-flag / critical-value screening. ALWAYS run this first for a new case.
+    It can only escalate care, never withhold it."""
+    try:
+        payload, findings = _forwardable(_to_engine_payload(case))
+    except PIIError as e:
+        return {"error": str(e), "action_required": "Remove patient identifiers and resend."}
+    try:
+        result = await engine.post("/screen", json=payload)
+    except engine.EngineError as e:
+        return {"error": str(e)}
+    if findings:
+        result["deidentification_warning"] = f"Redacted possible identifiers: {', '.join(findings)}"
+    return result
+
+
+@mcp.tool()
+async def tspi_analyze_case(case: PatientCase) -> dict:
+    """Run the TSPI biological analysis (39 axes, differential networks, NSS) WITHOUT producing a
+    full treatment plan. Returns the engine's structured assessment. Presentation only — do not
+    add or alter any scores."""
+    try:
+        payload, findings = _forwardable(_to_engine_payload(case))
+    except PIIError as e:
+        return {"error": str(e), "action_required": "Remove patient identifiers and resend."}
+    try:
+        result = await engine.post("/analyze", json=payload)
+    except engine.EngineError as e:
+        return {"error": str(e)}
+    out = {"analysis": result}
+    if findings:
+        out["deidentification_warning"] = f"Redacted possible identifiers: {', '.join(findings)}"
+    return out
+
+
+@mcp.tool()
+async def tspi_generate_treatment_plan(case: PatientCase) -> dict:
+    """Generate the full TSPI case report + candidate module plan for a de-identified case.
+    The result is an AI DRAFT (deliverable=false) and must be reviewed and approved by a clinician
+    before any patient use. Do not present it as a final prescription."""
+    try:
+        payload, findings = _forwardable(_to_engine_payload(case))
+    except PIIError as e:
+        return {"error": str(e), "action_required": "Remove patient identifiers and resend."}
+    try:
+        report = await engine.post("/report", json=payload)
+    except engine.EngineError as e:
+        return {"error": str(e)}
+    out = {
+        "notice": _DRAFT_NOTICE,
+        "report_id": report.get("report_id"),
+        "deliverable": report.get("deliverable", False),
+        "status": report.get("status", "draft"),
+        "plan": report,
+        "next_step": "Review, then call tspi_approve_treatment_plan to approve or reject.",
+    }
+    if findings:
+        out["deidentification_warning"] = f"Redacted possible identifiers: {', '.join(findings)}"
+    return out
+
+
+@mcp.tool()
+async def tspi_get_treatment_plan(report_id: str) -> dict:
+    """Fetch a previously generated plan by its report_id (to review or continue)."""
+    try:
+        return await engine.get(f"/reports/{report_id}")
+    except engine.EngineError as e:
+        return {"error": str(e)}
+
+
+@mcp.tool()
+async def tspi_approve_treatment_plan(
+    report_id: str,
+    decision: Literal["approve", "edit", "reject"],
+    edits: dict | None = None,
+    reason: str | None = None,
+) -> dict:
+    """Record the CLINICIAN's decision on a draft plan. 'approve' makes it deliverable; 'reject'
+    blocks it; 'edit' records edits. The clinician identity comes from the authenticated session.
+    This is the physician-approval gate — nothing reaches a patient without it."""
+    body = {"report_id": report_id, "doctor_id": settings.clinician_id, "decision": decision,
+            "edits": ({"reason": reason, **(edits or {})} if (edits or reason) else None)}
+    try:
+        result = await engine.post("/validate", json=body)
+    except engine.EngineError as e:
+        return {"error": str(e)}
+    return {"decision": decision, "by": settings.clinician_id, "result": result}
+
+
+@mcp.tool()
+async def tspi_record_outcome(report_id: str, marker: str, baseline: float, followup: float) -> dict:
+    """Record a follow-up marker change for a case (feeds the propose-only learning loop). This
+    never auto-changes the model; it only contributes evidence for later clinical review."""
+    body = {"report_id": report_id, "marker": marker, "baseline": baseline, "followup": followup}
+    try:
+        return await engine.post("/outcome", json=body)
+    except engine.EngineError as e:
+        return {"error": str(e)}
+
+
+def main() -> None:
+    mcp.run(transport=settings.transport)
+
+
+if __name__ == "__main__":
+    main()
