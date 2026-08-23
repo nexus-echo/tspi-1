@@ -20,3 +20,9 @@ build/
 # os
 .DS_Store
 stakeholder-chat.txt
+
+# tspi-mcp (explicit; also covered by the global python patterns above)
+apps/tspi-mcp/__pycache__/
+apps/tspi-mcp/**/__pycache__/
+apps/tspi-mcp/.venv/
+.venv
