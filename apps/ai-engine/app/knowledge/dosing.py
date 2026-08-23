@@ -39,3 +39,30 @@ def reassessment_days() -> list[int]:
 
 def safety_note() -> str:
     return _cfg()["safety"]
+
+
+# --- bowel-regulation modules (dose by bowel performance, not severity level) ---
+import re as _re
+
+
+def _norm(s: str) -> str:
+    return _re.sub(r"[^a-z0-9]", "", (s or "").lower())
+
+
+def bowel_group() -> set[str]:
+    """Normalized names/codes of modules that use bowel dosing (from config)."""
+    return {_norm(x) for x in _cfg().get("bowel_protocol", {}).get("group", [])}
+
+
+def is_bowel(code_or_name: str) -> bool:
+    n = _norm(code_or_name)
+    return any(b in n or n in b for b in bowel_group())
+
+
+def bowel_dose(code_or_name: str = "") -> str:
+    """KS gets its detailed titration; other bowel modules use the generic dose."""
+    bp = _cfg().get("bowel_protocol", {})
+    if _norm(code_or_name) == "ks":
+        ks = ks_protocol()
+        return f"KS protocol (bowel-based): start {ks['start']['normal']}; {ks['goal']}"
+    return f"Bowel protocol: {bp.get('generic_dose', '1-4 caps at bedtime + on waking')}; {bp.get('goal', '')}"

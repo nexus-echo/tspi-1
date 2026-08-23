@@ -1,0 +1,34 @@
+{
+  "dataset_name": "tspi_negative_test_rules",
+  "dataset_version": "0.1.0-provisional",
+  "approval_status": "PROVISIONAL",
+  "authoritative": false,
+  "source": "Domain-expert examples ('tspi comment for phase3 developer' section 8).",
+  "principle": "A normal test NARROWS the differential. It never erases a symptom and never proves the biological network is normal. Structural normality != functional network normality.",
+  "rules": [
+    {
+      "test": "gastroscopy",
+      "match_any": ["gastroscopy normal", "endoscopy normal", "normal gastroscopy", "egd normal"],
+      "reduces_probability_of": ["visible ulcer", "significant structural lesion", "mass"],
+      "does_not_exclude": ["functional dyspepsia", "motility disorder", "acid dysregulation",
+                            "enteric nervous dysfunction", "microbiome-related dysfunction"],
+      "axes_still_possible": ["A16", "A17", "A18", "A19"]
+    },
+    {
+      "test": "brain_mri",
+      "match_any": ["mri normal", "brain mri normal", "normal mri"],
+      "reduces_probability_of": ["stroke", "mass lesion", "visible structural pathology"],
+      "does_not_exclude": ["autonomic dysfunction", "vestibular dysfunction",
+                            "migraine-related network dysfunction", "microcirculatory dysfunction",
+                            "cellular energy dysfunction"],
+      "axes_still_possible": ["A34", "A21", "A23", "A8"]
+    },
+    {
+      "test": "routine_bloods",
+      "match_any": ["bloods normal", "blood tests normal", "labs normal", "cbc normal"],
+      "reduces_probability_of": ["advanced organ damage", "overt haematological disease"],
+      "does_not_exclude": ["functional network dysfunction", "early network imbalance"],
+      "axes_still_possible": []
+    }
+  ]
+}

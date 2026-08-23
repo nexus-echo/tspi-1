@@ -1,987 +1,1046 @@
-[
+{
+ "dataset_name": "tspi_axis_master",
+ "dataset_version": "2.0.0",
+ "framework_version": "39-axis-master-260715",
+ "effective_date": "2026-07-15",
+ "approval_status": "APPROVED",
+ "source": "last 39 แกน 12 โดเมน กุญแจ 3 ดอก (1)_260715_110654.pdf (corrected list, pp.36-41) + TSPI 3 Complete Domain Expert Response (Final Developer Lock)",
+ "supersedes_version": "1.x (A35-A39 deprecated: Protein Quality Control / Protein Clearance / CELA)",
+ "keys": [
   {
-    "axis_num": 1,
-    "axis_id": "A1",
-    "name": "Systemic Inflammatory Load",
-    "domain_num": 1,
-    "domain": "Domain 1 - Immune–Infection Governance",
-    "sub_axes": [
-      {
-        "code": "1A",
-        "name": "NF‑κB / Cytokine Burden",
-        "desc": "ภาระ IL‑6, TNF‑α, CRP และโปรแกรมยีนอักเสบรวมของทั้งระบบ"
-      },
-      {
-        "code": "1B",
-        "name": "Inflammasome Output",
-        "desc": "การทำงานของ NLRP3, IL‑1β, IL‑18 และ danger‑signaling (DAMP)"
-      },
-      {
-        "code": "1C",
-        "name": "Metabolic Inflammation",
-        "desc": "การอักเสบจากความอ้วน, lipotoxicity, insulin resistance, inflammaging"
-      }
-    ],
-    "source_file": "axis_01_Systemic_Inflammatory_Load.md"
+   "key_code": "KEY-A",
+   "official_name": "Metabolic Energy",
+   "display_order": 1
   },
   {
-    "axis_num": 2,
-    "axis_id": "A2",
-    "name": "Immune Homeostasis",
-    "domain_num": 1,
-    "domain": "Domain 1 - Immune–Infection Governance",
-    "sub_axes": [
-      {
-        "code": "2A",
-        "name": "Innate",
-        "desc": "Adaptive Coordination – การประสานกันของภูมิเดิม (innate) และภูมิจำเพาะ (adaptive)"
-      },
-      {
-        "code": "2B",
-        "name": "Immune Polarity",
-        "desc": "สมดุล Th1/Th2, macrophage M1/M2 และแนวโน้ม autoimmune/ allergy"
-      },
-      {
-        "code": "2C",
-        "name": "Tolerance",
-        "desc": "Resolution–Recovery – Treg, pro‑resolving mediators และความสามารถปิดการอักเสบกลับสู่ baseline"
-      }
-    ],
-    "source_file": "axis_02_Immune_Homeostasis.md"
+   "key_code": "KEY-B",
+   "official_name": "Biological Dynamics",
+   "display_order": 2
   },
   {
-    "axis_num": 3,
-    "axis_id": "A3",
-    "name": "Pathogen Defense (Host Defense)",
-    "domain_num": 1,
-    "domain": "Domain 1 - Immune–Infection Governance",
-    "sub_axes": [
-      {
-        "code": "3A",
-        "name": "Antiviral Defense",
-        "desc": "IFN tone และ interferon‑stimulated genes สำหรับต้านไวรัส"
-      },
-      {
-        "code": "3B",
-        "name": "Antibacterial / Antifungal Defense",
-        "desc": "antimicrobial peptides, phagocytosis และการฆ่าเชื้อแบคทีเรีย/เชื้อรา"
-      },
-      {
-        "code": "3C",
-        "name": "Mucosal Defense",
-        "desc": "ภูมิคุ้มกันด่าน mucosa (ลำไส้, ทางเดินหายใจ ฯลฯ)"
-      }
-    ],
-    "source_file": "axis_03_Pathogen_Defense_Host_Defense.md"
-  },
-  {
-    "axis_num": 4,
-    "axis_id": "A4",
-    "name": "Post‑Infectious Persistence",
-    "domain_num": 1,
-    "domain": "Domain 1 - Immune–Infection Governance",
-    "sub_axes": [
-      {
-        "code": "4A",
-        "name": "Immune Scar / Chronic Low‑Grade Activation",
-        "desc": "immune tone ไม่ยอมกลับ baseline หลังติดเชื้อ"
-      },
-      {
-        "code": "4B",
-        "name": "Latent Reactivation Tendency",
-        "desc": "แนวโน้มเชื้อแฝง เช่น TB/HSV/EBV กลับมากระตุ้น"
-      },
-      {
-        "code": "4C",
-        "name": "Post‑Viral Syndrome / Dysregulated Recovery",
-        "desc": "long‑covid‑like, fatigue, autonomic dysregulation หลังไวรัส"
-      }
-    ],
-    "source_file": "axis_04_PostInfectious_Persistence.md"
-  },
-  {
-    "axis_num": 5,
-    "axis_id": "A5",
-    "name": "Glucose–Insulin Regulation",
-    "domain_num": 2,
-    "domain": "Domain 2 - Metabolic–Energy Core",
-    "sub_axes": [
-      {
-        "code": "5A",
-        "name": "Insulin Signaling",
-        "desc": "IR/AKT/GLUT dynamics และความไวต่ออินซูลินของเนื้อเยื่อต่าง ๆ"
-      },
-      {
-        "code": "5B",
-        "name": "Hepatic Glucose Output",
-        "desc": "gluconeogenesis, glycogen flux และบทบาทตับในการปล่อยกลูโคส"
-      },
-      {
-        "code": "5C",
-        "name": "Glycemic Variability Stress",
-        "desc": "ความผันผวนของน้ำตาล (glucose swings) และผลเสียสะสม"
-      }
-    ],
-    "source_file": "axis_05_GlucoseInsulin_Regulation.md"
-  },
-  {
-    "axis_num": 6,
-    "axis_id": "A6",
-    "name": "Lipid–Lipotoxicity",
-    "domain_num": 2,
-    "domain": "Domain 2 - Metabolic–Energy Core",
-    "sub_axes": [
-      {
-        "code": "6A",
-        "name": "Lipoprotein Balance",
-        "desc": "โปรไฟล์ atherogenic ของ LDL, HDL, TG ฯลฯ"
-      },
-      {
-        "code": "6B",
-        "name": "Lipotoxic Overload / Ectopic Fat",
-        "desc": "ไขมันพอกตับ (NAFLD), ไขมันเกาะอวัยวะ (ectopic fat)"
-      },
-      {
-        "code": "6C",
-        "name": "Fatty Acid Oxidation Programs",
-        "desc": "PPAR/CPT‑driven fat oxidation และ metabolic flexibility"
-      }
-    ],
-    "source_file": "axis_06_LipidLipotoxicity.md"
-  },
-  {
-    "axis_num": 7,
-    "axis_id": "A7",
-    "name": "Nutrient Sensing (AMPK–mTOR)",
-    "domain_num": 2,
-    "domain": "Domain 2 - Metabolic–Energy Core",
-    "sub_axes": [
-      {
-        "code": "7A",
-        "name": "AMPK Energy Sensing",
-        "desc": "การรับรู้พลังงานต่ำและการเข้าสู่โหมดประหยัด/ซ่อมแซม"
-      },
-      {
-        "code": "7B",
-        "name": "mTORC1 Growth / Anabolism Tone",
-        "desc": "โหมดสร้าง (growth, anabolism) ที่สัมพันธ์กับการแก่และมะเร็ง"
-      },
-      {
-        "code": "7C",
-        "name": "Switch Control",
-        "desc": "ความสามารถสลับ growth ↔ repair อย่างยืดหยุ่น"
-      }
-    ],
-    "source_file": "axis_07_Nutrient_Sensing_AMPKmTOR.md"
-  },
-  {
-    "axis_num": 8,
-    "axis_id": "A8",
-    "name": "Mitochondrial Network",
-    "domain_num": 2,
-    "domain": "Domain 2 - Metabolic–Energy Core",
-    "sub_axes": [
-      {
-        "code": "8A",
-        "name": "Bioenergetics",
-        "desc": "ATP, electron transport chain, membrane potential"
-      },
-      {
-        "code": "8B",
-        "name": "Quality Control",
-        "desc": "mitophagy, fusion–fission, การเคลียร์ไมโทคอนเดรียเสีย"
-      },
-      {
-        "code": "8C",
-        "name": "Biogenesis / Renewal",
-        "desc": "PGC‑1, mtDNA stability, การสร้างไมโทคอนเดรียใหม่"
-      }
-    ],
-    "source_file": "axis_08_Mitochondrial_Network.md"
-  },
-  {
-    "axis_num": 9,
-    "axis_id": "A9",
-    "name": "Oxidative Stress",
-    "domain_num": 2,
-    "domain": "Domain 2 - Metabolic–Energy Core",
-    "sub_axes": [
-      {
-        "code": "9A",
-        "name": "ROS Load / Oxidative Damage",
-        "desc": "ภาระ ROS และความเสียหายต่อ DNA/โปรตีน/เยื่อหุ้ม"
-      },
-      {
-        "code": "9B",
-        "name": "Antioxidant Depletion",
-        "desc": "สถานะ SOD, GPx, catalase, glutathione"
-      },
-      {
-        "code": "9C",
-        "name": "Redox Signaling Imbalance",
-        "desc": "ความเพี้ยนของสัญญาณ redox เช่น NADPH oxidase, peroxiredoxin"
-      }
-    ],
-    "source_file": "axis_09_Oxidative_Stress.md"
-  },
-  {
-    "axis_num": 10,
-    "axis_id": "A10",
-    "name": "Proteostasis–Autophagy–Lysosome",
-    "domain_num": 2,
-    "domain": "Domain 2 - Metabolic–Energy Core",
-    "sub_axes": [
-      {
-        "code": "10A",
-        "name": "ER Stress / UPR",
-        "desc": "ความเครียดจากโปรตีนพับผิด (BiP/CHOP, UPR)"
-      },
-      {
-        "code": "10B",
-        "name": "Autophagy Flux",
-        "desc": "initiation → flux ของ autophagy เคลียร์ของเสียในเซลล์"
-      },
-      {
-        "code": "10C",
-        "name": "Lysosomal Degradation Capacity",
-        "desc": "ศักยภาพไลโซโซมในการย่อยสลาย/รีไซเคิล"
-      },
-      {
-        "code": "10D",
-        "name": "Environmental Stress Adaptation / Stress Resilience",
-        "desc": "การตอบสนองต่อความเครียดจากสิ่งแวดล้อมในระดับเซลล์"
-      }
-    ],
-    "source_file": "axis_10_ProteostasisAutophagyLysosome.md"
-  },
-  {
-    "axis_num": 11,
-    "axis_id": "A11",
-    "name": "DNA Repair & Genomic Stability",
-    "domain_num": 3,
-    "domain": "Domain 3 - Genomic–Longevity Programming",
-    "sub_axes": [
-      {
-        "code": "11A",
-        "name": "DNA Damage Response / Repair Pathways",
-        "desc": "ระบบตรวจและซ่อมแซมความเสียหาย DNA"
-      },
-      {
-        "code": "11B",
-        "name": "Mutation Buffering / Genomic Integrity",
-        "desc": "ความสามารถกันผลเสียจาก mutation สะสม"
-      },
-      {
-        "code": "11C",
-        "name": "Telomere Stability",
-        "desc": "ความมั่นคงของ telomere ที่สัมพันธ์กับอายุชีวภาพ"
-      }
-    ],
-    "source_file": "axis_11_DNA_Repair_Genomic_Stability.md"
-  },
-  {
-    "axis_num": 12,
-    "axis_id": "A12",
-    "name": "Epigenetic Regulation",
-    "domain_num": 3,
-    "domain": "Domain 3 - Genomic–Longevity Programming",
-    "sub_axes": [
-      {
-        "code": "12A",
-        "name": "DNA Methylation Programs",
-        "desc": "pattern เมทิลเลชันที่กำหนดการเปิด–ปิดยีน"
-      },
-      {
-        "code": "12B",
-        "name": "Histone / Chromatin Remodeling",
-        "desc": "สภาพโครมาตินและการเข้าถึงยีน"
-      },
-      {
-        "code": "12C",
-        "name": "miRNA / Transcriptional Balance",
-        "desc": "การควบคุมระดับ post‑transcription ผ่าน miRNA ฯลฯ"
-      },
-      {
-        "code": "12D",
-        "name": "Hemostasis & Hemorrhage Control",
-        "desc": "---"
-      }
-    ],
-    "source_file": "axis_12_Epigenetic_Regulation.md"
-  },
-  {
-    "axis_num": 13,
-    "axis_id": "A13",
-    "name": "Longevity Signaling (SIRT–FOXO–IGF)",
-    "domain_num": 3,
-    "domain": "Domain 3 - Genomic–Longevity Programming",
-    "sub_axes": [
-      {
-        "code": "13A",
-        "name": "Sirtuin Programs",
-        "desc": "โปรตีน sirtuin ที่เกี่ยวกับอายุยืนและ stress resistance"
-      },
-      {
-        "code": "13B",
-        "name": "FOXO Stress Adaptation",
-        "desc": "การตอบสนองต่อ stress ผ่าน FOXO transcription factors"
-      },
-      {
-        "code": "13C",
-        "name": "IGF / Anabolic",
-        "desc": "Longevity Balance – สมดุล IGF‑1 ระหว่างโหมดโตกับโหมดอายุยืน"
-      }
-    ],
-    "source_file": "axis_13_Longevity_Signaling_SIRTFOXOIGF.md"
-  },
-  {
-    "axis_num": 14,
-    "axis_id": "A14",
-    "name": "Senescence & SASP",
-    "domain_num": 3,
-    "domain": "Domain 3 - Genomic–Longevity Programming",
-    "sub_axes": [
-      {
-        "code": "14A",
-        "name": "Senescent Cell Burden",
-        "desc": "ปริมาณเซลล์ชราที่หยุดแบ่งตัว"
-      },
-      {
-        "code": "14B",
-        "name": "SASP Inflammatory Output",
-        "desc": "สารอักเสบ/โปร‑เสื่อมที่เซลล์ชราหลั่ง (senescence‑associated secretome)"
-      },
-      {
-        "code": "14C",
-        "name": "Senescence Clearance Potential",
-        "desc": "ความสามารถกำจัด/รีไซเคิลเซลล์ชรา"
-      }
-    ],
-    "source_file": "axis_14_Senescence_SASP.md"
-  },
-  {
-    "axis_num": 15,
-    "axis_id": "A15",
-    "name": "Detoxification & Cellular Defense",
-    "domain_num": 4,
-    "domain": "Domain 4 - Detox–Digestive–Gut Ecosystem",
-    "sub_axes": [
-      {
-        "code": "15A",
-        "name": "Phase I/II Biotransformation",
-        "desc": "CYP450, glucuronidation, sulfation ฯลฯ"
-      },
-      {
-        "code": "15B",
-        "name": "Nrf2",
-        "desc": "GSH Defense Programming – การกระตุ้น Nrf2, glutathione, antioxidant defense"
-      },
-      {
-        "code": "15C",
-        "name": "Xenobiotic / Metabolite Clearance Capacity",
-        "desc": "ความสามารถขับ xenobiotics และเมแทบอไลต์พิษ"
-      }
-    ],
-    "source_file": "axis_15_Detoxification_Cellular_Defense.md"
-  },
-  {
-    "axis_num": 16,
-    "axis_id": "A16",
-    "name": "Digestive–Absorptive",
-    "domain_num": 4,
-    "domain": "Domain 4 - Detox–Digestive–Gut Ecosystem",
-    "sub_axes": [
-      {
-        "code": "16A",
-        "name": "Gastric Digestion",
-        "desc": "กรดและการย่อยในกระเพาะ"
-      },
-      {
-        "code": "16B",
-        "name": "Pancreatic",
-        "desc": "Bile Function – เอนไซม์ตับอ่อนและน้ำดี / นิ่วถุงน้ำดี"
-      },
-      {
-        "code": "16C",
-        "name": "Small Intestine Absorption",
-        "desc": "การดูดซึมสารอาหารในลำไส้เล็ก"
-      }
-    ],
-    "source_file": "axis_16_DigestiveAbsorptive.md"
-  },
-  {
-    "axis_num": 17,
-    "axis_id": "A17",
-    "name": "Microbiome Ecology",
-    "domain_num": 4,
-    "domain": "Domain 4 - Detox–Digestive–Gut Ecosystem",
-    "sub_axes": [
-      {
-        "code": "17A",
-        "name": "Diversity / Resilience",
-        "desc": "ความหลากหลายและความยืดหยุ่นของ microbiome"
-      },
-      {
-        "code": "17B",
-        "name": "SCFA / Metabolite Profile",
-        "desc": "butyrate, propionate, acetate ฯลฯ"
-      },
-      {
-        "code": "17C",
-        "name": "Dysbiosis Patterns",
-        "desc": "รูปแบบเสียสมดุล เช่น overgrowth, loss of keystone species"
-      }
-    ],
-    "source_file": "axis_17_Microbiome_Ecology.md"
-  },
-  {
-    "axis_num": 18,
-    "axis_id": "A18",
-    "name": "Gut Barrier & Mucosal Integrity",
-    "domain_num": 4,
-    "domain": "Domain 4 - Detox–Digestive–Gut Ecosystem",
-    "sub_axes": [
-      {
-        "code": "18A",
-        "name": "Tight Junction Integrity",
-        "desc": "โครงสร้าง tight junction เช่น occludin, claudin"
-      },
-      {
-        "code": "18B",
-        "name": "Endotoxin Translocation",
-        "desc": "การรั่วของ LPS/endotoxin เข้ากระแสเลือด"
-      },
-      {
-        "code": "18C",
-        "name": "Mucosal Immune Interface",
-        "desc": "การสื่อสารภูมิคุ้มกันที่เยื่อบุลำไส้"
-      }
-    ],
-    "source_file": "axis_18_Gut_Barrier_Mucosal_Integrity.md"
-  },
-  {
-    "axis_num": 19,
-    "axis_id": "A19",
-    "name": "Colon Biofilm & Mucosal Burden",
-    "domain_num": 4,
-    "domain": "Domain 4 - Detox–Digestive–Gut Ecosystem",
-    "sub_axes": [
-      {
-        "code": "19A",
-        "name": "Biofilm Persistence",
-        "desc": "biofilm เรื้อรังในลำไส้ใหญ่"
-      },
-      {
-        "code": "19B",
-        "name": "Colon Plaque / Toxin Burden",
-        "desc": "คราบ, ของเสีย, toxin ที่เกาะผนังลำไส้"
-      },
-      {
-        "code": "19C",
-        "name": "Clearance Kinetics",
-        "desc": "อัตราการผลัดเยื่อบุและเคลียร์คราบ/ของเสีย"
-      }
-    ],
-    "source_file": "axis_19_Colon_Biofilm_Mucosal_Burden.md"
-  },
-  {
-    "axis_num": 20,
-    "axis_id": "A20",
-    "name": "Endothelial Function",
-    "domain_num": 5,
-    "domain": "Domain 5 - Vascular–Circulation–Stroke Prevention",
-    "sub_axes": [
-      {
-        "code": "20A",
-        "name": "NO/eNOS Tone",
-        "desc": "การสร้าง nitric oxide จาก endothelial NOS"
-      },
-      {
-        "code": "20B",
-        "name": "Endothelial Inflammation / Adhesion",
-        "desc": "การอักเสบที่ผนังหลอดเลือดและการเกาะของเม็ดเลือดขาว"
-      },
-      {
-        "code": "20C",
-        "name": "Glycocalyx Integrity",
-        "desc": "ชั้นไกลโคคาลิกซ์ปกป้องผนังเส้นเลือด"
-      }
-    ],
-    "source_file": "axis_20_Endothelial_Function.md"
-  },
-  {
-    "axis_num": 21,
-    "axis_id": "A21",
-    "name": "Vascular Remodeling & Microcirculation",
-    "domain_num": 5,
-    "domain": "Domain 5 - Vascular–Circulation–Stroke Prevention",
-    "sub_axes": [
-      {
-        "code": "21A",
-        "name": "Angiogenesis Signaling",
-        "desc": "การสร้างเส้นเลือดใหม่"
-      },
-      {
-        "code": "21B",
-        "name": "Capillary Density / Microvascular Structure",
-        "desc": "ความหนาแน่นโครงสร้างเส้นเลือดฝอย"
-      },
-      {
-        "code": "21C",
-        "name": "Tissue Perfusion & Oxygen Delivery",
-        "desc": "การส่งเลือดและออกซิเจนถึงเนื้อเยื่อ"
-      }
-    ],
-    "source_file": "axis_21_Vascular_Remodeling_Microcirculation.md"
-  },
-  {
-    "axis_num": 22,
-    "axis_id": "A22",
-    "name": "Thrombosis–Hemostasis",
-    "domain_num": 5,
-    "domain": "Domain 5 - Vascular–Circulation–Stroke Prevention",
-    "sub_axes": [
-      {
-        "code": "22A",
-        "name": "Platelet Activation",
-        "desc": "การเกาะกลุ่มของเกล็ดเลือด"
-      },
-      {
-        "code": "22B",
-        "name": "Coagulation Cascade Tone",
-        "desc": "การทำงานของระบบการแข็งตัวของเลือด"
-      },
-      {
-        "code": "22C",
-        "name": "Fibrinolysis Balance",
-        "desc": "การสลายลิ่มเลือดและสมดุลกับการแข็งตัว"
-      }
-    ],
-    "source_file": "axis_22_ThrombosisHemostasis.md"
-  },
-  {
-    "axis_num": 23,
-    "axis_id": "A23",
-    "name": "Hemodynamics & Arterial Elasticity",
-    "domain_num": 5,
-    "domain": "Domain 5 - Vascular–Circulation–Stroke Prevention",
-    "sub_axes": [
-      {
-        "code": "23A",
-        "name": "RAAS Regulation",
-        "desc": "ระบบ renin–angiotensin–aldosterone"
-      },
-      {
-        "code": "23B",
-        "name": "Vascular Stiffness / Compliance",
-        "desc": "ความแข็งหรือลดหยุ่นของผนังหลอดเลือด"
-      },
-      {
-        "code": "23C",
-        "name": "Blood Pressure Set‑Point",
-        "desc": "จุดตั้งค่าความดันเลือดของระบบ"
-      }
-    ],
-    "source_file": "axis_23_Hemodynamics_Arterial_Elasticity.md"
-  },
-  {
-    "axis_num": 24,
-    "axis_id": "A24",
-    "name": "Wound Healing (Internal + External)",
-    "domain_num": 6,
-    "domain": "Domain 6 - Repair–Fibrosis–Regeneration",
-    "sub_axes": [
-      {
-        "code": "24A",
-        "name": "Inflammation → Proliferation Transition",
-        "desc": "การเปลี่ยนเฟสจากอักเสบไปสู่การสร้างเนื้อเยื่อ"
-      },
-      {
-        "code": "24B",
-        "name": "Epithelialization / Closure Kinetics",
-        "desc": "ความเร็วในการปิดแผล/สร้างเยื่อบุใหม่"
-      },
-      {
-        "code": "24C",
-        "name": "Remodeling Quality",
-        "desc": "คุณภาพของแผลหลังซ่อม รวมถึงแผลเป็น"
-      }
-    ],
-    "source_file": "axis_24_Wound_Healing_Internal_External.md"
-  },
-  {
-    "axis_num": 25,
-    "axis_id": "A25",
-    "name": "Fibrosis & ECM Remodeling",
-    "domain_num": 6,
-    "domain": "Domain 6 - Repair–Fibrosis–Regeneration",
-    "sub_axes": [
-      {
-        "code": "25A",
-        "name": "TGF‑β Fibrotic Signaling",
-        "desc": "สัญญาณ fibrotic หลักนำโดย TGF‑β"
-      },
-      {
-        "code": "25B",
-        "name": "Collagen Deposition / Turnover",
-        "desc": "การสะสมและการสลายคอลลาเจนในอวัยวะ"
-      },
-      {
-        "code": "25C",
-        "name": "Organ Stiffness Progression",
-        "desc": "การแข็งของอวัยวะ (ตับแข็ง, พังผืดปอด ฯลฯ)"
-      }
-    ],
-    "source_file": "axis_25_Fibrosis_ECM_Remodeling.md"
-  },
-  {
-    "axis_num": 26,
-    "axis_id": "A26",
-    "name": "Stem Cell & Hematopoiesis",
-    "domain_num": 6,
-    "domain": "Domain 6 - Repair–Fibrosis–Regeneration",
-    "sub_axes": [
-      {
-        "code": "26A",
-        "name": "Stem Niche / Regenerative Reserve",
-        "desc": "สำรองเซลล์ต้นกำเนิดในร่างกาย"
-      },
-      {
-        "code": "26B",
-        "name": "Hematopoiesis",
-        "desc": "การสร้างเม็ดเลือดในไขกระดูก"
-      },
-      {
-        "code": "26C",
-        "name": "Recovery Capacity after Stress / Injury",
-        "desc": "ความสามารถฟื้นตัวหลังเจ็บป่วยหรือบาดเจ็บหนัก"
-      }
-    ],
-    "source_file": "axis_26_Stem_Cell_Hematopoiesis.md"
-  },
-  {
-    "axis_num": 27,
-    "axis_id": "A27",
-    "name": "Glycation / Carbonyl Stress (AGE)",
-    "domain_num": 6,
-    "domain": "Domain 6 - Repair–Fibrosis–Regeneration",
-    "sub_axes": [
-      {
-        "code": "27A",
-        "name": "AGE Formation / Carbonyl Load",
-        "desc": "การก่อตัว advanced glycation end products"
-      },
-      {
-        "code": "27B",
-        "name": "Protein Crosslinking / Stiffness",
-        "desc": "การเชื่อมขวางโปรตีน ทำให้เนื้อเยื่อแข็ง/กรอบ"
-      },
-      {
-        "code": "27C",
-        "name": "Tissue Vulnerability Amplification",
-        "desc": "ทำให้เนื้อเยื่อเปราะ เสี่ยงต่อโรคหลอดเลือด ไต ฯลฯ"
-      }
-    ],
-    "source_file": "axis_27_Glycation_Carbonyl_Stress_AGE.md"
-  },
-  {
-    "axis_num": 28,
-    "axis_id": "A28",
-    "name": "Muscle Protein Turnover",
-    "domain_num": 7,
-    "domain": "Domain 7 - Musculoskeletal & Structural Integrity",
-    "sub_axes": [
-      {
-        "code": "28A",
-        "name": "Anabolism",
-        "desc": "การสร้างโปรตีนกล้ามเนื้อ"
-      },
-      {
-        "code": "28B",
-        "name": "Catabolism",
-        "desc": "การสลายกล้ามเนื้อ"
-      },
-      {
-        "code": "28C",
-        "name": "Myogenesis / Recovery",
-        "desc": "การสร้างเส้นใยกล้ามเนื้อใหม่และการฟื้นตัว"
-      }
-    ],
-    "source_file": "axis_28_Muscle_Protein_Turnover.md"
-  },
-  {
-    "axis_num": 29,
-    "axis_id": "A29",
-    "name": "Bone Remodeling",
-    "domain_num": 7,
-    "domain": "Domain 7 - Musculoskeletal & Structural Integrity",
-    "sub_axes": [
-      {
-        "code": "29A",
-        "name": "Osteoblast Formation",
-        "desc": "การสร้างกระดูกโดย osteoblast"
-      },
-      {
-        "code": "29B",
-        "name": "Osteoclast Resorption",
-        "desc": "การสลายกระดูกโดย osteoclast"
-      },
-      {
-        "code": "29C",
-        "name": "Mineral Density Stability",
-        "desc": "ความหนาแน่นกระดูกและสมดุลแร่ธาตุ"
-      }
-    ],
-    "source_file": "axis_29_Bone_Remodeling.md"
-  },
-  {
-    "axis_num": 30,
-    "axis_id": "A30",
-    "name": "Connective Tissue Integrity",
-    "domain_num": 7,
-    "domain": "Domain 7 - Musculoskeletal & Structural Integrity",
-    "sub_axes": [
-      {
-        "code": "30A",
-        "name": "Tendon / Ligament ECM Resilience",
-        "desc": "ความยืดหยุ่นของเอ็น/เส้นเอ็น"
-      },
-      {
-        "code": "30B",
-        "name": "Joint Matrix Stability",
-        "desc": "ความสมบูรณ์ของกระดูกอ่อนและข้อต่อ"
-      },
-      {
-        "code": "30C",
-        "name": "Structural Crosslink Burden",
-        "desc": "การเชื่อมขวางโครงสร้างที่ทำให้แข็ง/ติด"
-      }
-    ],
-    "source_file": "axis_30_Connective_Tissue_Integrity.md"
-  },
-  {
-    "axis_num": 31,
-    "axis_id": "A31",
-    "name": "Female Hormone",
-    "domain_num": 8,
-    "domain": "Domain 8 - Endocrine Network",
-    "sub_axes": [
-      {
-        "code": "31A",
-        "name": "Estrogen Signaling",
-        "desc": "การทำงานของ estrogen และ receptor"
-      },
-      {
-        "code": "31B",
-        "name": "Progesterone Signaling",
-        "desc": "สมดุล progesterone และ estrogen"
-      },
-      {
-        "code": "31C",
-        "name": "Menopause Physiology & Receptor Balance",
-        "desc": "ชีววิทยาวัยหมดประจำเดือนและความไวตัวรับ"
-      }
-    ],
-    "source_file": "axis_31_Female_Hormone.md"
-  },
-  {
-    "axis_num": 32,
-    "axis_id": "A32",
-    "name": "Male Androgen",
-    "domain_num": 8,
-    "domain": "Domain 8 - Endocrine Network",
-    "sub_axes": [
-      {
-        "code": "32A",
-        "name": "Testosterone Tone",
-        "desc": "ระดับและ rhythmicity ของ testosterone"
-      },
-      {
-        "code": "32B",
-        "name": "DHT / AR Sensitivity",
-        "desc": "การเปลี่ยนเป็น DHT และความไว androgen receptor"
-      },
-      {
-        "code": "32C",
-        "name": "Prostate",
-        "desc": "Hair–Anabolic Linkage – ความเชื่อมโยงระหว่างต่อมลูกหมาก, ผม, มวลกล้ามเนื้อ"
-      }
-    ],
-    "source_file": "axis_32_Male_Androgen.md"
-  },
-  {
-    "axis_num": 33,
-    "axis_id": "A33",
-    "name": "Thyroid–Adrenal–Growth",
-    "domain_num": 8,
-    "domain": "Domain 8 - Endocrine Network",
-    "sub_axes": [
-      {
-        "code": "33A",
-        "name": "Thyroid Metabolic Control",
-        "desc": "TSH, T3/T4 และอัตราเมตาบอลิซึม"
-      },
-      {
-        "code": "33B",
-        "name": "Adrenal / HPA Rhythm",
-        "desc": "แกน HPA, คอร์ติซอล, จังหวะความเครียด"
-      },
-      {
-        "code": "33C",
-        "name": "GH",
-        "desc": "IGF Anabolic Repair Signaling – ฮอร์โมน growth และ IGF‑1 ในการซ่อมแซมและเติบโต"
-      }
-    ],
-    "source_file": "axis_33_ThyroidAdrenalGrowth.md"
-  },
-  {
-    "axis_num": 34,
-    "axis_id": "A34",
-    "name": "Neuro–Sleep–Stress–Brain Clearance (Meta‑Axis)",
-    "domain_num": 9,
-    "domain": "Domain 9 - Neuro–Sleep–Stress",
-    "sub_axes": [
-      {
-        "code": "34A",
-        "name": "Neuroinflammation",
-        "desc": "การอักเสบในสมองและระบบประสาท"
-      },
-      {
-        "code": "34B",
-        "name": "Sleep",
-        "desc": "Circadian–Melatonin Repair Programming – คุณภาพการนอน วงจร circadian และเมลาโทนิน"
-      },
-      {
-        "code": "34C",
-        "name": "HPA",
-        "desc": "Autonomic–Catecholamine Regulation + Glymphatic Clearance – การคุมเครียด, ระบบประสาทอัตโนมัติ และการระบายของเสียในสมอง (glymphatic)"
-      }
-    ],
-    "source_file": "axis_34_NeuroSleepStressBrain_Clearance_MetaAxis.md"
-  },
-  {
-    "axis_num": 35,
-    "axis_id": "A35",
-    "name": "Organ Resilience & Functional Reserve (Organ Meta‑Axis)",
-    "domain_num": 10,
-    "domain": "Domain 10 - Organ Axis + Oncology",
-    "sub_axes": [
-      {
-        "code": "35A",
-        "name": "Visceral Organs",
-        "desc": "ตับ ไต หัวใจ ปอด ม้าม ตับอ่อน ถุงน้ำดี กระเพาะ ลำไส้ กระเพาะปัสสาวะ"
-      },
-      {
-        "code": "35B",
-        "name": "Sensory & ENT / Local Inflammatory Organs",
-        "desc": "ตา จมูก ไซนัส คอ หู กล่องเสียง"
-      },
-      {
-        "code": "35C",
-        "name": "Reproductive & Pelvic / Anorectal Organs",
-        "desc": "มดลูก รังไข่ อัณฑะ ต่อมลูกหมาก ช่องคลอด ทวารหนัก ริดสีดวง"
-      }
-    ],
-    "source_file": "axis_35_Organ_Resilience_Functional_Reserve_Organ_MetaAxis.md"
-  },
-  {
-    "axis_num": 36,
-    "axis_id": "A36",
-    "name": "Oncology",
-    "domain_num": 10,
-    "domain": "Domain 10 - Organ Axis + Oncology",
-    "sub_axes": [
-      {
-        "code": "36A",
-        "name": "Oncologic Cell Fate",
-        "desc": "apoptosis, cell‑cycle checkpoints, การควบคุมการแบ่งตัวของเซลล์มะเร็ง"
-      },
-      {
-        "code": "36B",
-        "name": "Tumor Microenvironment (TME Ecology)",
-        "desc": "จุลสิ่งแวดล้อมของก้อนมะเร็งและ immune evasion niche"
-      },
-      {
-        "code": "36C",
-        "name": "Anti‑Metastatic Dynamics",
-        "desc": "EMT/MET, circulating tumor cells, invasion และ metastasis control"
-      }
-    ],
-    "source_file": "axis_36_Oncology.md"
-  },
-  {
-    "axis_num": 37,
-    "axis_id": "A37",
-    "name": "Protein Quality Control System",
-    "domain_num": 12,
-    "domain": "Domain 12 - Proteostasis & Cellular Integrity",
-    "sub_axes": [
-      {
-        "code": "37A",
-        "name": "Protein Folding & Chaperone System",
-        "desc": "HSP70/HSP90, folding correction, misfold prevention"
-      },
-      {
-        "code": "37B",
-        "name": "ER Stress & UPR Regulation",
-        "desc": "PERK/IRE1/ATF6, unfolded protein response, protein quality sensing"
-      },
-      {
-        "code": "37C",
-        "name": "Misfolded Protein Detection & Tagging",
-        "desc": "ubiquitin-proteasome, ERAD pathway, protein triage decision"
-      }
-    ],
-    "source_file": "axis_37_Protein_Quality_Control_System.md"
-  },
-  {
-    "axis_num": 38,
-    "axis_id": "A38",
-    "name": "Protein Clearance & Proteotoxic Stress",
-    "domain_num": 12,
-    "domain": "Domain 12 - Proteostasis & Cellular Integrity",
-    "sub_axes": [
-      {
-        "code": "38A",
-        "name": "Autophagy",
-        "desc": "Lysosome System – autophagy flux, lysosomal degradation, organelle clearance"
-      },
-      {
-        "code": "38B",
-        "name": "Protein Aggregation & Toxicity",
-        "desc": "amyloid, misfold accumulation, proteotoxic stress"
-      },
-      {
-        "code": "38C",
-        "name": "Oxidative Protein Damage & Cellular Burden",
-        "desc": "ROS-induced protein damage, carbonyl stress, cellular toxicity load"
-      }
-    ],
-    "source_file": "axis_38_Protein_Clearance_Proteotoxic_Stress.md"
-  },
-  {
-    "axis_num": 39,
-    "axis_id": "A39",
-    "name": "Cognitive-Emotional Loop Axis (CELA)",
-    "domain_num": 12,
-    "domain": "Domain 12 - Proteostasis & Cellular Integrity",
-    "sub_axes": [
-      {
-        "code": "39A",
-        "name": "Loop Generation",
-        "desc": "amygdala+hippocampus trigger, stress/trauma/memory, thought+emotion pair output"
-      },
-      {
-        "code": "39B",
-        "name": "Loop Reinforcement & Persistence",
-        "desc": "Default Mode Network activation, rumination, synaptic potentiation (LTP), identity attachment"
-      },
-      {
-        "code": "39C",
-        "name": "Loop Clearance & Neuro",
-        "desc": "Immune Interface – mindfulness/meditation/cognitive restructuring + HPA-cortisol, IL-6/TNF-α, microbiome dysbiosis, mitochondrial ROS"
-      }
-    ],
-    "source_file": "axis_39_Cognitive-Emotional_Loop_Axis_CELA.md"
+   "key_code": "KEY-C",
+   "official_name": "Biointegrity",
+   "display_order": 3
   }
-]
+ ],
+ "axes": [
+  {
+   "axis_num": 1,
+   "axis_id": "A1",
+   "name": "Systemic Inflammatory Load",
+   "domain_num": 1,
+   "domain": "Immune–Infection Governance",
+   "sub_axes": [
+    {
+     "code": "1A",
+     "name": "NF-κB / Cytokine Burden"
+    },
+    {
+     "code": "1B",
+     "name": "Inflammasome Output"
+    },
+    {
+     "code": "1C",
+     "name": "Metabolic Inflammation"
+    }
+   ],
+   "key_primary": "KEY-B",
+   "key_secondary": [
+    "KEY-C",
+    "KEY-A"
+   ]
+  },
+  {
+   "axis_num": 2,
+   "axis_id": "A2",
+   "name": "Immune Homeostasis",
+   "domain_num": 1,
+   "domain": "Immune–Infection Governance",
+   "sub_axes": [
+    {
+     "code": "2A",
+     "name": "Innate–Adaptive Coordination"
+    },
+    {
+     "code": "2B",
+     "name": "Immune Polarity"
+    },
+    {
+     "code": "2C",
+     "name": "Tolerance–Resolution–Recovery"
+    }
+   ],
+   "key_primary": "KEY-B",
+   "key_secondary": [
+    "KEY-C",
+    "KEY-A"
+   ]
+  },
+  {
+   "axis_num": 3,
+   "axis_id": "A3",
+   "name": "Pathogen Defense",
+   "domain_num": 1,
+   "domain": "Immune–Infection Governance",
+   "sub_axes": [
+    {
+     "code": "3A",
+     "name": "Antiviral Defense"
+    },
+    {
+     "code": "3B",
+     "name": "Antibacterial / Antifungal Defense"
+    },
+    {
+     "code": "3C",
+     "name": "Mucosal Defense"
+    }
+   ],
+   "key_primary": "KEY-B",
+   "key_secondary": [
+    "KEY-C",
+    "KEY-A"
+   ]
+  },
+  {
+   "axis_num": 4,
+   "axis_id": "A4",
+   "name": "Post-Infectious Persistence",
+   "domain_num": 1,
+   "domain": "Immune–Infection Governance",
+   "sub_axes": [
+    {
+     "code": "4A",
+     "name": "Immune Scar"
+    },
+    {
+     "code": "4B",
+     "name": "Latent Reactivation Tendency"
+    },
+    {
+     "code": "4C",
+     "name": "Post-Viral Dysregulated Recovery"
+    }
+   ],
+   "key_primary": "KEY-B",
+   "key_secondary": [
+    "KEY-C",
+    "KEY-A"
+   ]
+  },
+  {
+   "axis_num": 5,
+   "axis_id": "A5",
+   "name": "Glucose–Insulin Regulation",
+   "domain_num": 2,
+   "domain": "Metabolic–Energy Core",
+   "sub_axes": [
+    {
+     "code": "5A",
+     "name": "Insulin Signaling"
+    },
+    {
+     "code": "5B",
+     "name": "Hepatic Glucose Output"
+    },
+    {
+     "code": "5C",
+     "name": "Glycemic Variability Stress"
+    }
+   ],
+   "key_primary": "KEY-A",
+   "key_secondary": [
+    "KEY-B",
+    "KEY-C"
+   ]
+  },
+  {
+   "axis_num": 6,
+   "axis_id": "A6",
+   "name": "Lipid–Lipotoxicity",
+   "domain_num": 2,
+   "domain": "Metabolic–Energy Core",
+   "sub_axes": [
+    {
+     "code": "6A",
+     "name": "Lipoprotein Balance"
+    },
+    {
+     "code": "6B",
+     "name": "Ectopic Fat / NAFLD"
+    },
+    {
+     "code": "6C",
+     "name": "Fatty Acid Oxidation"
+    }
+   ],
+   "key_primary": "KEY-A",
+   "key_secondary": [
+    "KEY-B",
+    "KEY-C"
+   ]
+  },
+  {
+   "axis_num": 7,
+   "axis_id": "A7",
+   "name": "Nutrient Sensing",
+   "domain_num": 2,
+   "domain": "Metabolic–Energy Core",
+   "sub_axes": [
+    {
+     "code": "7A",
+     "name": "AMPK Energy Sensing"
+    },
+    {
+     "code": "7B",
+     "name": "mTORC1 Growth Tone"
+    },
+    {
+     "code": "7C",
+     "name": "Growth–Repair Switch Control"
+    }
+   ],
+   "key_primary": "KEY-A",
+   "key_secondary": [
+    "KEY-B",
+    "KEY-C"
+   ]
+  },
+  {
+   "axis_num": 8,
+   "axis_id": "A8",
+   "name": "Mitochondrial Network",
+   "domain_num": 2,
+   "domain": "Metabolic–Energy Core",
+   "sub_axes": [
+    {
+     "code": "8A",
+     "name": "ATP Bioenergetics"
+    },
+    {
+     "code": "8B",
+     "name": "Mitophagy / Fusion–Fission"
+    },
+    {
+     "code": "8C",
+     "name": "Mitochondrial Biogenesis"
+    }
+   ],
+   "key_primary": "KEY-A",
+   "key_secondary": [
+    "KEY-B",
+    "KEY-C"
+   ]
+  },
+  {
+   "axis_num": 9,
+   "axis_id": "A9",
+   "name": "Oxidative Stress & Redox Balance",
+   "domain_num": 2,
+   "domain": "Metabolic–Energy Core",
+   "sub_axes": [
+    {
+     "code": "9A",
+     "name": "ROS Load"
+    },
+    {
+     "code": "9B",
+     "name": "Antioxidant Defense"
+    },
+    {
+     "code": "9C",
+     "name": "Redox Signaling Balance"
+    }
+   ],
+   "key_primary": "KEY-A",
+   "key_secondary": [
+    "KEY-B",
+    "KEY-C"
+   ]
+  },
+  {
+   "axis_num": 10,
+   "axis_id": "A10",
+   "name": "Proteostasis–Autophagy–Lysosome",
+   "domain_num": 2,
+   "domain": "Metabolic–Energy Core",
+   "sub_axes": [
+    {
+     "code": "10A",
+     "name": "Protein Folding / Chaperone System"
+    },
+    {
+     "code": "10B",
+     "name": "ER Stress / UPR"
+    },
+    {
+     "code": "10C",
+     "name": "Autophagy–Lysosome Clearance"
+    },
+    {
+     "code": "10D",
+     "name": "Protein Aggregation / Proteotoxic Burden"
+    }
+   ],
+   "key_primary": "KEY-A",
+   "key_secondary": [
+    "KEY-B",
+    "KEY-C"
+   ]
+  },
+  {
+   "axis_num": 11,
+   "axis_id": "A11",
+   "name": "DNA Repair & Genomic Stability",
+   "domain_num": 3,
+   "domain": "Genomic Programming",
+   "sub_axes": [
+    {
+     "code": "11A",
+     "name": "DNA Damage Response"
+    },
+    {
+     "code": "11B",
+     "name": "Mutation Buffering"
+    },
+    {
+     "code": "11C",
+     "name": "Telomere Stability"
+    }
+   ],
+   "key_primary": "KEY-C",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-B"
+   ]
+  },
+  {
+   "axis_num": 12,
+   "axis_id": "A12",
+   "name": "Epigenetic Regulation",
+   "domain_num": 3,
+   "domain": "Genomic Programming",
+   "sub_axes": [
+    {
+     "code": "12A",
+     "name": "DNA Methylation"
+    },
+    {
+     "code": "12B",
+     "name": "Histone / Chromatin Remodeling"
+    },
+    {
+     "code": "12C",
+     "name": "miRNA / Non-Coding RNA Regulation"
+    }
+   ],
+   "key_primary": "KEY-C",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-B"
+   ]
+  },
+  {
+   "axis_num": 13,
+   "axis_id": "A13",
+   "name": "Longevity Signaling",
+   "domain_num": 3,
+   "domain": "Genomic Programming",
+   "sub_axes": [
+    {
+     "code": "13A",
+     "name": "Sirtuin Programs"
+    },
+    {
+     "code": "13B",
+     "name": "FOXO Stress Adaptation"
+    },
+    {
+     "code": "13C",
+     "name": "IGF / Anabolic–Longevity Balance"
+    }
+   ],
+   "key_primary": "KEY-C",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-B"
+   ]
+  },
+  {
+   "axis_num": 14,
+   "axis_id": "A14",
+   "name": "Senescence & SASP",
+   "domain_num": 3,
+   "domain": "Genomic Programming",
+   "sub_axes": [
+    {
+     "code": "14A",
+     "name": "Senescent Cell Burden"
+    },
+    {
+     "code": "14B",
+     "name": "SASP Inflammatory Output"
+    },
+    {
+     "code": "14C",
+     "name": "Senescence Clearance Potential"
+    }
+   ],
+   "key_primary": "KEY-C",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-B"
+   ]
+  },
+  {
+   "axis_num": 15,
+   "axis_id": "A15",
+   "name": "Detoxification Capacity",
+   "domain_num": 4,
+   "domain": "Detoxification & Cellular Defense",
+   "sub_axes": [
+    {
+     "code": "15A",
+     "name": "Phase I / Phase II Biotransformation"
+    },
+    {
+     "code": "15B",
+     "name": "Nrf2–Glutathione Defense"
+    },
+    {
+     "code": "15C",
+     "name": "Xenobiotic / Toxin Clearance"
+    }
+   ],
+   "key_primary": "KEY-A",
+   "key_secondary": [
+    "KEY-C",
+    "KEY-B"
+   ]
+  },
+  {
+   "axis_num": 16,
+   "axis_id": "A16",
+   "name": "Digestive–Absorptive Function",
+   "domain_num": 5,
+   "domain": "Digestive–Gut Ecosystem",
+   "sub_axes": [
+    {
+     "code": "16A",
+     "name": "Gastric Digestion"
+    },
+    {
+     "code": "16B",
+     "name": "Pancreatic–Bile Function"
+    },
+    {
+     "code": "16C",
+     "name": "Small Intestinal Absorption"
+    }
+   ],
+   "key_primary": "KEY-B",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-C"
+   ]
+  },
+  {
+   "axis_num": 17,
+   "axis_id": "A17",
+   "name": "Microbiome Ecology",
+   "domain_num": 5,
+   "domain": "Digestive–Gut Ecosystem",
+   "sub_axes": [
+    {
+     "code": "17A",
+     "name": "Diversity / Resilience"
+    },
+    {
+     "code": "17B",
+     "name": "SCFA / Metabolite Profile"
+    },
+    {
+     "code": "17C",
+     "name": "Dysbiosis Patterns"
+    }
+   ],
+   "key_primary": "KEY-B",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-C"
+   ]
+  },
+  {
+   "axis_num": 18,
+   "axis_id": "A18",
+   "name": "Gut Barrier & Mucosal Integrity",
+   "domain_num": 5,
+   "domain": "Digestive–Gut Ecosystem",
+   "sub_axes": [
+    {
+     "code": "18A",
+     "name": "Tight Junction Integrity"
+    },
+    {
+     "code": "18B",
+     "name": "Endotoxin Translocation"
+    },
+    {
+     "code": "18C",
+     "name": "Mucosal Immune Interface"
+    }
+   ],
+   "key_primary": "KEY-B",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-C"
+   ]
+  },
+  {
+   "axis_num": 19,
+   "axis_id": "A19",
+   "name": "Colon Biofilm & Mucosal Burden",
+   "domain_num": 5,
+   "domain": "Digestive–Gut Ecosystem",
+   "sub_axes": [
+    {
+     "code": "19A",
+     "name": "Biofilm Persistence"
+    },
+    {
+     "code": "19B",
+     "name": "Colon Plaque / Toxin Burden"
+    },
+    {
+     "code": "19C",
+     "name": "Clearance Kinetics"
+    }
+   ],
+   "key_primary": "KEY-B",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-C"
+   ]
+  },
+  {
+   "axis_num": 20,
+   "axis_id": "A20",
+   "name": "Endothelial Function",
+   "domain_num": 6,
+   "domain": "Vascular–Circulation",
+   "sub_axes": [
+    {
+     "code": "20A",
+     "name": "NO / eNOS Tone"
+    },
+    {
+     "code": "20B",
+     "name": "Endothelial Inflammation"
+    },
+    {
+     "code": "20C",
+     "name": "Glycocalyx Integrity"
+    }
+   ],
+   "key_primary": "KEY-B",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-C"
+   ]
+  },
+  {
+   "axis_num": 21,
+   "axis_id": "A21",
+   "name": "Vascular Remodeling & Microcirculation",
+   "domain_num": 6,
+   "domain": "Vascular–Circulation",
+   "sub_axes": [
+    {
+     "code": "21A",
+     "name": "Angiogenesis Signaling"
+    },
+    {
+     "code": "21B",
+     "name": "Capillary Density"
+    },
+    {
+     "code": "21C",
+     "name": "Tissue Perfusion / Oxygen Delivery"
+    }
+   ],
+   "key_primary": "KEY-B",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-C"
+   ]
+  },
+  {
+   "axis_num": 22,
+   "axis_id": "A22",
+   "name": "Thrombosis–Hemostasis",
+   "domain_num": 6,
+   "domain": "Vascular–Circulation",
+   "sub_axes": [
+    {
+     "code": "22A",
+     "name": "Platelet Activation"
+    },
+    {
+     "code": "22B",
+     "name": "Coagulation Cascade Tone"
+    },
+    {
+     "code": "22C",
+     "name": "Fibrinolysis Balance"
+    }
+   ],
+   "key_primary": "KEY-B",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-C"
+   ]
+  },
+  {
+   "axis_num": 23,
+   "axis_id": "A23",
+   "name": "Hemodynamics & Arterial Elasticity",
+   "domain_num": 6,
+   "domain": "Vascular–Circulation",
+   "sub_axes": [
+    {
+     "code": "23A",
+     "name": "RAAS Regulation"
+    },
+    {
+     "code": "23B",
+     "name": "Vascular Stiffness"
+    },
+    {
+     "code": "23C",
+     "name": "Blood Pressure Set-Point"
+    }
+   ],
+   "key_primary": "KEY-B",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-C"
+   ]
+  },
+  {
+   "axis_num": 24,
+   "axis_id": "A24",
+   "name": "Wound Healing",
+   "domain_num": 7,
+   "domain": "Repair–Regeneration",
+   "sub_axes": [
+    {
+     "code": "24A",
+     "name": "Inflammation → Proliferation Transition"
+    },
+    {
+     "code": "24B",
+     "name": "Epithelialization"
+    },
+    {
+     "code": "24C",
+     "name": "Remodeling Quality"
+    }
+   ],
+   "key_primary": "KEY-C",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-B"
+   ]
+  },
+  {
+   "axis_num": 25,
+   "axis_id": "A25",
+   "name": "Fibrosis & ECM Remodeling",
+   "domain_num": 7,
+   "domain": "Repair–Regeneration",
+   "sub_axes": [
+    {
+     "code": "25A",
+     "name": "TGF-β Fibrotic Signaling"
+    },
+    {
+     "code": "25B",
+     "name": "Collagen Turnover"
+    },
+    {
+     "code": "25C",
+     "name": "Organ Stiffness Progression"
+    }
+   ],
+   "key_primary": "KEY-C",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-B"
+   ]
+  },
+  {
+   "axis_num": 26,
+   "axis_id": "A26",
+   "name": "Stem Cell & Hematopoiesis",
+   "domain_num": 7,
+   "domain": "Repair–Regeneration",
+   "sub_axes": [
+    {
+     "code": "26A",
+     "name": "Stem Cell Niche"
+    },
+    {
+     "code": "26B",
+     "name": "Hematopoiesis"
+    },
+    {
+     "code": "26C",
+     "name": "Recovery Capacity After Stress"
+    }
+   ],
+   "key_primary": "KEY-C",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-B"
+   ]
+  },
+  {
+   "axis_num": 27,
+   "axis_id": "A27",
+   "name": "Glycation / Carbonyl Stress",
+   "domain_num": 7,
+   "domain": "Repair–Regeneration",
+   "sub_axes": [
+    {
+     "code": "27A",
+     "name": "AGE Formation"
+    },
+    {
+     "code": "27B",
+     "name": "Protein Crosslinking"
+    },
+    {
+     "code": "27C",
+     "name": "Tissue Vulnerability Amplification"
+    }
+   ],
+   "key_primary": "KEY-C",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-B"
+   ]
+  },
+  {
+   "axis_num": 28,
+   "axis_id": "A28",
+   "name": "Muscle Protein Turnover",
+   "domain_num": 8,
+   "domain": "Musculoskeletal & Structural Integrity",
+   "sub_axes": [
+    {
+     "code": "28A",
+     "name": "Muscle Anabolism"
+    },
+    {
+     "code": "28B",
+     "name": "Muscle Catabolism"
+    },
+    {
+     "code": "28C",
+     "name": "Myogenesis / Recovery"
+    }
+   ],
+   "key_primary": "KEY-C",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-B"
+   ]
+  },
+  {
+   "axis_num": 29,
+   "axis_id": "A29",
+   "name": "Bone Remodeling",
+   "domain_num": 8,
+   "domain": "Musculoskeletal & Structural Integrity",
+   "sub_axes": [
+    {
+     "code": "29A",
+     "name": "Osteoblast Formation"
+    },
+    {
+     "code": "29B",
+     "name": "Osteoclast Resorption"
+    },
+    {
+     "code": "29C",
+     "name": "Mineral Density Stability"
+    }
+   ],
+   "key_primary": "KEY-C",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-B"
+   ]
+  },
+  {
+   "axis_num": 30,
+   "axis_id": "A30",
+   "name": "Connective Tissue Integrity",
+   "domain_num": 8,
+   "domain": "Musculoskeletal & Structural Integrity",
+   "sub_axes": [
+    {
+     "code": "30A",
+     "name": "Tendon / Ligament Resilience"
+    },
+    {
+     "code": "30B",
+     "name": "Joint Matrix Stability"
+    },
+    {
+     "code": "30C",
+     "name": "Structural Crosslink Burden"
+    }
+   ],
+   "key_primary": "KEY-C",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-B"
+   ]
+  },
+  {
+   "axis_num": 31,
+   "axis_id": "A31",
+   "name": "Female Hormone Network",
+   "domain_num": 9,
+   "domain": "Endocrine Network",
+   "sub_axes": [
+    {
+     "code": "31A",
+     "name": "Estrogen Signaling"
+    },
+    {
+     "code": "31B",
+     "name": "Progesterone Balance"
+    },
+    {
+     "code": "31C",
+     "name": "Menopause Physiology"
+    }
+   ],
+   "key_primary": "KEY-B",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-C"
+   ]
+  },
+  {
+   "axis_num": 32,
+   "axis_id": "A32",
+   "name": "Male Androgen Network",
+   "domain_num": 9,
+   "domain": "Endocrine Network",
+   "sub_axes": [
+    {
+     "code": "32A",
+     "name": "Testosterone Tone"
+    },
+    {
+     "code": "32B",
+     "name": "DHT / Androgen Receptor Sensitivity"
+    },
+    {
+     "code": "32C",
+     "name": "Prostate–Hair–Anabolic Linkage"
+    }
+   ],
+   "key_primary": "KEY-B",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-C"
+   ]
+  },
+  {
+   "axis_num": 33,
+   "axis_id": "A33",
+   "name": "Thyroid–Adrenal–Growth Axis",
+   "domain_num": 9,
+   "domain": "Endocrine Network",
+   "sub_axes": [
+    {
+     "code": "33A",
+     "name": "Thyroid Metabolic Control"
+    },
+    {
+     "code": "33B",
+     "name": "HPA / Cortisol Rhythm"
+    },
+    {
+     "code": "33C",
+     "name": "GH–IGF Repair Signaling"
+    }
+   ],
+   "key_primary": "KEY-B",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-C"
+   ]
+  },
+  {
+   "axis_num": 34,
+   "axis_id": "A34",
+   "name": "Neuro–Sleep–Stress–Brain Clearance",
+   "domain_num": 10,
+   "domain": "Neurological Regulation",
+   "sub_axes": [
+    {
+     "code": "34A",
+     "name": "Neuroinflammation"
+    },
+    {
+     "code": "34B",
+     "name": "Sleep–Circadian–Melatonin Repair"
+    },
+    {
+     "code": "34C",
+     "name": "HPA–Autonomic–Glymphatic Clearance"
+    }
+   ],
+   "key_primary": "KEY-B",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-C"
+   ]
+  },
+  {
+   "axis_num": 35,
+   "axis_id": "A35",
+   "name": "Visceral Organ Functional Reserve",
+   "domain_num": 11,
+   "domain": "Organ Resilience",
+   "sub_axes": [
+    {
+     "code": "35A",
+     "name": "Liver–Kidney–Heart–Lung Reserve"
+    },
+    {
+     "code": "35B",
+     "name": "Pancreas–Gallbladder–GI Organ Function"
+    },
+    {
+     "code": "35C",
+     "name": "Spleen–Bladder–Fluid Regulation"
+    }
+   ],
+   "key_primary": "KEY-C",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-B"
+   ]
+  },
+  {
+   "axis_num": 36,
+   "axis_id": "A36",
+   "name": "Local Organ & Tissue Interface",
+   "domain_num": 11,
+   "domain": "Organ Resilience",
+   "sub_axes": [
+    {
+     "code": "36A",
+     "name": "Sensory / ENT Organs"
+    },
+    {
+     "code": "36B",
+     "name": "Reproductive / Pelvic Organs"
+    },
+    {
+     "code": "36C",
+     "name": "Anorectal / Local Mucosal Organs"
+    }
+   ],
+   "key_primary": "KEY-C",
+   "key_secondary": [
+    "KEY-A",
+    "KEY-B"
+   ]
+  },
+  {
+   "axis_num": 37,
+   "axis_id": "A37",
+   "name": "Oncologic Cell Fate",
+   "domain_num": 12,
+   "domain": "Oncology & System-Level Regulation",
+   "sub_axes": [
+    {
+     "code": "37A",
+     "name": "Apoptosis"
+    },
+    {
+     "code": "37B",
+     "name": "Cell-Cycle Checkpoints"
+    },
+    {
+     "code": "37C",
+     "name": "Abnormal Proliferation Control"
+    }
+   ],
+   "key_primary": "KEY-C",
+   "key_secondary": [
+    "KEY-B",
+    "KEY-A"
+   ]
+  },
+  {
+   "axis_num": 38,
+   "axis_id": "A38",
+   "name": "Tumor Microenvironment & Metastatic Dynamics",
+   "domain_num": 12,
+   "domain": "Oncology & System-Level Regulation",
+   "sub_axes": [
+    {
+     "code": "38A",
+     "name": "Tumor Immune Evasion"
+    },
+    {
+     "code": "38B",
+     "name": "EMT / Invasion / Migration"
+    },
+    {
+     "code": "38C",
+     "name": "Anti-Metastatic Network Control"
+    }
+   ],
+   "key_primary": "KEY-C",
+   "key_secondary": [
+    "KEY-B",
+    "KEY-A"
+   ]
+  },
+  {
+   "axis_num": 39,
+   "axis_id": "A39",
+   "name": "Genomic Regulation Homeostasis",
+   "domain_num": 12,
+   "domain": "Oncology & System-Level Regulation",
+   "sub_axes": [
+    {
+     "code": "39A",
+     "name": "Whole-System Gene Expression Balance"
+    },
+    {
+     "code": "39B",
+     "name": "Transcription–Translation Coordination"
+    },
+    {
+     "code": "39C",
+     "name": "Adaptive Gene Program Reset Toward Prakati"
+    }
+   ],
+   "key_primary": "KEY-C",
+   "key_secondary": [
+    "KEY-B",
+    "KEY-A"
+   ]
+  }
+ ]
+}

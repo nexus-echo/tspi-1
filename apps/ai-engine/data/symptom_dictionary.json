@@ -1,0 +1,207 @@
+{
+  "dataset_name": "tspi_symptom_dictionary",
+  "dataset_version": "0.1.0-provisional",
+  "framework_version": "39-axis-master-260715",
+  "approval_status": "PROVISIONAL",
+  "status": "DRAFT",
+  "authoritative": false,
+  "source": "Seeded from the domain experts' own worked examples (TSPI 3 Q4; 'tspi comment for phase3 developer' sections 4-13). NOT the official Symptom-to-Axis / Symptom-to-Network dictionary.",
+  "principles": [
+    "Symptoms are first-class biological evidence, not narrative text.",
+    "NEVER one symptom = one axis. A symptom generates MULTIPLE candidate axes/networks.",
+    "A normal test narrows the differential; it never erases a symptom.",
+    "Weights are adjusted by co-symptoms, timing, triggers, relieving factors and negatives.",
+    "Symptom burden is separate from attribution confidence."
+  ],
+  "weight_classes": {
+    "weak": 0.25,
+    "moderate": 0.50,
+    "strong": 0.75,
+    "pattern_defining": 1.00
+  },
+  "symptoms": [
+    {
+      "symptom_code": "SYM-BLOAT",
+      "name_en": "Bloating",
+      "name_th": "ท้องอืด",
+      "match_any": ["bloating", "bloated", "abdominal distension", "distended"],
+      "candidates": [
+        {"axis_code": "A16", "base_weight": 0.50, "weight_class": "moderate"},
+        {"axis_code": "A17", "base_weight": 0.25, "weight_class": "weak"},
+        {"axis_code": "A18", "base_weight": 0.25, "weight_class": "weak"},
+        {"axis_code": "A19", "base_weight": 0.25, "weight_class": "weak"},
+        {"axis_code": "A34", "base_weight": 0.25, "weight_class": "weak"}
+      ],
+      "context_rules": [
+        {"if_co_symptoms": ["SYM-EARLY-SATIETY", "SYM-BELCHING"], "boost": {"A16": 0.35},
+         "note": "bloating + early satiety + postprandial belching -> upper digestive weight high"},
+        {"if_co_symptoms": ["SYM-CONSTIPATION", "SYM-ABNORMAL-STOOL"],
+         "boost": {"A16": 0.20, "A17": 0.30, "A19": 0.30},
+         "note": "bloating + constipation + abnormal stool -> A16/A17/A19 increase"},
+        {"if_trigger": "stress", "boost": {"A34": 0.40},
+         "note": "bloating worse with stress -> neuro-autonomic + CELA regulation"},
+        {"if_co_symptoms": ["SYM-FOOD-INTOLERANCE", "SYM-RASH"], "boost": {"A17": 0.25, "A18": 0.30, "A2": 0.25}}
+      ],
+      "adaptive_questions": [
+        "Is the bloating before or after meals?", "How many minutes after eating does it start?",
+        "Are you full earlier than usual?", "Any belching or acid reflux?",
+        "How many bowel movements per day?", "Stool form (Bristol scale)?",
+        "Which foods trigger it?", "Any weight loss?", "Any bleeding?", "Any fever?",
+        "Any recent antibiotics?", "Any stress or poor sleep?", "What tests have you had, and the results?"
+      ],
+      "red_flag_links": ["RF-U08", "RF-U03", "RF-U01"]
+    },
+    {
+      "symptom_code": "SYM-EARLY-SATIETY", "name_en": "Early satiety", "name_th": "อิ่มเร็ว",
+      "match_any": ["early satiety", "full quickly", "feel full fast", "อิ่มเร็ว"],
+      "candidates": [{"axis_code": "A16", "base_weight": 0.75, "weight_class": "strong"}],
+      "adaptive_questions": ["How soon do you feel full?", "Has your appetite changed?"]
+    },
+    {
+      "symptom_code": "SYM-BELCHING", "name_en": "Postprandial belching", "name_th": "เรอหลังอาหาร",
+      "match_any": ["belching", "burping", "belch", "เรอ"],
+      "candidates": [{"axis_code": "A16", "base_weight": 0.50, "weight_class": "moderate"}]
+    },
+    {
+      "symptom_code": "SYM-REFLUX", "name_en": "Acid reflux", "name_th": "กรดไหลย้อน",
+      "match_any": ["reflux", "heartburn", "acid regurgitation", "กรดไหลย้อน"],
+      "candidates": [{"axis_code": "A16", "base_weight": 0.50, "weight_class": "moderate"}]
+    },
+    {
+      "symptom_code": "SYM-CONSTIPATION", "name_en": "Constipation", "name_th": "ท้องผูก",
+      "match_any": ["constipation", "constipated", "hard stool", "ท้องผูก"],
+      "candidates": [
+        {"axis_code": "A16", "base_weight": 0.50, "weight_class": "moderate"},
+        {"axis_code": "A19", "base_weight": 0.50, "weight_class": "moderate"},
+        {"axis_code": "A17", "base_weight": 0.25, "weight_class": "weak"},
+        {"axis_code": "A34", "base_weight": 0.25, "weight_class": "weak"},
+        {"axis_code": "A33", "base_weight": 0.25, "weight_class": "weak"}
+      ],
+      "adaptive_questions": ["How many days between bowel movements?", "Do you need laxatives?",
+                             "Is evacuation complete?"]
+    },
+    {
+      "symptom_code": "SYM-ABNORMAL-STOOL", "name_en": "Abnormal stool pattern",
+      "match_any": ["abnormal stool", "incomplete evacuation", "stool changed", "loose stool"],
+      "candidates": [{"axis_code": "A19", "base_weight": 0.50, "weight_class": "moderate"},
+                     {"axis_code": "A17", "base_weight": 0.50, "weight_class": "moderate"}]
+    },
+    {
+      "symptom_code": "SYM-FOOD-INTOLERANCE", "name_en": "Food intolerance",
+      "match_any": ["food intolerance", "food allergy", "certain foods trigger"],
+      "candidates": [{"axis_code": "A17", "base_weight": 0.50, "weight_class": "moderate"},
+                     {"axis_code": "A18", "base_weight": 0.50, "weight_class": "moderate"},
+                     {"axis_code": "A2", "base_weight": 0.25, "weight_class": "weak"}]
+    },
+    {
+      "symptom_code": "SYM-RASH", "name_en": "Rash", "match_any": ["rash", "hives", "urticaria"],
+      "candidates": [{"axis_code": "A2", "base_weight": 0.50, "weight_class": "moderate"},
+                     {"axis_code": "A18", "base_weight": 0.25, "weight_class": "weak"}]
+    },
+    {
+      "symptom_code": "SYM-FATIGUE",
+      "name_en": "Fatigue / low energy", "name_th": "เหนื่อยง่าย",
+      "match_any": ["fatigue", "tired", "tiredness", "low energy", "exhausted", "เหนื่อยง่าย"],
+      "candidates": [
+        {"axis_code": "A8", "base_weight": 0.25, "weight_class": "weak"},
+        {"axis_code": "A26", "base_weight": 0.25, "weight_class": "weak"},
+        {"axis_code": "A33", "base_weight": 0.25, "weight_class": "weak"},
+        {"axis_code": "A34", "base_weight": 0.25, "weight_class": "weak"},
+        {"axis_code": "A1", "base_weight": 0.25, "weight_class": "weak"}
+      ],
+      "context_rules": [
+        {"if_co_symptoms": ["SYM-PEM", "SYM-SLOW-RECOVERY", "SYM-UNREFRESHING-SLEEP"],
+         "boost": {"A8": 0.35},
+         "note": "post-exertional malaise + slow recovery + unrefreshing sleep -> cellular energy network"}
+      ],
+      "must_exclude_first": ["anemia", "thyroid disease", "cardiac disease", "pulmonary disease",
+                             "infection", "medication effect", "sleep disorder", "depression",
+                             "malnutrition", "deconditioning"],
+      "adaptive_questions": ["Is it worse after exertion?", "Do you recover slowly?",
+                             "Is sleep refreshing?", "Any breathlessness or chest symptoms?",
+                             "Any recent infection?", "Current medications?"]
+    },
+    {
+      "symptom_code": "SYM-PEM", "name_en": "Post-exertional malaise",
+      "match_any": ["worse after exertion", "post-exertional", "crash after activity"],
+      "candidates": [{"axis_code": "A8", "base_weight": 0.50, "weight_class": "moderate"}]
+    },
+    {
+      "symptom_code": "SYM-SLOW-RECOVERY", "name_en": "Slow recovery",
+      "match_any": ["slow recovery", "recover slowly", "takes days to recover"],
+      "candidates": [{"axis_code": "A8", "base_weight": 0.50, "weight_class": "moderate"}]
+    },
+    {
+      "symptom_code": "SYM-UNREFRESHING-SLEEP", "name_en": "Unrefreshing sleep",
+      "match_any": ["unrefreshing sleep", "not refreshed", "wake up tired", "poor sleep", "insomnia"],
+      "candidates": [{"axis_code": "A34", "base_weight": 0.50, "weight_class": "moderate"},
+                     {"axis_code": "A8", "base_weight": 0.25, "weight_class": "weak"}]
+    },
+    {
+      "symptom_code": "SYM-BRAIN-FOG", "name_en": "Brain fog",
+      "match_any": ["brain fog", "foggy", "cannot concentrate", "poor concentration"],
+      "candidates": [{"axis_code": "A34", "base_weight": 0.50, "weight_class": "moderate"},
+                     {"axis_code": "A8", "base_weight": 0.25, "weight_class": "weak"},
+                     {"axis_code": "A1", "base_weight": 0.25, "weight_class": "weak"}]
+    },
+    {
+      "symptom_code": "SYM-STRESS", "name_en": "Stress", "name_th": "ความเครียด",
+      "match_any": ["stress", "stressed", "anxiety", "anxious", "ความเครียด"],
+      "candidates": [{"axis_code": "A34", "base_weight": 0.50, "weight_class": "moderate"},
+                     {"axis_code": "A33", "base_weight": 0.25, "weight_class": "weak"}],
+      "network_hint": "CELA (Cognitive-Emotional Loop Architecture) — network #120, parent axis A34"
+    },
+    {
+      "symptom_code": "SYM-DIZZY",
+      "name_en": "Dizziness", "name_th": "เวียนหัว",
+      "match_any": ["dizzy", "dizziness", "lightheaded", "vertigo", "เวียนหัว"],
+      "candidates": [
+        {"axis_code": "A34", "base_weight": 0.50, "weight_class": "moderate"},
+        {"axis_code": "A23", "base_weight": 0.50, "weight_class": "moderate"},
+        {"axis_code": "A21", "base_weight": 0.25, "weight_class": "weak"},
+        {"axis_code": "A26", "base_weight": 0.25, "weight_class": "weak"},
+        {"axis_code": "A5", "base_weight": 0.25, "weight_class": "weak"},
+        {"axis_code": "A8", "base_weight": 0.25, "weight_class": "weak"}
+      ],
+      "differential_note": "Dizziness is NOT proof of any single mechanism. Build a differential network map.",
+      "adaptive_questions": ["Does it happen on standing?", "Spinning or swaying?", "Any ringing in the ears?",
+                             "Any palpitations?", "Does it happen when hungry?",
+                             "Blood pressure sitting and standing?", "How long does it last?",
+                             "Current medications?"],
+      "red_flag_links": ["RF-E01", "RF-E02", "RF-E03", "RF-E05", "RF-E07"]
+    },
+    {
+      "symptom_code": "SYM-INFLAMMATION", "name_en": "Inflammatory symptoms",
+      "match_any": ["inflammation", "inflammatory", "swelling", "aching"],
+      "candidates": [{"axis_code": "A1", "base_weight": 0.50, "weight_class": "moderate"}]
+    }
+  ],
+  "clusters": [
+    {
+      "cluster_code": "CL-UPPER-GI",
+      "name_en": "Upper digestive dysfunction cluster",
+      "members": ["SYM-EARLY-SATIETY", "SYM-BELCHING", "SYM-REFLUX", "SYM-BLOAT"],
+      "min_members": 2,
+      "axes": {"A16": 0.75},
+      "networks_hint": ["Gastric motility network", "Gastric acid regulation network",
+                        "Vagal digestive control network", "Pancreatic-biliary coordination network"]
+    },
+    {
+      "cluster_code": "CL-INTESTINAL-MOTILITY",
+      "name_en": "Intestinal motility cluster",
+      "members": ["SYM-CONSTIPATION", "SYM-ABNORMAL-STOOL", "SYM-BLOAT"],
+      "min_members": 2,
+      "axes": {"A16": 0.50, "A17": 0.50, "A19": 0.50},
+      "networks_hint": ["Enteric nervous system network", "Colonic motility network",
+                        "Pelvic evacuation network"]
+    },
+    {
+      "cluster_code": "CL-ENERGY",
+      "name_en": "Cellular energy dysfunction cluster",
+      "members": ["SYM-FATIGUE", "SYM-PEM", "SYM-SLOW-RECOVERY", "SYM-UNREFRESHING-SLEEP"],
+      "min_members": 2,
+      "axes": {"A8": 0.60},
+      "networks_hint": ["Mitochondrial bioenergetic network"]
+    }
+  ]
+}

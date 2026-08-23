@@ -7,7 +7,7 @@ from __future__ import annotations
 
 from fastapi import APIRouter, File, Form, HTTPException, UploadFile
 
-from app import learning, store
+from app import learning, red_flags, store
 from app.config import settings
 from app.pipeline import extraction
 from app.pipeline.orchestrator import analyze, build_report
@@ -27,6 +27,19 @@ def _require_consent(p: PatientInput, scope: str) -> None:
     if not p.consent.get(scope, scope == "ai_analysis" and False):
         store.audit("consent_denied", case_id=p.case_id, allowed=False, detail={"scope": scope})
         raise HTTPException(status_code=403, detail=f"Consent '{scope}' not granted.")
+
+
+@router.post("/screen", tags=["safety"])
+async def screen_endpoint(patient: PatientInput) -> dict:
+    """Phase 7 — deterministic red-flag screening. Runs before any TSPI reasoning.
+
+    Conservative by design: it may only escalate care, never withhold it.
+    """
+    result = red_flags.screen(patient)
+    store.audit("red_flag_screen", case_id=patient.case_id,
+                detail={"action_class": result.get("action_class"),
+                        "count": len(result.get("red_flags", []))})
+    return result
 
 
 @router.post("/analyze", response_model=AnalysisResult, tags=["diagnosis"])
@@ -70,10 +83,56 @@ async def outcome_endpoint(rec: OutcomeRecord) -> dict:
 
 @router.post("/learning/recalibrate", tags=["learning"])
 async def recalibrate_endpoint() -> dict:
-    """Phase 4: update axis weights from accumulated outcomes (feeds weight-aware NSS/SPS)."""
-    result = learning.recalibrate()
-    store.audit("recalibrate", actor="system", detail={"axes_changed": result["axes_changed"]})
+    """Phase 12: PROPOSE-ONLY. Population learning may never auto-change the global model.
+
+    Creates PROPOSE_MODEL_UPDATE proposals for clinical review (expert rule Q11). The previous
+    Phase-4 behaviour (auto-recalibrating global axis weights) was non-compliant and is removed.
+    """
+    result = learning.propose_model_update()
+    store.audit("recalibrate", actor="system",
+                detail={"proposals_created": result["proposals_created"],
+                        "global_model_changed": False})
     return result
+
+
+@router.get("/learning/proposals", tags=["learning"])
+async def list_proposals_endpoint(status: str | None = None) -> dict:
+    """Population model-update proposals awaiting clinical review."""
+    return learning.list_proposals(status)
+
+
+@router.post("/learning/proposals/{proposal_id}/decide", tags=["learning"])
+async def decide_proposal_endpoint(proposal_id: int, reviewer: str, approve: bool = True) -> dict:
+    """Clinician-gated. This is the ONLY path that may change the global clinical model."""
+    result = learning.approve_proposal(proposal_id, reviewer, approve)
+    if not result:
+        raise HTTPException(status_code=404, detail="Proposal not found.")
+    return result
+
+
+@router.post("/learning/adapt/{case_id}", tags=["learning"])
+async def adapt_patient_endpoint(case_id: str) -> dict:
+    """Level 1 — patient-specific axis adaptation (bounded +-5%/cycle, +-20% cumulative)."""
+    return learning.adapt_patient(case_id)
+
+
+@router.post("/learning/networks/{case_id}", tags=["learning"])
+async def observe_networks_endpoint(case_id: str) -> dict:
+    """Level 2 — learn the BEHAVIOUR of biological networks (what moved first, what followed)."""
+    return learning.observe_networks(case_id)
+
+
+@router.get("/patient-model/{case_id}", tags=["learning"])
+async def patient_model_endpoint(case_id: str) -> dict:
+    """Level 3 — the patient's versioned living biological model (history never deleted)."""
+    return learning.patient_model(case_id)
+
+
+@router.post("/patient-model/{case_id}/rebuild", tags=["learning"])
+async def rebuild_patient_model_endpoint(case_id: str, change_kind: str = "REFINE",
+                                         trigger: str | None = None) -> dict:
+    """Level 3 — reconstruct the model as a NEW version (CONFIRM/REFINE/REDIRECT/OVERRIDE/CONTRADICT)."""
+    return learning.rebuild_patient_model(case_id, change_kind=change_kind, trigger=trigger)
 
 
 @router.get("/learning/weights", tags=["learning"])
