@@ -1,0 +1,15 @@
+# Python caches & envs
+__pycache__/
+**/__pycache__/
+*.pyc
+.venv/
+.venv
+venv/
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+
+# local secrets / config
+.env
+.env.*
+!.env*.example
