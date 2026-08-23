@@ -176,3 +176,92 @@ class AxisWeight(Base):
     weight: Mapped[float] = mapped_column(Float, default=1.0)
     samples: Mapped[int] = mapped_column(Integer, default=0)
     updated_at: Mapped[datetime] = mapped_column(DateTime, default=_utcnow)
+
+
+# ---------------------------------------------------------------------------
+# Phase 12 — Adaptive Biological Intelligence Loop (3 levels; population = propose-only)
+# Per TSPI 3 Q11: the AI must NOT modify the global clinical model from individual cases.
+# ---------------------------------------------------------------------------
+class PatientAxisWeight(Base):
+    """Level 1 — patient-specific axis adaptation (bounded, never global)."""
+    __tablename__ = "patient_axis_weights"
+    case_id: Mapped[str] = mapped_column(String(64), primary_key=True)
+    axis_code: Mapped[str] = mapped_column(String(8), primary_key=True)
+    weight: Mapped[float] = mapped_column(Float, default=1.0)
+    cumulative_adjustment: Mapped[float] = mapped_column(Float, default=0.0)  # bounded +-0.20
+    consecutive_improvements: Mapped[int] = mapped_column(Integer, default=0)
+    samples: Mapped[int] = mapped_column(Integer, default=0)
+    updated_at: Mapped[datetime] = mapped_column(DateTime, default=_utcnow)
+
+
+class NetworkObservation(Base):
+    """Level 2 — network behaviour learning: which network moved first, what followed, how fast."""
+    __tablename__ = "network_observations"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    case_id: Mapped[str] = mapped_column(String(64))
+    changed_first: Mapped[str] = mapped_column(String(64))          # network/axis code
+    downstream: Mapped[str | None] = mapped_column(String(64))
+    direction: Mapped[str] = mapped_column(String(16))              # improved | worsened
+    magnitude: Mapped[float | None] = mapped_column(Float)
+    time_to_response_days: Mapped[int | None] = mapped_column(Integer)
+    repeated: Mapped[bool] = mapped_column(Boolean, default=False)
+    confounders: Mapped[str | None] = mapped_column(Text)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=_utcnow)
+
+
+class PatientModel(Base):
+    """Level 3 — versioned living patient biological model. Old versions are NEVER deleted."""
+    __tablename__ = "patient_models"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    case_id: Mapped[str] = mapped_column(String(64), index=True)
+    version: Mapped[int] = mapped_column(Integer, default=1)
+    change_kind: Mapped[str] = mapped_column(String(16), default="CONFIRM")  # CONFIRM/REFINE/REDIRECT/OVERRIDE/CONTRADICT
+    axis_state: Mapped[dict] = mapped_column(JSON, default=dict)
+    network_state: Mapped[dict] = mapped_column(JSON, default=dict)
+    trigger: Mapped[str | None] = mapped_column(String(200))
+    superseded: Mapped[bool] = mapped_column(Boolean, default=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=_utcnow)
+
+
+class ModelUpdateProposal(Base):
+    """Level 4 — population learning. AI may only PROPOSE; a clinician must approve."""
+    __tablename__ = "model_update_proposals"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    axis_code: Mapped[str] = mapped_column(String(8))
+    current_weight: Mapped[float] = mapped_column(Float, default=1.0)
+    proposed_weight: Mapped[float] = mapped_column(Float, default=1.0)
+    sample_size: Mapped[int] = mapped_column(Integer, default=0)
+    improved: Mapped[int] = mapped_column(Integer, default=0)
+    worsened: Mapped[int] = mapped_column(Integer, default=0)
+    rationale: Mapped[str | None] = mapped_column(Text)
+    blocking_reasons: Mapped[str | None] = mapped_column(Text)      # why it cannot auto-apply
+    status: Mapped[str] = mapped_column(String(24), default="PROPOSE_MODEL_UPDATE")
+    reviewed_by: Mapped[str | None] = mapped_column(String(64))
+    review_date: Mapped[datetime | None] = mapped_column(DateTime)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=_utcnow)
+
+
+class LearningRecord(Base):
+    """The minimum learning record specified by the experts (Q11)."""
+    __tablename__ = "learning_records"
+    id: Mapped[int] = mapped_column(primary_key=True)
+    case_id: Mapped[str] = mapped_column(String(64), index=True)
+    patient_model_version: Mapped[int | None] = mapped_column(Integer)
+    baseline_axis_state: Mapped[dict] = mapped_column(JSON, default=dict)
+    baseline_network_state: Mapped[dict] = mapped_column(JSON, default=dict)
+    followup_axis_state: Mapped[dict] = mapped_column(JSON, default=dict)
+    followup_network_state: Mapped[dict] = mapped_column(JSON, default=dict)
+    intervention_modules: Mapped[dict] = mapped_column(JSON, default=dict)
+    dose: Mapped[str | None] = mapped_column(String(120))
+    duration: Mapped[str | None] = mapped_column(String(64))
+    adherence: Mapped[str | None] = mapped_column(String(32))
+    lifestyle_interventions: Mapped[dict] = mapped_column(JSON, default=dict)
+    concurrent_medications: Mapped[dict] = mapped_column(JSON, default=dict)
+    symptom_response: Mapped[str | None] = mapped_column(Text)
+    laboratory_response: Mapped[str | None] = mapped_column(Text)
+    adverse_response: Mapped[str | None] = mapped_column(Text)
+    time_to_response: Mapped[str | None] = mapped_column(String(64))
+    confounders: Mapped[dict] = mapped_column(JSON, default=dict)
+    physician_interpretation: Mapped[str | None] = mapped_column(Text)
+    learning_approval_status: Mapped[str] = mapped_column(String(24), default="UNREVIEWED")
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=_utcnow)

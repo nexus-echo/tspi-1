@@ -1,0 +1,181 @@
+﻿legacy_display_id,network_number,network_code_candidate,network_name_en,axis_label_from_file,suggested_axis_code,suggested_axis_name,axis_confidence,CONFIRM_axis_code,derived_domain_code,derived_domain_name,(domain auto-derives from CONFIRM_axis),scope
+N001,1,LBN-001,NF-κB Inflammatory Switch Network,Systemic Inflammatory Load,A1,Systemic Inflammatory Load,1.0,,D1,Immune–Infection Governance,derived,ควบคุมการเปิดสัญญาณอักเสบหลัก
+N002,2,LBN-002,Cytokine Burden Network,Systemic Inflammatory Load,A1,Systemic Inflammatory Load,1.0,,D1,Immune–Infection Governance,derived,"IL-6, TNF-α, IL-1β, CRP"
+N003,3,LBN-003,Acute Inflammatory Response Network,Acute–Chronic Inflammation,,,0.0,,,,derived,การอักเสบเฉียบพลันเพื่อป้องกันภัย
+N004,4,LBN-004,Chronic Low-Grade Inflammation Network,Acute–Chronic Inflammation,,,0.0,,,,derived,การอักเสบเรื้อรังระดับต่ำ
+N005,5,LBN-005,Innate Immune Surveillance Network,Immune Surveillance,A2,Immune Homeostasis,0.33,,D1,Immune–Infection Governance,derived,"macrophage, neutrophil, dendritic cell"
+N006,6,LBN-006,NK Cell Tumor Surveillance Network,Immune Surveillance,A2,Immune Homeostasis,0.33,,D1,Immune–Infection Governance,derived,การกำจัดเซลล์ผิดปกติและเซลล์มะเร็ง
+N007,7,LBN-007,Adaptive Immune Coordination Network,Immune Balance,A2,Immune Homeostasis,0.33,,D1,Immune–Infection Governance,derived,"T cell, B cell, antibody response"
+N008,8,LBN-008,Treg–Th17 Balance Network,Immune Balance,A2,Immune Homeostasis,0.33,,D1,Immune–Infection Governance,derived,สมดุลภูมิคุ้มกันกับภูมิแพ้/ออโตอิมมูน
+N009,9,LBN-009,Inflammation Resolution Network,Resolution,,,0.0,,,,derived,การปิดการอักเสบและกลับสู่สมดุล
+N010,10,LBN-010,NLRP3 Inflammasome Network,Inflammasome,,,0.0,,,,derived,"sterile inflammation, IL-1β, IL-18"
+N011,11,LBN-011,Antiviral Interferon Network,Infection Defense,A3,Pathogen Defense,0.33,,D1,Immune–Infection Governance,derived,"interferon signaling, viral defense"
+N012,12,LBN-012,Antibacterial Defense Network,Infection Defense,A3,Pathogen Defense,0.33,,D1,Immune–Infection Governance,derived,"phagocytosis, antimicrobial peptides"
+N013,13,LBN-013,ROS Regulation Network,ROS/RNS Load,A1,Systemic Inflammatory Load,0.2,,D1,Immune–Infection Governance,derived,ควบคุม ROS ไม่ให้เกินสมดุล
+N014,14,LBN-014,Lipid Peroxidation Network,Oxidative Damage,A9,Oxidative Stress & Redox Balance,0.2,,D2,Metabolic–Energy Core,derived,"MDA, 4-HNE, membrane damage"
+N015,15,LBN-015,Nrf2 Antioxidant Response Network,Antioxidant Defense,A3,Pathogen Defense,0.33,,D1,Immune–Infection Governance,derived,เปิดระบบป้องกันเซลล์
+N016,16,LBN-016,Glutathione Defense Network,Antioxidant Defense,A3,Pathogen Defense,0.33,,D1,Immune–Infection Governance,derived,"GSH, GPx, detox redox balance"
+N017,17,LBN-017,Insulin Signaling Network,Glucose–Insulin Regulation,A5,Glucose–Insulin Regulation,1.0,,D2,Metabolic–Energy Core,derived,insulin receptor–AKT–GLUT
+N018,18,LBN-018,Glucose Utilization Network,Glucose–Insulin Regulation,A5,Glucose–Insulin Regulation,1.0,,D2,Metabolic–Energy Core,derived,การนำ glucose เข้าเซลล์และใช้พลังงาน
+N019,19,LBN-019,Hepatic Glucose Output Network,Hepatic Glucose Control,A5,Glucose–Insulin Regulation,0.2,,D2,Metabolic–Energy Core,derived,"gluconeogenesis, glycogen regulation"
+N020,20,LBN-020,Glucose Variability Control Network,Glycemic Stability,A11,DNA Repair & Genomic Stability,0.2,,D3,Genomic Programming,derived,ควบคุมระดับน้ำตาลไม่ให้แกว่ง
+N021,21,LBN-021,Lipid Transport Network,Lipid–Lipotoxicity,A6,Lipid–Lipotoxicity,1.0,,D2,Metabolic–Energy Core,derived,"LDL, HDL, TG, lipoprotein balance"
+N022,22,LBN-022,Ectopic Fat Accumulation Network,Lipid–Lipotoxicity,A6,Lipid–Lipotoxicity,1.0,,D2,Metabolic–Energy Core,derived,ไขมันพอกตับ ไขมันในอวัยวะ
+N023,23,LBN-023,Lipotoxic Injury Network,Lipid–Lipotoxicity,A6,Lipid–Lipotoxicity,1.0,,D2,Metabolic–Energy Core,derived,"ceramide, DAG, cellular toxicity"
+N024,24,LBN-024,Beta-Oxidation Network,Fatty Acid Oxidation,,,0.0,,,,derived,เผาผลาญกรดไขมันใน mitochondria
+N025,25,LBN-025,AMPK Energy Sensing Network,Nutrient Sensing,A7,Nutrient Sensing,1.0,,D2,Metabolic–Energy Core,derived,"low energy sensing, catabolic switch"
+N026,26,LBN-026,mTOR Growth Signaling Network,Nutrient Sensing,A7,Nutrient Sensing,1.0,,D2,Metabolic–Energy Core,derived,"growth, protein synthesis, anabolic state"
+N027,27,LBN-027,AMPK–mTOR Balance Network,Nutrient Sensing,A7,Nutrient Sensing,1.0,,D2,Metabolic–Energy Core,derived,ตัดสินใจ growth vs repair
+N028,28,LBN-028,Mitochondrial ATP Production Network,Mitochondrial Network,A8,Mitochondrial Network,1.0,,D2,Metabolic–Energy Core,derived,"ETC, oxidative phosphorylation"
+N029,29,LBN-029,Mitochondrial Quality Control Network,Mitochondrial Network,A8,Mitochondrial Network,1.0,,D2,Metabolic–Energy Core,derived,"mitophagy, fusion–fission"
+N030,30,LBN-030,Mitochondrial Biogenesis Network,Mitochondrial Network,A8,Mitochondrial Network,1.0,,D2,Metabolic–Energy Core,derived,สร้าง mitochondria ใหม่
+N031,31,LBN-031,Mitochondrial ROS Signaling Network,Redox–Energy Coupling,A9,Oxidative Stress & Redox Balance,0.17,,D2,Metabolic–Energy Core,derived,ROS ในฐานะ signal และ damage
+N032,32,LBN-032,Fuel Switching Network,Metabolic Flexibility,,,0.0,,,,derived,glucose ↔ fat ↔ ketone
+N033,33,LBN-033,Phase I Detoxification Network,Detoxification,A15,Detoxification Capacity,0.5,,D4,Detoxification & Cellular Defense,derived,CYP450 biotransformation
+N034,34,LBN-034,Phase II Conjugation Network,Detoxification,A15,Detoxification Capacity,0.5,,D4,Detoxification & Cellular Defense,derived,"glucuronidation, sulfation, methylation"
+N035,35,LBN-035,Phase III Transport Network,Detoxification,A15,Detoxification Capacity,0.5,,D4,Detoxification & Cellular Defense,derived,"efflux transport, bile/urine excretion"
+N036,36,LBN-036,Xenobiotic Clearance Network,Detoxification,A15,Detoxification Capacity,0.5,,D4,Detoxification & Cellular Defense,derived,ยา สารเคมี โลหะหนัก สารพิษ
+N037,37,LBN-037,Microbiome Diversity Network,Gut Ecosystem,A18,Gut Barrier & Mucosal Integrity,0.2,,D5,Digestive–Gut Ecosystem,derived,"microbial richness, ecosystem balance"
+N038,38,LBN-038,Keystone Microbe Network,Gut Ecosystem,A18,Gut Barrier & Mucosal Integrity,0.2,,D5,Digestive–Gut Ecosystem,derived,"Akkermansia, Bifidobacterium ฯลฯ"
+N039,39,LBN-039,SCFA Production Network,Microbial Metabolites,,,0.0,,,,derived,"butyrate, acetate, propionate"
+N040,40,LBN-040,Intestinal Barrier Integrity Network,Gut Barrier,A18,Gut Barrier & Mucosal Integrity,0.5,,D5,Digestive–Gut Ecosystem,derived,"tight junction, leaky gut, LPS"
+N041,41,LBN-041,Mucosal Barrier Network,Gut Barrier,A18,Gut Barrier & Mucosal Integrity,0.5,,D5,Digestive–Gut Ecosystem,derived,เยื่อบุลำไส้ ทางเดินหายใจ ช่องปาก ผิวหนัง และเยื่อบุทั้งหมดที่ทำหน้าที่เป็นด่านป้องกัน
+N042,42,LBN-042,LPS–TLR4 Activation Network,Endotoxin Load,A1,Systemic Inflammatory Load,0.25,,D1,Immune–Infection Governance,derived,การรั่วของ LPS จากลำไส้ กระตุ้น TLR4 → NF-κB → inflammation
+N043,43,LBN-043,Bile Acid–Microbiome Network,Microbial Metabolites,,,0.0,,,,derived,"การเปลี่ยนแปลง bile acid โดยจุลินทรีย์ ส่งผลต่อ FXR, TGR5, ตับ และเมตาบอลิซึม"
+N044,44,LBN-044,Gut–Liver Axis Network,Gut–Organ Axis,A18,Gut Barrier & Mucosal Integrity,0.17,,D5,Digestive–Gut Ecosystem,derived,"microbiome, LPS, bile acid, portal circulation เชื่อมลำไส้กับตับ"
+N045,45,LBN-045,Gut–Brain Axis Network,Gut–Organ Axis,A18,Gut Barrier & Mucosal Integrity,0.17,,D5,Digestive–Gut Ecosystem,derived,"microbiome กระทบสมองผ่าน vagus nerve, cytokines, tryptophan, SCFA"
+N046,46,LBN-046,Gut–Immune Axis Network,Gut–Organ Axis,A18,Gut Barrier & Mucosal Integrity,0.17,,D5,Digestive–Gut Ecosystem,derived,"microbiome ฝึกภูมิคุ้มกัน ควบคุม Treg, Th17, tolerance และ inflammation"
+N047,47,LBN-047,DNA Damage Surveillance Network,DNA Integrity,A30,Connective Tissue Integrity,0.25,,D8,Musculoskeletal & Structural Integrity,derived,"ตรวจจับ DNA damage ผ่าน ATM, ATR, p53, checkpoint ก่อนเกิด mutation"
+N048,48,LBN-048,Base Excision Repair Network,DNA Repair,A11,DNA Repair & Genomic Stability,0.5,,D3,Genomic Programming,derived,ซ่อม DNA damage จาก oxidative stress เช่น 8-OHdG และ base lesions
+N049,49,LBN-049,Nucleotide Excision Repair Network,DNA Repair,A11,DNA Repair & Genomic Stability,0.5,,D3,Genomic Programming,derived,"ซ่อม bulky DNA adducts, UV damage, chemical-induced DNA lesions"
+N050,50,LBN-050,Double-Strand Break Repair Network,DNA Repair,A11,DNA Repair & Genomic Stability,0.5,,D3,Genomic Programming,derived,ซ่อม DNA แตกสองสายผ่าน homologous recombination และ NHEJ
+N051,51,LBN-051,Chromosomal Stability Network,Genomic Stability,A11,DNA Repair & Genomic Stability,0.5,,D3,Genomic Programming,derived,"ป้องกัน chromosomal instability, aneuploidy, mutation accumulation"
+N052,52,LBN-052,Telomere Maintenance Network,Telomere Biology,,,0.0,,,,derived,"ควบคุม telomere length, shelterin complex, telomerase และ biological aging"
+N053,53,LBN-053,DNA Methylation Programming Network,Epigenetics,,,0.0,,,,derived,ควบคุมการเปิด–ปิดยีนผ่าน methylation และ epigenetic memory
+N054,54,LBN-054,Histone Modification Network,Epigenetics,,,0.0,,,,derived,histone acetylation/methylation ควบคุม chromatin และ gene accessibility
+N055,55,LBN-055,Chromatin Remodeling Network,Epigenetics,,,0.0,,,,derived,การจัดโครงสร้าง chromatin ให้ยีนบาง ชุดเปิดหรือปิดตามบริบท
+N056,56,LBN-056,MicroRNA Regulatory Network,RNA Regulation,A12,Epigenetic Regulation,0.33,,D3,Genomic Programming,derived,miRNA ควบคุม post-transcriptional gene expression และ phenotype
+N057,57,LBN-057,Transcription Factor Network,Gene Expression,,,0.0,,,,derived,"NRF2, FOXO, NF-κB, HIF-1α, MYC ควบคุมโปรแกรมชีวภาพหลัก"
+N058,58,LBN-058,Gene Expression Coordination Network,Gene Expression,,,0.0,,,,derived,"การประสานยีนหลายชุดให้เกิด response เช่น detox, repair, inflammation"
+N059,59,LBN-059,Circadian Gene Regulation Network,Circadian Genomics,,,0.0,,,,derived,"CLOCK, BMAL1, PER, CRY ควบคุมเวลาชีวภาพของยีนและเมตาบอลิซึม"
+N060,60,LBN-060,Cellular Identity Maintenance Network,Cellular Identity,,,0.0,,,,derived,"รักษา cell fate, phenotype, differentiation state ไม่ให้หลุดสมดุล"
+N061,61,LBN-061,Sirtuin–NAD+ Longevity Network,Sirtuin Pathway,,,0.0,,,,derived,"SIRT1–7, NAD+, mitochondrial function, stress resistance และ aging control"
+N062,62,LBN-062,FOXO Adaptive Survival Network,FOXO Pathway,,,0.0,,,,derived,"FOXO1/3 ควบคุม stress response, antioxidant, autophagy และ longevity"
+N063,63,LBN-063,IGF–Growth Regulation Network,Growth–Repair Balance,A9,Oxidative Stress & Redox Balance,0.17,,D2,Metabolic–Energy Core,derived,"IGF-1, mTOR, growth signaling และ trade-off ระหว่าง growth กับ longevity"
+N064,64,LBN-064,Cellular Senescence Control Network,Senescence,A14,Senescence & SASP,0.5,,D3,Genomic Programming,derived,"p16, p21, p53 ควบคุมเซลล์ชรา หยุดแบ่ง หรือเข้าสู่ repair/removal"
+N065,65,LBN-065,SASP Inflammatory Secretome Network,SASP,A14,Senescence & SASP,0.5,,D3,Genomic Programming,derived,"senescent cells หลั่ง IL-6, TNF-α, MMPs ทำให้เกิด inflammaging"
+N066,66,LBN-066,Biological Age Regulation Network,Biological Aging,,,0.0,,,,derived,"รวม epigenetic age, telomere, mitochondria, inflammation, proteostasis"
+N067,67,LBN-067,Autophagy Initiation Network,Autophagy,A10,Proteostasis–Autophagy–Lysosome,0.33,,D2,Metabolic–Energy Core,derived,"การเริ่ม autophagy ผ่าน AMPK, mTOR, ULK1 เพื่อล้างของเสียในเซลล์"
+N068,68,LBN-068,Autophagy Flux Network,Autophagy,A10,Proteostasis–Autophagy–Lysosome,0.33,,D2,Metabolic–Energy Core,derived,การไหลของ autophagy ตั้งแต่ autophagosome → lysosome → degradation
+N069,69,LBN-069,Mitophagy Network,Mitophagy,,,0.0,,,,derived,กำจัด mitochondria เสีย ลด ROS และรักษาคุณภาพพลังงาน
+N070,70,LBN-070,Lysosomal Degradation Network,Lysosome,A10,Proteostasis–Autophagy–Lysosome,0.33,,D2,Metabolic–Energy Core,derived,"ระบบย่อยสลายภายในเซลล์ กำจัด protein, organelle, waste"
+N071,71,LBN-071,Chaperone Protein Folding Network,Protein Folding,A28,Muscle Protein Turnover,0.25,,D8,Musculoskeletal & Structural Integrity,derived,HSPs และ chaperones ช่วยพับโปรตีนให้ถูกต้อง ลด misfolding
+N072,72,LBN-072,ER Stress–UPR Network,ER Stress,A27,Glycation / Carbonyl Stress,0.25,,D7,Repair–Regeneration,derived,"unfolded protein response, PERK, IRE1, ATF6 คุม ER stress"
+N073,73,LBN-073,Ubiquitin–Proteasome Network,Proteasome,,,0.0,,,,derived,ติด ubiquitin และย่อยโปรตีนเสียผ่าน proteasome
+N074,74,LBN-074,Proteotoxic Stress Network,Protein Aggregation,A28,Muscle Protein Turnover,0.25,,D8,Musculoskeletal & Structural Integrity,derived,"ควบคุม protein aggregation, amyloid burden, oxidized proteins"
+N075,75,LBN-075,Wound Healing Transition Network,Wound Healing,A24,Wound Healing,1.0,,D7,Repair–Regeneration,derived,inflammatory phase → proliferation → remodeling ให้แผลหายอย่างถูกลำดับ
+N076,76,LBN-076,Angiogenesis Repair Network,Angiogenesis,,,0.0,,,,derived,"VEGF, endothelial growth, new vessel formation เพื่อซ่อมเนื้อเยื่อ"
+N077,77,LBN-077,Extracellular Matrix Remodeling Network,ECM Remodeling,A25,Fibrosis & ECM Remodeling,0.67,,D7,Repair–Regeneration,derived,"collagen, elastin, fibronectin, MMPs, TIMPs ปรับโครงสร้างเนื้อเยื่อ"
+N078,78,LBN-078,Fibrosis Decision Network,Fibrosis,A25,Fibrosis & ECM Remodeling,0.33,,D7,Repair–Regeneration,derived,"ตัดสินผลลัพธ์ระหว่าง regeneration กับ fibrosis ผ่าน TGF-β, myofibroblast"
+N079,79,LBN-079,Stem Cell Activation Network,Stem Cell,A26,Stem Cell & Hematopoiesis,0.67,,D7,Repair–Regeneration,derived,กระตุ้น stem/progenitor cells ให้ซ่อมเนื้อเยื่อและสร้างเซลล์ใหม่
+N080,80,LBN-080,Tissue Regeneration Integration Network,Regeneration,,,0.0,,,,derived,"บูรณาการ stem cell, ECM, angiogenesis, immune resolution เพื่อสร้างเนื้อเยื่อใหม่"
+N081,81,LBN-081,Endothelial Integrity Network,Endothelial Function,A20,Endothelial Function,1.0,,D6,Vascular–Circulation,derived,"ควบคุมความสมบูรณ์ของ endothelial cell, glycocalyx, vascular permeability และการป้องกันหลอดเลือดเสื่อม"
+N082,82,LBN-082,Nitric Oxide Signaling Network,Endothelial Function,A20,Endothelial Function,1.0,,D6,Vascular–Circulation,derived,"eNOS, NO bioavailability, vasodilation, blood flow regulation และ endothelial protection"
+N083,83,LBN-083,Capillary Perfusion Network,Microcirculation,A21,Vascular Remodeling & Microcirculation,0.33,,D6,Vascular–Circulation,derived,การส่งเลือดระดับเส้นเลือดฝอย การนำ oxygen และ nutrient เข้าสู่เซลล์
+N084,84,LBN-084,Tissue Oxygenation Network,Oxygen Delivery,,,0.0,,,,derived,"oxygen transport, diffusion gradient และ tissue oxygen utilization"
+N085,85,LBN-085,Physiological Angiogenesis Network,Angiogenesis,,,0.0,,,,derived,"VEGF signaling, vessel formation และ tissue repair"
+N086,86,LBN-086,Vascular Adaptation Network,Vascular Remodeling,A21,Vascular Remodeling & Microcirculation,0.67,,D6,Vascular–Circulation,derived,"การปรับตัวของหลอดเลือดต่อ shear stress, BP และ metabolic demand"
+N087,87,LBN-087,Platelet Activation Network,Hemostasis,A22,Thrombosis–Hemostasis,0.5,,D6,Vascular–Circulation,derived,"platelet adhesion, aggregation และ clot initiation"
+N088,88,LBN-088,Coagulation Cascade Network,Hemostasis,A22,Thrombosis–Hemostasis,0.5,,D6,Vascular–Circulation,derived,"intrinsic/extrinsic pathway, thrombin generation และ fibrin formation"
+N089,89,LBN-089,Fibrinolytic Network,Hemostasis,A22,Thrombosis–Hemostasis,0.5,,D6,Vascular–Circulation,derived,"plasmin activation, clot resolution และ vascular clearance"
+N090,90,LBN-090,Endothelial Inflammation Network,Inflammation,,,0.0,,,,derived,"VCAM-1, ICAM-1, leukocyte adhesion และ atherosclerosis initiation"
+N091,91,LBN-091,RAAS Regulation Network,Blood Pressure,,,0.0,,,,derived,"renin–angiotensin–aldosterone control, sodium retention และ BP homeostasis"
+N092,92,LBN-092,Vascular Tone Network,Blood Pressure,,,0.0,,,,derived,"sympathetic control, NO signaling และ vascular resistance"
+N093,93,LBN-093,Arterial Compliance Network,Arterial Elasticity,A23,Hemodynamics & Arterial Elasticity,0.67,,D6,Vascular–Circulation,derived,"vascular stiffness, pulse wave velocity และ vascular aging"
+N094,94,LBN-094,Cardiac Contractility Network,Cardiac Function,A20,Endothelial Function,0.33,,D6,Vascular–Circulation,derived,"myocardial contraction, calcium handling และ cardiac output"
+N095,95,LBN-095,Cardiac Electrophysiology Network,Cardiac Function,A20,Endothelial Function,0.33,,D6,Vascular–Circulation,derived,"SA node, AV node, conduction pathway และ arrhythmia biology"
+N096,96,LBN-096,Cardiac Bioenergetics Network,Cardiac Energy,,,0.0,,,,derived,"ATP production, fatty acid oxidation และ myocardial energetics"
+N097,97,LBN-097,Cardiac Stress Adaptation Network,Cardiac Remodeling,A29,Bone Remodeling,0.33,,D8,Musculoskeletal & Structural Integrity,derived,"hypertrophy, remodeling, fibrosis และ heart failure progression"
+N098,98,LBN-098,Cardio–Renal Integration Network,Cardio–Renal Axis,A33,Thyroid–Adrenal–Growth Axis,0.17,,D9,Endocrine Network,derived,"interaction ระหว่าง heart output, renal perfusion และ fluid balance"
+N099,99,LBN-099,Cardio–Pulmonary Integration Network,Cardio–Pulmonary Axis,A33,Thyroid–Adrenal–Growth Axis,0.17,,D9,Endocrine Network,derived,"oxygen delivery, pulmonary circulation และ systemic perfusion"
+N100,100,LBN-100,Cardiovascular Reserve Network,Functional Reserve,A35,Visceral Organ Functional Reserve,0.5,,D11,Organ Resilience,derived,reserve capacity ของหัวใจและหลอดเลือดภายใต้ stress และ exercise
+N101,101,LBN-101,Sympathetic Regulation Network,Autonomic Balance,A9,Oxidative Stress & Redox Balance,0.2,,D2,Metabolic–Energy Core,derived,"fight-or-flight response, catecholamine release และ metabolic mobilization"
+N102,102,LBN-102,Parasympathetic Regulation Network,Autonomic Balance,A9,Oxidative Stress & Redox Balance,0.2,,D2,Metabolic–Energy Core,derived,"vagal activity, recovery mode และ inflammatory suppression"
+N103,103,LBN-103,Cholinergic Anti-inflammatory Network,Vagal Axis,A33,Thyroid–Adrenal–Growth Axis,0.2,,D9,Endocrine Network,derived,vagus nerve mediated immune regulation
+N104,104,LBN-104,HPA Axis Network,Stress Response,A27,Glycation / Carbonyl Stress,0.25,,D7,Repair–Regeneration,derived,hypothalamus–pituitary–adrenal axis และ cortisol regulation
+N105,105,LBN-105,Catecholamine Response Network,Stress Response,A27,Glycation / Carbonyl Stress,0.25,,D7,Repair–Regeneration,derived,"adrenaline, noradrenaline และ acute stress adaptation"
+N106,106,LBN-106,Thyroid Hormone Regulation Network,Thyroid Function,A20,Endothelial Function,0.33,,D6,Vascular–Circulation,derived,"TSH, T3, T4 และ metabolic rate control"
+N107,107,LBN-107,Growth Hormone–IGF Network,Growth Axis,A33,Thyroid–Adrenal–Growth Axis,0.5,,D9,Endocrine Network,derived,"growth, regeneration และ anabolic signaling"
+N108,108,LBN-108,HPG Axis Network,Reproductive Axis,A33,Thyroid–Adrenal–Growth Axis,0.2,,D9,Endocrine Network,derived,"gonadal hormones, fertility และ reproductive physiology"
+N109,109,LBN-109,Circadian Synchronization Network,Circadian Biology,,,0.0,,,,derived,CLOCK–BMAL1 regulation และ systemic biological timing
+N110,110,LBN-110,Sleep Architecture Network,Sleep Biology,A34,Neuro–Sleep–Stress–Brain Clearance,0.17,,D10,Neurological Regulation,derived,"REM, NREM, sleep cycles และ recovery physiology"
+N111,111,LBN-111,Brain Energy Metabolism Network,Brain Energy,A34,Neuro–Sleep–Stress–Brain Clearance,0.17,,D10,Neurological Regulation,derived,"neuronal glucose utilization, ketone metabolism และ ATP production"
+N112,112,LBN-112,Glymphatic Clearance Network,Brain Clearance,A34,Neuro–Sleep–Stress–Brain Clearance,0.4,,D10,Neurological Regulation,derived,"beta-amyloid clearance, metabolic waste removal ระหว่างการนอน"
+N113,113,LBN-113,Neuroimmune Communication Network,Neuroimmune,,,0.0,,,,derived,cytokine–brain interaction และ sickness behavior
+N114,114,LBN-114,Microglial Regulation Network,Neuroinflammation,,,0.0,,,,derived,neuroinflammatory tone และ neurodegeneration risk
+N115,115,LBN-115,Synaptic Plasticity Network,Synaptic Function,A20,Endothelial Function,0.33,,D6,Vascular–Circulation,derived,"learning, memory และ adaptive rewiring"
+N116,116,LBN-116,Memory Consolidation Network,Memory,,,0.0,,,,derived,hippocampal function และ long-term memory storage
+N117,117,LBN-117,Cognitive Control Network,Executive Function,A20,Endothelial Function,0.33,,D6,Vascular–Circulation,derived,"planning, attention, inhibition และ decision making"
+N118,118,LBN-118,Limbic Balance Network,Emotional Regulation,A12,Epigenetic Regulation,0.33,,D3,Genomic Programming,derived,"amygdala, hippocampus, emotional adaptation"
+N119,119,LBN-119,Dopaminergic Reward Network,Reward System,,,0.0,,,,derived,"motivation, addiction biology และ behavioral drive"
+N120,120,LBN-120,Cognitive–Emotional Loop Architecture (CELA) Network,CELA,A34,CELA ruling,1.0,,D10,Neurological Regulation,derived,"thought loops, rumination, stress amplification, HPA activation, microbiome interaction และ chronic disease propagation"
+N121,121,LBN-121,Hepatic Detoxification Network,Liver Functional Reserve,A35,Visceral Organ Functional Reserve,0.4,,D11,Organ Resilience,derived,ระบบตับในการเปลี่ยนสารพิษ ยา สารเคมี แอมโมเนีย และ metabolic waste ให้ขับออกได้ ผ่าน Phase I/II/III และ bile excretion
+N122,122,LBN-122,Hepatic Metabolic Network,Liver Metabolic Reserve,A35,Visceral Organ Functional Reserve,0.17,,D11,Organ Resilience,derived,"ควบคุม glucose, lipid, amino acid, cholesterol และ bile acid metabolism เป็นศูนย์กลางของ ไขมันพอกตับ เบาหวาน และ metabolic syndrome"
+N123,123,LBN-123,Hepatic Regeneration Network,Liver Repair,A11,DNA Repair & Genomic Stability,0.2,,D3,Genomic Programming,derived,"การฟื้นฟู hepatocyte หลัง inflammation, toxic injury, viral injury หรือ ischemic injury ผ่าน growth factors, stem/progenitor signals และ immune resolution"
+N124,124,LBN-124,Hepatic Fibrosis Regulation Network,Liver Fibrosis,A25,Fibrosis & ECM Remodeling,0.25,,D7,Repair–Regeneration,derived,"ควบคุม hepatic stellate cell, collagen deposition, ECM remodeling, cirrhosis progression และความสามารถกลับจาก fibrosis สู่ regeneration"
+N125,125,LBN-125,Bile Flow Regulation Network,Bile Dynamics,A38,Tumor Microenvironment & Metastatic Dynamics,0.2,,D12,Oncology & System-Level Regulation,derived,"ระบบสร้าง ระบาย และหมุนเวียนน้ำดี ครอบคลุม bile acid pool, gallbladder contraction, cholestasis, gallstone และ enterohepatic circulation"
+N126,126,LBN-126,Renal Filtration Network,Kidney Filtration,,,0.0,,,,derived,"ระบบกรองของเสียผ่าน glomerulus, eGFR, albuminuria, uremic toxin และ renal microcirculation"
+N127,127,LBN-127,Renal Tubular Transport Network,Tubular Function,A20,Endothelial Function,0.33,,D6,Vascular–Circulation,derived,"การดูดกลับ sodium, potassium, glucose, amino acid, bicarbonate และการขับกรด/สารพิษผ่าน proximal/distal tubule"
+N128,128,LBN-128,Acid–Base Homeostasis Network,Acid–Base Balance,A9,Oxidative Stress & Redox Balance,0.17,,D2,Metabolic–Energy Core,derived,"รักษา pH เลือดผ่าน bicarbonate buffer, renal acid excretion, respiratory compensation และ metabolic acidosis"
+N129,129,LBN-129,Fluid–Electrolyte Regulation Network,Fluid–Electrolyte Balance,A9,Oxidative Stress & Redox Balance,0.17,,D2,Metabolic–Energy Core,derived,"ควบคุมน้ำ เกลือแร่ sodium, potassium, magnesium, calcium และ volume status เชื่อมกับไต หัวใจ adrenal และ RAAS"
+N130,130,LBN-130,Cardio–Renal Integration Network,Cardio–Renal Axis,A33,Thyroid–Adrenal–Growth Axis,0.17,,D9,Endocrine Network,derived,ความสัมพันธ์ระหว่างหัวใจ ไต ความดัน น้ำคั่ง renal perfusion และ heart failure–kidney failure loop
+N131,131,LBN-131,Gastrointestinal Motility Network,GI Motility,,,0.0,,,,derived,"ควบคุม gastric emptying, intestinal peristalsis, colon transit, constipation, IBS และ autonomic–enteric nervous system"
+N132,132,LBN-132,Nutrient Absorption Network,Nutrient Absorption,A7,Nutrient Sensing,0.33,,D2,Metabolic–Energy Core,derived,"ดูดซึม glucose, amino acids, fatty acids, bile-soluble vitamins, minerals และความผิดปกติแบบ malabsorption"
+N133,133,LBN-133,Enteric Nervous System Network,Enteric Nervous System,,,0.0,,,,derived,"ระบบประสาทลำไส้ ควบคุม motility, secretion, visceral pain, gut–brain signaling และ stress-related gut disorder"
+N134,134,LBN-134,Pancreatic Endocrine Network,Pancreatic Endocrine,,,0.0,,,,derived,"beta-cell insulin, alpha-cell glucagon, incretin response, insulin reserve และ beta-cell exhaustion"
+N135,135,LBN-135,Pancreatic Exocrine Network,Pancreatic Exocrine,,,0.0,,,,derived,"การหลั่ง amylase, lipase, protease, bicarbonate เพื่อย่อยอาหาร เชื่อมกับ pancreatic insufficiency และ dyspepsia"
+N136,136,LBN-136,Gallbladder Motility Network,Gallbladder Function,A20,Endothelial Function,0.33,,D6,Vascular–Circulation,derived,"การบีบตัวของถุงน้ำดี การปล่อยน้ำดีหลังอาหาร ไขมัน digestion, bile stasis และ gallstone formation"
+N137,137,LBN-137,Pulmonary Gas Exchange Network,Gas Exchange,,,0.0,,,,derived,"การแลกเปลี่ยน O₂/CO₂ ผ่าน alveoli, diffusion capacity, ventilation–perfusion matching และ hypoxia"
+N138,138,LBN-138,Pulmonary Immune Defense Network,Pulmonary Defense,A3,Pathogen Defense,0.33,,D1,Immune–Infection Governance,derived,"macrophage, mucociliary clearance, antimicrobial peptide, antiviral defense และ airway inflammation"
+N139,139,LBN-139,Pulmonary Epithelial Repair Network,Pulmonary Repair,A11,DNA Repair & Genomic Stability,0.2,,D3,Genomic Programming,derived,"การซ่อมเยื่อบุหลอดลมและถุงลม หลัง infection, pollution, inflammation หรือ fibrosis"
+N140,140,LBN-140,Cardio–Pulmonary Oxygen Delivery Network,Cardio–Pulmonary Integration,,,0.0,,,,derived,การบูรณาการปอด หัวใจ เลือด และหลอดเลือดเพื่อส่ง oxygen ไปยัง tissue และ mitochondria
+N141,141,LBN-141,Muscle Protein Turnover Network,Muscle Integrity,A28,Muscle Protein Turnover,0.25,,D8,Musculoskeletal & Structural Integrity,derived,"สมดุล muscle protein synthesis/breakdown, mTOR, ubiquitin-proteasome, sarcopenia และ muscle wasting"
+N142,142,LBN-142,Myogenesis Network,Muscle Regeneration,A28,Muscle Protein Turnover,0.25,,D8,Musculoskeletal & Structural Integrity,derived,"satellite cell activation, myoblast differentiation, muscle repair หลัง injury, aging หรือ inflammation"
+N143,143,LBN-143,Bone Remodeling Network,Bone Remodeling,A29,Bone Remodeling,1.0,,D8,Musculoskeletal & Structural Integrity,derived,"สมดุล osteoblast–osteoclast, bone formation/resorption, osteoporosis และ bone–immune interaction"
+N144,144,LBN-144,Bone Mineral Homeostasis Network,Mineral Homeostasis,A2,Immune Homeostasis,0.33,,D1,Immune–Infection Governance,derived,"ควบคุม calcium, phosphate, vitamin D, PTH, magnesium และ mineralization ของกระดูก"
+N145,145,LBN-145,Cartilage Matrix Network,Cartilage Matrix,,,0.0,,,,derived,"chondrocyte, collagen II, aggrecan, MMPs, cartilage degradation และ osteoarthritis progression"
+N146,146,LBN-146,Synovial Joint Homeostasis Network,Joint Homeostasis,A2,Immune Homeostasis,0.33,,D1,Immune–Infection Governance,derived,"synovial fluid, joint lubrication, synovial inflammation, pain mediator และข้อเสื่อม"
+N147,147,LBN-147,Tendon–Ligament Integrity Network,Tendon–Ligament Integrity,A30,Connective Tissue Integrity,0.2,,D8,Musculoskeletal & Structural Integrity,derived,"collagen alignment, tendon ECM, ligament resilience, stiffness, injury repair และ chronic tendinopathy"
+N148,148,LBN-148,Fascial Communication Network,Fascia–Mechanics,,,0.0,,,,derived,"fascia sliding, mechanotransduction, force transmission, myofascial pain และ structural connectivity"
+N149,149,LBN-149,Skin Barrier & Repair Network,Skin Integrity,A30,Connective Tissue Integrity,0.25,,D8,Musculoskeletal & Structural Integrity,derived,"epidermal barrier, antimicrobial defense, wound healing, collagen remodeling และ inflammatory skin disorders"
+N150,150,LBN-150,Lymphatic Clearance Network,Lymphatic Drainage,,,0.0,,,,derived,"lymph flow, interstitial fluid drainage, immune trafficking, edema resolution และ toxin clearance"
+N151,151,LBN-151,Cell Cycle Control Network,Cell Cycle Control,A26,Stem Cell & Hematopoiesis,0.2,,D7,Repair–Regeneration,derived,"cyclin, CDK, checkpoint G1/S/G2/M, uncontrolled proliferation และ cancer initiation"
+N152,152,LBN-152,Tumor Suppressor Network,Tumor Suppression,A38,Tumor Microenvironment & Metastatic Dynamics,0.2,,D12,Oncology & System-Level Regulation,derived,"p53, RB, PTEN, APC, DNA checkpoint และการหยุดเซลล์ผิดปกติก่อนเกิด malignancy"
+N153,153,LBN-153,Apoptosis Execution Network,Apoptosis,,,0.0,,,,derived,"intrinsic/extrinsic apoptosis, caspase cascade, mitochondrial apoptosis และ cancer cell clearance"
+N154,154,LBN-154,Cancer Stem Cell Network,Cancer Stemness,,,0.0,,,,derived,"self-renewal, tumor initiation, recurrence, drug resistance และ stem-like phenotype"
+N155,155,LBN-155,Tumor Microenvironment Network,Tumor Microenvironment,A38,Tumor Microenvironment & Metastatic Dynamics,0.5,,D12,Oncology & System-Level Regulation,derived,"CAF, stromal cells, ECM, hypoxia, inflammatory niche และ immune suppression รอบก้อนมะเร็ง"
+N156,156,LBN-156,Anti-Cancer Immune Surveillance Network,Immune Surveillance,A2,Immune Homeostasis,0.33,,D1,Immune–Infection Governance,derived,"NK cell, CD8 T cell, dendritic cell, antigen presentation และ tumor elimination"
+N157,157,LBN-157,Immune Escape Network,Immune Escape,A2,Immune Homeostasis,0.33,,D1,Immune–Infection Governance,derived,"PD-1/PD-L1, CTLA-4, Treg, MDSC, immune exhaustion และ tumor immune evasion"
+N158,158,LBN-158,Cancer Metabolic Reprogramming Network,Cancer Metabolism,,,0.0,,,,derived,"Warburg effect, glutamine addiction, lipid metabolism, mitochondrial rewiring และ tumor survival"
+N159,159,LBN-159,EMT & Metastatic Dissemination Network,EMT–Metastasis,,,0.0,,,,derived,"epithelial–mesenchymal transition, invasion, migration, CTC survival และ organ colonization"
+N160,160,LBN-160,Cancer Evolution & Resistance Network,Evolution–Resistance,,,0.0,,,,derived,"clonal selection, mutation pressure, adaptive resistance, relapse และ treatment escape"
+N161,161,LBN-161,AGE Formation Network,AGE Biology,,,0.0,,,,derived,การเกิด Advanced Glycation End Products จากน้ำตาลเกินสะสมในโปรตีน ไขมัน และ DNA ส่งผลต่อหลอดเลือด ไต สมอง และ aging
+N162,162,LBN-162,Carbonyl Stress Network,Carbonyl Stress,A27,Glycation / Carbonyl Stress,0.67,,D7,Repair–Regeneration,derived,การสะสม reactive carbonyl compounds ที่ทำให้เกิด protein dysfunction และ chronic degeneration
+N163,163,LBN-163,Protein Crosslinking Network,Protein Damage,A28,Muscle Protein Turnover,0.25,,D8,Musculoskeletal & Structural Integrity,derived,การเชื่อมข้ามของ collagen และ protein ทำให้เนื้อเยื่อแข็ง เสื่อม และสูญเสีย elasticity
+N164,164,LBN-164,Bone Marrow Hematopoietic Network,Hematopoiesis,A26,Stem Cell & Hematopoiesis,0.33,,D7,Repair–Regeneration,derived,การสร้างเม็ดเลือดแดง เม็ดเลือดขาว และเกล็ดเลือดจาก stem cell
+N165,165,LBN-165,Red Blood Cell Production Network,Erythropoiesis,,,0.0,,,,derived,"การสร้าง RBC, oxygen carrying capacity และ anemia biology"
+N166,166,LBN-166,White Blood Cell Renewal Network,Leukopoiesis,,,0.0,,,,derived,การสร้าง immune cells และ immune competence
+N167,167,LBN-167,Platelet Renewal Network,Platelet Biology,,,0.0,,,,derived,megakaryocyte biology และ platelet turnover
+N168,168,LBN-168,Retinal–Visual Network,Visual System,,,0.0,,,,derived,"retina, photoreceptor, optic nerve, visual processing และ retinal degeneration"
+N169,169,LBN-169,Auditory Processing Network,Auditory System,,,0.0,,,,derived,"cochlea, hearing transduction และ auditory neural pathways"
+N170,170,LBN-170,Olfactory Signaling Network,Olfactory System,,,0.0,,,,derived,กลิ่น การรับรู้สารเคมี และ neuroimmune interaction ใน nasal mucosa
+N171,171,LBN-171,Taste Perception Network,Gustatory System,,,0.0,,,,derived,taste receptor biology และ nutrient sensing
+N172,172,LBN-172,Ovarian Function Network,Female Reproductive Function,A20,Endothelial Function,0.25,,D6,Vascular–Circulation,derived,"folliculogenesis, ovulation, reproductive hormone production"
+N173,173,LBN-173,Endometrial Cycling Network,Female Reproductive Function,A20,Endothelial Function,0.25,,D6,Vascular–Circulation,derived,"menstrual cycle, implantation biology และ uterine receptivity"
+N174,174,LBN-174,Testicular Function Network,Male Reproductive Function,A20,Endothelial Function,0.25,,D6,Vascular–Circulation,derived,"spermatogenesis, testosterone production และ fertility biology"
+N175,175,LBN-175,Prostate Homeostasis Network,Male Reproductive Function,A20,Endothelial Function,0.25,,D6,Vascular–Circulation,derived,"prostate physiology, inflammation และ androgen response"
+N176,176,LBN-176,Oral Mucosal Defense Network,Oral–Mucosal Defense,A3,Pathogen Defense,0.25,,D1,Immune–Infection Governance,derived,"oral microbiome, salivary immunity, mucosal protection"
+N177,177,LBN-177,Nasal–Sinus Defense Network,Upper Airway Defense,A3,Pathogen Defense,0.25,,D1,Immune–Infection Governance,derived,"mucociliary clearance, pathogen trapping และ airway immunity"
+N178,178,LBN-178,Viral Restriction Network,Specialized Antiviral Defense,A3,Pathogen Defense,0.25,,D1,Immune–Infection Governance,derived,"interferon-stimulated genes, viral entry inhibition และ intracellular antiviral defense"
+N179,179,LBN-179,Tumor Elimination Network,Specialized Anticancer Defense,A3,Pathogen Defense,0.25,,D1,Immune–Infection Governance,derived,"NK cell, macrophage, cytotoxic T cell coordination ต่อเซลล์มะเร็ง"
+N180,180,LBN-180,Human Biological Integration Network,Whole-Life Integration,,,0.0,,,,derived,"การบูรณาการทุก biological networks ให้เกิด physiological performance, adaptation และ health maintenance"

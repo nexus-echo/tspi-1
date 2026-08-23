@@ -1,0 +1,36 @@
+{
+  "dataset_name": "tspi_nss_config",
+  "dataset_version": "0.3.0",
+  "nss_algorithm_version": "TSPI-NSS-v0.3",
+  "framework_version": "39-axis-master-260715",
+  "approval_status": "PROVISIONAL",
+  "source": "TSPI 3 Q3 (initial) + 25 Jul Q2 (weighted average) + FINAL RULING 5 Aug 2026 §14: Data Completeness must NOT reduce observed severity. Confidence/Completeness/Evidence Quality describe reliability and coverage only, reported separately. Coefficients remain configurable pending clinical validation.",
+  "formula": "ObservedNSS = mean(Severity_i over qualifying axes) x NetworkFactor; qualifying = status in {PROVISIONALLY_ASSESSED, ASSESSED, HIGH_CONFIDENCE_ASSESSED}; severity is NEVER multiplied by confidence or completeness.",
+  "rules": {
+    "completeness_never_reduces_severity": "5 Aug §14: Final Severity = Severity x Completeness is PROHIBITED. A severe measured abnormality stays severe even when the dataset is incomplete.",
+    "assessment_state_inclusion": {
+      "NOT_ASSESSED": "excluded",
+      "AXIS_CANDIDATE": "excluded from final NSS",
+      "PROVISIONALLY_ASSESSED": "included only in a labelled Provisional NSS",
+      "ASSESSED": "included",
+      "HIGH_CONFIDENCE_ASSESSED": "included"
+    },
+    "reliability_reported_separately": "Every NSS output shows Observed NSS, Assessment Coverage, Overall Confidence, Biological Uncertainty, Assessment Status and Algorithm Version.",
+    "missing_data_is_not_normal": true,
+    "hypothesis_never_scores": true,
+    "critical_alerts_independent_of_nss": true,
+    "no_universal_inflammatory_multiplier": "An inflammation x1.3 rule must NOT be assumed a universal biological law."
+  },
+  "abnormal_axis_threshold": 50,
+  "network_factor": [
+    {"min_abnormal_axes": 0, "max_abnormal_axes": 2, "factor": 1.00},
+    {"min_abnormal_axes": 3, "max_abnormal_axes": 5, "factor": 1.05},
+    {"min_abnormal_axes": 6, "max_abnormal_axes": 99, "factor": 1.10}
+  ],
+  "severity_bands": [
+    {"level": 0, "nss_min": 0,  "nss_max": 15},
+    {"level": 1, "nss_min": 16, "nss_max": 30},
+    {"level": 2, "nss_min": 31, "nss_max": 60},
+    {"level": 3, "nss_min": 61, "nss_max": 100}
+  ]
+}

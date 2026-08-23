@@ -1,0 +1,81 @@
+﻿No,Domain,Biological Axis,Living Biological Network System
+100,Vascular,Functional  Reserve,Cardiovascular  Reserve  Network
+101,Neuroendocrine,Autonomic  Balance,Sympathetic  Regulation  Network
+102,Neuroendocrine,Autonomic  Balance,Parasympathetic  Regulation  Network
+103,Neuroendocrine,Vagal  Axis  Cholinergic  Anti-inflammatory  Network,vagus  nerve  mediated  immune  regulation
+104,Neuroendocrine,Stress  Response,HPA  Axis  Network
+105,Neuroendocrine,Stress  Response,Catecholamine  Response  Network
+106,Neuroendocrine,Thyroid  Function,Thyroid  Hormone  Regulation  Network
+107,Neuroendocrine,Growth  Axis  Growth  Hormone–IGF  Network,"growth,  regeneration  แ ล ะ  anabolic  signaling"
+108,Neuroendocrine,Reproductive  Axis,HPG  Axis  Network
+109,Neuroendocrine,Circadian  Biology,Circadian  Synchronization  Network
+110,Neuroendocrine,Sleep  Biology,Sleep  Architecture  Network
+112,Neurocognitive,Brain  Clearance  Glymphatic  Clearance  Network,"beta-amyloid  clearance,  metabolic  waste  removal  ร ะ ห ว ่ า ง ก า ร น อ น"
+113,Neurocognitive,Neuroimmune  Neuroimmune  Communication  Network,cytokine–brain  interaction  แ ล ะ  sickness  behavior
+114,Neurocognitive,Neuroinflammation,Microglial  Regulation  Network
+115,Neurocognitive,Synaptic  Function,Synaptic  Plasticity  Network
+116,Neurocognitive,Memory  Memory  Consolidation  Network,hippocampal  function  แ ล ะ  long-term  memory  storage
+117,Neurocognitive,Executive  Function,Cognitive  Control  Network
+118,Neurocognitive,Emotional  Regulation,Limbic  Balance  Network
+119,Neurocognitive,Reward  System  Dopaminergic  Reward  Network,"motivation,  addiction  biology  แ ล ะ  behavioral  drive"
+120,Neurocognitive,CELA  Cognitive–Emotional  Loop  Architecture  (CELA)  Network,"thought  loops,  rumination,  stress  amplification,  HPA  activation,  microbiome  interaction  แ ล ะ  chronic  disease  propagation"
+121,Organ  Resilience,Liver  Functional  Reserve,Hepatic  Detoxification  Network
+122,Organ  Resilience,Liver  Metabolic  Reserve,Hepatic  Metabolic  Network
+123,Organ  Resilience,Liver  Repair  Hepatic  Regeneration  Network,"ก า ร ฟ ื้ น ฟ ู  hepatocyte  ห ล ั ง  inflammation,  toxic  injury,  viral  injury  ห ร ื อ  ischemic  injury  ผ ่ า น  growth  factors,  stem/progenitor  signals  แ ล ะ  immune  resolution"
+124,Organ  Resilience,Liver  Fibrosis  Hepatic  Fibrosis  Regulation  Network,"ค ว บ ค ุ ม  hepatic  stellate  cell,  collagen  deposition,  ECM  remodeling,  cirrhosis  progression  แ ล ะ ค ว า ม ส า ม า ร ถ ก ล ั บ จ า ก  fibrosis  ส ู ่  regeneration"
+125,Organ  Resilience,Bile  Dynamics  Bile  Flow  Regulation  Network,"ร ะ บ บ ส ร ้ า ง  ร ะ บ า ย  แ ล ะ ห ม ุ น เ ว ี ย น น ํ้ า ด ี  ค ร อ บ ค ล ุ ม  bile  acid  pool,  gallbladder  contraction,  cholestasis,  gallstone  แ ล ะ  enterohepatic  circulation"
+126,Organ  Resilience,Kidney  Filtration  Renal  Filtration  Network,"ร ะ บ บ ก ร อ ง ข อ ง เ ส ี ย ผ ่ า น  glomerulus,  eGFR,  albuminuria,  uremic  toxin  แ ล ะ  renal  microcirculation"
+127,Organ  Resilience,Tubular  Function  Renal  Tubular  Transport  Network,"ก า ร ด ู ด ก ล ั บ  sodium,  potassium,  glucose,  amino  acid,  bicarbonate  แ ล ะ ก า ร ข ั บ ก ร ด / ส า ร พ ิ ษ ผ ่ า น  proximal/distal  tubule"
+128,Organ  Resilience,Acid–Base  Balance,Acid–Base  Homeostasis  Network
+129,Organ  Resilience,Fluid–Electrolyte  Balance,Fluid–Electrolyte  Regulation  Network
+130,Organ  Resilience,Cardio–Renal  Axis,Cardio–Renal  Integration  Network
+131,Digestive–Organ  Function,GI  Motility  Gastrointestinal  Motility  Network,"ค ว บ ค ุ ม  gastric  emptying,  intestinal  peristalsis,  colon  transit,  constipation,  IBS  แ ล ะ  autonomic–enteric  nervous  system"
+132,Digestive–Organ  Function,Nutrient  Absorption,Nutrient  Absorption  Network
+133,Digestive–Organ  Function,Enteric  Nervous  System,Enteric  Nervous  System  Network
+134,Digestive–Organ  Function,Pancreatic  Endocrine,Pancreatic  Endocrine  Network
+135,Digestive–Organ  Function,Pancreatic  Exocrine,Pancreatic  Exocrine  Network
+136,Digestive–Organ  Function,Gallbladder  Function,Gallbladder  Motility  Network
+137,Respiratory  Gas  Exchange  Pulmonary  Gas  Exchange  Network,"ก า ร แ ล ก เ ป ล ี่ ย น  O ₂ /CO ₂  ผ ่ า น  alveoli,  diffusion  capacity,  ventilation–perfusion  matching  แ ล ะ  hypoxia",138
+138,Respiratory  Pulmonary  Defense,Pulmonary  Immune  Defense  Network,"macrophage,  mucociliary  clearance,  antimicrobial  peptide,  antiviral  defense  แ ล ะ  airway  inflammation"
+139,Respiratory  Pulmonary  Repair,Pulmonary  Epithelial  Repair  Network,"ก า ร ซ ่ อ ม เ ย ื่ อ บ ุ ห ล อ ด ล ม แ ล ะ ถ ุ ง ล ม ห ล ั ง  infection,  pollution,  inflammation  ห ร ื อ  fibrosis"
+140,Respiratory–Circulation,Cardio–Pulmonary  Integration,Cardio–Pulmonary  Oxygen  Delivery  Network
+141,Structural  Biology,Muscle  Integrity  Muscle  Protein  Turnover  Network,"ส ม ด ุ ล  muscle  protein  synthesis/breakdown,  mTOR,  ubiquitin-proteasome,  sarcopenia  แ ล ะ  muscle  wasting"
+142,Structural  Biology,Muscle  Regeneration,Myogenesis  Network
+143,Structural  Biology,Bone  Remodeling,Bone  Remodeling  Network
+144,Structural  Biology,Mineral  Homeostasis,Bone  Mineral  Homeostasis  Network
+145,Structural  Biology,Cartilage  Matrix  Cartilage  Matrix  Network,"chondrocyte,  collagen  II,  aggrecan,  MMPs,  cartilage  degradation  แ ล ะ  osteoarthritis  progression"
+146,Structural  Biology,Joint  Homeostasis,Synovial  Joint  Homeostasis  Network
+147,Structural  Biology,Tendon–Ligament  Integrity,Tendon–Ligament  Integrity  Network
+148,Structural  Biology,Fascia–Mechanics,Fascial  Communication  Network
+149,Barrier–Structural,Skin  Integrity  Skin  Barrier  &  Repair  Network,"epidermal  barrier,  antimicrobial  defense,  wound  healing,  collagen  remodeling  แ ล ะ  inflammatory  skin  disorders"
+150,Fluid–Immune  Transport,Lymphatic  Drainage,Lymphatic  Clearance  Network
+151,Oncology  Cell  Cycle  Control,Cell  Cycle  Control  Network,"cyclin,  CDK,  checkpoint  G1/S/G2/M,  uncontrolled  proliferation  แ ล ะ  cancer  initiation"
+152,Oncology  Tumor  Suppression,Tumor  Suppressor  Network,"p53,  RB,  PTEN,  APC,  DNA  checkpoint  แ ล ะ ก า ร ห ย ุ ด เ ซ ล ล ์ ผ ิ ด ป ก ต ิ ก ่ อ น เ ก ิ ด  malignancy"
+153,Oncology  Apoptosis  Apoptosis  Execution  Network,"intrinsic/extrinsic  apoptosis,  caspase  cascade,  mitochondrial  apoptosis  แ ล ะ  cancer  cell  clearance",154
+154,Oncology  Cancer  Stemness,Cancer  Stem  Cell  Network,"self-renewal,  tumor  initiation,  recurrence,  drug  resistance  แ ล ะ  stem-like  phenotype"
+155,Oncology  Tumor  Microenvironment,Tumor  Microenvironment  Network,"CAF,  stromal  cells,  ECM,  hypoxia,  inflammatory  niche  แ ล ะ  immune  suppression  ร อ บ ก ้ อ น ม ะ เ ร ็ ง"
+156,Oncology  Immune  Surveillance,Anti-Cancer  Immune  Surveillance  Network,"NK  cell,  CD8  T  cell,  dendritic  cell,  antigen  presentation  แ ล ะ  tumor  elimination"
+157,Oncology  Immune  Escape  Immune  Escape  Network,"PD-1/PD-L1,  CTLA-4,  Treg,  MDSC,  immune  exhaustion  แ ล ะ  tumor  immune  evasion",158
+158,Oncology  Cancer  Metabolism,Cancer  Metabolic  Reprogramming  Network,"Warburg  effect,  glutamine  addiction,  lipid  metabolism,  mitochondrial  rewiring  แ ล ะ  tumor  survival"
+159,Oncology  EMT–Metastasis  EMT  &  Metastatic  Dissemination  Network,"epithelial–mesenchymal  transition,  invasion,  migration,  CTC  survival  แ ล ะ  organ  colonization",160
+160,Oncology  Evolution–Resistance,Cancer  Evolution  &  Resistance  Network,"clonal  selection,  mutation  pressure,  adaptive  resistance,  relapse  แ ล ะ  treatment  escape"
+161,Glycation  &  Aging,AGE  Biology  AGE  Formation  Network,ก า ร เ ก ิ ด  Advanced  Glycation  End  Products  จ า ก น ํ้ า ต า ล เ ก ิ น ส ะ ส ม ใ น โ ป ร ต ี น  ไ ข ม ั น  แ ล ะ  DNA  ส ่ ง ผ ล ต ่ อ ห ล อ ด เ ล ื อ ด  ไ ต  ส ม อ ง  แ ล ะ  aging
+162,Glycation  &  Aging,Carbonyl  Stress,Carbonyl  Stress  Network
+163,Glycation  &  Aging,Protein  Damage,Protein  Crosslinking  Network
+164,Hematology  Hematopoiesis,Bone  Marrow  Hematopoietic  Network,ก า ร ส ร ้ า ง เ ม ็ ด เ ล ื อ ด แ ด ง  เ ม ็ ด เ ล ื อ ด ข า ว  แ ล ะ เ ก ล ็ ด เ ล ื อ ด จ า ก  stem  cell
+165,Hematology  Erythropoiesis,Red  Blood  Cell  Production  Network,"ก า ร ส ร ้ า ง  RBC,  oxygen  carrying  capacity  แ ล ะ  anemia  biology"
+166,Hematology  Leukopoiesis  White  Blood  Cell  Renewal  Network,ก า ร ส ร ้ า ง  immune  cells  แ ล ะ  immune  competence,167
+167,Hematology  Platelet  Biology,Platelet  Renewal  Network,megakaryocyte  biology  แ ล ะ  platelet  turnover
+168,Sensory  Biology,Visual  System,Retinal–Visual  Network
+169,Sensory  Biology,Auditory  System,Auditory  Processing  Network
+170,Sensory  Biology,Olfactory  System,Olfactory  Signaling  Network
+171,Sensory  Biology,Gustatory  System,Taste  Perception  Network
+172,Reproductive  Biology,Female  Reproductive  Function,Ovarian  Function  Network
+173,Reproductive  Biology,Female  Reproductive  Function,Endometrial  Cycling  Network
+174,Reproductive  Biology,Male  Reproductive  Function,Testicular  Function  Network
+175,Reproductive  Biology,Male  Reproductive  Function,Prostate  Homeostasis  Network
+176,Barrier  Systems,Oral–Mucosal  Defense,Oral  Mucosal  Defense  Network
+177,Barrier  Systems,Upper  Airway  Defense,Nasal–Sinus  Defense  Network
+178,Host  Defense,Specialized  Antiviral  Defense,Viral  Restriction  Network
+179,Host  Defense,Specialized  Anticancer  Defense,Tumor  Elimination  Network
+180,System  Integration,Whole-Life  Integration,Human  Biological  Integration  Network

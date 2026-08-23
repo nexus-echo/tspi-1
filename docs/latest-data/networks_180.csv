@@ -1,0 +1,181 @@
+﻿network_number,domain,biological_axis,living_biological_network_system,scope
+1,Immune,Systemic Inflammatory Load,NF-κB Inflammatory Switch Network,ควบคุมการเปิดสัญญาณอักเสบหลัก
+2,Immune,Systemic Inflammatory Load,Cytokine Burden Network,"IL-6, TNF-α, IL-1β, CRP"
+3,Immune,Acute–Chronic Inflammation,Acute Inflammatory Response Network,การอักเสบเฉียบพลันเพื่อป้องกันภัย
+4,Immune,Acute–Chronic Inflammation,Chronic Low-Grade Inflammation Network,การอักเสบเรื้อรังระดับต่ำ
+5,Immune,Immune Surveillance,Innate Immune Surveillance Network,"macrophage, neutrophil, dendritic cell"
+6,Immune,Immune Surveillance,NK Cell Tumor Surveillance Network,การกำจัดเซลล์ผิดปกติและเซลล์มะเร็ง
+7,Immune,Immune Balance,Adaptive Immune Coordination Network,"T cell, B cell, antibody response"
+8,Immune,Immune Balance,Treg–Th17 Balance Network,สมดุลภูมิคุ้มกันกับภูมิแพ้/ออโตอิมมูน
+9,Inflammation,Resolution,Inflammation Resolution Network,การปิดการอักเสบและกลับสู่สมดุล
+10,Inflammation,Inflammasome,NLRP3 Inflammasome Network,"sterile inflammation, IL-1β, IL-18"
+11,Inflammation,Infection Defense,Antiviral Interferon Network,"interferon signaling, viral defense"
+12,Inflammation,Infection Defense,Antibacterial Defense Network,"phagocytosis, antimicrobial peptides"
+13,Oxidative Stress,ROS/RNS Load,ROS Regulation Network,ควบคุม ROS ไม่ให้เกินสมดุล
+14,Oxidative Stress,Oxidative Damage,Lipid Peroxidation Network,"MDA, 4-HNE, membrane damage"
+15,Oxidative Stress,Antioxidant Defense,Nrf2 Antioxidant Response Network,เปิดระบบป้องกันเซลล์
+16,Oxidative Stress,Antioxidant Defense,Glutathione Defense Network,"GSH, GPx, detox redox balance"
+17,Energy,Glucose–Insulin Regulation,Insulin Signaling Network,insulin receptor–AKT–GLUT
+18,Energy,Glucose–Insulin Regulation,Glucose Utilization Network,การนำ glucose เข้าเซลล์และใช้พลังงาน
+19,Energy,Hepatic Glucose Control,Hepatic Glucose Output Network,"gluconeogenesis, glycogen regulation"
+20,Energy,Glycemic Stability,Glucose Variability Control Network,ควบคุมระดับน้ำตาลไม่ให้แกว่ง
+21,Energy,Lipid–Lipotoxicity,Lipid Transport Network,"LDL, HDL, TG, lipoprotein balance"
+22,Energy,Lipid–Lipotoxicity,Ectopic Fat Accumulation Network,ไขมันพอกตับ ไขมันในอวัยวะ
+23,Energy,Lipid–Lipotoxicity,Lipotoxic Injury Network,"ceramide, DAG, cellular toxicity"
+24,Energy,Fatty Acid Oxidation,Beta-Oxidation Network,เผาผลาญกรดไขมันใน mitochondria
+25,Energy,Nutrient Sensing,AMPK Energy Sensing Network,"low energy sensing, catabolic switch"
+26,Energy,Nutrient Sensing,mTOR Growth Signaling Network,"growth, protein synthesis, anabolic state"
+27,Energy,Nutrient Sensing,AMPK–mTOR Balance Network,ตัดสินใจ growth vs repair
+28,Energy,Mitochondrial Network,Mitochondrial ATP Production Network,"ETC, oxidative phosphorylation"
+29,Energy,Mitochondrial Network,Mitochondrial Quality Control Network,"mitophagy, fusion–fission"
+30,Energy,Mitochondrial Network,Mitochondrial Biogenesis Network,สร้าง mitochondria ใหม่
+31,Energy,Redox–Energy Coupling,Mitochondrial ROS Signaling Network,ROS ในฐานะ signal และ damage
+32,Energy,Metabolic Flexibility,Fuel Switching Network,glucose ↔ fat ↔ ketone
+33,Gut,Detoxification,Phase I Detoxification Network,CYP450 biotransformation
+34,Gut,Detoxification,Phase II Conjugation Network,"glucuronidation, sulfation, methylation"
+35,Gut,Detoxification,Phase III Transport Network,"efflux transport, bile/urine excretion"
+36,Gut,Detoxification,Xenobiotic Clearance Network,ยา สารเคมี โลหะหนัก สารพิษ
+37,Gut,Gut Ecosystem,Microbiome Diversity Network,"microbial richness, ecosystem balance"
+38,Gut,Gut Ecosystem,Keystone Microbe Network,"Akkermansia, Bifidobacterium ฯลฯ"
+39,Gut,Microbial Metabolites,SCFA Production Network,"butyrate, acetate, propionate"
+40,Gut,Gut Barrier,Intestinal Barrier Integrity Network,"tight junction, leaky gut, LPS"
+41,Gut–Microbiome,Gut Barrier,Mucosal Barrier Network,เยื่อบุลำไส้ ทางเดินหายใจ ช่องปาก ผิวหนัง และเยื่อบุทั้งหมดที่ทำหน้าที่เป็นด่านป้องกัน
+42,Gut–Microbiome,Endotoxin Load,LPS–TLR4 Activation Network,การรั่วของ LPS จากลำไส้ กระตุ้น TLR4 → NF-κB → inflammation
+43,Gut–Microbiome,Microbial Metabolites,Bile Acid–Microbiome Network,"การเปลี่ยนแปลง bile acid โดยจุลินทรีย์ ส่งผลต่อ FXR, TGR5, ตับ และเมตาบอลิซึม"
+44,Gut–Microbiome,Gut–Organ Axis,Gut–Liver Axis Network,"microbiome, LPS, bile acid, portal circulation เชื่อมลำไส้กับตับ"
+45,Gut–Microbiome,Gut–Organ Axis,Gut–Brain Axis Network,"microbiome กระทบสมองผ่าน vagus nerve, cytokines, tryptophan, SCFA"
+46,Gut–Microbiome,Gut–Organ Axis,Gut–Immune Axis Network,"microbiome ฝึกภูมิคุ้มกัน ควบคุม Treg, Th17, tolerance และ inflammation"
+47,Genomic,DNA Integrity,DNA Damage Surveillance Network,"ตรวจจับ DNA damage ผ่าน ATM, ATR, p53, checkpoint ก่อนเกิด mutation"
+48,Genomic,DNA Repair,Base Excision Repair Network,ซ่อม DNA damage จาก oxidative stress เช่น 8-OHdG และ base lesions
+49,Genomic,DNA Repair,Nucleotide Excision Repair Network,"ซ่อม bulky DNA adducts, UV damage, chemical-induced DNA lesions"
+50,Genomic,DNA Repair,Double-Strand Break Repair Network,ซ่อม DNA แตกสองสายผ่าน homologous recombination และ NHEJ
+51,Genomic,Genomic Stability,Chromosomal Stability Network,"ป้องกัน chromosomal instability, aneuploidy, mutation accumulation"
+52,Genomic,Telomere Biology,Telomere Maintenance Network,"ควบคุม telomere length, shelterin complex, telomerase และ biological aging"
+53,Genomic,Epigenetics,DNA Methylation Programming Network,ควบคุมการเปิด–ปิดยีนผ่าน methylation และ epigenetic memory
+54,Genomic,Epigenetics,Histone Modification Network,histone acetylation/methylation ควบคุม chromatin และ gene accessibility
+55,Genomic,Epigenetics,Chromatin Remodeling Network,การจัดโครงสร้าง chromatin ให้ยีนบาง ชุดเปิดหรือปิดตามบริบท
+56,Genomic,RNA Regulation,MicroRNA Regulatory Network,miRNA ควบคุม post-transcriptional gene expression และ phenotype
+57,Genomic,Gene Expression,Transcription Factor Network,"NRF2, FOXO, NF-κB, HIF-1α, MYC ควบคุมโปรแกรมชีวภาพหลัก"
+58,Genomic,Gene Expression,Gene Expression Coordination Network,"การประสานยีนหลายชุดให้เกิด response เช่น detox, repair, inflammation"
+59,Genomic,Circadian Genomics,Circadian Gene Regulation Network,"CLOCK, BMAL1, PER, CRY ควบคุมเวลาชีวภาพของยีนและเมตาบอลิซึม"
+60,Genomic,Cellular Identity,Cellular Identity Maintenance Network,"รักษา cell fate, phenotype, differentiation state ไม่ให้หลุดสมดุล"
+61,Longevity,Sirtuin Pathway,Sirtuin–NAD+ Longevity Network,"SIRT1–7, NAD+, mitochondrial function, stress resistance และ aging control"
+62,Longevity,FOXO Pathway,FOXO Adaptive Survival Network,"FOXO1/3 ควบคุม stress response, antioxidant, autophagy และ longevity"
+63,Longevity,Growth–Repair Balance,IGF–Growth Regulation Network,"IGF-1, mTOR, growth signaling และ trade-off ระหว่าง growth กับ longevity"
+64,Longevity,Senescence,Cellular Senescence Control Network,"p16, p21, p53 ควบคุมเซลล์ชรา หยุดแบ่ง หรือเข้าสู่ repair/removal"
+65,Longevity,SASP,SASP Inflammatory Secretome Network,"senescent cells หลั่ง IL-6, TNF-α, MMPs ทำให้เกิด inflammaging"
+66,Longevity,Biological Aging,Biological Age Regulation Network,"รวม epigenetic age, telomere, mitochondria, inflammation, proteostasis"
+67,Cellular Clearance,Autophagy,Autophagy Initiation Network,"การเริ่ม autophagy ผ่าน AMPK, mTOR, ULK1 เพื่อล้างของเสียในเซลล์"
+68,Cellular Clearance,Autophagy,Autophagy Flux Network,การไหลของ autophagy ตั้งแต่ autophagosome → lysosome → degradation
+69,Cellular Clearance,Mitophagy,Mitophagy Network,กำจัด mitochondria เสีย ลด ROS และรักษาคุณภาพพลังงาน
+70,Cellular Clearance,Lysosome,Lysosomal Degradation Network,"ระบบย่อยสลายภายในเซลล์ กำจัด protein, organelle, waste"
+71,Proteostasis,Protein Folding,Chaperone Protein Folding Network,HSPs และ chaperones ช่วยพับโปรตีนให้ถูกต้อง ลด misfolding
+72,Proteostasis,ER Stress,ER Stress–UPR Network,"unfolded protein response, PERK, IRE1, ATF6 คุม ER stress"
+73,Proteostasis,Proteasome,Ubiquitin–Proteasome Network,ติด ubiquitin และย่อยโปรตีนเสียผ่าน proteasome
+74,Proteostasis,Protein Aggregation,Proteotoxic Stress Network,"ควบคุม protein aggregation, amyloid burden, oxidized proteins"
+75,Repair,Wound Healing,Wound Healing Transition Network,inflammatory phase → proliferation → remodeling ให้แผลหายอย่างถูกลำดับ
+76,Repair,Angiogenesis,Angiogenesis Repair Network,"VEGF, endothelial growth, new vessel formation เพื่อซ่อมเนื้อเยื่อ"
+77,Repair,ECM Remodeling,Extracellular Matrix Remodeling Network,"collagen, elastin, fibronectin, MMPs, TIMPs ปรับโครงสร้างเนื้อเยื่อ"
+78,Repair,Fibrosis,Fibrosis Decision Network,"ตัดสินผลลัพธ์ระหว่าง regeneration กับ fibrosis ผ่าน TGF-β, myofibroblast"
+79,Repair,Stem Cell,Stem Cell Activation Network,กระตุ้น stem/progenitor cells ให้ซ่อมเนื้อเยื่อและสร้างเซลล์ใหม่
+80,Repair,Regeneration,Tissue Regeneration Integration Network,"บูรณาการ stem cell, ECM, angiogenesis, immune resolution เพื่อสร้างเนื้อเยื่อใหม่"
+81,Vascular,Endothelial Function,Endothelial Integrity Network,"ควบคุมความสมบูรณ์ของ endothelial cell, glycocalyx, vascular permeability และการป้องกันหลอดเลือดเสื่อม"
+82,Vascular,Endothelial Function,Nitric Oxide Signaling Network,"eNOS, NO bioavailability, vasodilation, blood flow regulation และ endothelial protection"
+83,Vascular,Microcirculation,Capillary Perfusion Network,การส่งเลือดระดับเส้นเลือดฝอย การนำ oxygen และ nutrient เข้าสู่เซลล์
+84,Vascular,Oxygen Delivery,Tissue Oxygenation Network,"oxygen transport, diffusion gradient และ tissue oxygen utilization"
+85,Vascular,Angiogenesis,Physiological Angiogenesis Network,"VEGF signaling, vessel formation และ tissue repair"
+86,Vascular,Vascular Remodeling,Vascular Adaptation Network,"การปรับตัวของหลอดเลือดต่อ shear stress, BP และ metabolic demand"
+87,Vascular,Hemostasis,Platelet Activation Network,"platelet adhesion, aggregation และ clot initiation"
+88,Vascular,Hemostasis,Coagulation Cascade Network,"intrinsic/extrinsic pathway, thrombin generation และ fibrin formation"
+89,Vascular,Hemostasis,Fibrinolytic Network,"plasmin activation, clot resolution และ vascular clearance"
+90,Vascular,Inflammation,Endothelial Inflammation Network,"VCAM-1, ICAM-1, leukocyte adhesion และ atherosclerosis initiation"
+91,Vascular,Blood Pressure,RAAS Regulation Network,"renin–angiotensin–aldosterone control, sodium retention และ BP homeostasis"
+92,Vascular,Blood Pressure,Vascular Tone Network,"sympathetic control, NO signaling และ vascular resistance"
+93,Vascular,Arterial Elasticity,Arterial Compliance Network,"vascular stiffness, pulse wave velocity และ vascular aging"
+94,Vascular,Cardiac Function,Cardiac Contractility Network,"myocardial contraction, calcium handling และ cardiac output"
+95,Vascular,Cardiac Function,Cardiac Electrophysiology Network,"SA node, AV node, conduction pathway และ arrhythmia biology"
+96,Vascular,Cardiac Energy,Cardiac Bioenergetics Network,"ATP production, fatty acid oxidation และ myocardial energetics"
+97,Vascular,Cardiac Remodeling,Cardiac Stress Adaptation Network,"hypertrophy, remodeling, fibrosis และ heart failure progression"
+98,Vascular,Cardio–Renal Axis,Cardio–Renal Integration Network,"interaction ระหว่าง heart output, renal perfusion และ fluid balance"
+99,Vascular,Cardio–Pulmonary Axis,Cardio–Pulmonary Integration Network,"oxygen delivery, pulmonary circulation และ systemic perfusion"
+100,Vascular,Functional Reserve,Cardiovascular Reserve Network,reserve capacity ของหัวใจและหลอดเลือดภายใต้ stress และ exercise
+101,Neuroendocrine,Autonomic Balance,Sympathetic Regulation Network,"fight-or-flight response, catecholamine release และ metabolic mobilization"
+102,Neuroendocrine,Autonomic Balance,Parasympathetic Regulation Network,"vagal activity, recovery mode และ inflammatory suppression"
+103,Neuroendocrine,Vagal Axis,Cholinergic Anti-inflammatory Network,vagus nerve mediated immune regulation
+104,Neuroendocrine,Stress Response,HPA Axis Network,hypothalamus–pituitary–adrenal axis และ cortisol regulation
+105,Neuroendocrine,Stress Response,Catecholamine Response Network,"adrenaline, noradrenaline และ acute stress adaptation"
+106,Neuroendocrine,Thyroid Function,Thyroid Hormone Regulation Network,"TSH, T3, T4 และ metabolic rate control"
+107,Neuroendocrine,Growth Axis,Growth Hormone–IGF Network,"growth, regeneration และ anabolic signaling"
+108,Neuroendocrine,Reproductive Axis,HPG Axis Network,"gonadal hormones, fertility และ reproductive physiology"
+109,Neuroendocrine,Circadian Biology,Circadian Synchronization Network,CLOCK–BMAL1 regulation และ systemic biological timing
+110,Neuroendocrine,Sleep Biology,Sleep Architecture Network,"REM, NREM, sleep cycles และ recovery physiology"
+111,Neurocognitive,Brain Energy,Brain Energy Metabolism Network,"neuronal glucose utilization, ketone metabolism และ ATP production"
+112,Neurocognitive,Brain Clearance,Glymphatic Clearance Network,"beta-amyloid clearance, metabolic waste removal ระหว่างการนอน"
+113,Neurocognitive,Neuroimmune,Neuroimmune Communication Network,cytokine–brain interaction และ sickness behavior
+114,Neurocognitive,Neuroinflammation,Microglial Regulation Network,neuroinflammatory tone และ neurodegeneration risk
+115,Neurocognitive,Synaptic Function,Synaptic Plasticity Network,"learning, memory และ adaptive rewiring"
+116,Neurocognitive,Memory,Memory Consolidation Network,hippocampal function และ long-term memory storage
+117,Neurocognitive,Executive Function,Cognitive Control Network,"planning, attention, inhibition และ decision making"
+118,Neurocognitive,Emotional Regulation,Limbic Balance Network,"amygdala, hippocampus, emotional adaptation"
+119,Neurocognitive,Reward System,Dopaminergic Reward Network,"motivation, addiction biology และ behavioral drive"
+120,Neurocognitive,CELA,Cognitive–Emotional Loop Architecture (CELA) Network,"thought loops, rumination, stress amplification, HPA activation, microbiome interaction และ chronic disease propagation"
+121,Organ Resilience,Liver Functional Reserve,Hepatic Detoxification Network,ระบบตับในการเปลี่ยนสารพิษ ยา สารเคมี แอมโมเนีย และ metabolic waste ให้ขับออกได้ ผ่าน Phase I/II/III และ bile excretion
+122,Organ Resilience,Liver Metabolic Reserve,Hepatic Metabolic Network,"ควบคุม glucose, lipid, amino acid, cholesterol และ bile acid metabolism เป็นศูนย์กลางของ ไขมันพอกตับ เบาหวาน และ metabolic syndrome"
+123,Organ Resilience,Liver Repair,Hepatic Regeneration Network,"การฟื้นฟู hepatocyte หลัง inflammation, toxic injury, viral injury หรือ ischemic injury ผ่าน growth factors, stem/progenitor signals และ immune resolution"
+124,Organ Resilience,Liver Fibrosis,Hepatic Fibrosis Regulation Network,"ควบคุม hepatic stellate cell, collagen deposition, ECM remodeling, cirrhosis progression และความสามารถกลับจาก fibrosis สู่ regeneration"
+125,Organ Resilience,Bile Dynamics,Bile Flow Regulation Network,"ระบบสร้าง ระบาย และหมุนเวียนน้ำดี ครอบคลุม bile acid pool, gallbladder contraction, cholestasis, gallstone และ enterohepatic circulation"
+126,Organ Resilience,Kidney Filtration,Renal Filtration Network,"ระบบกรองของเสียผ่าน glomerulus, eGFR, albuminuria, uremic toxin และ renal microcirculation"
+127,Organ Resilience,Tubular Function,Renal Tubular Transport Network,"การดูดกลับ sodium, potassium, glucose, amino acid, bicarbonate และการขับกรด/สารพิษผ่าน proximal/distal tubule"
+128,Organ Resilience,Acid–Base Balance,Acid–Base Homeostasis Network,"รักษา pH เลือดผ่าน bicarbonate buffer, renal acid excretion, respiratory compensation และ metabolic acidosis"
+129,Organ Resilience,Fluid–Electrolyte Balance,Fluid–Electrolyte Regulation Network,"ควบคุมน้ำ เกลือแร่ sodium, potassium, magnesium, calcium และ volume status เชื่อมกับไต หัวใจ adrenal และ RAAS"
+130,Organ Resilience,Cardio–Renal Axis,Cardio–Renal Integration Network,ความสัมพันธ์ระหว่างหัวใจ ไต ความดัน น้ำคั่ง renal perfusion และ heart failure–kidney failure loop
+131,Digestive–Organ Function,GI Motility,Gastrointestinal Motility Network,"ควบคุม gastric emptying, intestinal peristalsis, colon transit, constipation, IBS และ autonomic–enteric nervous system"
+132,Digestive–Organ Function,Nutrient Absorption,Nutrient Absorption Network,"ดูดซึม glucose, amino acids, fatty acids, bile-soluble vitamins, minerals และความผิดปกติแบบ malabsorption"
+133,Digestive–Organ Function,Enteric Nervous System,Enteric Nervous System Network,"ระบบประสาทลำไส้ ควบคุม motility, secretion, visceral pain, gut–brain signaling และ stress-related gut disorder"
+134,Digestive–Organ Function,Pancreatic Endocrine,Pancreatic Endocrine Network,"beta-cell insulin, alpha-cell glucagon, incretin response, insulin reserve และ beta-cell exhaustion"
+135,Digestive–Organ Function,Pancreatic Exocrine,Pancreatic Exocrine Network,"การหลั่ง amylase, lipase, protease, bicarbonate เพื่อย่อยอาหาร เชื่อมกับ pancreatic insufficiency และ dyspepsia"
+136,Digestive–Organ Function,Gallbladder Function,Gallbladder Motility Network,"การบีบตัวของถุงน้ำดี การปล่อยน้ำดีหลังอาหาร ไขมัน digestion, bile stasis และ gallstone formation"
+137,Respiratory,Gas Exchange,Pulmonary Gas Exchange Network,"การแลกเปลี่ยน O₂/CO₂ ผ่าน alveoli, diffusion capacity, ventilation–perfusion matching และ hypoxia"
+138,Respiratory,Pulmonary Defense,Pulmonary Immune Defense Network,"macrophage, mucociliary clearance, antimicrobial peptide, antiviral defense และ airway inflammation"
+139,Respiratory,Pulmonary Repair,Pulmonary Epithelial Repair Network,"การซ่อมเยื่อบุหลอดลมและถุงลม หลัง infection, pollution, inflammation หรือ fibrosis"
+140,Respiratory–Circulation,Cardio–Pulmonary Integration,Cardio–Pulmonary Oxygen Delivery Network,การบูรณาการปอด หัวใจ เลือด และหลอดเลือดเพื่อส่ง oxygen ไปยัง tissue และ mitochondria
+141,Structural Biology,Muscle Integrity,Muscle Protein Turnover Network,"สมดุล muscle protein synthesis/breakdown, mTOR, ubiquitin-proteasome, sarcopenia และ muscle wasting"
+142,Structural Biology,Muscle Regeneration,Myogenesis Network,"satellite cell activation, myoblast differentiation, muscle repair หลัง injury, aging หรือ inflammation"
+143,Structural Biology,Bone Remodeling,Bone Remodeling Network,"สมดุล osteoblast–osteoclast, bone formation/resorption, osteoporosis และ bone–immune interaction"
+144,Structural Biology,Mineral Homeostasis,Bone Mineral Homeostasis Network,"ควบคุม calcium, phosphate, vitamin D, PTH, magnesium และ mineralization ของกระดูก"
+145,Structural Biology,Cartilage Matrix,Cartilage Matrix Network,"chondrocyte, collagen II, aggrecan, MMPs, cartilage degradation และ osteoarthritis progression"
+146,Structural Biology,Joint Homeostasis,Synovial Joint Homeostasis Network,"synovial fluid, joint lubrication, synovial inflammation, pain mediator และข้อเสื่อม"
+147,Structural Biology,Tendon–Ligament Integrity,Tendon–Ligament Integrity Network,"collagen alignment, tendon ECM, ligament resilience, stiffness, injury repair และ chronic tendinopathy"
+148,Structural Biology,Fascia–Mechanics,Fascial Communication Network,"fascia sliding, mechanotransduction, force transmission, myofascial pain และ structural connectivity"
+149,Barrier–Structural,Skin Integrity,Skin Barrier & Repair Network,"epidermal barrier, antimicrobial defense, wound healing, collagen remodeling และ inflammatory skin disorders"
+150,Fluid–Immune Transport,Lymphatic Drainage,Lymphatic Clearance Network,"lymph flow, interstitial fluid drainage, immune trafficking, edema resolution และ toxin clearance"
+151,Oncology,Cell Cycle Control,Cell Cycle Control Network,"cyclin, CDK, checkpoint G1/S/G2/M, uncontrolled proliferation และ cancer initiation"
+152,Oncology,Tumor Suppression,Tumor Suppressor Network,"p53, RB, PTEN, APC, DNA checkpoint และการหยุดเซลล์ผิดปกติก่อนเกิด malignancy"
+153,Oncology,Apoptosis,Apoptosis Execution Network,"intrinsic/extrinsic apoptosis, caspase cascade, mitochondrial apoptosis และ cancer cell clearance"
+154,Oncology,Cancer Stemness,Cancer Stem Cell Network,"self-renewal, tumor initiation, recurrence, drug resistance และ stem-like phenotype"
+155,Oncology,Tumor Microenvironment,Tumor Microenvironment Network,"CAF, stromal cells, ECM, hypoxia, inflammatory niche และ immune suppression รอบก้อนมะเร็ง"
+156,Oncology,Immune Surveillance,Anti-Cancer Immune Surveillance Network,"NK cell, CD8 T cell, dendritic cell, antigen presentation และ tumor elimination"
+157,Oncology,Immune Escape,Immune Escape Network,"PD-1/PD-L1, CTLA-4, Treg, MDSC, immune exhaustion และ tumor immune evasion"
+158,Oncology,Cancer Metabolism,Cancer Metabolic Reprogramming Network,"Warburg effect, glutamine addiction, lipid metabolism, mitochondrial rewiring และ tumor survival"
+159,Oncology,EMT–Metastasis,EMT & Metastatic Dissemination Network,"epithelial–mesenchymal transition, invasion, migration, CTC survival และ organ colonization"
+160,Oncology,Evolution–Resistance,Cancer Evolution & Resistance Network,"clonal selection, mutation pressure, adaptive resistance, relapse และ treatment escape"
+161,Glycation & Aging,AGE Biology,AGE Formation Network,การเกิด Advanced Glycation End Products จากน้ำตาลเกินสะสมในโปรตีน ไขมัน และ DNA ส่งผลต่อหลอดเลือด ไต สมอง และ aging
+162,Glycation & Aging,Carbonyl Stress,Carbonyl Stress Network,การสะสม reactive carbonyl compounds ที่ทำให้เกิด protein dysfunction และ chronic degeneration
+163,Glycation & Aging,Protein Damage,Protein Crosslinking Network,การเชื่อมข้ามของ collagen และ protein ทำให้เนื้อเยื่อแข็ง เสื่อม และสูญเสีย elasticity
+164,Hematology,Hematopoiesis,Bone Marrow Hematopoietic Network,การสร้างเม็ดเลือดแดง เม็ดเลือดขาว และเกล็ดเลือดจาก stem cell
+165,Hematology,Erythropoiesis,Red Blood Cell Production Network,"การสร้าง RBC, oxygen carrying capacity และ anemia biology"
+166,Hematology,Leukopoiesis,White Blood Cell Renewal Network,การสร้าง immune cells และ immune competence
+167,Hematology,Platelet Biology,Platelet Renewal Network,megakaryocyte biology และ platelet turnover
+168,Sensory Biology,Visual System,Retinal–Visual Network,"retina, photoreceptor, optic nerve, visual processing และ retinal degeneration"
+169,Sensory Biology,Auditory System,Auditory Processing Network,"cochlea, hearing transduction และ auditory neural pathways"
+170,Sensory Biology,Olfactory System,Olfactory Signaling Network,กลิ่น การรับรู้สารเคมี และ neuroimmune interaction ใน nasal mucosa
+171,Sensory Biology,Gustatory System,Taste Perception Network,taste receptor biology และ nutrient sensing
+172,Reproductive Biology,Female Reproductive Function,Ovarian Function Network,"folliculogenesis, ovulation, reproductive hormone production"
+173,Reproductive Biology,Female Reproductive Function,Endometrial Cycling Network,"menstrual cycle, implantation biology และ uterine receptivity"
+174,Reproductive Biology,Male Reproductive Function,Testicular Function Network,"spermatogenesis, testosterone production และ fertility biology"
+175,Reproductive Biology,Male Reproductive Function,Prostate Homeostasis Network,"prostate physiology, inflammation และ androgen response"
+176,Barrier Systems,Oral–Mucosal Defense,Oral Mucosal Defense Network,"oral microbiome, salivary immunity, mucosal protection"
+177,Barrier Systems,Upper Airway Defense,Nasal–Sinus Defense Network,"mucociliary clearance, pathogen trapping และ airway immunity"
+178,Host Defense,Specialized Antiviral Defense,Viral Restriction Network,"interferon-stimulated genes, viral entry inhibition และ intracellular antiviral defense"
+179,Host Defense,Specialized Anticancer Defense,Tumor Elimination Network,"NK cell, macrophage, cytotoxic T cell coordination ต่อเซลล์มะเร็ง"
+180,System Integration,Whole-Life Integration,Human Biological Integration Network,"การบูรณาการทุก biological networks ให้เกิด physiological performance, adaptation และ health maintenance"

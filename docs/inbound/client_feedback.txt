@@ -1,0 +1,72 @@
+i know that the team has miss understanding about the philosophy of tspi
+
+so this file explain
+
+ผมคิดว่าควรตอบในฐานะ Domain Expert และไม่ใช่แค่ตอบว่า "ส่ง Excel ให้" แต่ควรอธิบายว่า ทำไม TSPI จึงต้องการ Official Master Dataset เพราะเรื่องนี้เป็น Source of Truth ของระบบทั้งหมด
+ผมแนะนำให้ตอบแบบนี้
+Official Domain Expert Response
+Blocker 2 – 180 Living Biological Networks
+Thank you for identifying this issue.
+Your decision not to load the extracted table is correct.
+We do not want the development team to reconstruct or infer the 180 Living Biological Networks from the PDF, because this document is intended for human reading, not as the authoritative machine-readable master.
+A partially extracted or incorrectly parsed network registry could introduce silent errors into the Biological Reasoning Engine, which would compromise the integrity of the TSPI platform.
+Therefore:
+Official Decision
+The PDF is not the production source of truth for the 180 Living Biological Networks.
+The production source of truth will be provided as an Official Network Registry in machine-readable format (Excel/CSV).
+The development team should only use this official registry.
+Required Official Network Registry Structure
+Each network should contain at least the following fields:
+network_code
+network_number
+network_name_en
+network_name_th
+primary_axis_code
+secondary_axis_codes[]
+domain_code
+network_type
+upstream_network_codes[]
+downstream_network_codes[]
+related_modules[]
+accepted_markers[]
+accepted_symptoms[]
+evidence_grade
+status
+network_master_version
+This registry will become the official machine-readable master for all future versions of TSPI AI.
+Important clarification
+Please note that the 180 Living Biological Networks are NOT the primary reasoning engine.
+The reasoning hierarchy remains:
+Clinical Evidence
+↓
+Three Biological Keys
+↓
+Nine Restoration Steps
+↓
+Twelve Biological Domains
+↓
+Thirty-nine Biological Axes
+↓
+180 Living Biological Networks
+↓
+200 Biological Modules
+Networks exist to explain the biological mechanisms underlying the Thirty-nine Biological Axes.
+They are not intended to replace the Thirty-nine Biological Axes as the central diagnostic layer.
+Module matching should always begin from the Thirty-nine Biological Axes.
+The Network layer is used for:
+mechanistic explanation,
+network propagation,
+biological validation,
+and mechanistic confidence,
+rather than primary module selection.
+Interim implementation
+Until the Official Network Registry is available:
+Do not infer missing network data from the PDF.
+Do not reconstruct the registry automatically.
+Keep the Network layer inactive (Not Available).
+Do not renormalize the scoring weights.
+Report reduced confidence due to missing Network data.
+Continue using the approved reasoning pipeline based on Clinical Evidence → Fundamental Medicine → Thirty-nine Biological Axes.
+This preserves the constitutional architecture of TSPI while preventing incorrect biological reasoning.
+ผมขอเสนอให้เพิ่มประโยคสุดท้ายอีกข้อ เพราะจะช่วยป้องกันการตีความผิดของทีมพัฒนาในอนาคต
+The 180 Living Biological Networks are an official knowledge registry maintained by the Fundamental Medicine Committee. They are not AI-generated entities and may only be modified through formal scientific review and approval.

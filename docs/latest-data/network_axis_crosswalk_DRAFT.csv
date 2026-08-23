@@ -1,0 +1,142 @@
+﻿biological_axis_label,networks_using_label,auto_mapped_axis_code,suggested_axis_code,suggested_axis_name,suggestion_confidence,CONFIRM_axis_code,status,example_networks
+Detoxification,4,,A15,Detoxification Capacity,0.5,,NEEDS_REVIEW,N033 Phase I Detoxification Network | N034 Phase II Conjugation Network
+DNA Repair,3,,A11,DNA Repair & Genomic Stability,0.5,,NEEDS_REVIEW,N048 Base Excision Repair Network | N049 Nucleotide Excision Repair Network
+Epigenetics,3,,,,0.0,,NEEDS_REVIEW,N053 DNA Methylation Programming Network | N054 Histone Modification Network
+Gut–Organ Axis,3,,A18,Gut Barrier & Mucosal Integrity,0.17,,NEEDS_REVIEW,N044 Gut–Liver Axis Network | N045 Gut–Brain Axis Network
+Hemostasis,3,,A22,Thrombosis–Hemostasis,0.5,,NEEDS_REVIEW,N087 Platelet Activation Network | N088 Coagulation Cascade Network
+Immune Surveillance,3,,A2,Immune Homeostasis,0.33,,NEEDS_REVIEW,N005 Innate Immune Surveillance Network | N006 NK Cell Tumor Surveillance Network
+Lipid–Lipotoxicity,3,A6,A6,,1.0,A6,AUTO_MATCHED,N021 Lipid Transport Network | N022 Ectopic Fat Accumulation Network
+Mitochondrial Network,3,A8,A8,,1.0,A8,AUTO_MATCHED,N028 Mitochondrial ATP Production Network | N029 Mitochondrial Quality Control Network
+Nutrient Sensing,3,A7,A7,,1.0,A7,AUTO_MATCHED,N025 AMPK Energy Sensing Network | N026 mTOR Growth Signaling Network
+Acute–Chronic Inflammation,2,,,,0.0,,NEEDS_REVIEW,N003 Acute Inflammatory Response Network | N004 Chronic Low-Grade Inflammation Network
+Angiogenesis,2,,,,0.0,,NEEDS_REVIEW,N076 Angiogenesis Repair Network | N085 Physiological Angiogenesis Network
+Antioxidant Defense,2,,A3,Pathogen Defense,0.33,,NEEDS_REVIEW,N015 Nrf2 Antioxidant Response Network | N016 Glutathione Defense Network
+Autonomic Balance,2,,A9,Oxidative Stress & Redox Balance,0.2,,NEEDS_REVIEW,N101 Sympathetic Regulation Network | N102 Parasympathetic Regulation Network
+Autophagy,2,,A10,Proteostasis–Autophagy–Lysosome,0.33,,NEEDS_REVIEW,N067 Autophagy Initiation Network | N068 Autophagy Flux Network
+Blood Pressure,2,,,,0.0,,NEEDS_REVIEW,N091 RAAS Regulation Network | N092 Vascular Tone Network
+Cardiac Function,2,,A20,Endothelial Function,0.33,,NEEDS_REVIEW,N094 Cardiac Contractility Network | N095 Cardiac Electrophysiology Network
+Cardio–Renal Axis,2,,A33,Thyroid–Adrenal–Growth Axis,0.17,,NEEDS_REVIEW,N098 Cardio–Renal Integration Network | N130 Cardio–Renal Integration Network
+Endothelial Function,2,A20,A20,,1.0,A20,AUTO_MATCHED,N081 Endothelial Integrity Network | N082 Nitric Oxide Signaling Network
+Female Reproductive Function,2,,A20,Endothelial Function,0.25,,NEEDS_REVIEW,N172 Ovarian Function Network | N173 Endometrial Cycling Network
+Gene Expression,2,,,,0.0,,NEEDS_REVIEW,N057 Transcription Factor Network | N058 Gene Expression Coordination Network
+Glucose–Insulin Regulation,2,A5,A5,,1.0,A5,AUTO_MATCHED,N017 Insulin Signaling Network | N018 Glucose Utilization Network
+Gut Barrier,2,,A18,Gut Barrier & Mucosal Integrity,0.5,,NEEDS_REVIEW,N040 Intestinal Barrier Integrity Network | N041 Mucosal Barrier Network
+Gut Ecosystem,2,,A18,Gut Barrier & Mucosal Integrity,0.2,,NEEDS_REVIEW,N037 Microbiome Diversity Network | N038 Keystone Microbe Network
+Immune Balance,2,,A2,Immune Homeostasis,0.33,,NEEDS_REVIEW,N007 Adaptive Immune Coordination Network | N008 Treg–Th17 Balance Network
+Infection Defense,2,,A3,Pathogen Defense,0.33,,NEEDS_REVIEW,N011 Antiviral Interferon Network | N012 Antibacterial Defense Network
+Male Reproductive Function,2,,A20,Endothelial Function,0.25,,NEEDS_REVIEW,N174 Testicular Function Network | N175 Prostate Homeostasis Network
+Microbial Metabolites,2,,,,0.0,,NEEDS_REVIEW,N039 SCFA Production Network | N043 Bile Acid–Microbiome Network
+Stress Response,2,,A27,Glycation / Carbonyl Stress,0.25,,NEEDS_REVIEW,N104 HPA Axis Network | N105 Catecholamine Response Network
+Systemic Inflammatory Load,2,A1,A1,,1.0,A1,AUTO_MATCHED,N001 NF-κB Inflammatory Switch Network | N002 Cytokine Burden Network
+AGE Biology,1,,,,0.0,,NEEDS_REVIEW,N161 AGE Formation Network
+Acid–Base Balance,1,,A9,Oxidative Stress & Redox Balance,0.17,,NEEDS_REVIEW,N128 Acid–Base Homeostasis Network
+Apoptosis,1,,,,0.0,,NEEDS_REVIEW,N153 Apoptosis Execution Network
+Arterial Elasticity,1,,A23,Hemodynamics & Arterial Elasticity,0.67,,NEEDS_REVIEW,N093 Arterial Compliance Network
+Auditory System,1,,,,0.0,,NEEDS_REVIEW,N169 Auditory Processing Network
+Bile Dynamics,1,,A38,Tumor Microenvironment & Metastatic Dynamics,0.2,,NEEDS_REVIEW,N125 Bile Flow Regulation Network
+Biological Aging,1,,,,0.0,,NEEDS_REVIEW,N066 Biological Age Regulation Network
+Bone Remodeling,1,A29,A29,,1.0,A29,AUTO_MATCHED,N143 Bone Remodeling Network
+Brain Clearance,1,,A34,Neuro–Sleep–Stress–Brain Clearance,0.4,,NEEDS_REVIEW,N112 Glymphatic Clearance Network
+Brain Energy,1,,A34,Neuro–Sleep–Stress–Brain Clearance,0.17,,NEEDS_REVIEW,N111 Brain Energy Metabolism Network
+CELA,1,,,,0.0,,NEEDS_REVIEW,N120 Cognitive–Emotional Loop Architecture (CELA) Network
+Cancer Metabolism,1,,,,0.0,,NEEDS_REVIEW,N158 Cancer Metabolic Reprogramming Network
+Cancer Stemness,1,,,,0.0,,NEEDS_REVIEW,N154 Cancer Stem Cell Network
+Carbonyl Stress,1,,A27,Glycation / Carbonyl Stress,0.67,,NEEDS_REVIEW,N162 Carbonyl Stress Network
+Cardiac Energy,1,,,,0.0,,NEEDS_REVIEW,N096 Cardiac Bioenergetics Network
+Cardiac Remodeling,1,,A29,Bone Remodeling,0.33,,NEEDS_REVIEW,N097 Cardiac Stress Adaptation Network
+Cardio–Pulmonary Axis,1,,A33,Thyroid–Adrenal–Growth Axis,0.17,,NEEDS_REVIEW,N099 Cardio–Pulmonary Integration Network
+Cardio–Pulmonary Integration,1,,,,0.0,,NEEDS_REVIEW,N140 Cardio–Pulmonary Oxygen Delivery Network
+Cartilage Matrix,1,,,,0.0,,NEEDS_REVIEW,N145 Cartilage Matrix Network
+Cell Cycle Control,1,,A26,Stem Cell & Hematopoiesis,0.2,,NEEDS_REVIEW,N151 Cell Cycle Control Network
+Cellular Identity,1,,,,0.0,,NEEDS_REVIEW,N060 Cellular Identity Maintenance Network
+Circadian Biology,1,,,,0.0,,NEEDS_REVIEW,N109 Circadian Synchronization Network
+Circadian Genomics,1,,,,0.0,,NEEDS_REVIEW,N059 Circadian Gene Regulation Network
+DNA Integrity,1,,A30,Connective Tissue Integrity,0.25,,NEEDS_REVIEW,N047 DNA Damage Surveillance Network
+ECM Remodeling,1,,A25,Fibrosis & ECM Remodeling,0.67,,NEEDS_REVIEW,N077 Extracellular Matrix Remodeling Network
+EMT–Metastasis,1,,,,0.0,,NEEDS_REVIEW,N159 EMT & Metastatic Dissemination Network
+ER Stress,1,,A27,Glycation / Carbonyl Stress,0.25,,NEEDS_REVIEW,N072 ER Stress–UPR Network
+Emotional Regulation,1,,A12,Epigenetic Regulation,0.33,,NEEDS_REVIEW,N118 Limbic Balance Network
+Endotoxin Load,1,,A1,Systemic Inflammatory Load,0.25,,NEEDS_REVIEW,N042 LPS–TLR4 Activation Network
+Enteric Nervous System,1,,,,0.0,,NEEDS_REVIEW,N133 Enteric Nervous System Network
+Erythropoiesis,1,,,,0.0,,NEEDS_REVIEW,N165 Red Blood Cell Production Network
+Evolution–Resistance,1,,,,0.0,,NEEDS_REVIEW,N160 Cancer Evolution & Resistance Network
+Executive Function,1,,A20,Endothelial Function,0.33,,NEEDS_REVIEW,N117 Cognitive Control Network
+FOXO Pathway,1,,,,0.0,,NEEDS_REVIEW,N062 FOXO Adaptive Survival Network
+Fascia–Mechanics,1,,,,0.0,,NEEDS_REVIEW,N148 Fascial Communication Network
+Fatty Acid Oxidation,1,,,,0.0,,NEEDS_REVIEW,N024 Beta-Oxidation Network
+Fibrosis,1,,A25,Fibrosis & ECM Remodeling,0.33,,NEEDS_REVIEW,N078 Fibrosis Decision Network
+Fluid–Electrolyte Balance,1,,A9,Oxidative Stress & Redox Balance,0.17,,NEEDS_REVIEW,N129 Fluid–Electrolyte Regulation Network
+Functional Reserve,1,,A35,Visceral Organ Functional Reserve,0.5,,NEEDS_REVIEW,N100 Cardiovascular Reserve Network
+GI Motility,1,,,,0.0,,NEEDS_REVIEW,N131 Gastrointestinal Motility Network
+Gallbladder Function,1,,A20,Endothelial Function,0.33,,NEEDS_REVIEW,N136 Gallbladder Motility Network
+Gas Exchange,1,,,,0.0,,NEEDS_REVIEW,N137 Pulmonary Gas Exchange Network
+Genomic Stability,1,,A11,DNA Repair & Genomic Stability,0.5,,NEEDS_REVIEW,N051 Chromosomal Stability Network
+Glycemic Stability,1,,A11,DNA Repair & Genomic Stability,0.2,,NEEDS_REVIEW,N020 Glucose Variability Control Network
+Growth Axis,1,,A33,Thyroid–Adrenal–Growth Axis,0.5,,NEEDS_REVIEW,N107 Growth Hormone–IGF Network
+Growth–Repair Balance,1,,A9,Oxidative Stress & Redox Balance,0.17,,NEEDS_REVIEW,N063 IGF–Growth Regulation Network
+Gustatory System,1,,,,0.0,,NEEDS_REVIEW,N171 Taste Perception Network
+Hematopoiesis,1,,A26,Stem Cell & Hematopoiesis,0.33,,NEEDS_REVIEW,N164 Bone Marrow Hematopoietic Network
+Hepatic Glucose Control,1,,A5,Glucose–Insulin Regulation,0.2,,NEEDS_REVIEW,N019 Hepatic Glucose Output Network
+Immune Escape,1,,A2,Immune Homeostasis,0.33,,NEEDS_REVIEW,N157 Immune Escape Network
+Inflammasome,1,,,,0.0,,NEEDS_REVIEW,N010 NLRP3 Inflammasome Network
+Inflammation,1,,,,0.0,,NEEDS_REVIEW,N090 Endothelial Inflammation Network
+Joint Homeostasis,1,,A2,Immune Homeostasis,0.33,,NEEDS_REVIEW,N146 Synovial Joint Homeostasis Network
+Kidney Filtration,1,,,,0.0,,NEEDS_REVIEW,N126 Renal Filtration Network
+Leukopoiesis,1,,,,0.0,,NEEDS_REVIEW,N166 White Blood Cell Renewal Network
+Liver Fibrosis,1,,A25,Fibrosis & ECM Remodeling,0.25,,NEEDS_REVIEW,N124 Hepatic Fibrosis Regulation Network
+Liver Functional Reserve,1,,A35,Visceral Organ Functional Reserve,0.4,,NEEDS_REVIEW,N121 Hepatic Detoxification Network
+Liver Metabolic Reserve,1,,A35,Visceral Organ Functional Reserve,0.17,,NEEDS_REVIEW,N122 Hepatic Metabolic Network
+Liver Repair,1,,A11,DNA Repair & Genomic Stability,0.2,,NEEDS_REVIEW,N123 Hepatic Regeneration Network
+Lymphatic Drainage,1,,,,0.0,,NEEDS_REVIEW,N150 Lymphatic Clearance Network
+Lysosome,1,,A10,Proteostasis–Autophagy–Lysosome,0.33,,NEEDS_REVIEW,N070 Lysosomal Degradation Network
+Memory,1,,,,0.0,,NEEDS_REVIEW,N116 Memory Consolidation Network
+Metabolic Flexibility,1,,,,0.0,,NEEDS_REVIEW,N032 Fuel Switching Network
+Microcirculation,1,,A21,Vascular Remodeling & Microcirculation,0.33,,NEEDS_REVIEW,N083 Capillary Perfusion Network
+Mineral Homeostasis,1,,A2,Immune Homeostasis,0.33,,NEEDS_REVIEW,N144 Bone Mineral Homeostasis Network
+Mitophagy,1,,,,0.0,,NEEDS_REVIEW,N069 Mitophagy Network
+Muscle Integrity,1,,A28,Muscle Protein Turnover,0.25,,NEEDS_REVIEW,N141 Muscle Protein Turnover Network
+Muscle Regeneration,1,,A28,Muscle Protein Turnover,0.25,,NEEDS_REVIEW,N142 Myogenesis Network
+Neuroimmune,1,,,,0.0,,NEEDS_REVIEW,N113 Neuroimmune Communication Network
+Neuroinflammation,1,,,,0.0,,NEEDS_REVIEW,N114 Microglial Regulation Network
+Nutrient Absorption,1,,A7,Nutrient Sensing,0.33,,NEEDS_REVIEW,N132 Nutrient Absorption Network
+Olfactory System,1,,,,0.0,,NEEDS_REVIEW,N170 Olfactory Signaling Network
+Oral–Mucosal Defense,1,,A3,Pathogen Defense,0.25,,NEEDS_REVIEW,N176 Oral Mucosal Defense Network
+Oxidative Damage,1,,A9,Oxidative Stress & Redox Balance,0.2,,NEEDS_REVIEW,N014 Lipid Peroxidation Network
+Oxygen Delivery,1,,,,0.0,,NEEDS_REVIEW,N084 Tissue Oxygenation Network
+Pancreatic Endocrine,1,,,,0.0,,NEEDS_REVIEW,N134 Pancreatic Endocrine Network
+Pancreatic Exocrine,1,,,,0.0,,NEEDS_REVIEW,N135 Pancreatic Exocrine Network
+Platelet Biology,1,,,,0.0,,NEEDS_REVIEW,N167 Platelet Renewal Network
+Proteasome,1,,,,0.0,,NEEDS_REVIEW,N073 Ubiquitin–Proteasome Network
+Protein Aggregation,1,,A28,Muscle Protein Turnover,0.25,,NEEDS_REVIEW,N074 Proteotoxic Stress Network
+Protein Damage,1,,A28,Muscle Protein Turnover,0.25,,NEEDS_REVIEW,N163 Protein Crosslinking Network
+Protein Folding,1,,A28,Muscle Protein Turnover,0.25,,NEEDS_REVIEW,N071 Chaperone Protein Folding Network
+Pulmonary Defense,1,,A3,Pathogen Defense,0.33,,NEEDS_REVIEW,N138 Pulmonary Immune Defense Network
+Pulmonary Repair,1,,A11,DNA Repair & Genomic Stability,0.2,,NEEDS_REVIEW,N139 Pulmonary Epithelial Repair Network
+RNA Regulation,1,,A12,Epigenetic Regulation,0.33,,NEEDS_REVIEW,N056 MicroRNA Regulatory Network
+ROS/RNS Load,1,,A1,Systemic Inflammatory Load,0.2,,NEEDS_REVIEW,N013 ROS Regulation Network
+Redox–Energy Coupling,1,,A9,Oxidative Stress & Redox Balance,0.17,,NEEDS_REVIEW,N031 Mitochondrial ROS Signaling Network
+Regeneration,1,,,,0.0,,NEEDS_REVIEW,N080 Tissue Regeneration Integration Network
+Reproductive Axis,1,,A33,Thyroid–Adrenal–Growth Axis,0.2,,NEEDS_REVIEW,N108 HPG Axis Network
+Resolution,1,,,,0.0,,NEEDS_REVIEW,N009 Inflammation Resolution Network
+Reward System,1,,,,0.0,,NEEDS_REVIEW,N119 Dopaminergic Reward Network
+SASP,1,,A14,Senescence & SASP,0.5,,NEEDS_REVIEW,N065 SASP Inflammatory Secretome Network
+Senescence,1,,A14,Senescence & SASP,0.5,,NEEDS_REVIEW,N064 Cellular Senescence Control Network
+Sirtuin Pathway,1,,,,0.0,,NEEDS_REVIEW,N061 Sirtuin–NAD+ Longevity Network
+Skin Integrity,1,,A30,Connective Tissue Integrity,0.25,,NEEDS_REVIEW,N149 Skin Barrier & Repair Network
+Sleep Biology,1,,A34,Neuro–Sleep–Stress–Brain Clearance,0.17,,NEEDS_REVIEW,N110 Sleep Architecture Network
+Specialized Anticancer Defense,1,,A3,Pathogen Defense,0.25,,NEEDS_REVIEW,N179 Tumor Elimination Network
+Specialized Antiviral Defense,1,,A3,Pathogen Defense,0.25,,NEEDS_REVIEW,N178 Viral Restriction Network
+Stem Cell,1,,A26,Stem Cell & Hematopoiesis,0.67,,NEEDS_REVIEW,N079 Stem Cell Activation Network
+Synaptic Function,1,,A20,Endothelial Function,0.33,,NEEDS_REVIEW,N115 Synaptic Plasticity Network
+Telomere Biology,1,,,,0.0,,NEEDS_REVIEW,N052 Telomere Maintenance Network
+Tendon–Ligament Integrity,1,,A30,Connective Tissue Integrity,0.2,,NEEDS_REVIEW,N147 Tendon–Ligament Integrity Network
+Thyroid Function,1,,A20,Endothelial Function,0.33,,NEEDS_REVIEW,N106 Thyroid Hormone Regulation Network
+Tubular Function,1,,A20,Endothelial Function,0.33,,NEEDS_REVIEW,N127 Renal Tubular Transport Network
+Tumor Microenvironment,1,,A38,Tumor Microenvironment & Metastatic Dynamics,0.5,,NEEDS_REVIEW,N155 Tumor Microenvironment Network
+Tumor Suppression,1,,A38,Tumor Microenvironment & Metastatic Dynamics,0.2,,NEEDS_REVIEW,N152 Tumor Suppressor Network
+Upper Airway Defense,1,,A3,Pathogen Defense,0.25,,NEEDS_REVIEW,N177 Nasal–Sinus Defense Network
+Vagal Axis,1,,A33,Thyroid–Adrenal–Growth Axis,0.2,,NEEDS_REVIEW,N103 Cholinergic Anti-inflammatory Network
+Vascular Remodeling,1,,A21,Vascular Remodeling & Microcirculation,0.67,,NEEDS_REVIEW,N086 Vascular Adaptation Network
+Visual System,1,,,,0.0,,NEEDS_REVIEW,N168 Retinal–Visual Network
+Whole-Life Integration,1,,,,0.0,,NEEDS_REVIEW,N180 Human Biological Integration Network
+Wound Healing,1,A24,A24,,1.0,A24,AUTO_MATCHED,N075 Wound Healing Transition Network

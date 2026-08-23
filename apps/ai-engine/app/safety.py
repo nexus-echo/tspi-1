@@ -12,10 +12,24 @@ from __future__ import annotations
 
 import json
 import re
+from enum import Enum
 from functools import lru_cache
 from pathlib import Path
 
 _DATA = Path(__file__).resolve().parent.parent / "data" / "safety_rules.json"
+
+
+class SafetyOutcome(str, Enum):
+    """Categorical safety result (31 Jul Directive 8). Safety is a GATE, not a numeric score.
+
+    CONTRAINDICATED / HOLD exclude a module BEFORE ranking; INSUFFICIENT_SAFETY_DATA means we
+    could not clear it, so it is held rather than assumed safe.
+    """
+    PASS = "PASS"
+    PASS_WITH_MONITORING = "PASS_WITH_MONITORING"
+    HOLD = "HOLD"
+    CONTRAINDICATED = "CONTRAINDICATED"
+    INSUFFICIENT_SAFETY_DATA = "INSUFFICIENT_SAFETY_DATA"
 
 
 def _norm(s: str) -> str:

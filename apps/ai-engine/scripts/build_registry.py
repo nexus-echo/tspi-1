@@ -1,7 +1,7 @@
 """Compile the official module registry + axis->module map from source data.
 
 INPUT  (dev/offline): knowledge-sources/200-modules/modules_consolidated.json (draft) or, once
-       delivered, the official master file (same field spec — see docs/Module_Registry_Spec.md).
+       delivered, the official master file (same field spec — see docs/02-reference/Module_Registry_Spec.md).
 OUTPUT (shipped in the image): data/module_registry.json  +  data/axis_module_official.json
 
 Rules (domain-expert answers): 1 module = 1 product (keyed by H-Code), map to 39 axes with a

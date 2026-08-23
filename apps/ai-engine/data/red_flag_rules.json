@@ -1,0 +1,78 @@
+{
+  "dataset_name": "tspi_red_flag_registry",
+  "dataset_version": "0.1.0-provisional",
+  "framework_version": "39-axis-master-260715",
+  "approval_status": "PROVISIONAL",
+  "status": "DRAFT",
+  "authoritative": false,
+  "source": "Seeded verbatim from the domain-expert examples in 'TSPI 3 — Complete Domain Expert Response' (Q5) and 'tspi comment for phase3 developer' (section 10). NOT the official registry.",
+  "note": "Provisional clinical content pending the official Red-Flag list. Screening is deterministic and conservative: it may only ESCALATE care, never withhold it. Thresholds are illustrative and require clinical ratification.",
+  "action_classes": {
+    "CLASS_1_EMERGENCY": {
+      "required_action": "EMERGENCY_REFERRAL",
+      "release_block": true,
+      "module_plan_allowed": false,
+      "description": "Immediately block the normal TSPI flow and direct emergency evaluation."
+    },
+    "CLASS_2_URGENT": {
+      "required_action": "URGENT_MEDICAL_ASSESSMENT",
+      "release_block": true,
+      "module_plan_allowed": true,
+      "module_plan_requires_clinician_override": true,
+      "description": "Urgent medical assessment required before patient release."
+    },
+    "CLASS_3_STANDARD_WORKUP": {
+      "required_action": "STANDARD_WORKUP_FIRST",
+      "release_block": false,
+      "module_plan_allowed": true,
+      "cause_specific_module_plan": "blocked",
+      "supportive_plan": "clinician_review_only",
+      "description": "Standard diagnostic work-up before a cause-specific TSPI recommendation."
+    }
+  },
+  "symptom_rules": [
+    {"red_flag_code": "RF-E01", "symptom_area": "neuro", "action_class": "CLASS_1_EMERGENCY", "name_en": "Sudden unilateral weakness", "match_any": ["unilateral weakness", "sudden weakness", "limb weakness", "hemiparesis"]},
+    {"red_flag_code": "RF-E02", "symptom_area": "neuro", "action_class": "CLASS_1_EMERGENCY", "name_en": "New speech disturbance", "match_any": ["slurred speech", "speech disturbance", "aphasia"]},
+    {"red_flag_code": "RF-E03", "symptom_area": "neuro", "action_class": "CLASS_1_EMERGENCY", "name_en": "Sudden severe ataxia", "match_any": ["sudden ataxia", "severe ataxia", "cannot walk suddenly"]},
+    {"red_flag_code": "RF-E04", "symptom_area": "neuro", "action_class": "CLASS_1_EMERGENCY", "name_en": "Seizure", "match_any": ["seizure", "convulsion"]},
+    {"red_flag_code": "RF-E05", "symptom_area": "neuro", "action_class": "CLASS_1_EMERGENCY", "name_en": "Loss of consciousness", "match_any": ["loss of consciousness", "unconscious", "fainted", "syncope"]},
+    {"red_flag_code": "RF-E06", "symptom_area": "neuro", "action_class": "CLASS_1_EMERGENCY", "name_en": "Worst headache of life", "match_any": ["worst headache", "thunderclap headache"]},
+    {"red_flag_code": "RF-E07", "symptom_area": "cardiac", "action_class": "CLASS_1_EMERGENCY", "name_en": "Severe chest pain", "match_any": ["severe chest pain", "crushing chest pain"]},
+    {"red_flag_code": "RF-E08", "symptom_area": "respiratory", "action_class": "CLASS_1_EMERGENCY", "name_en": "Severe respiratory distress", "match_any": ["respiratory distress", "severe breathlessness", "cannot breathe"]},
+    {"red_flag_code": "RF-E09", "symptom_area": "general", "action_class": "CLASS_1_EMERGENCY", "name_en": "Shock", "match_any": ["shock", "collapse"]},
+    {"red_flag_code": "RF-E10", "symptom_area": "general", "action_class": "CLASS_1_EMERGENCY", "name_en": "Major active bleeding", "match_any": ["major bleeding", "active bleeding", "haemorrhage", "hemorrhage"]},
+    {"red_flag_code": "RF-E11", "symptom_area": "immune", "action_class": "CLASS_1_EMERGENCY", "name_en": "Anaphylaxis", "match_any": ["anaphylaxis", "anaphylactic"]},
+
+    {"red_flag_code": "RF-U01", "symptom_area": "gastrointestinal", "action_class": "CLASS_2_URGENT", "name_en": "Persistent vomiting", "match_any": ["persistent vomiting", "continuous vomiting", "vomiting for days"]},
+    {"red_flag_code": "RF-U02", "symptom_area": "gastrointestinal", "action_class": "CLASS_2_URGENT", "name_en": "Black stool", "match_any": ["black stool", "melena", "melaena", "tarry stool"]},
+    {"red_flag_code": "RF-U03", "symptom_area": "gastrointestinal", "action_class": "CLASS_2_URGENT", "name_en": "Bloody stool", "match_any": ["bloody stool", "blood in stool", "rectal bleeding", "hematochezia"]},
+    {"red_flag_code": "RF-U04", "symptom_area": "gastrointestinal", "action_class": "CLASS_2_URGENT", "name_en": "New dysphagia", "match_any": ["dysphagia", "difficulty swallowing", "trouble swallowing"]},
+    {"red_flag_code": "RF-U05", "symptom_area": "gastrointestinal", "action_class": "CLASS_2_URGENT", "name_en": "Severe abdominal pain", "match_any": ["severe abdominal pain", "severe stomach pain"]},
+    {"red_flag_code": "RF-U06", "symptom_area": "hepatic", "action_class": "CLASS_2_URGENT", "name_en": "New jaundice", "match_any": ["jaundice", "yellow eyes", "yellow skin"]},
+    {"red_flag_code": "RF-U07", "symptom_area": "general", "action_class": "CLASS_2_URGENT", "name_en": "High fever with altered mental status", "match_any": ["high fever with confusion", "fever and confusion", "altered mental status", "stiff neck"]},
+    {"red_flag_code": "RF-U08", "symptom_area": "general", "action_class": "CLASS_2_URGENT", "name_en": "Unexplained significant weight loss", "match_any": ["unexplained weight loss", "significant weight loss", "losing weight without"]},
+    {"red_flag_code": "RF-U09", "symptom_area": "general", "action_class": "CLASS_2_URGENT", "name_en": "New mass", "match_any": ["new mass", "new lump", "abdominal mass"]},
+    {"red_flag_code": "RF-U10", "symptom_area": "cardiac", "action_class": "CLASS_2_URGENT", "name_en": "Symptomatic arrhythmia", "match_any": ["arrhythmia", "irregular heartbeat", "palpitations with dizziness"]},
+
+    {"red_flag_code": "RF-S01", "symptom_area": "general", "action_class": "CLASS_3_STANDARD_WORKUP", "name_en": "Strong family history of cancer", "match_any": ["family history of cancer"]},
+    {"red_flag_code": "RF-S02", "symptom_area": "general", "action_class": "CLASS_3_STANDARD_WORKUP", "name_en": "Change in a long-standing symptom pattern", "match_any": ["symptom pattern changed", "symptoms suddenly different"]},
+    {"red_flag_code": "RF-S03", "symptom_area": "general", "action_class": "CLASS_3_STANDARD_WORKUP", "name_en": "Symptoms unresponsive to reasonable initial care", "match_any": ["not responding to treatment", "no improvement despite treatment"]}
+  ],
+  "condition_rules": [
+    {"red_flag_code": "RF-C01", "action_class": "CLASS_2_URGENT", "name_en": "Suspected acute kidney injury", "match_any": ["acute kidney injury", "aki"]},
+    {"red_flag_code": "RF-C02", "action_class": "CLASS_3_STANDARD_WORKUP", "name_en": "Potential malignancy requiring exclusion", "match_any": ["suspected cancer", "possible malignancy", "suspicious lesion"]},
+    {"red_flag_code": "RF-C03", "action_class": "CLASS_3_STANDARD_WORKUP", "name_en": "Organ dysfunction of unclear cause", "match_any": ["organ dysfunction unclear", "unexplained organ dysfunction"]}
+  ],
+  "critical_value_rules": [
+    {"red_flag_code": "RF-CV01", "analyte": "potassium", "units": ["mmol/l", "meq/l"], "critical_low": 2.5, "critical_high": 6.5, "action_class": "CLASS_1_EMERGENCY", "name_en": "Critical potassium"},
+    {"red_flag_code": "RF-CV02", "analyte": "sodium", "units": ["mmol/l", "meq/l"], "critical_low": 120, "critical_high": 160, "action_class": "CLASS_1_EMERGENCY", "name_en": "Critical sodium"},
+    {"red_flag_code": "RF-CV03", "analyte": "glucose", "units": ["mg/dl"], "critical_low": 54, "critical_high": 450, "action_class": "CLASS_1_EMERGENCY", "name_en": "Critical glucose (mg/dL)"},
+    {"red_flag_code": "RF-CV04", "analyte": "glucose", "units": ["mmol/l"], "critical_low": 3.0, "critical_high": 25.0, "action_class": "CLASS_1_EMERGENCY", "name_en": "Critical glucose (mmol/L)"},
+    {"red_flag_code": "RF-CV05", "analyte": "hemoglobin", "units": ["g/dl"], "critical_low": 7.0, "critical_high": null, "action_class": "CLASS_2_URGENT", "name_en": "Severe anemia"},
+    {"red_flag_code": "RF-CV06", "analyte": "platelet", "units": ["10^9/l", "x10^9/l", "k/ul"], "critical_low": 20, "critical_high": null, "action_class": "CLASS_2_URGENT", "name_en": "Severe thrombocytopenia"},
+    {"red_flag_code": "RF-CV07", "analyte": "alt", "units": ["u/l", "iu/l"], "critical_low": null, "critical_high": 1000, "action_class": "CLASS_2_URGENT", "name_en": "Marked liver injury (ALT)"},
+    {"red_flag_code": "RF-CV08", "analyte": "ast", "units": ["u/l", "iu/l"], "critical_low": null, "critical_high": 1000, "action_class": "CLASS_2_URGENT", "name_en": "Marked liver injury (AST)"},
+    {"red_flag_code": "RF-CV09", "analyte": "spo2", "units": ["%"], "critical_low": 88, "critical_high": null, "action_class": "CLASS_1_EMERGENCY", "name_en": "Severe hypoxemia"},
+    {"red_flag_code": "RF-CV10", "analyte": "troponin", "units": ["ng/ml", "ng/l"], "critical_low": null, "critical_high": 0.04, "action_class": "CLASS_1_EMERGENCY", "name_en": "Acute cardiac marker elevation"}
+  ]
+}

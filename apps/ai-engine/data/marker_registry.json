@@ -1,0 +1,277 @@
+{
+  "dataset_name": "tspi_marker_registry",
+  "dataset_version": "0.1.0",
+  "framework_version": "39-axis-master-260715",
+  "approval_status": "PROVISIONAL",
+  "authoritative": false,
+  "source": "Seeded from domain-expert worked examples (13 Jul Q1, 15/16 Jul) and CONFIRMED model in answer tspi 25.07.2026.pdf (Q1 ferritin=A1; Q5a value_source_type separate from direction; Q5b Optimal Range = U-shape family). Replace with the official Marker Registry when delivered.",
+  "notes": "value_source_type (MEASURED|DERIVED) is separate from direction_rule. TARGET_RANGE carries a curve_type (U_SHAPE = Optimal Range). CONTEXT_DEPENDENT markers use context_rules, never a single axis.",
+  "markers": [
+    {
+      "marker_name": "CRP",
+      "aliases": [
+        "c-reactive protein",
+        "hscrp",
+        "hs-crp"
+      ],
+      "primary_axis": "A1",
+      "direction_rule": "LOWER_BETTER",
+      "value_source_type": "MEASURED",
+      "unit": "mg/L",
+      "concept": "systemic inflammation",
+      "evidence_grade": "A",
+      "note": "acute-phase inflammatory marker"
+    },
+    {
+      "marker_name": "ESR",
+      "aliases": [
+        "sed rate"
+      ],
+      "primary_axis": "A1",
+      "direction_rule": "LOWER_BETTER",
+      "value_source_type": "MEASURED",
+      "unit": "mm/hr",
+      "concept": "systemic inflammation"
+    },
+    {
+      "marker_name": "HbA1c",
+      "aliases": [
+        "a1c",
+        "glycated hemoglobin"
+      ],
+      "primary_axis": "A5",
+      "direction_rule": "LOWER_BETTER",
+      "value_source_type": "MEASURED",
+      "unit": "%",
+      "concept": "glucose / insulin dysregulation",
+      "evidence_grade": "A"
+    },
+    {
+      "marker_name": "Glucose",
+      "aliases": [
+        "fasting glucose",
+        "fastingglucose",
+        "fbg"
+      ],
+      "primary_axis": "A5",
+      "direction_rule": "LOWER_BETTER",
+      "value_source_type": "MEASURED",
+      "unit": "mg/dL",
+      "concept": "glucose / insulin dysregulation"
+    },
+    {
+      "marker_name": "Hemoglobin",
+      "aliases": [
+        "hb",
+        "hgb"
+      ],
+      "primary_axis": "A26",
+      "direction_rule": "HIGHER_BETTER",
+      "value_source_type": "MEASURED",
+      "unit": "g/dL",
+      "concept": "anemia / oxygen transport",
+      "note": "very high Hb is also abnormal; refine to TARGET_RANGE when official cut-offs arrive"
+    },
+    {
+      "marker_name": "MCV",
+      "aliases": [
+        "mean corpuscular volume"
+      ],
+      "primary_axis": "A26",
+      "direction_rule": "TARGET_RANGE",
+      "curve_type": "U_SHAPE",
+      "value_source_type": "MEASURED",
+      "unit": "fL",
+      "lower_optimal": 80,
+      "upper_optimal": 100,
+      "concept": "red cell size (microcytic/macrocytic)"
+    },
+    {
+      "marker_name": "TSH",
+      "aliases": [
+        "thyroid stimulating hormone"
+      ],
+      "primary_axis": "A33",
+      "direction_rule": "TARGET_RANGE",
+      "curve_type": "U_SHAPE",
+      "value_source_type": "MEASURED",
+      "unit": "mIU/L",
+      "lower_optimal": 0.4,
+      "upper_optimal": 2.5,
+      "concept": "thyroid axis",
+      "note": "Optimal Range = U-shape (25 Jul Q5b): both low and high are abnormal"
+    },
+    {
+      "marker_name": "Sodium",
+      "aliases": [
+        "na"
+      ],
+      "primary_axis": "A34",
+      "direction_rule": "TARGET_RANGE",
+      "curve_type": "U_SHAPE",
+      "value_source_type": "MEASURED",
+      "unit": "mmol/L",
+      "lower_optimal": 135,
+      "upper_optimal": 145,
+      "concept": "electrolyte balance"
+    },
+    {
+      "marker_name": "Potassium",
+      "aliases": [
+        "k"
+      ],
+      "primary_axis": "A34",
+      "direction_rule": "TARGET_RANGE",
+      "curve_type": "U_SHAPE",
+      "value_source_type": "MEASURED",
+      "unit": "mmol/L",
+      "lower_optimal": 3.5,
+      "upper_optimal": 5.0,
+      "concept": "electrolyte balance"
+    },
+    {
+      "marker_name": "Vitamin D",
+      "aliases": [
+        "25-oh vitamin d",
+        "vitamind",
+        "25ohd"
+      ],
+      "primary_axis": "A15",
+      "direction_rule": "HIGHER_BETTER",
+      "value_source_type": "MEASURED",
+      "unit": "ng/mL",
+      "concept": "immune-metabolic support"
+    },
+    {
+      "marker_name": "IgE",
+      "aliases": [
+        "immunoglobulin e"
+      ],
+      "primary_axis": "A2",
+      "secondary_axes": [
+        "A18"
+      ],
+      "direction_rule": "LOWER_BETTER",
+      "value_source_type": "MEASURED",
+      "unit": "IU/mL",
+      "concept": "immune hypersensitivity / barrier"
+    },
+    {
+      "marker_name": "Ferritin",
+      "aliases": [
+        "serum ferritin"
+      ],
+      "primary_axis": "A26",
+      "secondary_axes": [
+        "A1"
+      ],
+      "direction_rule": "CONTEXT_DEPENDENT",
+      "value_source_type": "MEASURED",
+      "unit": "ng/mL",
+      "context_rules": [
+        {
+          "when": "down",
+          "axis": "A26",
+          "concept": "anemia / oxygen transport",
+          "note": "low ferritin = iron deficiency -> hematopoiesis (A26)"
+        },
+        {
+          "when": "up",
+          "requires_marker": "CRP",
+          "axis": "A1",
+          "concept": "systemic inflammation",
+          "note": "high ferritin WITH inflammation -> Systemic Inflammatory Load (A1). NOT A34 (25 Jul Q1: A34 was a typo)."
+        },
+        {
+          "when": "up",
+          "axis": null,
+          "concept": null,
+          "note": "high ferritin ALONE is an ambiguous acute-phase reactant -> assert no axis"
+        }
+      ],
+      "note": "31 Jul §6.3: Primary A26 (Stem Cell & Hematopoiesis); Secondary A1 only with inflammatory evidence. Direction context-dependent. A34 was a typo."
+    },
+    {
+      "marker_name": "HOMA-IR",
+      "aliases": [
+        "homair",
+        "homa"
+      ],
+      "primary_axis": "A5",
+      "direction_rule": "LOWER_BETTER",
+      "value_source_type": "DERIVED",
+      "required_inputs": [
+        "glucose",
+        "insulin"
+      ],
+      "unit": "index",
+      "concept": "glucose / insulin dysregulation",
+      "note": "31 Jul §6.1: DERIVED, unit-specific formula. Units MUST be validated before calculation (mg/dL ÷405 vs mmol/L ÷22.5).",
+      "calculation_rules": {
+        "mg/dL": "(fasting_glucose_mg_dL * fasting_insulin_uIU_mL) / 405",
+        "mmol/L": "(fasting_glucose_mmol_L * fasting_insulin_uIU_mL) / 22.5"
+      },
+      "formula_version": "1.0",
+      "unit_validation_required": true
+    },
+    {
+      "marker_name": "eGFR",
+      "aliases": [
+        "egfr",
+        "estimated gfr"
+      ],
+      "primary_axis": "A35",
+      "direction_rule": "HIGHER_BETTER",
+      "value_source_type": "DERIVED",
+      "calculation_rule": "CKD-EPI 2021 from creatinine, age, sex",
+      "required_inputs": [
+        "creatinine",
+        "age",
+        "sex"
+      ],
+      "unit": "mL/min/1.73m2",
+      "concept": "renal functional reserve"
+    },
+    {
+      "marker_name": "TG/HDL ratio",
+      "aliases": [
+        "tghdl",
+        "tg/hdl"
+      ],
+      "primary_axis": "A6",
+      "direction_rule": "LOWER_BETTER",
+      "value_source_type": "DERIVED",
+      "calculation_rule": "triglycerides / HDL",
+      "required_inputs": [
+        "triglycerides",
+        "hdl"
+      ],
+      "unit": "ratio",
+      "concept": "lipid / lipotoxicity"
+    },
+    {
+      "marker_name": "AST/ALT ratio",
+      "aliases": [
+        "astalt",
+        "de ritis"
+      ],
+      "primary_axis": "A35",
+      "direction_rule": "CONTEXT_DEPENDENT",
+      "value_source_type": "DERIVED",
+      "calculation_rule": "AST / ALT",
+      "required_inputs": [
+        "ast",
+        "alt"
+      ],
+      "unit": "ratio",
+      "context_rules": [
+        {
+          "when": "up",
+          "axis": "A35",
+          "note": "elevated ratio suggests hepatic stress"
+        }
+      ],
+      "note": "derived AND context-dependent — value_source_type is independent of direction_rule (25 Jul Q5a)"
+    }
+  ]
+}

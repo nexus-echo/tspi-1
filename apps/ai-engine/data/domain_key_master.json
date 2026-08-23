@@ -1,0 +1,139 @@
+{
+ "dataset_name": "tspi_domain_key_master",
+ "dataset_version": "1.0.0",
+ "framework_version": "39-axis-master-260715",
+ "effective_date": "2026-07-15",
+ "approval_status": "APPROVED",
+ "source": "TSPI 3 — Complete Domain Expert Response (Q6: Recommended TSPI Domain-to-Key Master v1.0)",
+ "note": "key_code is stable and separate from display_order. A domain may relate to all 3 Keys; primary = dominant organising principle.",
+ "keys": [
+  {
+   "key_code": "KEY-A",
+   "official_name": "Metabolic Energy",
+   "display_order": 1,
+   "meaning": "capacity to generate, distribute and use biological energy"
+  },
+  {
+   "key_code": "KEY-B",
+   "official_name": "Biological Dynamics",
+   "display_order": 2,
+   "meaning": "biological movement, signaling, exchange and adaptation"
+  },
+  {
+   "key_code": "KEY-C",
+   "official_name": "Biointegrity",
+   "display_order": 3,
+   "meaning": "coherent biological identity, structure and long-term stability"
+  }
+ ],
+ "domains": [
+  {
+   "domain_code": "D1",
+   "domain_name": "Immune–Infection Governance",
+   "primary_key_code": "KEY-B",
+   "secondary_key_codes": [
+    "KEY-C",
+    "KEY-A"
+   ]
+  },
+  {
+   "domain_code": "D2",
+   "domain_name": "Metabolic–Energy Core",
+   "primary_key_code": "KEY-A",
+   "secondary_key_codes": [
+    "KEY-B",
+    "KEY-C"
+   ]
+  },
+  {
+   "domain_code": "D3",
+   "domain_name": "Genomic Programming",
+   "primary_key_code": "KEY-C",
+   "secondary_key_codes": [
+    "KEY-A",
+    "KEY-B"
+   ]
+  },
+  {
+   "domain_code": "D4",
+   "domain_name": "Detoxification and Cellular Defense",
+   "primary_key_code": "KEY-A",
+   "secondary_key_codes": [
+    "KEY-C",
+    "KEY-B"
+   ]
+  },
+  {
+   "domain_code": "D5",
+   "domain_name": "Digestive–Gut Ecosystem",
+   "primary_key_code": "KEY-B",
+   "secondary_key_codes": [
+    "KEY-A",
+    "KEY-C"
+   ]
+  },
+  {
+   "domain_code": "D6",
+   "domain_name": "Vascular–Circulation",
+   "primary_key_code": "KEY-B",
+   "secondary_key_codes": [
+    "KEY-A",
+    "KEY-C"
+   ]
+  },
+  {
+   "domain_code": "D7",
+   "domain_name": "Repair–Regeneration",
+   "primary_key_code": "KEY-C",
+   "secondary_key_codes": [
+    "KEY-A",
+    "KEY-B"
+   ]
+  },
+  {
+   "domain_code": "D8",
+   "domain_name": "Musculoskeletal and Structural Integrity",
+   "primary_key_code": "KEY-C",
+   "secondary_key_codes": [
+    "KEY-A",
+    "KEY-B"
+   ]
+  },
+  {
+   "domain_code": "D9",
+   "domain_name": "Endocrine Network",
+   "primary_key_code": "KEY-B",
+   "secondary_key_codes": [
+    "KEY-A",
+    "KEY-C"
+   ]
+  },
+  {
+   "domain_code": "D10",
+   "domain_name": "Neurological Regulation",
+   "primary_key_code": "KEY-B",
+   "secondary_key_codes": [
+    "KEY-A",
+    "KEY-C"
+   ]
+  },
+  {
+   "domain_code": "D11",
+   "domain_name": "Organ Resilience",
+   "primary_key_code": "KEY-C",
+   "secondary_key_codes": [
+    "KEY-A",
+    "KEY-B"
+   ]
+  },
+  {
+   "domain_code": "D12",
+   "domain_name": "Oncology and System-Level Regulation",
+   "primary_key_code": "KEY-C",
+   "secondary_key_codes": [
+    "KEY-B",
+    "KEY-A"
+   ]
+  }
+ ]
+}

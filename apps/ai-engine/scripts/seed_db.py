@@ -23,7 +23,9 @@ def _load(name: str):
 def seed_all() -> dict:
     init_db()
     fw = _load("tspi_framework.json")
-    axes = _load("tspi_axes_39.json")
+    _axes_doc = _load("tspi_axes_39.json")
+    # tspi_axes_39.json is the wrapped v2.0.0 master ({... "axes": [...]}); tolerate a bare list too
+    axes = _axes_doc["axes"] if isinstance(_axes_doc, dict) else _axes_doc
     try:
         registry = _load("product_registry.json")
     except FileNotFoundError:

@@ -1,0 +1,32 @@
+{
+  "dataset_name": "tspi_module_match_config",
+  "dataset_version": "1.0.0",
+  "match_version": "TSPI-Module-Match-v1.0",
+  "approval_status": "APPROVED",
+  "source": "TSPI 3 — Complete Domain Expert Response, Q10 (formula approved as TSPI Module Match v1.0).",
+  "weights": {
+    "axis_match": 0.30,
+    "network_match": 0.25,
+    "evidence_grade": 0.15,
+    "phenotype_fit": 0.10,
+    "safety": 0.10,
+    "step_compatibility": 0.05,
+    "historical_response": 0.05
+  },
+  "safety_is_a_gate": true,
+  "safety_gate_note": "Absolute contraindication or major unacceptable interaction => module_status=EXCLUDED and module_match_score=not_calculated. Do NOT merely subtract the 10% safety component.",
+  "selection_limits": {
+    "core_min": 1,
+    "core_max": 3,
+    "supporting_max": 3,
+    "typical_total_max": 6,
+    "senior_approval_above": 6,
+    "justification_required_above": 8
+  },
+  "reason_not_selected_enum": [
+    "CONTRAINDICATED", "MAJOR_INTERACTION", "DUPLICATE_MECHANISM", "INSUFFICIENT_EVIDENCE",
+    "INSUFFICIENT_PATIENT_DATA", "NOT_STEP_COMPATIBLE", "EXCESSIVE_MODULE_BURDEN",
+    "LOWER_RANKED_THAN_SELECTED_ALTERNATIVE", "PHYSICIAN_EXCLUDED",
+    "DIAGNOSTIC_WORKUP_REQUIRED_FIRST"
+  ]
+}
