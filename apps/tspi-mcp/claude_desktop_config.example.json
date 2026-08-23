@@ -1,0 +1,19 @@
+{
+  "//": "Copy the tspi-ai-brain block into your Claude Desktop config file:",
+  "//_windows": "%APPDATA%\\Claude\\claude_desktop_config.json",
+  "//_macos": "~/Library/Application Support/Claude/claude_desktop_config.json",
+  "//_note": "The engine (FastAPI) must be running and reachable at TSPI_ENGINE_URL. This is local stdio — no public IP needed.",
+  "mcpServers": {
+    "tspi-ai-brain": {
+      "command": "python",
+      "args": ["-m", "tspi_mcp.server"],
+      "cwd": "C:\\workspace\\tspi_new\\apps\\tspi-mcp",
+      "env": {
+        "TSPI_ENGINE_URL": "http://localhost:8000",
+        "TSPI_CLINICIAN_ID": "dr.example",
+        "TSPI_STRICT_DEIDENT": "true",
+        "TSPI_MCP_TRANSPORT": "stdio"
+      }
+    }
+  }
+}
