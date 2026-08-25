@@ -1,5 +1,0 @@
-# Optional: only needed to OCR image lab reports (.png/.jpg) and parse PDF text layers.
-# Pillow 12.x adds official Python 3.14 wheels.
-pillow>=12.0
-pytesseract>=0.3.13
-pdfplumber>=0.11.4
