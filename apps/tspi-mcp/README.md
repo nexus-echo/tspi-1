@@ -25,10 +25,10 @@ Doctor ─chat─► AI client ─MCP─► THIS server ─REST─► TSPI FastA
 | `tspi_generate_treatment_plan` | `POST /report` | Full draft plan (deliverable=false) |
 | `tspi_get_treatment_plan` | `GET /reports/{id}` | Re-fetch a plan |
 | `tspi_approve_treatment_plan` | `POST /validate` | Physician approve / edit / reject |
+| `tspi_update_treatment_plan` | `POST /reports/{id}/override` | Structured physician edits (remove/reject module, change dose, override safety, add/remove secondary axis, note) — non-destructive; resets plan to draft for re-approval |
 | `tspi_record_outcome` | `POST /outcome` | Follow-up marker for propose-only learning |
 
-Later phases add `tspi_update_treatment_plan` (needs a new engine override endpoint),
-`tspi_extract_lab_report` (`/extract`), remote transport + OAuth, and RBAC.
+Later phases add `tspi_extract_lab_report` (`/extract`), remote transport + OAuth, and RBAC.
 
 ## Run locally (Claude Desktop)
 

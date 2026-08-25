@@ -1,6 +1,6 @@
 # Full local/prod-like stack: FastAPI app + PostgreSQL(pgvector) + Ollama.
 #
-#   cp .env.docker.example .env      # add your DEEPSEEK_API_KEY etc.
+#   cp .env.example .env      # add your DEEPSEEK_API_KEY etc.
 #   docker compose up -d --build
 #   docker compose exec ollama ollama pull bge-m3        # pull embed model (once)
 #   docker compose exec ollama ollama pull qwen2.5vl     # vision model for /extract (once)

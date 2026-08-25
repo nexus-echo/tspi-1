@@ -770,3 +770,108 @@ def test_safety_gate_is_categorical():
     # an absolutely contraindicated module is CONTRAINDICATED, not merely low-scored
     excluded = [m for m in presented if m.get("module_status") == "EXCLUDED"]
     assert all(m["safety_outcome"] == "CONTRAINDICATED" for m in excluded)
+
+
+# ---- Clinician override / update plan (POST /reports/{id}/override) ----
+def test_override_edits_plan_and_requires_reapproval():
+    # generate + approve a plan
+    rid = client.post("/report", json=_PATIENT).json()["report_id"]
+    client.post("/validate", json={"report_id": rid, "doctor_id": "dr.smith", "decision": "approve"})
+    assert client.get(f"/reports/{rid}").json()["deliverable"] is True
+    # pick a presented module to remove
+    rep = client.get(f"/reports/{rid}").json()
+    mods = rep["payload"].get("modules", [])
+    assert mods, "expected at least one module to edit"
+    code = mods[0]["module_code"]
+    # apply a structured override
+    out = client.post(f"/reports/{rid}/override", json={
+        "clinician_id": "dr.smith",
+        "actions": [{"action": "REMOVE_MODULE", "module_code": code,
+                     "reason_code": "CLINICAL_JUDGMENT", "rationale": "not indicated"}]}).json()
+    assert out["applied"][0]["status"] == "APPLIED"
+    assert out["reapproval_required"] is True
+    assert out["deliverable"] is False
+    # editing invalidated the approval
+    after = client.get(f"/reports/{rid}").json()
+    assert after["deliverable"] is False
+    ov = after["payload"]["clinician_overrides"]
+    assert ov and ov[0]["reason_code"] == "CLINICAL_JUDGMENT" and ov[0]["before"] is not None
+
+
+def test_override_unknown_report_404():
+    r = client.post("/reports/nope/override", json={
+        "clinician_id": "d", "actions": [{"action": "ADD_NOTE", "reason_code": "CLINICAL_JUDGMENT"}]})
+    assert r.status_code == 404
+
+
+def test_override_rejects_action_without_reason_code():
+    rid = client.post("/report", json=_PATIENT).json()["report_id"]
+    r = client.post(f"/reports/{rid}/override", json={
+        "clinician_id": "d", "actions": [{"action": "ADD_NOTE"}]})  # missing reason_code
+    assert r.status_code == 422
+
+
+# ---- Phase B: auth + RBAC + tenant isolation ----
+import contextlib
+from app.config import settings as _S
+
+@contextlib.contextmanager
+def _auth_on(token="svc-test"):
+    old_e, old_t = _S.auth_enabled, _S.service_tokens
+    _S.auth_enabled, _S.service_tokens = True, token
+    try:
+        yield
+    finally:
+        _S.auth_enabled, _S.service_tokens = old_e, old_t
+
+def _hdr(role, user="u1", clinic=None, token="svc-test"):
+    h = {"Authorization": f"Bearer {token}", "X-TSPI-Role": role, "X-TSPI-User-Id": user}
+    if clinic:
+        h["X-TSPI-Clinic-Id"] = clinic
+    return h
+
+_PT = {**_PATIENT, "case_id": "CASE-P1"}
+
+def test_auth_disabled_by_default_keeps_endpoints_open():
+    assert _S.auth_enabled is False
+    assert client.post("/analyze", json=_PATIENT).status_code == 200   # no headers needed
+
+def test_missing_token_is_401_when_auth_on():
+    with _auth_on():
+        assert client.post("/analyze", json=_PATIENT).status_code == 401
+
+def test_patient_cannot_generate_but_clinician_can():
+    with _auth_on():
+        assert client.post("/report", json=_PT, headers=_hdr("patient", "CASE-P1")).status_code == 403
+        r = client.post("/report", json=_PT, headers=_hdr("clinician", "dr.a", clinic="clinicA"))
+        assert r.status_code == 200
+
+def test_patient_sees_only_own_approved_plan():
+    with _auth_on():
+        rid = client.post("/report", json=_PT,
+                          headers=_hdr("clinician", "dr.a", clinic="clinicA")).json()["report_id"]
+        # draft -> patient blocked
+        assert client.get(f"/reports/{rid}", headers=_hdr("patient", "CASE-P1")).status_code == 403
+        # another patient blocked
+        assert client.get(f"/reports/{rid}", headers=_hdr("patient", "CASE-OTHER")).status_code == 403
+        # approve, then own patient can read
+        client.post("/validate", json={"report_id": rid, "doctor_id": "dr.a", "decision": "approve"},
+                    headers=_hdr("clinician", "dr.a"))
+        assert client.get(f"/reports/{rid}", headers=_hdr("patient", "CASE-P1")).status_code == 200
+
+def test_clinic_staff_reads_clinic_but_cannot_write():
+    with _auth_on():
+        rid = client.post("/report", json=_PT,
+                          headers=_hdr("clinician", "dr.a", clinic="clinicA")).json()["report_id"]
+        assert client.get(f"/reports/{rid}", headers=_hdr("clinic_staff", "s1", clinic="clinicA")).status_code == 200
+        assert client.get(f"/reports/{rid}", headers=_hdr("clinic_staff", "s2", clinic="clinicB")).status_code == 403
+        # staff cannot approve/override
+        assert client.post("/validate", json={"report_id": rid, "doctor_id": "s1", "decision": "approve"},
+                           headers=_hdr("clinic_staff", "s1", clinic="clinicA")).status_code == 403
+
+def test_learning_admin_is_reviewer_only_and_audit_is_gated():
+    with _auth_on():
+        assert client.post("/learning/recalibrate", headers=_hdr("clinician", "dr.a")).status_code == 403
+        assert client.post("/learning/recalibrate", headers=_hdr("reviewer", "rv")).status_code == 200
+        assert client.get("/audit", headers=_hdr("clinician", "dr.a")).status_code == 403
+        assert client.get("/audit", headers=_hdr("auditor", "au")).status_code == 200

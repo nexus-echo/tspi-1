@@ -209,6 +209,27 @@ class ValidationRequest(BaseModel):
     edits: dict | None = None
 
 
+class OverrideAction(BaseModel):
+    """One structured physician edit to a plan (5 Aug 'structured clinician overrides')."""
+    action: Literal[
+        "REMOVE_MODULE", "REJECT_MODULE", "CHANGE_DOSE", "OVERRIDE_SAFETY",
+        "ADD_SECONDARY_AXIS", "REMOVE_SECONDARY_AXIS", "ADD_NOTE",
+    ]
+    module_code: str | None = None
+    axis_code: str | None = None
+    new_dose: str | None = None
+    reason_code: Literal[
+        "NEW_CLINICAL_INFORMATION", "PATIENT_PREFERENCE", "SAFETY_CONCERN", "REGISTRY_ERROR",
+        "ALGORITHM_ERROR", "CLINICAL_JUDGMENT", "DIAGNOSTIC_UNCERTAINTY", "TREATMENT_RESPONSE",
+    ]
+    rationale: str | None = None
+
+
+class OverrideRequest(BaseModel):
+    clinician_id: str
+    actions: list[OverrideAction]
+
+
 class OutcomeRecord(BaseModel):
     report_id: str
     marker: str

@@ -22,6 +22,10 @@ class Settings:
     engine_token: str | None = os.getenv("TSPI_ENGINE_TOKEN") or None
     # The authenticated clinician using this chat session (recorded on approvals + audit).
     clinician_id: str = os.getenv("TSPI_CLINICIAN_ID", "unknown-clinician")
+    # Role + clinic the MCP acts as (forwarded to the engine when it enforces auth). The MCP is a
+    # clinician-facing surface, so the default role is 'clinician'.
+    clinician_role: str = os.getenv("TSPI_CLINICIAN_ROLE", "clinician")
+    clinic_id: str | None = os.getenv("TSPI_CLINIC_ID") or None
     # De-identification: when strict, any detected PII in input HARD-FAILS the call.
     # When not strict, PII is redacted and a warning is returned instead.
     strict_deident: bool = _bool("TSPI_STRICT_DEIDENT", True)

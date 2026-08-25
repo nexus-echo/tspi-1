@@ -47,5 +47,12 @@ class Settings(BaseSettings):
     require_doctor_validation: bool = True
     enforce_deidentification: bool = True
 
+    # --- Phase B: auth / RBAC / audit ---
+    # OFF by default so the local pilot + MiHealth keep working unchanged. Turn on per environment.
+    auth_enabled: bool = False
+    # Comma-separated service bearer tokens the trusted callers (MCP / MiHealth) present.
+    # The caller then forwards the end-user identity via X-TSPI-* headers.
+    service_tokens: str = ""
+
 
 settings = Settings()

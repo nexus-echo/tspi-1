@@ -7,7 +7,7 @@ delivery on doctor validation.
 ## Quick start
 ```bash
 cd tspi_ai_brain
-cp .env.docker.example .env          # add DEEPSEEK_API_KEY; review EMBEDDING_* and POSTGRES_PASSWORD
+cp .env.example .env          # add DEEPSEEK_API_KEY; review EMBEDDING_* and POSTGRES_PASSWORD
 docker compose up -d --build         # builds api, starts db + ollama
 
 # one-time model + vectors (Phase 2 RAG)

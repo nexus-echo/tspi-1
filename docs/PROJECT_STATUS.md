@@ -1,6 +1,6 @@
 # TSPI AI Engine — Project Status & Update
 
-*Prepared for the TSPI clinical / domain-expert team · Last updated: 5 Aug 2026*
+*Prepared for the TSPI clinical / domain-expert team · Last updated: 23 Aug 2026*
 
 This document summarises where the TSPI AI Engine stands today: what is built and tested, what remains,
 and — most importantly — **what we now need from your team to keep the project moving**. The engine's
@@ -35,7 +35,7 @@ not a number** · red-flag screening runs first · **learning is propose-only** 
 approves) · one immutable analysis record per run · the system fails closed when a registry is missing or
 unapproved · physician approval before any patient release.
 
-## 3. Built & tested — engine core ✅ (71 automated tests passing)
+## 3. Built & tested — engine core ✅ (82 automated tests passing)
 
 | Area | State |
 |---|---|
@@ -49,6 +49,9 @@ unapproved · physician approval before any patient release.
 | Marker Registry — value source vs direction rule, curve types, context markers | ✅ |
 | Canonical records locked — CELA (`TSPI-NET-0120`→A34/D10), A10 sub-axes, 9 Restoration Steps | ✅ |
 | All refinements from your 25 Jul, 31 Jul and 5 Aug guidance | ✅ (see §5) |
+| **Doctor's-chat integration (MCP)** — connect the AI Brain to an AI chat client | ✅ (see §8) |
+| **Approve *and* update** a plan — structured, reason-coded physician edits | ✅ |
+| **Access control** — authentication, roles (patient / clinic-staff / clinician / reviewer / auditor), audit trail | ✅ (see §8) |
 
 ---
 
@@ -172,9 +175,44 @@ clinical use. We are folding them into the implementation plan:
 - **Release-state ladder** (fail-closed; nothing provisional reaches patient release) · **cross-report
   consistency validator** · **registry dependency graph** · **rollback / incident management**.
 - **Clinician-authored gold-standard test cases** and a **physician shadow-pilot** (no auto-prescribing,
-  no patient release) — because the 71 automated tests prove technical behaviour, not clinical validity.
+  no patient release) — because the automated tests prove technical behaviour, not clinical validity.
 
 **Recommended sequence to a pilot (from your review):** approve the Module remap → complete the network
 crosswalk → build the Network Edge Registry → build the Module-to-Network Claim Registry → approve the
 pilot clinical registries → lock NSS → run clinician gold-standard tests → physician shadow pilot →
 patient release only after formal approval.
+
+---
+
+## 8. Platform & access — how people use the AI Brain (new)
+
+Alongside the clinical engine, we built the access layer so different people can use it safely.
+
+**Doctor's-chat integration.** A doctor can now connect the AI Brain to their AI chat client and run the
+whole loop in plain language: **submit a de-identified case → screen for red flags → generate a draft
+plan → approve *or* update it**. The chat is only a front-end; the engine remains the sole source of
+clinical conclusions, and **no patient identifiers ever reach it**. (Validated end-to-end.)
+
+**Approve *and* update.** Beyond approve/reject, a clinician can now make **structured, reason-coded
+edits** to a plan (remove a module, change a dose, override safety with justification, adjust axes).
+Every edit is recorded, and editing an approved plan sends it back to draft for re-approval.
+
+**Roles & access (as you requested).** The system now enforces roles end-to-end:
+
+| Role | Can do |
+|---|---|
+| **Patient** | self-register, upload own labs, submit symptoms; **view only their own *approved* plan** |
+| **Clinic staff** | everything a patient can, plus trigger generation, view live status, and view all patients' reports **in their clinic** — no clinical approval/override |
+| **Clinician** | generate, update, and **approve/reject** their own cases |
+| **Reviewer** (Clinical Review Board) | the above, plus govern the learning model |
+| **Auditor** | read-only access to reports + the audit trail |
+
+Patient identity stays in MiHealth; the engine only ever sees a de-identified case. Every clinically
+meaningful action is written to an **append-only audit trail** (who, what, when, why). Access control
+ships **switched off by default** and is turned on per environment before multi-user or real-patient use.
+
+**Two decisions we'd like your confirmation on:**
+1. For an **unapproved draft**, should clinic staff see the full clinical detail, or only its **status +
+   safety flags** until a clinician approves it? *(We recommend status + safety flags only.)*
+2. Confirm that **patient and clinic-staff sign-in lives in MiHealth** (the patient portal), with the
+   approved plan shown to the patient there — the AI-chat path stays clinician-only.

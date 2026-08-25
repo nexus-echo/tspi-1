@@ -15,7 +15,7 @@ From the repo root (`C:\workspace\tspi_new`):
 
 ```bash
 # 1. one-time: put your secrets in place
-cp apps/ai-engine/.env.docker.example apps/ai-engine/.env    # add DEEPSEEK_API_KEY etc. (optional)
+cp apps/ai-engine/.env.example apps/ai-engine/.env    # add DEEPSEEK_API_KEY etc. (optional)
 
 # 2. build + start db + ollama + api together
 docker compose up -d --build

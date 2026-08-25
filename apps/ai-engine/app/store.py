@@ -12,13 +12,40 @@ def new_id() -> str:
 
 
 def audit(action: str, *, case_id: str | None = None, report_id: str | None = None,
-          actor: str | None = "mihealth", allowed: bool = True, detail: dict | None = None) -> None:
+          actor: str | None = "mihealth", allowed: bool = True, detail: dict | None = None,
+          role: str | None = None, source: str | None = None,
+          request_id: str | None = None) -> None:
     init_db()
     s = get_session()
     try:
         s.add(AuditLog(action=action, case_id=case_id, report_id=report_id,
-                       actor=actor, allowed=allowed, detail=detail or {}))
+                       actor=actor, allowed=allowed, detail=detail or {},
+                       role=role, source=source, request_id=request_id))
         s.commit()
+    finally:
+        s.close()
+
+
+def list_audit(*, case_id: str | None = None, report_id: str | None = None,
+               actor: str | None = None, action: str | None = None, limit: int = 200) -> list[dict]:
+    """Read the append-only audit trail (auditor/reviewer only, enforced at the route)."""
+    s = get_session()
+    try:
+        q = s.query(AuditLog)
+        if case_id:
+            q = q.filter(AuditLog.case_id == case_id)
+        if report_id:
+            q = q.filter(AuditLog.report_id == report_id)
+        if actor:
+            q = q.filter(AuditLog.actor == actor)
+        if action:
+            q = q.filter(AuditLog.action == action)
+        rows = q.order_by(AuditLog.id.desc()).limit(min(limit, 1000)).all()
+        return [{"id": r.id, "action": r.action, "case_id": r.case_id, "report_id": r.report_id,
+                 "actor": r.actor, "role": getattr(r, "role", None),
+                 "source": getattr(r, "source", None), "request_id": getattr(r, "request_id", None),
+                 "allowed": r.allowed, "detail": r.detail,
+                 "at": r.created_at.isoformat() if r.created_at else None} for r in rows]
     finally:
         s.close()
 
@@ -47,7 +74,29 @@ def get_report(report_id: str) -> dict | None:
         return {"id": r.id, "case_id": r.case_id, "status": r.status, "nss": r.nss,
                 "severity_level": r.severity_level, "payload": r.payload,
                 "safety_alerts": (r.safety_alerts or {}).get("alerts", []),
+                "owner_clinician_id": getattr(r, "owner_clinician_id", None),
+                "owner_case_subject": getattr(r, "owner_case_subject", None),
+                "clinic_id": getattr(r, "clinic_id", None),
                 "deliverable": r.status == "validated"}
+    finally:
+        s.close()
+
+
+def set_report_owner(report_id: str, *, clinician_id: str | None = None,
+                     case_subject: str | None = None, clinic_id: str | None = None) -> None:
+    """Stamp ownership / tenant scope on a report (Phase B). Nulls are left unchanged."""
+    s = get_session()
+    try:
+        r = s.get(Report, report_id)
+        if not r:
+            return
+        if clinician_id is not None:
+            r.owner_clinician_id = clinician_id
+        if case_subject is not None:
+            r.owner_case_subject = case_subject
+        if clinic_id is not None:
+            r.clinic_id = clinic_id
+        s.commit()
     finally:
         s.close()
 
@@ -64,6 +113,102 @@ def record_validation(report_id: str, doctor_id: str, decision: str,
                                decision=decision, edits=edits or {}))
         s.commit()
         return {"report_id": report_id, "status": r.status, "deliverable": r.status == "validated"}
+    finally:
+        s.close()
+
+
+def record_override(report_id: str, clinician_id: str, actions: list[dict]) -> dict | None:
+    """Apply structured physician edits to a report's plan. NON-DESTRUCTIVE and audited.
+
+    - The original plan is preserved; every edit is appended to payload['clinician_overrides']
+      with before/after + reason (5 Aug 'structured clinician overrides' requirement).
+    - Editing a plan invalidates any prior approval: the report returns to 'draft' and must be
+      re-approved before it is deliverable again.
+    """
+    s = get_session()
+    try:
+        r = s.get(Report, report_id)
+        if not r:
+            return None
+        payload = dict(r.payload or {})
+        overrides = list(payload.get("clinician_overrides", []))
+        modules = payload.get("modules", []) or []
+        considered = payload.get("considered_modules", []) or []
+        by_code = {m.get("module_code"): m for m in (modules + considered) if isinstance(m, dict)}
+
+        applied: list[dict] = []
+        for a in actions:
+            act = a.get("action")
+            code = a.get("module_code")
+            reason_code = a.get("reason_code")
+            rationale = a.get("rationale")
+            mod = by_code.get(code) if code else None
+            before, after = None, None
+
+            if act in ("REMOVE_MODULE", "REJECT_MODULE"):
+                if not mod:
+                    applied.append({"action": act, "module_code": code, "status": "NOT_FOUND"})
+                    continue
+                before = {"module_status": mod.get("module_status")}
+                mod["module_status"] = "PHYSICIAN_EXCLUDED"
+                mod["reason_not_selected"] = "PHYSICIAN_REJECTED"
+                mod["physician_removed"] = True
+                after = {"module_status": "PHYSICIAN_EXCLUDED"}
+            elif act == "CHANGE_DOSE":
+                if not mod:
+                    applied.append({"action": act, "module_code": code, "status": "NOT_FOUND"}); continue
+                before = {"dose": mod.get("dose")}
+                mod["dose"] = a.get("new_dose")
+                mod["dose_overridden_by_clinician"] = True
+                after = {"dose": a.get("new_dose")}
+            elif act == "OVERRIDE_SAFETY":
+                if not mod:
+                    applied.append({"action": act, "module_code": code, "status": "NOT_FOUND"}); continue
+                before = {"safety_outcome": mod.get("safety_outcome")}
+                mod["safety_outcome"] = "PASS_WITH_MONITORING"
+                mod["safety_overridden_by_clinician"] = True
+                after = {"safety_outcome": "PASS_WITH_MONITORING"}
+            elif act in ("ADD_SECONDARY_AXIS", "REMOVE_SECONDARY_AXIS"):
+                if not mod:
+                    applied.append({"action": act, "module_code": code, "status": "NOT_FOUND"}); continue
+                axes = list(mod.get("target_axes", []) or [])
+                before = {"target_axes": list(axes)}
+                ax = a.get("axis_code")
+                if act == "ADD_SECONDARY_AXIS" and ax and ax not in axes:
+                    axes.append(ax)
+                if act == "REMOVE_SECONDARY_AXIS" and ax in axes:
+                    axes.remove(ax)
+                mod["target_axes"] = axes
+                after = {"target_axes": axes}
+            elif act == "ADD_NOTE":
+                pass  # free-text note captured in the override record below
+            else:
+                applied.append({"action": act, "status": "UNSUPPORTED_ACTION"}); continue
+
+            entry = {"action": act, "module_code": code, "axis_code": a.get("axis_code"),
+                     "reason_code": reason_code, "rationale": rationale,
+                     "before": before, "after": after,
+                     "clinician_id": clinician_id, "at": _now().isoformat()}
+            overrides.append(entry)
+            applied.append({"action": act, "module_code": code, "status": "APPLIED"})
+
+        payload["clinician_overrides"] = overrides
+        payload["plan_version"] = int(payload.get("plan_version", 1)) + 1
+        # editing invalidates prior approval -> must be re-approved
+        was_validated = r.status == "validated"
+        r.status = "draft"
+        r.payload = payload
+        try:
+            from sqlalchemy.orm.attributes import flag_modified
+            flag_modified(r, "payload")
+        except Exception:  # noqa: BLE001
+            pass
+        s.commit()
+        return {"report_id": report_id, "plan_version": payload["plan_version"],
+                "applied": applied, "overrides_total": len(overrides),
+                "status": r.status, "deliverable": False,
+                "reapproval_required": was_validated,
+                "notice": "Plan edited by clinician. Re-approval required before it is deliverable."}
     finally:
         s.close()
 

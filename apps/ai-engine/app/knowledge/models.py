@@ -130,6 +130,10 @@ class Report(Base):
     severity_level: Mapped[int] = mapped_column(Integer, default=0)
     payload: Mapped[dict] = mapped_column(JSON)                          # full CaseReport JSON
     safety_alerts: Mapped[dict | None] = mapped_column(JSON)
+    # Phase B — ownership / tenant scope (nullable for legacy rows). NOT PII: de-identified keys.
+    owner_clinician_id: Mapped[str | None] = mapped_column(String(64), nullable=True)
+    owner_case_subject: Mapped[str | None] = mapped_column(String(64), nullable=True)
+    clinic_id: Mapped[str | None] = mapped_column(String(64), nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=_utcnow)
 
 
@@ -165,6 +169,10 @@ class AuditLog(Base):
     actor: Mapped[str | None] = mapped_column(String(64))   # 'mihealth' | doctor_id | 'system'
     allowed: Mapped[bool] = mapped_column(Boolean, default=True)
     detail: Mapped[dict | None] = mapped_column(JSON)
+    # Phase B — richer, reconstructable audit
+    role: Mapped[str | None] = mapped_column(String(24), nullable=True)
+    source: Mapped[str | None] = mapped_column(String(24), nullable=True)   # mcp|mihealth|system
+    request_id: Mapped[str | None] = mapped_column(String(64), nullable=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=_utcnow)
 
 

@@ -2,15 +2,22 @@
   "//": "Copy the tspi-ai-brain block into your Claude Desktop config file:",
   "//_windows": "%APPDATA%\\Claude\\claude_desktop_config.json",
   "//_macos": "~/Library/Application Support/Claude/claude_desktop_config.json",
-  "//_note": "The engine (FastAPI) must be running and reachable at TSPI_ENGINE_URL. This is local stdio — no public IP needed.",
+  "//_note1": "The engine (FastAPI) must be running and reachable at TSPI_ENGINE_URL. Local stdio = no public IP needed.",
+  "//_note2": "command MUST point at the Python that has fastmcp installed — i.e. this app's venv, NOT the system python.",
+  "//_note3": "TSPI_CLINICIAN_ID / TSPI_CLINIC_ID are STATIC here only for the local single-clinician pilot. In multi-doctor / production they are set dynamically at login (provisioned when the clinic/clinician registers, carried in the auth token, forwarded per-request) — not hard-coded env.",
+  "//_note4": "TSPI_ENGINE_TOKEN is required only when the engine has AUTH_ENABLED=true; it must match one of the engine's SERVICE_TOKENS.",
   "mcpServers": {
     "tspi-ai-brain": {
-      "command": "python",
+      "command": "C:\\workspace\\tspi_new\\apps\\tspi-mcp\\.venv\\Scripts\\python.exe",
       "args": ["-m", "tspi_mcp.server"],
       "cwd": "C:\\workspace\\tspi_new\\apps\\tspi-mcp",
       "env": {
+        "PYTHONPATH": "C:\\workspace\\tspi_new\\apps\\tspi-mcp",
         "TSPI_ENGINE_URL": "http://localhost:8000",
         "TSPI_CLINICIAN_ID": "dr.example",
+        "TSPI_CLINICIAN_ROLE": "clinician",
+        "TSPI_CLINIC_ID": "clinic-001",
+        "TSPI_ENGINE_TOKEN": "svc-mcp-REPLACE_ME_when_engine_auth_enabled",
         "TSPI_STRICT_DEIDENT": "true",
         "TSPI_MCP_TRANSPORT": "stdio"
       }

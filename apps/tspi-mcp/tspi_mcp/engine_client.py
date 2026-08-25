@@ -18,9 +18,16 @@ class EngineError(RuntimeError):
 
 
 def _headers() -> dict[str, str]:
+    # Service token authenticates the MCP to the engine; X-TSPI-* forward the clinician identity
+    # the engine trusts for RBAC + audit (only honoured server-side when the token is valid).
     h = {"Accept": "application/json"}
     if settings.engine_token:
         h["Authorization"] = f"Bearer {settings.engine_token}"
+    h["X-TSPI-User-Id"] = settings.clinician_id
+    h["X-TSPI-Role"] = settings.clinician_role
+    h["X-TSPI-Source"] = "mcp"
+    if settings.clinic_id:
+        h["X-TSPI-Clinic-Id"] = settings.clinic_id
     return h
 
 

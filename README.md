@@ -29,7 +29,7 @@ tspi_new/
 
 ## Run everything (Docker)
 ```bash
-cp apps/ai-engine/.env.docker.example apps/ai-engine/.env   # add DEEPSEEK_API_KEY etc.
+cp apps/ai-engine/.env.example apps/ai-engine/.env   # add DEEPSEEK_API_KEY etc.
 docker compose up -d --build
 docker compose exec ollama ollama pull bge-m3               # once (embeddings)
 docker compose exec tspi-api python -m scripts.embed_knowledge   # once (build vectors)

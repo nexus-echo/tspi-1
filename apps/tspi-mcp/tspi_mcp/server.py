@@ -183,6 +183,34 @@ async def tspi_approve_treatment_plan(
     return {"decision": decision, "by": settings.clinician_id, "result": result}
 
 
+class OverrideActionIn(BaseModel):
+    """One structured physician edit. Every edit REQUIRES a reason_code."""
+    action: Literal["REMOVE_MODULE", "REJECT_MODULE", "CHANGE_DOSE", "OVERRIDE_SAFETY",
+                    "ADD_SECONDARY_AXIS", "REMOVE_SECONDARY_AXIS", "ADD_NOTE"]
+    module_code: str | None = Field(default=None, description="Target module (for module actions).")
+    axis_code: str | None = Field(default=None, description="Axis code (for axis actions).")
+    new_dose: str | None = Field(default=None, description="New dose text (for CHANGE_DOSE).")
+    reason_code: Literal["NEW_CLINICAL_INFORMATION", "PATIENT_PREFERENCE", "SAFETY_CONCERN",
+                         "REGISTRY_ERROR", "ALGORITHM_ERROR", "CLINICAL_JUDGMENT",
+                         "DIAGNOSTIC_UNCERTAINTY", "TREATMENT_RESPONSE"]
+    rationale: str | None = Field(default=None, description="Short free-text justification.")
+
+
+@mcp.tool()
+async def tspi_update_treatment_plan(report_id: str, actions: list[OverrideActionIn]) -> dict:
+    """Apply the CLINICIAN's structured edits to a draft plan: remove/reject a module, change a
+    dose, override safety (with justification), add/remove a secondary axis, or add a note. Every
+    edit needs a reason_code and is recorded non-destructively. Editing invalidates any prior
+    approval — the plan returns to draft and must be re-approved with tspi_approve_treatment_plan."""
+    body = {"clinician_id": settings.clinician_id, "actions": [a.model_dump() for a in actions]}
+    try:
+        result = await engine.post(f"/reports/{report_id}/override", json=body)
+    except engine.EngineError as e:
+        return {"error": str(e)}
+    result["by"] = settings.clinician_id
+    return result
+
+
 @mcp.tool()
 async def tspi_record_outcome(report_id: str, marker: str, baseline: float, followup: float) -> dict:
     """Record a follow-up marker change for a case (feeds the propose-only learning loop). This
