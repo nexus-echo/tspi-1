@@ -80,6 +80,9 @@ async def compose(analysis: AnalysisResult, modules: list[ModulePick], llm: LLMP
             + "\n".join(m.model_dump_json() for m in modules)
             + context
         )
+        # P4 guard: the LLM must never see PII. Fail closed if any identifier is in the prompt.
+        from app import deid
+        deid.assert_prompt_deidentified(prompt, analysis.case_id)
         try:
             markdown = await llm.complete(prompt)
         except Exception:  # noqa: BLE001 — fall back to deterministic report

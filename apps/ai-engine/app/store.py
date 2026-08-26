@@ -82,6 +82,32 @@ def get_report(report_id: str) -> dict | None:
         s.close()
 
 
+def save_identity(case_id: str, blob: str, encrypted: bool) -> None:
+    """P4 — upsert encrypted patient identity (PHI) keyed by case_id."""
+    from app.knowledge.models import PatientIdentity as _PI
+    init_db()
+    s = get_session()
+    try:
+        row = s.get(_PI, case_id)
+        if row:
+            row.blob, row.encrypted, row.updated_at = blob, encrypted, _now()
+        else:
+            s.add(_PI(case_id=case_id, blob=blob, encrypted=encrypted))
+        s.commit()
+    finally:
+        s.close()
+
+
+def get_identity(case_id: str) -> dict | None:
+    from app.knowledge.models import PatientIdentity as _PI
+    s = get_session()
+    try:
+        row = s.get(_PI, case_id)
+        return {"blob": row.blob, "encrypted": row.encrypted} if row else None
+    finally:
+        s.close()
+
+
 def set_report_owner(report_id: str, *, clinician_id: str | None = None,
                      case_subject: str | None = None, clinic_id: str | None = None) -> None:
     """Stamp ownership / tenant scope on a report (Phase B). Nulls are left unchanged."""

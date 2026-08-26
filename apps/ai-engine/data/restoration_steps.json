@@ -1,0 +1,18 @@
+{
+  "dataset_name": "tspi_restoration_steps",
+  "dataset_version": "1.0.0",
+  "framework_version": "39-axis-master-260715",
+  "approval_status": "CANONICAL",
+  "source": "answer 05.08.2026 §7 — canonical numbered 9 Restoration Steps (S9 = Prakati; ignore narrative Step-8 drift).",
+  "steps": [
+    {"code": "S1", "name_en": "Detoxification", "order": 1},
+    {"code": "S2", "name_en": "Microbiome Ecosystem", "order": 2},
+    {"code": "S3", "name_en": "Immune–Inflammatory Regulation", "order": 3},
+    {"code": "S4", "name_en": "Redox Homeostasis & Oxidative Balance", "order": 4},
+    {"code": "S5", "name_en": "Enhance Metabolic Function & Mitochondria", "order": 5},
+    {"code": "S6", "name_en": "Autophagy & Cellular Clearance", "order": 6},
+    {"code": "S7", "name_en": "Genomic Stability & Proteostasis", "order": 7},
+    {"code": "S8", "name_en": "Genomic Regulation Homeostasis", "order": 8},
+    {"code": "S9", "name_en": "Prakati: Bioelectrical & Physiological Coherence", "order": 9}
+  ]
+}

@@ -159,6 +159,19 @@ class OutcomeRow(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime, default=_utcnow)
 
 
+class PatientIdentity(Base):
+    """P4 — encrypted patient identity (PHI), keyed by the de-identified case_id.
+
+    Only the de-id/re-id layer reads this; the brain + LLM never do. `blob` is Fernet-encrypted
+    (or plaintext JSON in the dev fallback when no key is configured — never in production)."""
+    __tablename__ = "patient_identities"
+    case_id: Mapped[str] = mapped_column(String(64), primary_key=True)
+    blob: Mapped[str] = mapped_column(Text)
+    encrypted: Mapped[bool] = mapped_column(Boolean, default=True)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=_utcnow)
+    updated_at: Mapped[datetime] = mapped_column(DateTime, default=_utcnow)
+
+
 class AuditLog(Base):
     """Append-only audit trail. Records actions + consent decisions; no PII."""
     __tablename__ = "audit_log"

@@ -7,7 +7,7 @@ from __future__ import annotations
 
 from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile
 
-from app import learning, red_flags, store
+from app import deid, learning, red_flags, store
 from app.auth import Principal, check_report_access, get_principal, require_role
 from app.config import settings
 from app.pipeline import extraction
@@ -55,6 +55,7 @@ async def analyze_endpoint(patient: PatientInput,
                            p: Principal = Depends(require_role(
                                "clinic_staff", "clinician", "reviewer", "service"))) -> AnalysisResult:
     _require_consent(patient, "ai_analysis")
+    patient = deid.intake(patient)          # P4: strip + store PII before any pipeline/LLM step
     result = await analyze(patient)
     store.audit("analyze", case_id=patient.case_id, actor=p.id,
                 detail={"nss": result.nss}, **_audit_ctx(p))
@@ -63,10 +64,12 @@ async def analyze_endpoint(patient: PatientInput,
 
 @router.post("/report", response_model=CaseReport, tags=["diagnosis"])
 async def report_endpoint(patient: PatientInput,
+                          report_language: str | None = None,
                           p: Principal = Depends(require_role(
                               "clinic_staff", "clinician", "reviewer", "service"))) -> CaseReport:
     _require_consent(patient, "ai_analysis")
-    report = await build_report(patient)
+    patient = deid.intake(patient)          # P4: strip + store PII before any pipeline/LLM step
+    report = await build_report(patient, report_language=report_language)
     # Phase B — stamp ownership/tenant scope (de-identified keys, never PII).
     store.set_report_owner(
         report.report_id,
@@ -88,6 +91,54 @@ async def get_report_endpoint(report_id: str,
         raise HTTPException(status_code=404, detail="Report not found.")
     check_report_access(p, rep, write=False)          # tenant / approved-only gate
     return rep
+
+
+@router.get("/reports/{report_id}/identified", tags=["workflow"])
+async def get_identified_report_endpoint(
+        report_id: str,
+        p: Principal = Depends(require_role(
+            "patient", "clinic_staff", "clinician", "reviewer", "service"))) -> dict:
+    """Return the report with PII re-attached (render-time re-identification). NEVER served to the
+    chat/MCP surface — that would leak PII to the chat provider. MiHealth/portal only."""
+    if p.source == "mcp":
+        raise HTTPException(status_code=403,
+                            detail="Identified reports are not available over the chat/MCP surface.")
+    rep = store.get_report(report_id)
+    if not rep:
+        raise HTTPException(status_code=404, detail="Report not found.")
+    check_report_access(p, rep, write=False)
+    rep["report_markdown"] = deid.reidentify(rep.get("payload", {}).get("report_markdown", ""),
+                                             rep["case_id"])
+    rep["identified"] = True
+    store.audit("identified_report", report_id=report_id, actor=p.id, **_audit_ctx(p))
+    return rep
+
+
+@router.get("/reports/{report_id}/render", tags=["workflow"])
+async def render_report_endpoint(
+        report_id: str, language: str | None = None, audience: str = "physician",
+        identified: bool = False,
+        p: Principal = Depends(require_role(
+            "patient", "clinic_staff", "clinician", "reviewer", "service"))) -> dict:
+    """Render the report from the common template. language: en|th · audience: physician|patient.
+    De-identified by default (placeholders). identified=true re-attaches PII — never over chat/MCP,
+    and the patient audience requires an approved (deliverable) report."""
+    from app import report_render
+    rep = store.get_report(report_id)
+    if not rep:
+        raise HTTPException(status_code=404, detail="Report not found.")
+    check_report_access(p, rep, write=False)
+    if audience == "patient" and not rep.get("deliverable"):
+        raise HTTPException(status_code=409, detail="Patient report requires physician approval first.")
+    md = report_render.render(rep.get("payload", {}), language=language, audience=audience)
+    if identified:
+        if p.source == "mcp":
+            raise HTTPException(status_code=403, detail="Identified render not available over chat/MCP.")
+        md = deid.reidentify(md, rep["case_id"])
+    store.audit("render_report", report_id=report_id, actor=p.id,
+                detail={"language": language, "audience": audience, "identified": identified}, **_audit_ctx(p))
+    return {"report_id": report_id, "language": (language or rep.get("payload", {}).get("report_language", "en")),
+            "audience": audience, "identified": identified, "markdown": md}
 
 
 @router.post("/validate", tags=["workflow"])

@@ -40,6 +40,10 @@ def _flag(lab: LabResult) -> str | None:
             return "high"
         if lab.ref_low is not None and lab.value < lab.ref_low:
             return "low"
+        # No reference range supplied -> fall back to the candidate cut-off registry (pilot).
+        if lab.ref_high is None and lab.ref_low is None:
+            from app.cutoffs import classify
+            return classify(lab.analyte, lab.value).get("flag")
     return None
 
 
@@ -63,7 +67,9 @@ def normalize(patient: PatientInput) -> list[BiologicalSignal]:
                          else EvidenceStatus.MEASURED)
             val = lab.value if isinstance(lab.value, (int, float)) else None
             interp = marker_interpret(marker, val, lab.ref_low, lab.ref_high)
-            if interp["direction"] and interp["direction"] != "abnormal":
+            # refine direction only when the marker rule detects an actual up/down; never let a
+            # "normal" verdict clobber a cut-off-derived flag (which used the registry thresholds).
+            if interp["direction"] in ("up", "down"):
                 direction = interp["direction"]
 
             if marker.direction_rule is DirectionRule.CONTEXT_DEPENDENT:
