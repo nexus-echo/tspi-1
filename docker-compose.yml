@@ -54,8 +54,34 @@ services:
     restart: unless-stopped
 
 
+  # ---------------- TSPI MCP server (public surface for AI chat clients) ----------------
+  tspi-mcp:
+    build: ./apps/tspi-mcp
+
+    env_file:
+      - ./apps/tspi-mcp/.env
+
+    environment:
+      TSPI_ENGINE_URL: http://tspi-api:8000     # engine stays PRIVATE (internal only)
+      TSPI_MCP_TRANSPORT: streamable-http
+      TSPI_MCP_PORT: "8080"
+      # OAuth is REQUIRED when this is publicly exposed — set TSPI_MCP_AUTH in .env (jwt|workos).
+
+    ports:
+      - "8080:8080"
+
+    depends_on:
+      tspi-api:
+        condition: service_started
+
+    restart: unless-stopped
+
+
 # The MiHealth portal (frontend + backend) now lives in its own repo. It reaches this engine
 # over HTTP via TSPI_BASE_URL; see docs/01-plans/TSPI_MiHealth_Repo_Split_Plan.md.
+#
+# Deployment note (Coolify): expose ONLY tspi-mcp (public, OAuth) and MiHealth web. Keep tspi-api
+# (the engine) and tspi-db PRIVATE — no public route. See docs/01-plans/TSPI_Deploy_Runbook_Coolify.md.
 
 # ---------------- Persistent storage ----------------
 volumes:

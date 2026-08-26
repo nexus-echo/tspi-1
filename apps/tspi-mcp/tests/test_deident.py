@@ -38,3 +38,40 @@ def test_clean_input_passes_untouched():
     clean, findings = deidentify(payload, strict=True)
     assert findings == []
     assert clean["labs"][0]["analyte"] == "CRP"
+
+
+# ---- P7: OAuth wiring (env-driven) ----
+def test_auth_none_by_default_and_static_identity():
+    import os
+    os.environ.pop("TSPI_MCP_AUTH", None)
+    from importlib import reload
+    from tspi_mcp import config as c, identity as idn
+    reload(c); reload(idn)
+    assert idn.build_auth() is None                       # local stdio: no incoming auth
+    user, role, clinic = idn.current_identity()           # falls back to static pilot identity
+    assert role == c.settings.clinician_role
+
+def test_auth_jwt_requires_config_else_fail_closed():
+    import os, pytest
+    from importlib import reload
+    from tspi_mcp import config as c, identity as idn
+    os.environ["TSPI_MCP_AUTH"] = "jwt"                    # but no JWKS/issuer -> must fail closed
+    os.environ.pop("TSPI_JWT_JWKS_URI", None); os.environ.pop("TSPI_JWT_ISSUER", None)
+    reload(c); reload(idn)
+    with pytest.raises(RuntimeError):
+        idn.build_auth()
+    os.environ.pop("TSPI_MCP_AUTH", None); reload(c); reload(idn)
+
+def test_auth_jwt_builds_verifier_when_configured():
+    import os
+    from importlib import reload
+    from tspi_mcp import config as c, identity as idn
+    os.environ.update({"TSPI_MCP_AUTH": "jwt",
+                       "TSPI_JWT_JWKS_URI": "https://idp.example/.well-known/jwks.json",
+                       "TSPI_JWT_ISSUER": "https://idp.example", "TSPI_JWT_AUDIENCE": "tspi-mcp"})
+    reload(c); reload(idn)
+    auth = idn.build_auth()
+    assert auth is not None and auth.__class__.__name__ == "JWTVerifier"
+    for k in ("TSPI_MCP_AUTH", "TSPI_JWT_JWKS_URI", "TSPI_JWT_ISSUER", "TSPI_JWT_AUDIENCE"):
+        os.environ.pop(k, None)
+    reload(c); reload(idn)

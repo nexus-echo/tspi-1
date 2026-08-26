@@ -33,5 +33,20 @@ class Settings:
     transport: str = os.getenv("TSPI_MCP_TRANSPORT", "stdio")
     http_timeout_s: float = float(os.getenv("TSPI_HTTP_TIMEOUT", "60"))
 
+    # --- P7: OAuth for the public/remote MCP surface ---
+    # none  = no incoming auth (local stdio only; NEVER expose publicly)
+    # jwt   = validate bearer JWTs from any OIDC issuer (JWKS)  [works with Auth0/Keycloak/Azure/…]
+    # workos= WorkOS AuthKit (DCR) — the simplest fully-automatic remote-connector flow
+    mcp_auth: str = os.getenv("TSPI_MCP_AUTH", "none")
+    mcp_base_url: str | None = os.getenv("TSPI_MCP_BASE_URL") or None      # public https URL of this MCP
+    jwt_jwks_uri: str | None = os.getenv("TSPI_JWT_JWKS_URI") or None
+    jwt_issuer: str | None = os.getenv("TSPI_JWT_ISSUER") or None
+    jwt_audience: str | None = os.getenv("TSPI_JWT_AUDIENCE") or None
+    workos_authkit_domain: str | None = os.getenv("TSPI_WORKOS_AUTHKIT_DOMAIN") or None
+    # Token claim names carrying the clinician identity (mapped to X-TSPI-* for the engine).
+    claim_user: str = os.getenv("TSPI_CLAIM_USER", "sub")
+    claim_role: str = os.getenv("TSPI_CLAIM_ROLE", "role")
+    claim_clinic: str = os.getenv("TSPI_CLAIM_CLINIC", "clinic_id")
+
 
 settings = Settings()

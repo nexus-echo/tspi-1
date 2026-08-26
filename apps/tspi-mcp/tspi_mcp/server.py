@@ -34,7 +34,9 @@ RULES FOR THE ASSISTANT:
   until a clinician approves it with tspi_approve_treatment_plan.
 """
 
-mcp = FastMCP("tspi-ai-brain", instructions=INSTRUCTIONS)
+from .identity import build_auth
+
+mcp = FastMCP("tspi-ai-brain", instructions=INSTRUCTIONS, auth=build_auth())
 
 
 # --------------------------------------------------------------------------- input models
@@ -223,7 +225,13 @@ async def tspi_record_outcome(report_id: str, marker: str, baseline: float, foll
 
 
 def main() -> None:
-    mcp.run(transport=settings.transport)
+    t = settings.transport
+    if t in ("streamable-http", "http", "sse"):
+        import os
+        port = int(os.getenv("TSPI_MCP_PORT", "8080"))
+        mcp.run(transport=t, host="0.0.0.0", port=port)   # container: bind all interfaces
+    else:
+        mcp.run(transport=t)                               # stdio (local Claude Desktop)
 
 
 if __name__ == "__main__":
