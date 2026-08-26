@@ -21,7 +21,7 @@ services:
     restart: unless-stopped
 
 
-  # ---------------- TSPI AI brain ----------------
+  # ---------------- TSPI AI brain (FastAPI engine) ----------------
   tspi-api:
     build: ./apps/ai-engine
 
@@ -54,84 +54,9 @@ services:
     restart: unless-stopped
 
 
-  # ---------------- MiHealth portal database ----------------
-  mihealth-db:
-    image: postgres:15
-
-    environment:
-      POSTGRES_USER: mihealth
-      POSTGRES_PASSWORD: ${MIHEALTH_DB_PASSWORD:-mihealth}
-      POSTGRES_DB: mihealth
-
-    volumes:
-      - mihealth_pgdata:/var/lib/postgresql/data
-
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U mihealth"]
-      interval: 5s
-      timeout: 3s
-      retries: 10
-
-    restart: unless-stopped
-
-
-  # ---------------- MiHealth API ----------------
-  mihealth-api:
-    build: ./apps/mihealth-backend
-
-    depends_on:
-      mihealth-db:
-        condition: service_healthy
-
-      tspi-api:
-        condition: service_started
-
-    environment:
-      DATABASE_URL: postgresql+psycopg2://mihealth:${MIHEALTH_DB_PASSWORD:-mihealth}@mihealth-db:5432/mihealth
-
-      JWT_SECRET: ${JWT_SECRET:-change-me-to-a-long-random-string}
-
-      TSPI_BASE_URL: http://tspi-api:8000
-
-      SEED_ADMIN_EMAIL: ${SEED_ADMIN_EMAIL:-admin@mihealth.app}
-
-      SEED_ADMIN_PASSWORD: ${SEED_ADMIN_PASSWORD:-admin12345}
-
-      SEED_ADMIN_NAME: Default Admin
-
-      CORS_ORIGINS: http://localhost:5173
-
-      UPLOAD_DIR: /data/uploads
-
-      OCR_USE_LLM: "false"
-
-    volumes:
-      - mihealth_uploads:/data/uploads
-
-    ports:
-      - "8001:8001"
-
-    restart: unless-stopped
-
-
-  # ---------------- MiHealth Web UI ----------------
-  mihealth-web:
-    build: ./apps/mihealth-frontend
-
-    depends_on:
-      - mihealth-api
-
-    environment:
-      VITE_API_TARGET: http://mihealth-api:8001
-
-    ports:
-      - "5173:5173"
-
-    restart: unless-stopped
-
+# The MiHealth portal (frontend + backend) now lives in its own repo. It reaches this engine
+# over HTTP via TSPI_BASE_URL; see docs/01-plans/TSPI_MiHealth_Repo_Split_Plan.md.
 
 # ---------------- Persistent storage ----------------
 volumes:
   tspi_pgdata:
-  mihealth_pgdata:
-  mihealth_uploads:
