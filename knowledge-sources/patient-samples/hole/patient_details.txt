@@ -1,0 +1,15 @@
+Nitin Hole - Male 
+Age - 48 years 
+
+Problem: 
+The patient was diagnosed with:
+Moderately Differentiated Adenocarcinoma of the Right Colon (pT3N0)
+Histopathological findings demonstrated:
+Tumor invasion into the subserosal fat layer
+No lymph node metastasis (0/18 lymph nodes)
+No lymphovascular invasion
+No perineural invasion
+Negative surgical margins
+MSS/MMR-proficient phenotype
+In addition, extensive adenomatous polyposis involving more than 50 colonic polyps was identified throughout the colon, 
+representing a biologically high-risk inflammatory and proliferative environment associated with future neoplastic recurrence and continued abnormal epithelial growth.
