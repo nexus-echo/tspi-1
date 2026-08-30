@@ -1,6 +1,6 @@
 {
   "dataset_name": "tspi_marker_registry",
-  "dataset_version": "0.1.0",
+  "dataset_version": "0.2.0",
   "framework_version": "39-axis-master-260715",
   "approval_status": "PROVISIONAL",
   "authoritative": false,
@@ -272,6 +272,194 @@
         }
       ],
       "note": "derived AND context-dependent — value_source_type is independent of direction_rule (25 Jul Q5a)"
+    },
+    {
+      "marker_name": "Insulin",
+      "aliases": [
+        "fasting insulin"
+      ],
+      "primary_axis": "A5",
+      "direction_rule": "LOWER_BETTER",
+      "value_source_type": "MEASURED",
+      "unit": "uIU/mL",
+      "concept": "glucose / insulin dysregulation"
+    },
+    {
+      "marker_name": "LDL",
+      "aliases": [
+        "ldl-c",
+        "ldl cholesterol"
+      ],
+      "primary_axis": "A6",
+      "direction_rule": "LOWER_BETTER",
+      "value_source_type": "MEASURED",
+      "unit": "mg/dL",
+      "concept": "lipid / lipotoxicity"
+    },
+    {
+      "marker_name": "HDL",
+      "aliases": [
+        "hdl-c",
+        "hdl cholesterol"
+      ],
+      "primary_axis": "A6",
+      "direction_rule": "HIGHER_BETTER",
+      "value_source_type": "MEASURED",
+      "unit": "mg/dL",
+      "concept": "lipid / lipotoxicity"
+    },
+    {
+      "marker_name": "Triglycerides",
+      "aliases": [
+        "tg",
+        "trig"
+      ],
+      "primary_axis": "A6",
+      "direction_rule": "LOWER_BETTER",
+      "value_source_type": "MEASURED",
+      "unit": "mg/dL",
+      "concept": "lipid / lipotoxicity"
+    },
+    {
+      "marker_name": "Creatinine",
+      "aliases": [
+        "cr",
+        "serum creatinine"
+      ],
+      "primary_axis": "A35",
+      "direction_rule": "LOWER_BETTER",
+      "value_source_type": "MEASURED",
+      "unit": "mg/dL",
+      "concept": "renal functional reserve"
+    },
+    {
+      "marker_name": "ALT",
+      "aliases": [
+        "sgpt",
+        "alt (sgpt)"
+      ],
+      "primary_axis": "A15",
+      "secondary_axes": [
+        "A35"
+      ],
+      "direction_rule": "LOWER_BETTER",
+      "value_source_type": "MEASURED",
+      "unit": "U/L",
+      "concept": "liver / detox"
+    },
+    {
+      "marker_name": "AST",
+      "aliases": [
+        "sgot",
+        "ast (sgot)"
+      ],
+      "primary_axis": "A15",
+      "secondary_axes": [
+        "A35"
+      ],
+      "direction_rule": "LOWER_BETTER",
+      "value_source_type": "MEASURED",
+      "unit": "U/L",
+      "concept": "liver / detox"
+    },
+    {
+      "marker_name": "Vitamin B12",
+      "aliases": [
+        "b12",
+        "cobalamin"
+      ],
+      "primary_axis": "A26",
+      "secondary_axes": [
+        "A34"
+      ],
+      "direction_rule": "HIGHER_BETTER",
+      "value_source_type": "MEASURED",
+      "unit": "pg/mL",
+      "concept": "nutrient / methylation"
+    },
+    {
+      "marker_name": "Homocysteine",
+      "aliases": [
+        "hcy"
+      ],
+      "primary_axis": "A34",
+      "secondary_axes": [
+        "A11",
+        "A22"
+      ],
+      "direction_rule": "LOWER_BETTER",
+      "value_source_type": "MEASURED",
+      "unit": "umol/L",
+      "concept": "methylation / vascular"
+    },
+    {
+      "marker_name": "FT3",
+      "aliases": [
+        "free t3"
+      ],
+      "primary_axis": "A33",
+      "direction_rule": "TARGET_RANGE",
+      "curve_type": "U_SHAPE",
+      "value_source_type": "MEASURED",
+      "unit": "pg/mL",
+      "concept": "thyroid axis"
+    },
+    {
+      "marker_name": "FT4",
+      "aliases": [
+        "free t4"
+      ],
+      "primary_axis": "A33",
+      "direction_rule": "TARGET_RANGE",
+      "curve_type": "U_SHAPE",
+      "value_source_type": "MEASURED",
+      "unit": "ng/dL",
+      "concept": "thyroid axis"
+    },
+    {
+      "marker_name": "WBC",
+      "aliases": [
+        "white blood cell",
+        "leukocyte count"
+      ],
+      "primary_axis": "A1",
+      "secondary_axes": [
+        "A2"
+      ],
+      "direction_rule": "TARGET_RANGE",
+      "curve_type": "U_SHAPE",
+      "value_source_type": "MEASURED",
+      "unit": "x10^9/L",
+      "concept": "immune / inflammation"
+    },
+    {
+      "marker_name": "Platelets",
+      "aliases": [
+        "plt",
+        "platelet count"
+      ],
+      "primary_axis": "A22",
+      "direction_rule": "TARGET_RANGE",
+      "curve_type": "U_SHAPE",
+      "value_source_type": "MEASURED",
+      "unit": "x10^9/L",
+      "concept": "thrombosis / hemostasis"
+    },
+    {
+      "marker_name": "Troponin",
+      "aliases": [
+        "troponin i",
+        "troponin t",
+        "hs-troponin"
+      ],
+      "primary_axis": "A23",
+      "secondary_axes": [
+        "A35"
+      ],
+      "direction_rule": "LOWER_BETTER",
+      "value_source_type": "MEASURED",
+      "unit": "ng/mL",
+      "concept": "cardiac injury"
     }
   ]
 }

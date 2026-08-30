@@ -80,7 +80,21 @@ class PatientInput(BaseModel):
     conditions: list[str] = []          # for safety/contraindication checks
     lifestyle: dict[str, str] = {}
     omics: dict[str, str] = {}
-    consent: dict[str, bool] = {}       # ai_analysis, doctor_sharing, tspi_connection, ...
+    consent: dict[str, bool] = {}
+    # P4 — optional PII; the engine strips + stores it encrypted at intake so the pipeline/LLM
+    # never see it. De-identified clients (MCP, existing MiHealth) simply omit this.
+    patient_identity: "PatientIdentity | None" = None       # ai_analysis, doctor_sharing, tspi_connection, ...
+
+
+class PatientIdentity(BaseModel):
+    """P4 — patient PII. Accepted ONLY at the engine's intake boundary; stripped + stored encrypted
+    before any pipeline/LLM step. Never persisted in the report; re-attached at render only."""
+    full_name: str | None = None
+    dob: str | None = None
+    mrn: str | None = None
+    phone: str | None = None
+    email: str | None = None
+    address: str | None = None
 
 
 class BiologicalSignal(BaseModel):
@@ -200,6 +214,12 @@ class CaseReport(BaseModel):
     considered_modules: list[ModulePick] = [] # matched but NOT selected, each with a reason
     module_selection: dict = {}               # counts, limits, approval flags, match_version
     nss_detail: dict = {}                     # explainable NSS v0.1 breakdown
+    # --- Production pilot ---
+    pilot_mode: bool = False                  # produced with provisional/candidate data
+    provisional: bool = False                 # not clinically validated
+    pilot_notice: str | None = None           # watermark shown on the report
+    report_language: str = "en"               # "en" | "th"
+    networks: list[dict] = []                 # candidate mechanistic networks for the assessed axes
 
 
 class ValidationRequest(BaseModel):

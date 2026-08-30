@@ -54,5 +54,17 @@ class Settings(BaseSettings):
     # The caller then forwards the end-user identity via X-TSPI-* headers.
     service_tokens: str = ""
 
+    # --- Production pilot ---
+    # When true, PROVISIONAL/candidate clinical datasets are usable for ranking, but every report is
+    # watermarked PROVISIONAL and must not auto-reach a patient. Physician approval still required.
+    pilot_mode: bool = False
+    # Default language for generated reports (per-request override allowed): "en" | "th".
+    report_language_default: str = "en"
+
+    # --- PII / PHI (P4) ---
+    # Fernet key for encrypting stored patient identity (PHI) at rest. REQUIRED in any environment
+    # that receives PII. Unset -> dev fallback stores plaintext (flagged); never do that in prod.
+    encryption_key: str | None = None
+
 
 settings = Settings()

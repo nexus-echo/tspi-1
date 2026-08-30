@@ -1,0 +1,33 @@
+{
+  "dataset_name": "tspi_lab_cutoffs",
+  "dataset_version": "0.1.0",
+  "framework_version": "39-axis-master-260715",
+  "approval_status": "PROVISIONAL",
+  "authoritative": false,
+  "source": "CANDIDATE cut-offs seeded from standard adult reference ranges for the pilot. NOT clinically approved; population/assay variants pending. Unknown marker -> NOT_CLASSIFIABLE.",
+  "bands_note": "direction from marker_registry.json. Values are adult, general population unless noted.",
+  "cutoffs": [
+    {"marker": "CRP", "unit": "mg/L", "optimal_high": 1.0, "subclinical_high": 3.0, "functional_high": 10.0, "pathological_high": 10.0, "critical_high": null},
+    {"marker": "hs-CRP", "unit": "mg/L", "optimal_high": 1.0, "subclinical_high": 3.0, "functional_high": 10.0, "pathological_high": 10.0},
+    {"marker": "ESR", "unit": "mm/hr", "optimal_high": 15, "subclinical_high": 30, "functional_high": 50, "pathological_high": 50},
+    {"marker": "HbA1c", "unit": "%", "optimal_high": 5.4, "subclinical_high": 5.7, "functional_high": 6.5, "pathological_high": 6.5},
+    {"marker": "Glucose", "unit": "mg/dL", "optimal_low": 70, "optimal_high": 90, "subclinical_high": 100, "functional_high": 126, "pathological_high": 126, "critical_low": 54, "critical_high": 450},
+    {"marker": "Hemoglobin", "unit": "g/dL", "optimal_low": 13.0, "subclinical_low": 12.0, "functional_low": 10.0, "pathological_low": 8.0, "critical_low": 7.0},
+    {"marker": "TSH", "unit": "mIU/L", "optimal_low": 0.4, "optimal_high": 2.5, "subclinical_high": 4.0, "functional_high": 10.0, "pathological_high": 10.0, "critical_low": 0.1},
+    {"marker": "Ferritin", "unit": "ng/mL", "optimal_low": 30, "optimal_high": 200, "subclinical_low": 15, "functional_low": 15, "pathological_low": 10},
+    {"marker": "Vitamin D", "unit": "ng/mL", "optimal_low": 30, "subclinical_low": 20, "functional_low": 20, "pathological_low": 12},
+    {"marker": "Vitamin B12", "unit": "pg/mL", "optimal_low": 400, "subclinical_low": 300, "functional_low": 200, "pathological_low": 200},
+    {"marker": "Homocysteine", "unit": "umol/L", "optimal_high": 9, "subclinical_high": 12, "functional_high": 15, "pathological_high": 15},
+    {"marker": "Triglycerides", "unit": "mg/dL", "optimal_high": 100, "subclinical_high": 150, "functional_high": 200, "pathological_high": 200},
+    {"marker": "LDL", "unit": "mg/dL", "optimal_high": 100, "subclinical_high": 130, "functional_high": 160, "pathological_high": 160},
+    {"marker": "HDL", "unit": "mg/dL", "optimal_low": 50, "subclinical_low": 40, "functional_low": 35, "pathological_low": 30},
+    {"marker": "Sodium", "unit": "mmol/L", "optimal_low": 135, "optimal_high": 145, "critical_low": 120, "critical_high": 160},
+    {"marker": "Potassium", "unit": "mmol/L", "optimal_low": 3.5, "optimal_high": 5.0, "critical_low": 2.5, "critical_high": 6.5},
+    {"marker": "Creatinine", "unit": "mg/dL", "optimal_low": 0.6, "optimal_high": 1.1, "functional_high": 1.3, "pathological_high": 1.5},
+    {"marker": "eGFR", "unit": "mL/min/1.73m2", "optimal_low": 90, "subclinical_low": 60, "functional_low": 45, "pathological_low": 30},
+    {"marker": "ALT", "unit": "U/L", "optimal_high": 30, "subclinical_high": 40, "functional_high": 80, "pathological_high": 200, "critical_high": 1000},
+    {"marker": "AST", "unit": "U/L", "optimal_high": 30, "subclinical_high": 40, "functional_high": 80, "pathological_high": 200, "critical_high": 1000},
+    {"marker": "Platelets", "unit": "x10^9/L", "optimal_low": 150, "optimal_high": 400, "critical_low": 20},
+    {"marker": "Troponin", "unit": "ng/mL", "optimal_high": 0.04, "critical_high": 0.04}
+  ]
+}

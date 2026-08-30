@@ -22,3 +22,4 @@ pytest-asyncio>=0.25
 python-multipart>=0.0.9   # FastAPI file uploads (UploadFile/Form)
 pdfplumber>=0.11          # PDF text-layer extraction
 PyMuPDF>=1.24             # rasterize scanned PDF pages -> images for the vision model
+cryptography>=42

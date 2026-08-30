@@ -19,15 +19,18 @@ class EngineError(RuntimeError):
 
 def _headers() -> dict[str, str]:
     # Service token authenticates the MCP to the engine; X-TSPI-* forward the clinician identity
-    # the engine trusts for RBAC + audit (only honoured server-side when the token is valid).
+    # the engine trusts for RBAC + audit. Identity is PER-REQUEST from the validated OAuth token
+    # (P7) when the MCP is remote/authenticated, else the static pilot identity (stdio).
+    from .identity import current_identity
+    user, role, clinic = current_identity()
     h = {"Accept": "application/json"}
     if settings.engine_token:
         h["Authorization"] = f"Bearer {settings.engine_token}"
-    h["X-TSPI-User-Id"] = settings.clinician_id
-    h["X-TSPI-Role"] = settings.clinician_role
+    h["X-TSPI-User-Id"] = user
+    h["X-TSPI-Role"] = role
     h["X-TSPI-Source"] = "mcp"
-    if settings.clinic_id:
-        h["X-TSPI-Clinic-Id"] = settings.clinic_id
+    if clinic:
+        h["X-TSPI-Clinic-Id"] = clinic
     return h
 
 

@@ -875,3 +875,164 @@ def test_learning_admin_is_reviewer_only_and_audit_is_gated():
         assert client.post("/learning/recalibrate", headers=_hdr("reviewer", "rv")).status_code == 200
         assert client.get("/audit", headers=_hdr("clinician", "dr.a")).status_code == 403
         assert client.get("/audit", headers=_hdr("auditor", "au")).status_code == 200
+
+
+# ---- P1: PILOT_MODE + report language ----
+import contextlib as _ctx
+from app.config import settings as _PS
+
+@_ctx.contextmanager
+def _pilot_on():
+    old = _PS.pilot_mode
+    _PS.pilot_mode = True
+    try:
+        yield
+    finally:
+        _PS.pilot_mode = old
+
+def test_report_language_defaults_to_en():
+    r = client.post("/report", json=_PATIENT).json()
+    assert r["report_language"] == "en"
+    assert r["pilot_mode"] is False and r["provisional"] is False
+
+def test_report_language_override_th():
+    r = client.post("/report?report_language=th", json=_PATIENT).json()
+    assert r["report_language"] == "th"
+
+def test_pilot_mode_watermarks_and_blocks_patient_release():
+    with _pilot_on():
+        r = client.post("/report", json=_PATIENT).json()
+        assert r["pilot_mode"] is True and r["provisional"] is True
+        assert "PROVISIONAL" in (r["pilot_notice"] or "")
+        assert r["release_block"] is True           # provisional must not reach a patient
+        assert r["deliverable"] is False
+
+
+# ---- P2: candidate clinical data (cut-offs, steps, expanded registries) ----
+def test_cutoffs_classify_bands_and_critical():
+    from app.cutoffs import classify
+    assert classify("CRP", 21)["flag"] == "high"
+    assert classify("Potassium", 7.0)["band"] == "CRITICAL"
+    assert classify("Hemoglobin", 6.5)["band"] == "CRITICAL"
+    assert classify("Zonulin", 5)["classifiable"] is False
+
+def test_cutoffs_fallback_when_no_ref_range():
+    # lab with NO ref range -> normalizer derives the flag from the cut-off registry
+    from app.pipeline.normalizer import normalize
+    from app.schemas import PatientInput, LabResult
+    p = PatientInput(case_id="CUT-1", age_band="40s", sex="male",
+                     labs=[LabResult(analyte="CRP", value=21.0)])   # no ref_high/low
+    sig = [s for s in normalize(p) if "CRP" in s.source][0]
+    assert sig.direction == "up"
+
+def test_restoration_steps_canonical():
+    from app.steps import steps, name
+    s = steps()
+    assert len(s) == 9 and s[0]["code"] == "S1"
+    assert name("S9").startswith("Prakati")
+
+def test_registries_expanded():
+    import json
+    assert len(json.load(open("data/marker_registry.json"))["markers"]) >= 28
+    assert len(json.load(open("data/phenotype_registry.json"))["phenotypes"]) >= 12
+    ame = json.load(open("data/axis_min_evidence.json"))["axes"]
+    assert len(ame) == 39
+    onco = [a for a in ame if a["axis_code"] == "A37"][0]
+    assert onco["allow_provisional_assessment"] is False   # oncology never provisional from symptoms
+
+
+# ---- P3: candidate network layer + pilot provisional module notes ----
+def test_report_carries_candidate_networks():
+    r = client.post("/report", json=_PATIENT).json()
+    nets = r.get("networks", [])
+    assert nets and any(n["primary_axis"] == "A1" for n in nets)   # CRP -> A1 networks present
+    assert all(n["mapping_status"] in ("CANDIDATE", "APPROVED") for n in nets)
+
+def test_pilot_marks_modules_provisional():
+    with _pilot_on():
+        r = client.post("/report", json=_PATIENT).json()
+        assert r["modules"]
+        assert all(any("PROVISIONAL" in note for note in m["match_notes"]) for m in r["modules"])
+
+
+# ---- P4: PII de-id boundary, encrypted storage, re-id at render, LLM guard ----
+def test_engine_intake_strips_and_stores_pii_deidentified_pipeline():
+    from app import deid, store
+    p = {**_PATIENT, "case_id": "PII-1",
+         "patient_identity": {"full_name": "John Q Patient", "dob": "1980-05-01"}}
+    r = client.post("/report", json=p).json()
+    # PII never appears in the returned (de-identified) report
+    blob = str(r).lower()
+    assert "john q patient" not in blob and "1980-05-01" not in blob
+    # identity is stored (dev fallback plaintext here since no key) and re-id works
+    assert deid.get_identity("PII-1")["full_name"] == "John Q Patient"
+
+def test_reidentify_substitutes_placeholders():
+    from app import deid
+    deid.store_identity("PII-2", {"full_name": "Jane Roe"})
+    assert deid.reidentify("Patient: {{patient.full_name}} — plan", "PII-2") == "Patient: Jane Roe — plan"
+
+def test_llm_prompt_guard_blocks_pii():
+    import pytest, asyncio
+    from app import deid
+    from app.pipeline.report_composer import compose
+    from app.schemas import AnalysisResult
+    deid.store_identity("PII-3", {"full_name": "Secret Name"})
+    class _LLM:
+        enabled = True
+        async def complete(self, prompt): return "should not run"
+    # craft an analysis whose case_id has stored PII and inject the name to simulate a leak
+    a = AnalysisResult(case_id="PII-3", signals=[], axis_scores=[], root_cause_chain=[])
+    a_json = a.model_copy()
+    # monkey a leak: put the name into the symptoms-like field via model_dump patch is hard;
+    # instead assert the guard raises when the name is present in a prompt string
+    with pytest.raises(deid.PIILeak):
+        deid.assert_prompt_deidentified("... Secret Name ...", "PII-3")
+
+def test_identified_report_blocked_over_mcp_and_available_to_clinician():
+    with _auth_on():
+        rid = client.post("/report", json={**_PATIENT, "case_id": "PII-4",
+                          "patient_identity": {"full_name": "Owen Owner"}},
+                          headers=_hdr("clinician", "dr.a", clinic="clinicA")).json()["report_id"]
+        # chat/MCP surface must NOT get an identified report
+        mcp_hdr = {**_hdr("clinician", "dr.a", clinic="clinicA"), "X-TSPI-Source": "mcp"}
+        assert client.get(f"/reports/{rid}/identified", headers=mcp_hdr).status_code == 403
+        # clinician (portal source) can
+        ok = client.get(f"/reports/{rid}/identified", headers=_hdr("clinician", "dr.a", clinic="clinicA"))
+        assert ok.status_code == 200 and ok.json()["identified"] is True
+
+
+# ---- P5: bilingual report renderer (physician + patient, en/th) ----
+def test_render_physician_en():
+    rid = client.post("/report", json=_PATIENT).json()["report_id"]
+    r = client.get(f"/reports/{rid}/render?language=en&audience=physician").json()
+    md = r["markdown"]
+    assert r["language"] == "en"
+    assert "TSPI Integrative Case Report" in md
+    assert "Axis Analysis" in md and "Module Plan" in md
+    assert "{{patient.full_name}}" in md          # de-identified: placeholder, not real PII
+
+def test_render_thai_localises_labels():
+    rid = client.post("/report", json=_PATIENT).json()["report_id"]
+    md = client.get(f"/reports/{rid}/render?language=th").json()["markdown"]
+    assert "รายงานกรณีศึกษาเชิงบูรณาการ TSPI" in md   # Thai title
+    assert "A1" in md                                  # canonical codes stay stable
+
+def test_render_patient_requires_approval():
+    rid = client.post("/report", json=_PATIENT).json()["report_id"]
+    # draft -> patient render blocked
+    assert client.get(f"/reports/{rid}/render?audience=patient").status_code == 409
+    client.post("/validate", json={"report_id": rid, "doctor_id": "dr.a", "decision": "approve"})
+    r = client.get(f"/reports/{rid}/render?audience=patient")
+    assert r.status_code == 200 and "Your plan" in r.json()["markdown"]
+
+def test_render_identified_blocked_over_mcp():
+    with _auth_on():
+        rid = client.post("/report", json={**_PATIENT, "case_id": "REN-1",
+                          "patient_identity": {"full_name": "Rendered Name"}},
+                          headers=_hdr("clinician", "dr.a", clinic="clinicA")).json()["report_id"]
+        mcp_hdr = {**_hdr("clinician", "dr.a", clinic="clinicA"), "X-TSPI-Source": "mcp"}
+        assert client.get(f"/reports/{rid}/render?identified=true", headers=mcp_hdr).status_code == 403
+        ok = client.get(f"/reports/{rid}/render?identified=true",
+                        headers=_hdr("clinician", "dr.a", clinic="clinicA")).json()
+        assert "Rendered Name" in ok["markdown"]      # re-identified for the clinician/portal

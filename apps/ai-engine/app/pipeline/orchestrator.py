@@ -70,7 +70,7 @@ async def analyze(patient: PatientInput) -> AnalysisResult:
     )
 
 
-async def build_report(patient: PatientInput) -> CaseReport:
+async def build_report(patient: PatientInput, report_language: str | None = None) -> CaseReport:
     analysis = await analyze(patient)
     screen = analysis.red_flag_screen or {}
 
@@ -129,6 +129,27 @@ async def build_report(patient: PatientInput) -> CaseReport:
                     detail={"action_class": screen.get("action_class"),
                             "count": len(screen["red_flags"]),
                             "release_block": report.release_block})
+
+    # Candidate network layer — mechanistic context for the assessed axes (explains, never ranks)
+    from app import networks as _net
+    seen_ax: list[str] = []
+    for a in analysis.axis_scores:
+        if getattr(a, "scoring_effect", True) and a.axis_code not in seen_ax:
+            seen_ax.append(a.axis_code)
+    report.networks = [n for ax in seen_ax[:6] for n in _net.networks_for_axis(ax, limit=2)]
+
+    # Production pilot — stamp provisional watermark + language; provisional never auto-reaches a patient
+    from app import pilot
+    report.report_language = pilot.report_language(report_language)
+    if pilot.is_pilot():
+        report.pilot_mode = True
+        report.provisional = True
+        report.pilot_notice = pilot.PILOT_NOTICE
+        report.release_block = True          # provisional plans must not reach a patient
+        report.disclaimer = f"{pilot.PILOT_NOTICE} {report.disclaimer}"
+        for m in report.modules:
+            if pilot.PILOT_NOTICE[:5] not in " ".join(m.match_notes):
+                m.match_notes = [*m.match_notes, "PROVISIONAL — pilot candidate mapping"]
 
     # Phase 3 — persist (de-identified) + doctor-validation gate
     status = "draft" if settings.require_doctor_validation else "validated"

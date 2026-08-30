@@ -50,6 +50,33 @@ No public IP is required for this local/stdio setup — everything runs on the m
 | `TSPI_STRICT_DEIDENT` | `true` | Strict = reject on any detected PII; else redact + warn |
 | `TSPI_MCP_TRANSPORT` | `stdio` | `stdio` (local) or `streamable-http` (remote) |
 
+## Public deployment (OAuth — P7)
+
+A **public** MCP endpoint MUST be OAuth-protected — an unauthenticated public MCP would let anyone
+call the clinical tools. Set `TSPI_MCP_AUTH` (fail-closed: if set but misconfigured, the server
+refuses to start rather than run unauthenticated):
+
+| `TSPI_MCP_AUTH` | Use when | Required env |
+|---|---|---|
+| `none` (default) | local stdio (Claude Desktop) only — never public | — |
+| `workos` | fastest fully-automatic remote-connector flow (DCR) | `TSPI_WORKOS_AUTHKIT_DOMAIN`, `TSPI_MCP_BASE_URL` |
+| `jwt` | you already have an OIDC issuer (Auth0/Keycloak/Azure/…) | `TSPI_JWT_JWKS_URI`, `TSPI_JWT_ISSUER`, `TSPI_JWT_AUDIENCE` |
+
+Per-request **clinician identity** comes from the validated token's claims
+(`TSPI_CLAIM_USER` / `TSPI_CLAIM_ROLE` / `TSPI_CLAIM_CLINIC`, defaults `sub` / `role` / `clinic_id`)
+and is forwarded to the engine as `X-TSPI-User-Id / -Role / -Clinic-Id`. Also set
+`TSPI_MCP_TRANSPORT=streamable-http` and put TLS + the OAuth callback behind a reverse proxy. The
+engine stays private; the MCP is the only exposed surface.
+
+```
+TSPI_MCP_AUTH=workos
+TSPI_WORKOS_AUTHKIT_DOMAIN=https://your-project.authkit.app
+TSPI_MCP_BASE_URL=https://mcp.your-domain.com
+TSPI_MCP_TRANSPORT=streamable-http
+TSPI_ENGINE_URL=http://tspi-api:8000     # private
+TSPI_ENGINE_TOKEN=<one of the engine SERVICE_TOKENS>
+```
+
 ## Governance invariants
 
 - **PII never leaves this layer.** Tool schemas have no identity fields; the de-id gate drops

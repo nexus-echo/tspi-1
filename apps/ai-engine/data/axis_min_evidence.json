@@ -1,0 +1,835 @@
+{
+  "dataset_name": "tspi_axis_min_evidence",
+  "dataset_version": "0.1.0",
+  "framework_version": "39-axis-master-260715",
+  "approval_status": "PROVISIONAL",
+  "authoritative": false,
+  "source": "CANDIDATE per-axis minimum-evidence (pilot). Weights CORE=3/SUPPORTING=2/OPTIONAL=1. Oncology axes (A37-A39) require verified evidence, never symptoms alone.",
+  "axes": [
+    {
+      "axis_code": "A1",
+      "axis_name": "Systemic Inflammatory Load",
+      "core_evidence": [
+        "CRP/hs-CRP/ESR or inflammatory symptoms"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A2",
+      "axis_name": "Immune Homeostasis",
+      "core_evidence": [
+        "immune panel or recurrent-infection history"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A3",
+      "axis_name": "Pathogen Defense",
+      "core_evidence": [
+        "infection markers / culture / clinical infection"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A4",
+      "axis_name": "Post-Infectious Persistence",
+      "core_evidence": [
+        "post-infective symptom persistence"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A5",
+      "axis_name": "Glucose–Insulin Regulation",
+      "core_evidence": [
+        "fasting glucose or HbA1c"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A6",
+      "axis_name": "Lipid–Lipotoxicity",
+      "core_evidence": [
+        "lipid profile (TG/LDL/HDL)"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A7",
+      "axis_name": "Nutrient Sensing",
+      "core_evidence": [
+        "nutrient-sensing / metabolic markers"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A8",
+      "axis_name": "Mitochondrial Network",
+      "core_evidence": [
+        "energy phenotype (fatigue/PEM) or lactate/mito markers"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A9",
+      "axis_name": "Oxidative Stress & Redox Balance",
+      "core_evidence": [
+        "oxidative-stress markers or redox phenotype"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A10",
+      "axis_name": "Proteostasis–Autophagy–Lysosome",
+      "core_evidence": [
+        "proteostasis/autophagy markers (research)"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A11",
+      "axis_name": "DNA Repair & Genomic Stability",
+      "core_evidence": [
+        "DNA-repair / genomic markers"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A12",
+      "axis_name": "Epigenetic Regulation",
+      "core_evidence": [
+        "epigenetic markers"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A13",
+      "axis_name": "Longevity Signaling",
+      "core_evidence": [
+        "longevity markers"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A14",
+      "axis_name": "Senescence & SASP",
+      "core_evidence": [
+        "senescence/SASP markers"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A15",
+      "axis_name": "Detoxification Capacity",
+      "core_evidence": [
+        "liver-detox markers (ALT/AST/GGT) or exposure"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A16",
+      "axis_name": "Digestive–Absorptive Function",
+      "core_evidence": [
+        "digestive symptoms or absorption markers"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A17",
+      "axis_name": "Microbiome Ecology",
+      "core_evidence": [
+        "microbiome/stool or dysbiosis symptoms"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A18",
+      "axis_name": "Gut Barrier & Mucosal Integrity",
+      "core_evidence": [
+        "gut-barrier markers (zonulin) or leaky-gut symptoms"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A19",
+      "axis_name": "Colon Biofilm & Mucosal Burden",
+      "core_evidence": [
+        "colon-specific evidence (colonoscopy/biofilm)"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A20",
+      "axis_name": "Endothelial Function",
+      "core_evidence": [
+        "endothelial/vascular function"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A21",
+      "axis_name": "Vascular Remodeling & Microcirculation",
+      "core_evidence": [
+        "microcirculation/vascular remodeling"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A22",
+      "axis_name": "Thrombosis–Hemostasis",
+      "core_evidence": [
+        "coagulation/platelets"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A23",
+      "axis_name": "Hemodynamics & Arterial Elasticity",
+      "core_evidence": [
+        "BP / arterial elasticity"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A24",
+      "axis_name": "Wound Healing",
+      "core_evidence": [
+        "wound-healing status"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A25",
+      "axis_name": "Fibrosis & ECM Remodeling",
+      "core_evidence": [
+        "fibrosis/ECM markers or imaging"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A26",
+      "axis_name": "Stem Cell & Hematopoiesis",
+      "core_evidence": [
+        "CBC or equivalent haematology (ferritin/iron studies)"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A27",
+      "axis_name": "Glycation / Carbonyl Stress",
+      "core_evidence": [
+        "glycation markers (AGEs) / HbA1c context"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A28",
+      "axis_name": "Muscle Protein Turnover",
+      "core_evidence": [
+        "muscle mass/turnover markers"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A29",
+      "axis_name": "Bone Remodeling",
+      "core_evidence": [
+        "bone density/remodeling markers"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A30",
+      "axis_name": "Connective Tissue Integrity",
+      "core_evidence": [
+        "connective-tissue status"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A31",
+      "axis_name": "Female Hormone Network",
+      "core_evidence": [
+        "female hormone panel"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A32",
+      "axis_name": "Male Androgen Network",
+      "core_evidence": [
+        "male androgen panel"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A33",
+      "axis_name": "Thyroid–Adrenal–Growth Axis",
+      "core_evidence": [
+        "TSH/FT3/FT4 or adrenal/growth markers"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A34",
+      "axis_name": "Neuro–Sleep–Stress–Brain Clearance",
+      "core_evidence": [
+        "sleep/stress/neuro symptoms or autonomic markers"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A35",
+      "axis_name": "Visceral Organ Functional Reserve",
+      "core_evidence": [
+        "organ-function/reserve tests (liver/kidney/heart)"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A36",
+      "axis_name": "Local Organ & Tissue Interface",
+      "core_evidence": [
+        "local organ/tissue exam (eye/ear/ENT/skin/pelvic)"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": true,
+      "minimum_tier": "Low",
+      "exclusion_rules": [],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A37",
+      "axis_name": "Oncologic Cell Fate",
+      "core_evidence": [
+        "verified oncology evidence (pathology/imaging/biopsy)"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": false,
+      "minimum_tier": "High",
+      "exclusion_rules": [
+        "symptoms alone must never generate a score"
+      ],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A38",
+      "axis_name": "Tumor Microenvironment & Metastatic Dynamics",
+      "core_evidence": [
+        "tumor microenvironment / metastatic evidence"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": false,
+      "minimum_tier": "High",
+      "exclusion_rules": [
+        "symptoms alone must never generate a score"
+      ],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    },
+    {
+      "axis_code": "A39",
+      "axis_name": "Genomic Regulation Homeostasis",
+      "core_evidence": [
+        "genomic/molecular oncology evidence"
+      ],
+      "supporting_evidence": [
+        "compatible symptoms",
+        "related markers"
+      ],
+      "optional_evidence": [
+        "history",
+        "lifestyle/exposure"
+      ],
+      "minimum_core_count": 1,
+      "minimum_total_weight": 3,
+      "allow_provisional_assessment": false,
+      "minimum_tier": "High",
+      "exclusion_rules": [
+        "symptoms alone must never generate a score"
+      ],
+      "status": "CANDIDATE_FOR_EXPERT_REVIEW"
+    }
+  ]
+}
