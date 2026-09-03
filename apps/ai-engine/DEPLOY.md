@@ -1,81 +1,72 @@
 # TSPI AI Brain — Deployment (Docker Compose)
 
-Full stack in three containers: **api** (FastAPI), **db** (PostgreSQL + pgvector), **ollama**
-(local LLM/embeddings). The app de-identifies, scores (NSS/SPS), generates the report, and gates
-delivery on doctor validation.
+The repo has **one** compose file at the root (`../../docker-compose.yml`) that builds **two**
+application services: **tspi-api** (FastAPI engine) and **tspi-mcp** (public MCP surface).
 
-## Quick start
+There is deliberately **no database or Ollama container**:
+- **Database** — SQLite locally (zero-config), **Supabase Postgres + pgvector** in prod, selected
+  purely by `DATABASE_URL`.
+- **Ollama** — an **external** service in both environments (localhost locally, a GPU box over
+  Tailscale in prod), selected by `OLLAMA_BASE_URL`.
+
+## Quick start (local docker)
 ```bash
-cd tspi_ai_brain
-cp .env.example .env          # add DEEPSEEK_API_KEY; review EMBEDDING_* and POSTGRES_PASSWORD
-docker compose up -d --build         # builds api, starts db + ollama
+cd tspi_new                             # repo root (where docker-compose.yml lives)
+cp apps/ai-engine/.env.example apps/ai-engine/.env    # fill in values (see [local] annotations)
+cp apps/tspi-mcp/.env.example  apps/tspi-mcp/.env
+docker compose up -d --build            # builds tspi-api + tspi-mcp
 
-# one-time model + vectors (Phase 2 RAG)
-docker compose exec ollama ollama pull bge-m3
-docker compose exec api python -m scripts.embed_knowledge
-docker compose exec api python -m scripts.verify_phase2   # expect ALL PASS
-
-open http://localhost:8000/docs       # OpenAPI / Swagger
+open http://localhost:8002/docs         # engine OpenAPI / Swagger
+# MCP surface: http://localhost:8080
 ```
-On startup the **api** container waits for Postgres, **seeds the knowledge base** (idempotent),
-then runs uvicorn with `WEB_CONCURRENCY` workers. The Postgres/Ollama data persist in named volumes.
+With `DATABASE_URL` unset the engine uses the built-in SQLite DB. Point `OLLAMA_BASE_URL` at your
+own Ollama (use `http://host.docker.internal:11434` to reach a host Ollama from the container).
+On startup the engine seeds the knowledge base (idempotent), runs Alembic migrations, then serves
+uvicorn with `WEB_CONCURRENCY` workers.
 
 ## Services
-| Service | Image | Purpose | Port |
-|---|---|---|---|
-| `api` | built from `Dockerfile` | FastAPI engine (`/report`, `/validate`, `/learning/*`, …) | 8000 |
-| `db` | `pgvector/pgvector:pg16` | relational catalog **+** embeddings (one DB) | 5432 (internal) |
-| `ollama` | `ollama/ollama` | local embeddings (`bge-m3`) and optional local LLM | 11434 (internal) |
+| Service | Build context | Purpose | Port | Public? |
+|---|---|---|---|---|
+| `tspi-api` | `apps/ai-engine` | FastAPI engine (`/report`, `/validate`, `/learning/*`, …) | 8002→8000 | **No** (private in prod) |
+| `tspi-mcp` | `apps/tspi-mcp` | MCP server for AI chat clients | 8080 | **Yes** + OAuth in prod |
 
-## Configuration (`.env`)
-- **LLM:** `LLM_PRIMARY=deepseek` + `DEEPSEEK_API_KEY` (the report writer). Ollama is an in-stack fallback.
-- **Embeddings:** `EMBEDDING_BACKEND=ollama` + `OLLAMA_EMBEDDING_MODEL=bge-m3` + `EMBEDDING_DIM=1024`
-  (local/private). Or `api` (OpenAI-compatible) — set `EMBEDDING_API_KEY`/`EMBEDDING_MODEL`/`EMBEDDING_DIM`.
-- **Infra** (set by compose, don't put in `.env`): `DATABASE_URL`, `OLLAMA_BASE_URL`.
-- `WEB_CONCURRENCY` (workers), `RUN_EMBED_ON_START` (embed on boot if the model is pre-pulled),
-  `REQUIRE_DOCTOR_VALIDATION` (default true).
+External (not containers): the DB (SQLite/Supabase via `DATABASE_URL`) and Ollama (via `OLLAMA_BASE_URL`).
+
+## Configuration (`apps/ai-engine/.env`)
+Every var is annotated `[local]` / `[prod]` in `.env.example`. The prod-critical switches:
+- **Database:** set `DATABASE_URL` to the Supabase **pooler** conn (port 6543). The DB password
+  lives inside this URL — there is no separate `POSTGRES_PASSWORD` (no bundled Postgres).
+- **LLM:** `LLM_PRIMARY=ollama` in prod (PHI-bearing report LLM stays local); DeepSeek is unused
+  on the PHI path and its key can be omitted.
+- **Embeddings:** `EMBEDDING_BACKEND=ollama` + `OLLAMA_EMBEDDING_MODEL=bge-m3` + `EMBEDDING_DIM=1024`.
+- **Auth/PHI:** `AUTH_ENABLED=true` + `SERVICE_TOKENS=…` and `ENCRYPTION_KEY=<fernet>` (PHI stored
+  encrypted); `PILOT_MODE=true` for the pilot.
 
 > Switching the embedding model changes the vector dimension — set `EMBEDDING_DIM` to match and
 > re-run `embed_knowledge` (it drops & rebuilds `kb_embeddings`).
 
-## Scaling (≈1000 reports/day)
-- Raise `WEB_CONCURRENCY` (2–4 workers per core) and/or run multiple `api` replicas behind a load
-  balancer. The app is stateless; all state is in Postgres.
-- **Ollama wants a GPU** for good throughput — uncomment the `deploy.resources` GPU block (needs
-  `nvidia-container-toolkit`). Without a GPU, prefer the **`api` embedding backend** (managed) and
-  use DeepSeek for the LLM, so the box stays CPU-only.
-- pgvector: add an index for large catalogs (only needed once the catalog grows):
+## Production (Coolify + Supabase + Tailscale)
+The full production runbook — creating the Coolify services, Supabase pgvector setup, keeping the
+engine private, MCP OAuth, and the go-live checklist — lives in
+`../../docs/01-plans/TSPI_Deploy_Runbook_Coolify.md`. Key points:
+- Expose **only** `tspi-mcp` (public + OAuth) and the MiHealth web app. Keep `tspi-api` private.
+- Use managed Postgres+pgvector (Supabase) and Tailscale Ollama — same image, env-driven.
+- Secrets go in Coolify's secret store, not a committed `.env`. Rotate keys. Configure backups.
+- pgvector index for large catalogs (once the catalog grows):
   `CREATE INDEX ON kb_embeddings USING hnsw (embedding vector_cosine_ops);`
-
-## Production hardening
-- **TLS / reverse proxy:** put Caddy / Nginx / Traefik in front of `api:8000` for HTTPS + rate limiting.
-- **Managed Postgres** (RDS/Cloud SQL/Supabase with pgvector): drop the `db` service and point
-  `DATABASE_URL` at it. Same code.
-- **Secrets:** use Docker/cloud secrets, not a plaintext `.env`, in production. Rotate keys.
-- **Backups:** snapshot the `tspi_pgdata` volume / managed-DB backups (reports + audit log live here).
-- **Schema migrations:** add **Alembic** before the first prod schema change (today tables are
-  auto-created on boot, fine for greenfield).
-- **Observability:** scrape `/health`; ship logs; track LLM/embedding latency + token cost.
-- **Compliance (health data):** keep de-identification on (default), TLS everywhere, restrict DB
-  network, retain the `audit_log`. For HIPAA, route DeepSeek/embeddings via a BAA-covered endpoint.
-
-## Cloud (serverless) alternative
-For a managed deploy (Cloud Run / ECS Fargate): use the same image with **managed Postgres+pgvector**
-and the **`api` embedding backend** + DeepSeek (no Ollama container, since Ollama needs a persistent
-GPU host). See `TSPI_Deployment_and_Cost_Plan.md` for the cost model.
 
 ## Common commands
 ```bash
-docker compose logs -f api                 # app logs
-docker compose exec api python -m scripts.validate_phase0   # 27/27
-docker compose exec api python -m pytest -q                  # 17 tests
-docker compose down                        # stop (keeps volumes)
-docker compose down -v                     # stop + WIPE data
+docker compose logs -f tspi-api                              # app logs
+docker compose exec tspi-api python -m scripts.validate_phase0
+docker compose exec tspi-api python -m pytest -q             # test suite
+docker compose exec tspi-api python -m scripts.embed_knowledge   # build vectors (Ollama reachable)
+docker compose down                                         # stop
 ```
 
 ## Troubleshooting
-- **api restarts / DB errors:** ensure `db` is healthy (`docker compose ps`); the entrypoint retries 60×2s.
-- **`verify_phase2` SKIP:** `DATABASE_URL` isn't Postgres — it's set by compose; check the `api` env.
 - **embed fails:** pull the model first (`ollama pull bge-m3`) and confirm `EMBEDDING_DIM` matches it.
 - **report is short/bulleted (not prose):** the LLM call failed → it fell back to the deterministic
-  report. Check `DEEPSEEK_API_KEY` / `LLM_PRIMARY`.
+  report. Check `OLLAMA_BASE_URL` / `LLM_PRIMARY` (or `DEEPSEEK_API_KEY` if using DeepSeek locally).
+- **engine can't reach Ollama from a container:** use `http://host.docker.internal:11434` (local)
+  or the Tailscale IP (prod), not `localhost`.

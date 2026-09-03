@@ -1,60 +1,45 @@
+# TSPI AI platform — the SINGLE Docker Compose for this repo (engine + MCP only).
+#
+# Why no database container:
+#   • LOCAL dev  -> built-in SQLite (data/tspi.db), zero-config. Leave DATABASE_URL unset.
+#   • PRODUCTION -> Supabase Postgres (pgvector). Set DATABASE_URL to the Supabase pooler conn.
+#   Neither environment uses a bundled Postgres, so there is no `db` service here.
+#
+# Why no Ollama container:
+#   Ollama is an EXTERNAL service in BOTH environments — never containerised here:
+#   • LOCAL      -> your own Ollama at http://localhost:11434 (or http://host.docker.internal:11434
+#                   from inside the container).
+#   • PRODUCTION -> the GPU box reached over Tailscale (e.g. http://100.121.11.25:11434).
+#   Point OLLAMA_BASE_URL at it in apps/ai-engine/.env.
+#
+# So this file only builds the two application services. Everything environment-specific
+# (DATABASE_URL, OLLAMA_BASE_URL, AUTH_ENABLED, secrets, ...) comes from the per-app .env files.
+#
+#   cp apps/ai-engine/.env.example apps/ai-engine/.env     # fill in values
+#   cp apps/tspi-mcp/.env.example  apps/tspi-mcp/.env
+#   docker compose up -d --build
+#   open http://localhost:8002/docs        # engine (Swagger)
+#   MCP:  http://localhost:8080            # public surface (OAuth required in prod)
+
 services:
 
-  # ---------------- TSPI AI brain database ----------------
-  tspi-db:
-    image: pgvector/pgvector:pg16
-
-    environment:
-      POSTGRES_USER: tspi
-      POSTGRES_PASSWORD: ${TSPI_DB_PASSWORD:-tspi}
-      POSTGRES_DB: tspi
-
-    volumes:
-      - tspi_pgdata:/var/lib/postgresql/data
-
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U tspi -d tspi"]
-      interval: 5s
-      timeout: 3s
-      retries: 12
-
-    restart: unless-stopped
-
-
-  # ---------------- TSPI AI brain (FastAPI engine) ----------------
+  # ---------------- TSPI AI brain (FastAPI engine) — PRIVATE in production ----------------
   tspi-api:
     build: ./apps/ai-engine
 
+    # All config/secrets come from here. For local docker with SQLite, DATABASE_URL can stay
+    # unset. For prod, set DATABASE_URL (Supabase) + OLLAMA_BASE_URL (Tailscale) + AUTH_ENABLED
+    # etc. In Coolify these are set as service secrets instead of an .env file.
     env_file:
       - ./apps/ai-engine/.env
 
-    environment:
-      TSPI_ENV: prod
-
-      DATABASE_URL: postgresql+psycopg://tspi:${TSPI_DB_PASSWORD:-tspi}@tspi-db:5432/tspi
-
-      # Remote Ollama running on local WSL2 through Tailscale.
-      OLLAMA_BASE_URL: http://100.121.11.25:11434
-
-      # Primary local LLM.
-      OLLAMA_MODEL: qwen3:8b
-
-      # Embedding model.
-      OLLAMA_EMBEDDING_MODEL: bge-m3
-
-      WEB_CONCURRENCY: ${WEB_CONCURRENCY:-2}
-
     ports:
-      - "8002:8000"
-
-    depends_on:
-      tspi-db:
-        condition: service_healthy
+      - "8002:8000"          # engine Swagger at http://localhost:8002/docs
 
     restart: unless-stopped
 
 
-  # ---------------- TSPI MCP server (public surface for AI chat clients) ----------------
+  # ---------------- TSPI MCP server — PUBLIC surface for AI chat clients (OAuth) ----------------
   tspi-mcp:
     build: ./apps/tspi-mcp
 
@@ -62,10 +47,10 @@ services:
       - ./apps/tspi-mcp/.env
 
     environment:
-      TSPI_ENGINE_URL: http://tspi-api:8000     # engine stays PRIVATE (internal only)
+      TSPI_ENGINE_URL: http://tspi-api:8000     # reach the engine on the internal network only
       TSPI_MCP_TRANSPORT: streamable-http
       TSPI_MCP_PORT: "8080"
-      # OAuth is REQUIRED when this is publicly exposed — set TSPI_MCP_AUTH in .env (jwt|workos).
+      # OAuth is REQUIRED when this is publicly exposed — set TSPI_MCP_AUTH (jwt|workos) in .env.
 
     ports:
       - "8080:8080"
@@ -77,12 +62,7 @@ services:
     restart: unless-stopped
 
 
-# The MiHealth portal (frontend + backend) now lives in its own repo. It reaches this engine
-# over HTTP via TSPI_BASE_URL; see docs/01-plans/TSPI_MiHealth_Repo_Split_Plan.md.
-#
-# Deployment note (Coolify): expose ONLY tspi-mcp (public, OAuth) and MiHealth web. Keep tspi-api
-# (the engine) and tspi-db PRIVATE — no public route. See docs/01-plans/TSPI_Deploy_Runbook_Coolify.md.
-
-# ---------------- Persistent storage ----------------
-volumes:
-  tspi_pgdata:
+# Deployment note (Coolify): expose ONLY tspi-mcp (public, OAuth) and the MiHealth web app
+# (which now lives in its own repo). Keep tspi-api (the engine) PRIVATE — no public route.
+# External services in prod: Supabase Postgres (DATABASE_URL) and Tailscale Ollama
+# (OLLAMA_BASE_URL). See docs/01-plans/TSPI_Deploy_Runbook_Coolify.md.
