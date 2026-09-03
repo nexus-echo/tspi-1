@@ -1,68 +1,73 @@
-# TSPI AI platform — the SINGLE Docker Compose for this repo (engine + MCP only).
+# TSPI AI Platform — Production Docker Compose
 #
-# Why no database container:
-#   • LOCAL dev  -> built-in SQLite (data/tspi.db), zero-config. Leave DATABASE_URL unset.
-#   • PRODUCTION -> Supabase Postgres (pgvector). Set DATABASE_URL to the Supabase pooler conn.
-#   Neither environment uses a bundled Postgres, so there is no `db` service here.
+# Services:
+#   • tspi-api — private FastAPI AI engine
+#   • tspi-mcp — public MCP server via Coolify reverse proxy
 #
-# Why no Ollama container:
-#   Ollama is an EXTERNAL service in BOTH environments — never containerised here:
-#   • LOCAL      -> your own Ollama at http://localhost:11434 (or http://host.docker.internal:11434
-#                   from inside the container).
-#   • PRODUCTION -> the GPU box reached over Tailscale (e.g. http://100.121.11.25:11434).
-#   Point OLLAMA_BASE_URL at it in apps/ai-engine/.env.
+# External production services:
+#   • Supabase Postgres / pgvector
+#   • Ollama running remotely on the user's GPU/local machine via Tailscale
 #
-# So this file only builds the two application services. Everything environment-specific
-# (DATABASE_URL, OLLAMA_BASE_URL, AUTH_ENABLED, secrets, ...) comes from the per-app .env files.
-#
-#   cp apps/ai-engine/.env.example apps/ai-engine/.env     # fill in values
-#   cp apps/tspi-mcp/.env.example  apps/tspi-mcp/.env
-#   docker compose up -d --build
-#   open http://localhost:8002/docs        # engine (Swagger)
-#   MCP:  http://localhost:8080            # public surface (OAuth required in prod)
+# IMPORTANT:
+#   • No database container is deployed here.
+#   • No Ollama container is deployed here.
+#   • No fixed VPS host ports are published.
+#   • Coolify environment variables/secrets provide production configuration.
+#   • Only tspi-mcp should receive a public Coolify domain.
+#   • tspi-api remains private on the Docker network.
 
 services:
 
-  # ---------------- TSPI AI brain (FastAPI engine) — PRIVATE in production ----------------
+  # ============================================================
+  # TSPI AI BRAIN — FastAPI Engine
+  # PRIVATE: internal Docker network only
+  # ============================================================
   tspi-api:
-    build: ./apps/ai-engine
+    build:
+      context: ./apps/ai-engine
 
-    # All config/secrets come from here. For local docker with SQLite, DATABASE_URL can stay
-    # unset. For prod, set DATABASE_URL (Supabase) + OLLAMA_BASE_URL (Tailscale) + AUTH_ENABLED
-    # etc. In Coolify these are set as service secrets instead of an .env file.
-    env_file:
-      - ./apps/ai-engine/.env
+    # Production configuration is injected by Coolify.
+    #
+    # Examples:
+    # DATABASE_URL
+    # OLLAMA_BASE_URL
+    # AUTH_ENABLED
+    # API secrets
+    #
+    # Do NOT use env_file here unless the .env file is actually
+    # present inside the Git repository.
 
-    ports:
-      - "8002:8000"          # engine Swagger at http://localhost:8002/docs
+    expose:
+      - "8000"
 
     restart: unless-stopped
 
 
-  # ---------------- TSPI MCP server — PUBLIC surface for AI chat clients (OAuth) ----------------
+  # ============================================================
+  # TSPI MCP SERVER
+  # PUBLIC: expose through Coolify reverse proxy/domain only
+  # ============================================================
   tspi-mcp:
-    build: ./apps/tspi-mcp
-
-    env_file:
-      - ./apps/tspi-mcp/.env
+    build:
+      context: ./apps/tspi-mcp
 
     environment:
-      TSPI_ENGINE_URL: http://tspi-api:8000     # reach the engine on the internal network only
+      # Internal Docker networking.
+      # The MCP server communicates directly with the AI engine.
+      TSPI_ENGINE_URL: http://tspi-api:8000
+
+      # MCP transport configuration.
       TSPI_MCP_TRANSPORT: streamable-http
       TSPI_MCP_PORT: "8080"
-      # OAuth is REQUIRED when this is publicly exposed — set TSPI_MCP_AUTH (jwt|workos) in .env.
 
-    ports:
-      - "8080:8080"
+    # Other secrets/configuration should be configured in Coolify,
+    # for example OAuth/authentication settings.
+
+    expose:
+      - "8080"
 
     depends_on:
       tspi-api:
         condition: service_started
 
     restart: unless-stopped
-
-
-# Deployment note (Coolify): expose ONLY tspi-mcp (public, OAuth) and the MiHealth web app
-# (which now lives in its own repo). Keep tspi-api (the engine) PRIVATE — no public route.
-# External services in prod: Supabase Postgres (DATABASE_URL) and Tailscale Ollama
-# (OLLAMA_BASE_URL). See docs/01-plans/TSPI_Deploy_Runbook_Coolify.md.
