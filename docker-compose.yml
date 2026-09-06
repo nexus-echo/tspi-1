@@ -18,6 +18,26 @@
 
 services:
 
+  # ---------------- TSPI AI brain database ----------------
+  tspi-db:
+    image: pgvector/pgvector:pg16
+
+    environment:
+      POSTGRES_USER: tspi
+      POSTGRES_PASSWORD: ${TSPI_DB_PASSWORD:-tspi}
+      POSTGRES_DB: tspi
+
+    volumes:
+      - tspi_pgdata:/var/lib/postgresql/data
+
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tspi -d tspi"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+
+    restart: unless-stopped
+
   # ============================================================
   # TSPI AI BRAIN — FastAPI Engine
   # PRIVATE: internal Docker network only
@@ -25,6 +45,9 @@ services:
   tspi-api:
     build:
       context: ./apps/ai-engine
+
+    environment:
+      DATABASE_URL: postgresql+psycopg://tspi:${TSPI_DB_PASSWORD:-tspi}@tspi-db:5432/tspi
 
     # Production configuration is injected by Coolify.
     #
@@ -39,6 +62,10 @@ services:
 
     expose:
       - "8000"
+
+    depends_on:
+      tspi-db:
+        condition: service_healthy
 
     restart: unless-stopped
 
@@ -71,3 +98,7 @@ services:
         condition: service_started
 
     restart: unless-stopped
+
+# ---------------- Persistent storage ----------------
+volumes:
+  tspi_pgdata:
