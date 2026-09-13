@@ -28,6 +28,8 @@ class Principal:
     clinic_id: str | None = None
     source: str = "system"       # mcp | mihealth | system
     request_id: str | None = None
+    name: str | None = None      # human display name (for report attribution; never PII-gating)
+    email: str | None = None     # human email (for report attribution / audit)
 
 
 def _valid_service_tokens() -> set[str]:
@@ -41,6 +43,8 @@ def get_principal(
     x_tspi_clinic_id: str | None = Header(default=None),
     x_tspi_source: str | None = Header(default=None),
     x_request_id: str | None = Header(default=None),
+    x_tspi_name: str | None = Header(default=None),
+    x_tspi_email: str | None = Header(default=None),
 ) -> Principal:
     """Resolve the caller into a Principal. Fail-closed when auth is enabled."""
     if not settings.auth_enabled:
@@ -60,7 +64,8 @@ def get_principal(
         raise HTTPException(status_code=401, detail="Missing X-TSPI-User-Id.")
 
     return Principal(id=x_tspi_user_id, role=role, clinic_id=x_tspi_clinic_id,
-                     source=(x_tspi_source or "mihealth"), request_id=x_request_id)
+                     source=(x_tspi_source or "mihealth"), request_id=x_request_id,
+                     name=(x_tspi_name or None), email=(x_tspi_email or None))
 
 
 def require_role(*allowed: str):

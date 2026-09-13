@@ -1,3 +1,8 @@
-fastmcp>=2.0
+# Pin fastmcp to 3.x: the WorkOS AuthKitProvider API (authkit_domain/base_url/resource_base_url)
+# and http_app()'s automatic auth wiring (middleware + /.well-known/oauth-* routes + RequireAuth
+# guard on /mcp) that this server relies on are 3.x behavior. The 2.x AuthKit API differs.
+fastmcp>=3.4,<4
 httpx>=0.27
 pydantic>=2.6
+uvicorn>=0.30          # server.py runs uvicorn for the streamable-http transport
+python-dotenv>=1.0     # config.py loads the package .env explicitly

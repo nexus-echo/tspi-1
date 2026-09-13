@@ -60,6 +60,9 @@ services:
     # Do NOT use env_file here unless the .env file is actually
     # present inside the Git repository.
 
+    ports:
+      - "8000:8000"
+
     expose:
       - "8000"
 
@@ -89,6 +92,9 @@ services:
 
     # Other secrets/configuration should be configured in Coolify,
     # for example OAuth/authentication settings.
+
+    ports:
+      - "8080:8080"
 
     expose:
       - "8080"

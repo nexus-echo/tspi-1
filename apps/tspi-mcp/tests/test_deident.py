@@ -41,15 +41,20 @@ def test_clean_input_passes_untouched():
 
 
 # ---- P7: OAuth wiring (env-driven) ----
-def test_auth_none_by_default_and_static_identity():
+def test_auth_none_is_unauthenticated_and_static_identity():
     import os
-    os.environ.pop("TSPI_MCP_AUTH", None)
+    # Force "none" explicitly (hermetic): load_dotenv never overrides an already-set env var,
+    # so this holds even when a developer .env with TSPI_MCP_AUTH=workos is present on disk.
+    os.environ["TSPI_MCP_AUTH"] = "none"
     from importlib import reload
     from tspi_mcp import config as c, identity as idn
     reload(c); reload(idn)
-    assert idn.build_auth() is None                       # local stdio: no incoming auth
-    user, role, clinic = idn.current_identity()           # falls back to static pilot identity
-    assert role == c.settings.clinician_role
+    try:
+        assert idn.build_auth() is None                   # stdio: no incoming auth provider
+        user, role, clinic = idn.current_identity()       # falls back to static pilot identity
+        assert role == c.settings.clinician_role
+    finally:
+        os.environ.pop("TSPI_MCP_AUTH", None); reload(c); reload(idn)
 
 def test_auth_jwt_requires_config_else_fail_closed():
     import os, pytest

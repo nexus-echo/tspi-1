@@ -127,23 +127,58 @@ def set_report_owner(report_id: str, *, clinician_id: str | None = None,
         s.close()
 
 
+def stamp_report_actor(report_id: str, field: str, actor: dict) -> None:
+    """Record WHO acted on a report (e.g. created_by) in the report payload (JSON, no migration).
+    `actor` is {id, name?, email?}; a timestamp is added here."""
+    s = get_session()
+    try:
+        r = s.get(Report, report_id)
+        if not r:
+            return
+        payload = dict(r.payload or {})
+        payload[field] = {**actor, "at": _now().isoformat()}
+        r.payload = payload
+        try:
+            from sqlalchemy.orm.attributes import flag_modified
+            flag_modified(r, "payload")
+        except Exception:  # noqa: BLE001
+            pass
+        s.commit()
+    finally:
+        s.close()
+
+
 def record_validation(report_id: str, doctor_id: str, decision: str,
-                      edits: dict | None) -> dict | None:
+                      edits: dict | None, approver: dict | None = None) -> dict | None:
     s = get_session()
     try:
         r = s.get(Report, report_id)
         if not r:
             return None
         r.status = {"approve": "validated", "reject": "rejected", "edit": "validated"}.get(decision, r.status)
+        edits = dict(edits or {})
+        if approver:
+            stamped = {**approver, "at": _now().isoformat(), "decision": decision}
+            edits["_approved_by"] = stamped
+            if decision in ("approve", "edit"):
+                payload = dict(r.payload or {})
+                payload["approved_by"] = stamped
+                r.payload = payload
+                try:
+                    from sqlalchemy.orm.attributes import flag_modified
+                    flag_modified(r, "payload")
+                except Exception:  # noqa: BLE001
+                    pass
         s.add(ReportValidation(report_id=report_id, doctor_id=doctor_id,
-                               decision=decision, edits=edits or {}))
+                               decision=decision, edits=edits))
         s.commit()
         return {"report_id": report_id, "status": r.status, "deliverable": r.status == "validated"}
     finally:
         s.close()
 
 
-def record_override(report_id: str, clinician_id: str, actions: list[dict]) -> dict | None:
+def record_override(report_id: str, clinician_id: str, actions: list[dict],
+                    editor: dict | None = None) -> dict | None:
     """Apply structured physician edits to a report's plan. NON-DESTRUCTIVE and audited.
 
     - The original plan is preserved; every edit is appended to payload['clinician_overrides']
@@ -214,11 +249,16 @@ def record_override(report_id: str, clinician_id: str, actions: list[dict]) -> d
             entry = {"action": act, "module_code": code, "axis_code": a.get("axis_code"),
                      "reason_code": reason_code, "rationale": rationale,
                      "before": before, "after": after,
-                     "clinician_id": clinician_id, "at": _now().isoformat()}
+                     "clinician_id": clinician_id,
+                     "clinician_name": (editor or {}).get("name"),
+                     "clinician_email": (editor or {}).get("email"),
+                     "at": _now().isoformat()}
             overrides.append(entry)
             applied.append({"action": act, "module_code": code, "status": "APPLIED"})
 
         payload["clinician_overrides"] = overrides
+        if editor:
+            payload["last_edited_by"] = {**editor, "at": _now().isoformat()}
         payload["plan_version"] = int(payload.get("plan_version", 1)) + 1
         # editing invalidates prior approval -> must be re-approved
         was_validated = r.status == "validated"

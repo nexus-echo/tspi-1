@@ -35,6 +35,13 @@ def _audit_ctx(p: Principal) -> dict:
     return {"role": p.role, "source": p.source, "request_id": p.request_id}
 
 
+def _actor(p: Principal, fallback_id: str | None = None) -> dict:
+    """Who performed an action — for report attribution (created/approved/edited by).
+    Uses the authenticated principal; falls back to the request-supplied id when auth is off."""
+    return {"id": (p.id if settings.auth_enabled else (fallback_id or p.id)),
+            "name": p.name, "email": p.email, "role": p.role}
+
+
 @router.post("/screen", tags=["safety"])
 async def screen_endpoint(patient: PatientInput,
                           p: Principal = Depends(require_role(
@@ -76,6 +83,7 @@ async def report_endpoint(patient: PatientInput,
         clinician_id=(p.id if p.role in ("clinician", "reviewer") else None),
         case_subject=patient.case_id,
         clinic_id=p.clinic_id)
+    store.stamp_report_actor(report.report_id, "created_by", _actor(p))   # who generated the plan
     store.audit("report", case_id=patient.case_id, report_id=report.report_id,
                 actor=p.id, **_audit_ctx(p))
     return report
@@ -149,9 +157,12 @@ async def validate_endpoint(req: ValidationRequest,
     if not existing:
         raise HTTPException(status_code=404, detail="Report not found.")
     check_report_access(p, existing, write=True)      # only owner clinician / reviewer
-    result = store.record_validation(req.report_id, req.doctor_id, req.decision, req.edits)
-    store.audit("validate", report_id=req.report_id, actor=(p.id if settings.auth_enabled else req.doctor_id),
-                detail={"decision": req.decision}, **_audit_ctx(p))
+    approver = _actor(p, fallback_id=req.doctor_id)
+    result = store.record_validation(req.report_id, req.doctor_id, req.decision, req.edits,
+                                     approver=approver)
+    store.audit("validate", report_id=req.report_id, actor=approver["id"],
+                detail={"decision": req.decision, "by_name": p.name, "by_email": p.email},
+                **_audit_ctx(p))
     return result
 
 
@@ -167,11 +178,13 @@ async def override_endpoint(report_id: str, req: OverrideRequest,
     if existing is None:
         raise HTTPException(status_code=404, detail="Report not found.")
     check_report_access(p, existing, write=True)
+    editor = _actor(p, fallback_id=req.clinician_id)
     result = store.record_override(
-        report_id, req.clinician_id, [a.model_dump() for a in req.actions])
-    store.audit("override", report_id=report_id, actor=req.clinician_id,
+        report_id, req.clinician_id, [a.model_dump() for a in req.actions], editor=editor)
+    store.audit("override", report_id=report_id, actor=editor["id"],
                 detail={"actions": [a.action for a in req.actions],
-                        "plan_version": result.get("plan_version")}, **_audit_ctx(p))
+                        "plan_version": result.get("plan_version"),
+                        "by_name": p.name, "by_email": p.email}, **_audit_ctx(p))
     return result
 
 

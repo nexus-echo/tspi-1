@@ -21,16 +21,21 @@ def _headers() -> dict[str, str]:
     # Service token authenticates the MCP to the engine; X-TSPI-* forward the clinician identity
     # the engine trusts for RBAC + audit. Identity is PER-REQUEST from the validated OAuth token
     # (P7) when the MCP is remote/authenticated, else the static pilot identity (stdio).
-    from .identity import current_identity
-    user, role, clinic = current_identity()
+    from .identity import current_identity_ext
+    ident = current_identity_ext()
     h = {"Accept": "application/json"}
     if settings.engine_token:
         h["Authorization"] = f"Bearer {settings.engine_token}"
-    h["X-TSPI-User-Id"] = user
-    h["X-TSPI-Role"] = role
+    h["X-TSPI-User-Id"] = ident["user"]
+    h["X-TSPI-Role"] = ident["role"]
     h["X-TSPI-Source"] = "mcp"
-    if clinic:
-        h["X-TSPI-Clinic-Id"] = clinic
+    if ident["clinic"]:
+        h["X-TSPI-Clinic-Id"] = ident["clinic"]
+    # Human-identity for report attribution (who created/approved). Optional; omitted if absent.
+    if ident["name"]:
+        h["X-TSPI-Name"] = ident["name"]
+    if ident["email"]:
+        h["X-TSPI-Email"] = ident["email"]
     return h
 
 

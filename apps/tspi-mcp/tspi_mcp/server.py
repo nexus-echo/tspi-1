@@ -13,6 +13,7 @@ Governance baked into this layer (not the engine):
 """
 from __future__ import annotations
 
+import logging
 from typing import Any, Literal
 
 from fastmcp import FastMCP
@@ -36,8 +37,34 @@ RULES FOR THE ASSISTANT:
 
 from .identity import build_auth
 
-mcp = FastMCP("tspi-ai-brain", instructions=INSTRUCTIONS, auth=build_auth())
 
+auth_provider = build_auth()
+
+# FAIL-CLOSED: a network transport (streamable-http/http/sse) is a PUBLIC surface and must never
+# run without auth. If auth didn't build (TSPI_MCP_AUTH unset/none, e.g. .env not loaded), refuse
+# to start over HTTP instead of silently exposing every tool. stdio (local Claude Desktop) is exempt.
+if settings.transport in ("streamable-http", "http", "sse") and auth_provider is None:
+    raise RuntimeError(
+        "Public MCP transport "
+        f"({settings.transport}) requires authentication, but no auth provider was built "
+        "(TSPI_MCP_AUTH is 'none' or unset). Set TSPI_MCP_AUTH=workos (with "
+        "TSPI_WORKOS_AUTHKIT_DOMAIN + TSPI_MCP_BASE_URL) or =jwt. Refusing to start unauthenticated."
+    )
+
+# One concise startup log line — confirms auth actually loaded (the usual failure mode is
+# TSPI_MCP_AUTH defaulting to "none" when the .env wasn't found). Logged, not printed.
+logging.getLogger("tspi_mcp").info(
+    "TSPI MCP starting: transport=%s auth=%s provider=%s base_url=%s",
+    settings.transport, settings.mcp_auth,
+    type(auth_provider).__name__ if auth_provider else None, settings.mcp_base_url,
+)
+
+
+mcp = FastMCP(
+    "tspi-ai-brain",
+    instructions=INSTRUCTIONS,
+    auth=auth_provider,
+)
 
 # --------------------------------------------------------------------------- input models
 class LabResultIn(BaseModel):
@@ -83,6 +110,22 @@ def _forwardable(payload: dict) -> tuple[dict, list[str]]:
 
 
 # --------------------------------------------------------------------------- tools
+@mcp.tool()
+async def tspi_whoami() -> dict:
+    """Show the identity the server resolved for the current authenticated session — the fields
+    read from your WorkOS token (user id, role, clinic, name, email). Use this to verify the JWT
+    template is delivering the expected claims. Read-only; returns only the caller's OWN identity,
+    never patient data."""
+    from .identity import current_identity_ext
+    ident = current_identity_ext()
+    return {
+        "authenticated": settings.mcp_auth != "none",
+        "identity": ident,
+        "note": ("These come from your WorkOS token claims (or the static pilot identity on stdio). "
+                 "role must be an engine-valid value (e.g. 'clinician') to pass RBAC."),
+    }
+
+
 @mcp.tool()
 async def tspi_engine_health() -> dict:
     """Check that the TSPI engine is reachable and report its governance/registry status."""
@@ -225,13 +268,17 @@ async def tspi_record_outcome(report_id: str, marker: str, baseline: float, foll
 
 
 def main() -> None:
+    """Run the server. FastMCP launches its own uvicorn for HTTP transports and wires the WorkOS
+    auth (middleware + /.well-known routes + the /mcp guard) from the FastMCP instance — no separate
+    uvicorn call or custom ASGI app is needed. The fail-closed guard at import time already ensures
+    an HTTP transport never starts without an auth provider."""
     t = settings.transport
     if t in ("streamable-http", "http", "sse"):
         import os
         port = int(os.getenv("TSPI_MCP_PORT", "8080"))
-        mcp.run(transport=t, host="0.0.0.0", port=port)   # container: bind all interfaces
+        mcp.run(transport=t, host="0.0.0.0", port=port)                 # container: bind all interfaces
     else:
-        mcp.run(transport=t)                               # stdio (local Claude Desktop)
+        mcp.run(transport=t)                                            # stdio (local Claude Desktop)
 
 
 if __name__ == "__main__":
